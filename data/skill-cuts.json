@@ -1,0 +1,145 @@
+{
+  "description": "Skill cuts approved 2026-10-19. Each cut skill and all of its relationships are removed from the fork. Applied by scripts/apply_skill_cuts.py, after merges.",
+  "cuts": {
+    "S0118": {
+      "text": "Skill in developing machine understandable semantic ontologies",
+      "reason": "Niche; unlikely to be searched by students"
+    },
+    "S0382": {
+      "text": "Skill in tailoring code analysis",
+      "reason": "Vague"
+    },
+    "S0384": {
+      "text": "Skill in applying standards",
+      "reason": "Too generic to explore"
+    },
+    "S0400": {
+      "text": "Skill in creating programming languages",
+      "reason": "Not a cybersecurity skill for this audience"
+    },
+    "S0405": {
+      "text": "Skill in pricing products",
+      "reason": "Not a security skill"
+    },
+    "S0439": {
+      "text": "Skill in identifying external partners",
+      "reason": "Intel-community phrasing"
+    },
+    "S0464": {
+      "text": "Skill in applying stakeholder management within a system development life cycle",
+      "reason": "Vague"
+    },
+    "S0474": {
+      "text": "Skill in finding system files",
+      "reason": "Too granular"
+    },
+    "S0494": {
+      "text": "Skill in performing operational environment analysis",
+      "reason": "Military operational-environment phrasing"
+    },
+    "S0495": {
+      "text": "Skill in determining asset availability, capabilities, and limitations",
+      "reason": "Military phrasing"
+    },
+    "S0499": {
+      "text": "Skill in performing intelligence collection analysis",
+      "reason": "Intel tradecraft"
+    },
+    "S0507": {
+      "text": "Skill in collecting terminal or environment data",
+      "reason": "Vague"
+    },
+    "S0514": {
+      "text": "Skill in preparing operational environments",
+      "reason": "Military phrasing"
+    },
+    "S0530": {
+      "text": "Skill in conducting research",
+      "reason": "Too generic"
+    },
+    "S0551": {
+      "text": "Skill in applying information technologies into proposed solutions",
+      "reason": "Vague"
+    },
+    "S0583": {
+      "text": "Skill in implementing established network security practices",
+      "reason": "Vague"
+    },
+    "S0638": {
+      "text": "Skill in designing cross-domain solutions",
+      "reason": "Classified-network niche"
+    },
+    "S0654": {
+      "text": "Skill in conducting system reviews",
+      "reason": "Vague"
+    },
+    "S0687": {
+      "text": "Skill in performing administrative planning activities",
+      "reason": "Vague; on 9 roles"
+    },
+    "S0690": {
+      "text": "Skill in performing midpoint collection data analysis",
+      "reason": "Intel tradecraft"
+    },
+    "S0702": {
+      "text": "Skill in defining an operational environment",
+      "reason": "Military phrasing"
+    },
+    "S0704": {
+      "text": "Skill in performing target analysis",
+      "reason": "Intel targeting"
+    },
+    "S0729": {
+      "text": "Skill in preparing plans",
+      "reason": "Too generic"
+    },
+    "S0765": {
+      "text": "Skill in converting intelligence requirements into intelligence production tasks",
+      "reason": "Intel tradecraft"
+    },
+    "S0771": {
+      "text": "Skill in creating planning documents",
+      "reason": "Vague"
+    },
+    "S0772": {
+      "text": "Skill in maintaining planning documents",
+      "reason": "Vague"
+    },
+    "S0777": {
+      "text": "Skill in developing collection strategies",
+      "reason": "Intel tradecraft"
+    },
+    "S0779": {
+      "text": "Skill in determining information requirements",
+      "reason": "Intel phrasing"
+    },
+    "S0789": {
+      "text": "Skill in coordinating collection support",
+      "reason": "Intel tradecraft"
+    },
+    "S0790": {
+      "text": "Skill in monitoring status",
+      "reason": "Vague"
+    },
+    "S0811": {
+      "text": "Skill in managing intelligence collection requirements",
+      "reason": "Intel tradecraft; mismapped to 5 management roles"
+    },
+    "S0825": {
+      "text": "Skill in communicating with engineering staff",
+      "reason": "Covered by Technical communication"
+    },
+    "S0879": {
+      "text": "Skill in performing scientific analysis",
+      "reason": "Too generic"
+    },
+    "S0882": {
+      "text": "Skill in performing static analysis",
+      "reason": "Ambiguous; covered by code and malware variants"
+    },
+    "S0949": {
+      "text": "Skill in recognizing and acknowledging unique contributions from varying skillsets",
+      "reason": "Too generic"
+    }
+  }
+}

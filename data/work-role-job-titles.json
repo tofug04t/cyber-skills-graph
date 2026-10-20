@@ -1,0 +1,504 @@
+{
+  "work_role_job_titles": [
+    {
+      "work_role_id": "DD-WRL-001",
+      "work_role_title": "Cybersecurity Architecture",
+      "job_titles": [
+        "Security Architect",
+        "Cybersecurity Architect",
+        "Cloud Security Architect",
+        "Enterprise Security Architect",
+        "Security Consultant",
+        "Cryptography/PKI Engineer",
+        "Zero Trust Architect"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-002",
+      "work_role_title": "Enterprise Architecture",
+      "job_titles": [
+        "Enterprise Architect",
+        "IT Architect",
+        "Solutions Architect",
+        "Technology Architect"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-003",
+      "work_role_title": "Secure Software Development",
+      "job_titles": [
+        "Software Engineer",
+        "Application Security Engineer",
+        "Secure Software Developer",
+        "DevSecOps Engineer"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-004",
+      "work_role_title": "Secure Systems Development",
+      "job_titles": [
+        "Systems Engineer",
+        "Security Engineer",
+        "Secure Systems Engineer"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-005",
+      "work_role_title": "Software Security Assessment",
+      "job_titles": [
+        "Application Security Engineer",
+        "AppSec Analyst",
+        "Software Security Analyst"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-006",
+      "work_role_title": "Systems Requirements Planning",
+      "job_titles": [
+        "Systems Analyst",
+        "Business Systems Analyst",
+        "Security Requirements Analyst"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-007",
+      "work_role_title": "Systems Testing and Evaluation",
+      "job_titles": [
+        "QA Engineer",
+        "Test Engineer",
+        "Systems Test Engineer",
+        "Security Test Engineer"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-008",
+      "work_role_title": "Technology Research and Development",
+      "job_titles": [
+        "Research Engineer",
+        "R&D Engineer",
+        "Security Researcher",
+        "Applied Researcher"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-009",
+      "work_role_title": "Operational Technology (OT) Cybersecurity Engineering",
+      "job_titles": [
+        "OT Security Engineer",
+        "ICS/SCADA Security Engineer",
+        "Industrial Cybersecurity Engineer",
+        "Control Systems Security Engineer"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-010",
+      "work_role_title": "AI/ML Security",
+      "job_titles": [
+        "AI Security Engineer",
+        "ML Security Engineer",
+        "AI Red Teamer",
+        "Machine Learning Security Researcher",
+        "Responsible AI Engineer"
+      ]
+    },
+    {
+      "work_role_id": "IN-WRL-001",
+      "work_role_title": "Cybercrime Investigation",
+      "job_titles": [
+        "Cybercrime Investigator",
+        "Digital Forensics Investigator",
+        "Fraud Investigator",
+        "Computer Crime Investigator"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-001",
+      "work_role_title": "Data Analysis",
+      "job_titles": [
+        "Data Analyst",
+        "Security Data Analyst",
+        "Cybersecurity Data Scientist",
+        "Business Intelligence Analyst"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-002",
+      "work_role_title": "Database Administration",
+      "job_titles": [
+        "Database Administrator",
+        "Database Engineer",
+        "Data Engineer"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-003",
+      "work_role_title": "Knowledge Management",
+      "job_titles": [
+        "Knowledge Manager",
+        "Information Manager",
+        "Knowledge Management Specialist"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-004",
+      "work_role_title": "Network Operations",
+      "job_titles": [
+        "Network Engineer",
+        "Network Administrator",
+        "NOC Engineer",
+        "Network Operations Technician"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-005",
+      "work_role_title": "Systems Administration",
+      "job_titles": [
+        "Systems Administrator",
+        "IT Administrator",
+        "Server Administrator"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-006",
+      "work_role_title": "Systems Security Analysis",
+      "job_titles": [
+        "Security Analyst",
+        "Systems Security Analyst",
+        "Information Security Analyst",
+        "DLP Analyst"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-007",
+      "work_role_title": "Technical Support",
+      "job_titles": [
+        "IT Support Specialist",
+        "Help Desk Technician",
+        "Technical Support Engineer",
+        "Desktop Support Analyst"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-002",
+      "work_role_title": "Cybersecurity Policy and Planning",
+      "job_titles": [
+        "Security Policy Analyst",
+        "GRC Analyst",
+        "Cybersecurity Strategist",
+        "Information Security Policy Manager",
+        "Security Analyst",
+        "Security Consultant"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-003",
+      "work_role_title": "Cybersecurity Workforce Management",
+      "job_titles": [
+        "Cybersecurity Workforce Planner",
+        "IT Workforce Development Manager",
+        "Security Talent Manager"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-004",
+      "work_role_title": "Cybersecurity Curriculum Development",
+      "job_titles": [
+        "Curriculum Developer",
+        "Instructional Designer",
+        "Training Content Developer"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-005",
+      "work_role_title": "Cybersecurity Instruction",
+      "job_titles": [
+        "Security Trainer",
+        "Cybersecurity Instructor",
+        "Security Awareness Trainer"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-006",
+      "work_role_title": "Cybersecurity Legal Advice",
+      "job_titles": [
+        "Cybersecurity Counsel",
+        "Privacy Counsel",
+        "Technology Attorney",
+        "Compliance Counsel"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-007",
+      "work_role_title": "Executive Cybersecurity Leadership",
+      "job_titles": [
+        "CISO",
+        "VP of Security",
+        "Head of Information Security",
+        "Director of Cybersecurity"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-008",
+      "work_role_title": "Privacy Compliance",
+      "job_titles": [
+        "Privacy Officer",
+        "Data Protection Officer",
+        "Privacy Analyst",
+        "Privacy Compliance Manager",
+        "GRC Analyst",
+        "Compliance Analyst"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-010",
+      "work_role_title": "Security Program Management",
+      "job_titles": [
+        "Program Manager",
+        "IT Program Manager",
+        "Security Program Manager",
+        "Product Support Manager",
+        "Sustaining Engineering Manager",
+        "Technical Product Manager",
+        "Project Manager",
+        "Technical Project Manager",
+        "IT Project Manager",
+        "IT Portfolio Manager",
+        "Technology Investment Manager",
+        "IT Governance Manager"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-012",
+      "work_role_title": "IT/Security Controls Auditor",
+      "job_titles": [
+        "IT Auditor",
+        "Security Auditor",
+        "Compliance Auditor",
+        "Internal Auditor - IT",
+        "Security Analyst",
+        "Security Consultant",
+        "IT Audit Manager",
+        "Technology Auditor",
+        "Internal Audit Manager",
+        "GRC Analyst",
+        "Compliance Analyst"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-013",
+      "work_role_title": "Systems Authorization",
+      "job_titles": [
+        "Information System Security Officer (ISSO)",
+        "Risk and Authorization Analyst",
+        "Security Assessment and Authorization (A&A) Analyst",
+        "GRC Analyst"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-014",
+      "work_role_title": "Systems Security Management",
+      "job_titles": [
+        "Information Systems Security Manager (ISSM)",
+        "IT Security Manager",
+        "Security Operations Manager",
+        "Security Engineer"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-017",
+      "work_role_title": "Cybersecurity Supply Chain Risk Management",
+      "job_titles": [
+        "Supply Chain Risk Analyst",
+        "Third-Party Risk Analyst",
+        "Vendor Risk Manager",
+        "GRC Analyst"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-018",
+      "work_role_title": "Security Compliance Monitoring",
+      "job_titles": [
+        "Compliance Monitoring Analyst",
+        "GRC Analyst",
+        "Continuous Monitoring Analyst",
+        "Security Analyst",
+        "Compliance Analyst"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-001",
+      "work_role_title": "Defensive Cybersecurity",
+      "job_titles": [
+        "SOC Analyst",
+        "Cyber Defense Analyst",
+        "Blue Team Analyst",
+        "Security Analyst",
+        "Security Engineer",
+        "SOC Manager"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-002",
+      "work_role_title": "Digital Forensics",
+      "job_titles": [
+        "Digital Forensics Analyst",
+        "Forensic Investigator",
+        "DFIR Analyst",
+        "Forensic Examiner",
+        "eDiscovery Analyst"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-003",
+      "work_role_title": "Incident Response",
+      "job_titles": [
+        "Incident Responder",
+        "DFIR Analyst",
+        "Incident Response Analyst"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-004",
+      "work_role_title": "Infrastructure Support",
+      "job_titles": [
+        "Infrastructure Engineer",
+        "Security Infrastructure Engineer",
+        "Systems Engineer",
+        "Security Engineer"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-005",
+      "work_role_title": "Insider Threat Analysis",
+      "job_titles": [
+        "Insider Threat Analyst",
+        "Insider Risk Analyst",
+        "Security Analyst"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-006",
+      "work_role_title": "Cyber Threat Intelligence",
+      "job_titles": [
+        "Threat Intelligence Analyst",
+        "Cyber Threat Analyst",
+        "Threat Hunter",
+        "Security Analyst"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-007",
+      "work_role_title": "Vulnerability Analysis",
+      "job_titles": [
+        "Vulnerability Analyst",
+        "Vulnerability Management Engineer",
+        "Security Analyst",
+        "Security Consultant",
+        "Bug Bounty/VDP Manager"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-008",
+      "work_role_title": "Penetration Testing and Red Teaming",
+      "job_titles": [
+        "Penetration Tester",
+        "Red Team Operator",
+        "Ethical Hacker",
+        "Offensive Security Engineer",
+        "Security Consultant"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-009",
+      "work_role_title": "Malware Analysis and Reverse Engineering",
+      "job_titles": [
+        "Malware Analyst",
+        "Reverse Engineer",
+        "Malware Reverse Engineer",
+        "Threat Research Engineer"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-011",
+      "work_role_title": "Cloud Security Engineering",
+      "job_titles": [
+        "Cloud Security Engineer",
+        "Cloud Security Architect",
+        "Cloud Security Analyst"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-008",
+      "work_role_title": "Identity and Access Management",
+      "job_titles": [
+        "IAM Engineer",
+        "IAM Analyst",
+        "Identity Architect",
+        "Identity Engineer"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-010",
+      "work_role_title": "Detection Engineering",
+      "job_titles": [
+        "Detection Engineer",
+        "Purple Team Engineer",
+        "SIEM Engineer"
+      ]
+    },
+    {
+      "work_role_id": "PD-WRL-011",
+      "work_role_title": "Threat Hunting",
+      "job_titles": [
+        "Threat Hunter",
+        "Threat Hunting Analyst"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-012",
+      "work_role_title": "Application Security",
+      "job_titles": [
+        "Application Security Engineer",
+        "Product Security Engineer",
+        "AppSec Analyst"
+      ]
+    },
+    {
+      "work_role_id": "DD-WRL-013",
+      "work_role_title": "DevSecOps",
+      "job_titles": [
+        "DevSecOps Engineer",
+        "Platform Security Engineer",
+        "Security Automation Engineer"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-019",
+      "work_role_title": "GRC Analysis",
+      "job_titles": [
+        "GRC Analyst",
+        "Compliance Analyst",
+        "Risk Analyst",
+        "IT Risk Analyst"
+      ]
+    },
+    {
+      "work_role_id": "OG-WRL-020",
+      "work_role_title": "Security Awareness",
+      "job_titles": [
+        "Security Awareness Manager",
+        "Security Awareness Specialist",
+        "Human Risk Manager"
+      ]
+    },
+    {
+      "work_role_id": "IO-WRL-009",
+      "work_role_title": "Cyber Range Engineering",
+      "job_titles": [
+        "Cyber Range Engineer",
+        "Cyber Range Operator",
+        "Exercise Developer"
+      ]
+    }
+  ]
+}

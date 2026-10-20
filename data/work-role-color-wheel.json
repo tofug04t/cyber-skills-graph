@@ -1,0 +1,285 @@
+{
+  "color_wheel_scheme": "SANS-style extended color wheel (Red/Blue/Purple/Yellow/Green/Orange/White)",
+  "work_role_colors": [
+    {
+      "work_role_id": "DD-WRL-001",
+      "work_role_title": "Cybersecurity Architecture",
+      "primary_color": "Yellow",
+      "secondary_color": "Green",
+      "rationale": "Designs security into systems being built (Yellow); sets hardening standards that bridge into ops (Green)."
+    },
+    {
+      "work_role_id": "DD-WRL-002",
+      "work_role_title": "Enterprise Architecture",
+      "primary_color": "Yellow",
+      "secondary_color": "White",
+      "rationale": "Designs enterprise technology structure (Yellow); sets architecture governance/standards (White)."
+    },
+    {
+      "work_role_id": "DD-WRL-003",
+      "work_role_title": "Secure Software Development",
+      "primary_color": "Yellow",
+      "secondary_color": null,
+      "rationale": "Builds software."
+    },
+    {
+      "work_role_id": "DD-WRL-004",
+      "work_role_title": "Secure Systems Development",
+      "primary_color": "Yellow",
+      "secondary_color": null,
+      "rationale": "Builds systems."
+    },
+    {
+      "work_role_id": "DD-WRL-005",
+      "work_role_title": "Software Security Assessment",
+      "primary_color": "Green",
+      "secondary_color": null,
+      "rationale": "Assesses/hardens what's already built, bridging build and defense."
+    },
+    {
+      "work_role_id": "DD-WRL-006",
+      "work_role_title": "Systems Requirements Planning",
+      "primary_color": "Yellow",
+      "secondary_color": "White",
+      "rationale": "Translates requirements into technical build specs (Yellow); involves governance/compliance requirements-setting (White)."
+    },
+    {
+      "work_role_id": "DD-WRL-007",
+      "work_role_title": "Systems Testing and Evaluation",
+      "primary_color": "Yellow",
+      "secondary_color": "Green",
+      "rationale": "Part of the build lifecycle (Yellow); validates security readiness before deployment, bridging build and defense (Green)."
+    },
+    {
+      "work_role_id": "DD-WRL-008",
+      "work_role_title": "Technology Research and Development",
+      "primary_color": "Yellow",
+      "secondary_color": null,
+      "rationale": "Research and engineering of new capabilities."
+    },
+    {
+      "work_role_id": "DD-WRL-009",
+      "work_role_title": "Operational Technology (OT) Cybersecurity Engineering",
+      "primary_color": "Yellow",
+      "secondary_color": "Green",
+      "rationale": "Engineers industrial systems (Yellow); hardens them against operational cyber events (Green)."
+    },
+    {
+      "work_role_id": "DD-WRL-010",
+      "work_role_title": "AI/ML Security",
+      "primary_color": "Yellow",
+      "secondary_color": "Red",
+      "rationale": "Builds/evaluates AI systems (Yellow); adversarial testing of models (prompting for failure, hallucination-hunting) is inherently attacker-mindset work (Red)."
+    },
+    {
+      "work_role_id": "IN-WRL-001",
+      "work_role_title": "Cybercrime Investigation",
+      "primary_color": "Blue",
+      "secondary_color": "White",
+      "rationale": "Investigates and responds to intrusions (Blue); supports legal/prosecutorial processes (White)."
+    },
+    {
+      "work_role_id": "IO-WRL-001",
+      "work_role_title": "Data Analysis",
+      "primary_color": "Green",
+      "secondary_color": null,
+      "rationale": "Operational/analytical function bridging data infrastructure and insight."
+    },
+    {
+      "work_role_id": "IO-WRL-002",
+      "work_role_title": "Database Administration",
+      "primary_color": "Green",
+      "secondary_color": null,
+      "rationale": "Operates and secures data infrastructure."
+    },
+    {
+      "work_role_id": "IO-WRL-003",
+      "work_role_title": "Knowledge Management",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Governs organizational information/knowledge assets."
+    },
+    {
+      "work_role_id": "IO-WRL-004",
+      "work_role_title": "Network Operations",
+      "primary_color": "Green",
+      "secondary_color": null,
+      "rationale": "Operates and hardens network infrastructure."
+    },
+    {
+      "work_role_id": "IO-WRL-005",
+      "work_role_title": "Systems Administration",
+      "primary_color": "Green",
+      "secondary_color": null,
+      "rationale": "Operates and hardens systems infrastructure."
+    },
+    {
+      "work_role_id": "IO-WRL-006",
+      "work_role_title": "Systems Security Analysis",
+      "primary_color": "Blue",
+      "secondary_color": "Green",
+      "rationale": "Analyzes systems for security issues (Blue); overlaps with ops hardening (Green)."
+    },
+    {
+      "work_role_id": "IO-WRL-007",
+      "work_role_title": "Technical Support",
+      "primary_color": "Green",
+      "secondary_color": null,
+      "rationale": "Operational IT support function."
+    },
+    {
+      "work_role_id": "OG-WRL-002",
+      "work_role_title": "Cybersecurity Policy and Planning",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Governance function."
+    },
+    {
+      "work_role_id": "OG-WRL-003",
+      "work_role_title": "Cybersecurity Workforce Management",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Governance/HR function."
+    },
+    {
+      "work_role_id": "OG-WRL-004",
+      "work_role_title": "Cybersecurity Curriculum Development",
+      "primary_color": "Orange",
+      "secondary_color": null,
+      "rationale": "Develops security awareness, training, and education content -- this is the training/education function itself."
+    },
+    {
+      "work_role_id": "OG-WRL-005",
+      "work_role_title": "Cybersecurity Instruction",
+      "primary_color": "Orange",
+      "secondary_color": null,
+      "rationale": "Delivers security awareness, training, and education -- the training/education function itself."
+    },
+    {
+      "work_role_id": "OG-WRL-006",
+      "work_role_title": "Cybersecurity Legal Advice",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Legal/governance function."
+    },
+    {
+      "work_role_id": "OG-WRL-007",
+      "work_role_title": "Executive Cybersecurity Leadership",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Executive governance function."
+    },
+    {
+      "work_role_id": "OG-WRL-008",
+      "work_role_title": "Privacy Compliance",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Governance/compliance function."
+    },
+    {
+      "work_role_id": "OG-WRL-010",
+      "work_role_title": "Security Program Management",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Program governance function."
+    },
+    {
+      "work_role_id": "OG-WRL-012",
+      "work_role_title": "IT/Security Controls Auditor",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Independent audit/assurance function."
+    },
+    {
+      "work_role_id": "OG-WRL-013",
+      "work_role_title": "Systems Authorization",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Risk-acceptance/authorization governance function."
+    },
+    {
+      "work_role_id": "OG-WRL-014",
+      "work_role_title": "Systems Security Management",
+      "primary_color": "White",
+      "secondary_color": "Blue",
+      "rationale": "Manages a system's overall security posture (White); day-to-day overlaps with active defense (Blue)."
+    },
+    {
+      "work_role_id": "OG-WRL-017",
+      "work_role_title": "Cybersecurity Supply Chain Risk Management",
+      "primary_color": "White",
+      "secondary_color": null,
+      "rationale": "Supply-chain governance/risk function."
+    },
+    {
+      "work_role_id": "OG-WRL-018",
+      "work_role_title": "Security Compliance Monitoring",
+      "primary_color": "White",
+      "secondary_color": "Blue",
+      "rationale": "Compliance monitoring governance (White); operational monitoring overlaps defensive visibility (Blue)."
+    },
+    {
+      "work_role_id": "PD-WRL-001",
+      "work_role_title": "Defensive Cybersecurity",
+      "primary_color": "Blue",
+      "secondary_color": "Purple",
+      "rationale": "Core defensive operations (Blue); often the blue side of purple-team exercises (Purple)."
+    },
+    {
+      "work_role_id": "PD-WRL-002",
+      "work_role_title": "Digital Forensics",
+      "primary_color": "Blue",
+      "secondary_color": null,
+      "rationale": "Defensive/forensic investigation."
+    },
+    {
+      "work_role_id": "PD-WRL-003",
+      "work_role_title": "Incident Response",
+      "primary_color": "Blue",
+      "secondary_color": null,
+      "rationale": "Defensive incident handling."
+    },
+    {
+      "work_role_id": "PD-WRL-004",
+      "work_role_title": "Infrastructure Support",
+      "primary_color": "Green",
+      "secondary_color": "Blue",
+      "rationale": "Operates/hardens cyber infrastructure (Green); directly supports defensive operations (Blue)."
+    },
+    {
+      "work_role_id": "PD-WRL-005",
+      "work_role_title": "Insider Threat Analysis",
+      "primary_color": "Blue",
+      "secondary_color": null,
+      "rationale": "Defensive/investigative analysis of insider risk."
+    },
+    {
+      "work_role_id": "PD-WRL-006",
+      "work_role_title": "Cyber Threat Intelligence",
+      "primary_color": "Blue",
+      "secondary_color": "Red",
+      "rationale": "Defensive threat awareness (Blue); intelligence directly informs adversary emulation for red teams (Red)."
+    },
+    {
+      "work_role_id": "PD-WRL-007",
+      "work_role_title": "Vulnerability Analysis",
+      "primary_color": "Blue",
+      "secondary_color": "Red",
+      "rationale": "Defensive posture assessment (Blue); technique overlap with offensive vulnerability discovery (Red)."
+    },
+    {
+      "work_role_id": "PD-WRL-008",
+      "work_role_title": "Penetration Testing and Red Teaming",
+      "primary_color": "Red",
+      "secondary_color": "Purple",
+      "rationale": "Core offensive simulation (Red); purple-team exercises are collaborative red+blue work usually led from the red side (Purple)."
+    },
+    {
+      "work_role_id": "PD-WRL-009",
+      "work_role_title": "Malware Analysis and Reverse Engineering",
+      "primary_color": "Blue",
+      "secondary_color": "Red",
+      "rationale": "Fundamentally defensive/investigative work (Blue); reverse-engineering technique overlaps with offensive tradecraft used to build and understand exploits (Red)."
+    }
+  ]
+}

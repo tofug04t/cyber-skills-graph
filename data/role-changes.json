@@ -1,0 +1,1083 @@
+{
+  "description": "Role and addition changes approved 2026-10-19 in the skills data review. Applied by scripts/apply_role_changes.py after skill merges and cuts. New skills (S9001+) and new roles carry the fork's doc_identifier (MHP_SKILLS_GRAPH_FORK_1_0), marking them as authored rather than NIST-sourced.",
+  "newSkills": [
+    {
+      "id": "S9001",
+      "title": "Linux administration",
+      "text": "Skill in administering Linux systems, including users, permissions, services, and logs",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9002",
+      "title": "Windows administration",
+      "text": "Skill in administering Windows systems, including users, Group Policy, services, and event logs",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9003",
+      "title": "Active Directory",
+      "text": "Skill in managing directory services for users, groups, computers, and authentication in Windows domains",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9004",
+      "title": "TCP/IP",
+      "text": "Skill in applying the TCP/IP model and common protocols to understand and troubleshoot network traffic",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9005",
+      "title": "DNS",
+      "text": "Skill in configuring and analyzing the Domain Name System, including spotting DNS abuse",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9006",
+      "title": "Firewall management",
+      "text": "Skill in configuring and maintaining firewall rules and policies",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9007",
+      "title": "Python",
+      "text": "Skill in writing Python programs for automation, analysis, and security tooling",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9008",
+      "title": "PowerShell",
+      "text": "Skill in writing PowerShell scripts for Windows administration, automation, and investigation",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9009",
+      "title": "Bash",
+      "text": "Skill in writing Bash shell scripts for Linux administration and automation",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9010",
+      "title": "Regex",
+      "text": "Skill in writing regular expressions to search, parse, and match text and log data",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9011",
+      "title": "Version control",
+      "text": "Skill in using version control systems to manage code and configuration changes",
+      "area": "Foundations"
+    },
+    {
+      "id": "S9012",
+      "title": "Cloud IAM",
+      "text": "Skill in designing and auditing identity and access policies in cloud platforms",
+      "area": "Cloud"
+    },
+    {
+      "id": "S9013",
+      "title": "Container security",
+      "text": "Skill in securing container images, registries, and runtimes",
+      "area": "Cloud"
+    },
+    {
+      "id": "S9014",
+      "title": "Kubernetes security",
+      "text": "Skill in securing container orchestration clusters, workloads, and their configuration",
+      "area": "Cloud"
+    },
+    {
+      "id": "S9015",
+      "title": "Infrastructure as code",
+      "text": "Skill in defining and reviewing infrastructure as code, including catching insecure configuration before deployment",
+      "area": "Cloud"
+    },
+    {
+      "id": "S9016",
+      "title": "Cloud posture management",
+      "text": "Skill in monitoring cloud environments for misconfiguration, drift, and policy violations",
+      "area": "Cloud"
+    },
+    {
+      "id": "S9017",
+      "title": "SSO and federation",
+      "text": "Skill in implementing single sign-on and identity federation between systems and organizations",
+      "area": "Identity"
+    },
+    {
+      "id": "S9018",
+      "title": "MFA",
+      "text": "Skill in deploying and managing multi-factor authentication",
+      "area": "Identity"
+    },
+    {
+      "id": "S9019",
+      "title": "Privileged access management",
+      "text": "Skill in controlling, monitoring, and auditing privileged accounts and administrative access",
+      "area": "Identity"
+    },
+    {
+      "id": "S9020",
+      "title": "Identity lifecycle",
+      "text": "Skill in managing account provisioning, changes, and deprovisioning across the employee lifecycle",
+      "area": "Identity"
+    },
+    {
+      "id": "S9021",
+      "title": "SIEM operation",
+      "text": "Skill in operating a security information and event management platform to collect, search, and alert on security data",
+      "area": "Defense"
+    },
+    {
+      "id": "S9022",
+      "title": "Alert triage",
+      "text": "Skill in triaging security alerts to separate real threats from false positives and escalate appropriately",
+      "area": "Defense"
+    },
+    {
+      "id": "S9023",
+      "title": "EDR operation",
+      "text": "Skill in operating endpoint detection and response tools to investigate and contain threats on hosts",
+      "area": "Defense"
+    },
+    {
+      "id": "S9024",
+      "title": "Detection rules",
+      "text": "Skill in writing, testing, and tuning detection rules that alert on attacker behavior",
+      "area": "Defense"
+    },
+    {
+      "id": "S9025",
+      "title": "Threat hunting",
+      "text": "Skill in proactively searching systems and networks for threats that evaded existing defenses",
+      "area": "Defense"
+    },
+    {
+      "id": "S9026",
+      "title": "Hypothesis-driven investigation",
+      "text": "Skill in forming investigation hypotheses from threat intelligence and testing them against data",
+      "area": "Defense"
+    },
+    {
+      "id": "S9027",
+      "title": "ATT&CK mapping",
+      "text": "Skill in mapping attacker behavior, detections, and controls to a common adversary-technique framework",
+      "area": "Defense"
+    },
+    {
+      "id": "S9028",
+      "title": "Phishing analysis",
+      "text": "Skill in analyzing reported phishing messages, links, and attachments",
+      "area": "Defense"
+    },
+    {
+      "id": "S9029",
+      "title": "Email security",
+      "text": "Skill in configuring and monitoring email security controls, including sender authentication and filtering",
+      "area": "Defense"
+    },
+    {
+      "id": "S9030",
+      "title": "Sandbox analysis",
+      "text": "Skill in detonating suspicious files in an isolated environment to observe their behavior",
+      "area": "Defense"
+    },
+    {
+      "id": "S9031",
+      "title": "Web app testing",
+      "text": "Skill in testing web applications for security vulnerabilities",
+      "area": "Offense"
+    },
+    {
+      "id": "S9032",
+      "title": "API testing",
+      "text": "Skill in testing application programming interfaces for authentication, authorization, and input-handling flaws",
+      "area": "Offense"
+    },
+    {
+      "id": "S9033",
+      "title": "Privilege escalation",
+      "text": "Skill in identifying and exploiting paths to higher privileges on compromised systems",
+      "area": "Offense"
+    },
+    {
+      "id": "S9034",
+      "title": "Active Directory attacks",
+      "text": "Skill in testing Windows domain environments for common identity and authentication attack paths",
+      "area": "Offense"
+    },
+    {
+      "id": "S9035",
+      "title": "Phishing simulation",
+      "text": "Skill in designing and running authorized phishing simulations to measure and improve resistance",
+      "area": "Offense"
+    },
+    {
+      "id": "S9036",
+      "title": "Pentest reporting",
+      "text": "Skill in writing penetration test reports that explain findings, risk, and remediation clearly",
+      "area": "Offense"
+    },
+    {
+      "id": "S9037",
+      "title": "Scenario design",
+      "text": "Skill in designing realistic attack and defense scenarios for exercises and training",
+      "area": "Offense"
+    },
+    {
+      "id": "S9038",
+      "title": "API security",
+      "text": "Skill in designing and reviewing application programming interfaces for secure authentication, authorization, and data handling",
+      "area": "AppSec"
+    },
+    {
+      "id": "S9039",
+      "title": "Dependency scanning",
+      "text": "Skill in identifying vulnerable or risky third-party software dependencies",
+      "area": "AppSec"
+    },
+    {
+      "id": "S9040",
+      "title": "CI/CD security",
+      "text": "Skill in securing build and deployment pipelines and the systems they run on",
+      "area": "AppSec"
+    },
+    {
+      "id": "S9041",
+      "title": "Secrets management",
+      "text": "Skill in storing, rotating, and controlling access to credentials, keys, and other secrets",
+      "area": "AppSec"
+    },
+    {
+      "id": "S9042",
+      "title": "Framework mapping",
+      "text": "Skill in mapping an organization's controls to security and compliance frameworks",
+      "area": "GRC"
+    },
+    {
+      "id": "S9043",
+      "title": "Audit evidence collection",
+      "text": "Skill in collecting and organizing evidence that security controls are in place and working",
+      "area": "GRC"
+    },
+    {
+      "id": "S9044",
+      "title": "Vendor risk assessment",
+      "text": "Skill in assessing the security risk of vendors and third-party services",
+      "area": "GRC"
+    },
+    {
+      "id": "S9045",
+      "title": "Compliance metrics",
+      "text": "Skill in defining and tracking metrics that show ongoing compliance status",
+      "area": "GRC"
+    },
+    {
+      "id": "S9046",
+      "title": "Program metrics",
+      "text": "Skill in defining and reporting metrics that show a security program's effectiveness",
+      "area": "GRC"
+    },
+    {
+      "id": "S9047",
+      "title": "Prompt injection testing",
+      "text": "Skill in testing AI applications for prompt injection and related input manipulation",
+      "area": "AI"
+    },
+    {
+      "id": "S9048",
+      "title": "LLM red teaming",
+      "text": "Skill in adversarially testing large language model systems for harmful, unsafe, or unintended behavior",
+      "area": "AI"
+    },
+    {
+      "id": "S9049",
+      "title": "AI governance",
+      "text": "Skill in establishing policies and oversight for the responsible and secure use of AI",
+      "area": "AI"
+    },
+    {
+      "id": "S9050",
+      "title": "Model supply chain review",
+      "text": "Skill in evaluating the origin, integrity, and risk of third-party AI models and datasets",
+      "area": "AI"
+    }
+  ],
+  "newRoles": [
+    {
+      "id": "DD-WRL-011",
+      "category": "DD",
+      "title": "Cloud Security Engineering",
+      "text": "Responsible for securing cloud environments -- designing and enforcing identity, network, and configuration controls across cloud platforms, and monitoring for misconfiguration and drift.",
+      "skills": [
+        "S9012",
+        "S9016",
+        "S9013",
+        "S9014",
+        "S9015",
+        "S9041",
+        "S0683",
+        "S0866",
+        "S0448"
+      ],
+      "jobTitles": [
+        "Cloud Security Engineer",
+        "Cloud Security Architect",
+        "Cloud Security Analyst"
+      ]
+    },
+    {
+      "id": "IO-WRL-008",
+      "category": "IO",
+      "title": "Identity and Access Management",
+      "text": "Responsible for designing and operating the systems that control who can access what -- account lifecycle, single sign-on, multi-factor authentication, and privileged access.",
+      "skills": [
+        "S9020",
+        "S9017",
+        "S9018",
+        "S9019",
+        "S0587",
+        "S0844",
+        "S0484",
+        "S9003",
+        "S9012"
+      ],
+      "jobTitles": [
+        "IAM Engineer",
+        "IAM Analyst",
+        "Identity Architect",
+        "Identity Engineer"
+      ]
+    },
+    {
+      "id": "PD-WRL-010",
+      "category": "PD",
+      "title": "Detection Engineering",
+      "text": "Responsible for building, testing, and tuning the detections that alert on attacker behavior, validating coverage against known techniques and working with red teams to close gaps.",
+      "skills": [
+        "S9024",
+        "S0566",
+        "S9027",
+        "S0866",
+        "S9021",
+        "S0516",
+        "S0592",
+        "S0650",
+        "S0448"
+      ],
+      "jobTitles": [
+        "Detection Engineer",
+        "Purple Team Engineer",
+        "SIEM Engineer"
+      ]
+    },
+    {
+      "id": "PD-WRL-011",
+      "category": "PD",
+      "title": "Threat Hunting",
+      "text": "Responsible for proactively searching systems and networks for attackers who evaded existing defenses, forming hypotheses from threat intelligence and testing them against telemetry.",
+      "skills": [
+        "S9025",
+        "S9026",
+        "S0921",
+        "S0866",
+        "S0874",
+        "S0599",
+        "S9027",
+        "S0748",
+        "S0848"
+      ],
+      "jobTitles": [
+        "Threat Hunter",
+        "Threat Hunting Analyst"
+      ]
+    },
+    {
+      "id": "DD-WRL-012",
+      "category": "DD",
+      "title": "Application Security",
+      "text": "Responsible for helping development teams build secure software through threat modeling, code review, security testing, and guidance on fixing vulnerabilities.",
+      "skills": [
+        "S0588",
+        "S0972",
+        "S0883",
+        "S0857",
+        "S9039",
+        "S9038",
+        "S9031",
+        "S0172",
+        "S0565"
+      ],
+      "jobTitles": [
+        "Application Security Engineer",
+        "Product Security Engineer",
+        "AppSec Analyst"
+      ]
+    },
+    {
+      "id": "DD-WRL-013",
+      "category": "DD",
+      "title": "DevSecOps",
+      "text": "Responsible for building security into software delivery pipelines and platforms, automating checks so code and infrastructure ship securely by default.",
+      "skills": [
+        "S9040",
+        "S9041",
+        "S9015",
+        "S9039",
+        "S9013",
+        "S0974",
+        "S0448",
+        "S0650"
+      ],
+      "jobTitles": [
+        "DevSecOps Engineer",
+        "Platform Security Engineer",
+        "Security Automation Engineer"
+      ]
+    },
+    {
+      "id": "OG-WRL-019",
+      "category": "OG",
+      "title": "GRC Analysis",
+      "text": "Responsible for supporting governance, risk, and compliance programs -- mapping controls to frameworks, collecting audit evidence, assessing risk, and tracking remediation.",
+      "skills": [
+        "S9042",
+        "S9043",
+        "S0686",
+        "S0667",
+        "S9044",
+        "S0564",
+        "S9045",
+        "S0579"
+      ],
+      "jobTitles": [
+        "GRC Analyst",
+        "Compliance Analyst",
+        "Risk Analyst",
+        "IT Risk Analyst"
+      ]
+    },
+    {
+      "id": "OG-WRL-020",
+      "category": "OG",
+      "title": "Security Awareness",
+      "text": "Responsible for building the training, phishing simulations, and communication that help employees recognize and report threats and reduce human risk.",
+      "skills": [
+        "S0380",
+        "S9035",
+        "S0628",
+        "S0848",
+        "S0791",
+        "S9046"
+      ],
+      "jobTitles": [
+        "Security Awareness Manager",
+        "Security Awareness Specialist",
+        "Human Risk Manager"
+      ]
+    },
+    {
+      "id": "IO-WRL-009",
+      "category": "IO",
+      "title": "Cyber Range Engineering",
+      "text": "Responsible for designing, building, and operating simulated environments for security training, exercises, and testing, combining infrastructure engineering with attack and defense scenarios.",
+      "skills": [
+        "S0472",
+        "S0523",
+        "S9015",
+        "S0516",
+        "S0613",
+        "S9037",
+        "S0650"
+      ],
+      "jobTitles": [
+        "Cyber Range Engineer",
+        "Cyber Range Operator",
+        "Exercise Developer"
+      ]
+    }
+  ],
+  "roleMerges": {
+    "OG-WRL-009": "OG-WRL-010",
+    "OG-WRL-011": "OG-WRL-010",
+    "OG-WRL-015": "OG-WRL-010",
+    "OG-WRL-016": "OG-WRL-012",
+    "IN-WRL-002": "PD-WRL-002"
+  },
+  "roleUpdates": {
+    "OG-WRL-010": {
+      "title": "Security Program Management",
+      "text": "Responsible for leading security and technology programs and projects -- setting priorities, managing budgets, schedules, and vendors, and keeping products and systems secure and supported throughout their lifecycle."
+    },
+    "PD-WRL-006": {
+      "title": "Cyber Threat Intelligence",
+      "text": "Responsible for collecting and analyzing information about threat actors, their tools, and their techniques, and turning it into intelligence that helps the organization anticipate, detect, and respond to attacks."
+    },
+    "IN-WRL-001": {
+      "text": "Responsible for investigating computer intrusions and cybercrimes using a full range of investigative tools and processes, balancing the need to preserve evidence against the need to contain the threat."
+    },
+    "PD-WRL-002": {
+      "text": "Responsible for collecting, preserving, and analyzing digital evidence from computers, networks, and devices to investigate incidents and support internal, legal, or law-enforcement processes."
+    }
+  },
+  "addMappings": [
+    [
+      "DD-WRL-003",
+      "S9011"
+    ],
+    [
+      "DD-WRL-003",
+      "S9038"
+    ],
+    [
+      "DD-WRL-005",
+      "S9039"
+    ],
+    [
+      "DD-WRL-010",
+      "S9047"
+    ],
+    [
+      "DD-WRL-010",
+      "S9048"
+    ],
+    [
+      "DD-WRL-010",
+      "S9049"
+    ],
+    [
+      "DD-WRL-010",
+      "S9050"
+    ],
+    [
+      "DD-WRL-011",
+      "S9012"
+    ],
+    [
+      "DD-WRL-011",
+      "S9013"
+    ],
+    [
+      "DD-WRL-011",
+      "S9014"
+    ],
+    [
+      "DD-WRL-011",
+      "S9015"
+    ],
+    [
+      "DD-WRL-011",
+      "S9016"
+    ],
+    [
+      "DD-WRL-011",
+      "S9041"
+    ],
+    [
+      "DD-WRL-012",
+      "S9031"
+    ],
+    [
+      "DD-WRL-012",
+      "S9038"
+    ],
+    [
+      "DD-WRL-012",
+      "S9039"
+    ],
+    [
+      "DD-WRL-013",
+      "S9011"
+    ],
+    [
+      "DD-WRL-013",
+      "S9013"
+    ],
+    [
+      "DD-WRL-013",
+      "S9015"
+    ],
+    [
+      "DD-WRL-013",
+      "S9039"
+    ],
+    [
+      "DD-WRL-013",
+      "S9040"
+    ],
+    [
+      "DD-WRL-013",
+      "S9041"
+    ],
+    [
+      "IO-WRL-001",
+      "S9007"
+    ],
+    [
+      "IO-WRL-004",
+      "S9004"
+    ],
+    [
+      "IO-WRL-004",
+      "S9005"
+    ],
+    [
+      "IO-WRL-004",
+      "S9006"
+    ],
+    [
+      "IO-WRL-005",
+      "S9001"
+    ],
+    [
+      "IO-WRL-005",
+      "S9002"
+    ],
+    [
+      "IO-WRL-005",
+      "S9003"
+    ],
+    [
+      "IO-WRL-005",
+      "S9008"
+    ],
+    [
+      "IO-WRL-005",
+      "S9009"
+    ],
+    [
+      "IO-WRL-005",
+      "S9019"
+    ],
+    [
+      "IO-WRL-008",
+      "S9003"
+    ],
+    [
+      "IO-WRL-008",
+      "S9012"
+    ],
+    [
+      "IO-WRL-008",
+      "S9017"
+    ],
+    [
+      "IO-WRL-008",
+      "S9018"
+    ],
+    [
+      "IO-WRL-008",
+      "S9019"
+    ],
+    [
+      "IO-WRL-008",
+      "S9020"
+    ],
+    [
+      "IO-WRL-009",
+      "S9015"
+    ],
+    [
+      "IO-WRL-009",
+      "S9037"
+    ],
+    [
+      "OG-WRL-002",
+      "S9049"
+    ],
+    [
+      "OG-WRL-005",
+      "S9037"
+    ],
+    [
+      "OG-WRL-006",
+      "S0415"
+    ],
+    [
+      "OG-WRL-006",
+      "S0450"
+    ],
+    [
+      "OG-WRL-006",
+      "S0460"
+    ],
+    [
+      "OG-WRL-006",
+      "S9042"
+    ],
+    [
+      "OG-WRL-007",
+      "S9046"
+    ],
+    [
+      "OG-WRL-012",
+      "S9042"
+    ],
+    [
+      "OG-WRL-012",
+      "S9043"
+    ],
+    [
+      "OG-WRL-017",
+      "S9044"
+    ],
+    [
+      "OG-WRL-018",
+      "S0423"
+    ],
+    [
+      "OG-WRL-018",
+      "S0451"
+    ],
+    [
+      "OG-WRL-018",
+      "S0459"
+    ],
+    [
+      "OG-WRL-018",
+      "S0667"
+    ],
+    [
+      "OG-WRL-018",
+      "S9016"
+    ],
+    [
+      "OG-WRL-018",
+      "S9042"
+    ],
+    [
+      "OG-WRL-018",
+      "S9043"
+    ],
+    [
+      "OG-WRL-018",
+      "S9045"
+    ],
+    [
+      "OG-WRL-019",
+      "S9042"
+    ],
+    [
+      "OG-WRL-019",
+      "S9043"
+    ],
+    [
+      "OG-WRL-019",
+      "S9044"
+    ],
+    [
+      "OG-WRL-019",
+      "S9045"
+    ],
+    [
+      "OG-WRL-020",
+      "S9035"
+    ],
+    [
+      "OG-WRL-020",
+      "S9046"
+    ],
+    [
+      "PD-WRL-001",
+      "S0519"
+    ],
+    [
+      "PD-WRL-001",
+      "S9001"
+    ],
+    [
+      "PD-WRL-001",
+      "S9002"
+    ],
+    [
+      "PD-WRL-001",
+      "S9004"
+    ],
+    [
+      "PD-WRL-001",
+      "S9005"
+    ],
+    [
+      "PD-WRL-001",
+      "S9010"
+    ],
+    [
+      "PD-WRL-001",
+      "S9021"
+    ],
+    [
+      "PD-WRL-001",
+      "S9022"
+    ],
+    [
+      "PD-WRL-001",
+      "S9023"
+    ],
+    [
+      "PD-WRL-001",
+      "S9024"
+    ],
+    [
+      "PD-WRL-001",
+      "S9028"
+    ],
+    [
+      "PD-WRL-001",
+      "S9029"
+    ],
+    [
+      "PD-WRL-003",
+      "S0519"
+    ],
+    [
+      "PD-WRL-003",
+      "S9021"
+    ],
+    [
+      "PD-WRL-003",
+      "S9022"
+    ],
+    [
+      "PD-WRL-003",
+      "S9023"
+    ],
+    [
+      "PD-WRL-003",
+      "S9028"
+    ],
+    [
+      "PD-WRL-004",
+      "S9001"
+    ],
+    [
+      "PD-WRL-004",
+      "S9002"
+    ],
+    [
+      "PD-WRL-004",
+      "S9006"
+    ],
+    [
+      "PD-WRL-004",
+      "S9029"
+    ],
+    [
+      "PD-WRL-006",
+      "S0518"
+    ],
+    [
+      "PD-WRL-006",
+      "S0695"
+    ],
+    [
+      "PD-WRL-006",
+      "S9025"
+    ],
+    [
+      "PD-WRL-006",
+      "S9027"
+    ],
+    [
+      "PD-WRL-008",
+      "S0516"
+    ],
+    [
+      "PD-WRL-008",
+      "S0543"
+    ],
+    [
+      "PD-WRL-008",
+      "S0591"
+    ],
+    [
+      "PD-WRL-008",
+      "S0737"
+    ],
+    [
+      "PD-WRL-008",
+      "S0754"
+    ],
+    [
+      "PD-WRL-008",
+      "S0925"
+    ],
+    [
+      "PD-WRL-008",
+      "S9004"
+    ],
+    [
+      "PD-WRL-008",
+      "S9007"
+    ],
+    [
+      "PD-WRL-008",
+      "S9008"
+    ],
+    [
+      "PD-WRL-008",
+      "S9009"
+    ],
+    [
+      "PD-WRL-008",
+      "S9027"
+    ],
+    [
+      "PD-WRL-008",
+      "S9031"
+    ],
+    [
+      "PD-WRL-008",
+      "S9032"
+    ],
+    [
+      "PD-WRL-008",
+      "S9033"
+    ],
+    [
+      "PD-WRL-008",
+      "S9034"
+    ],
+    [
+      "PD-WRL-008",
+      "S9035"
+    ],
+    [
+      "PD-WRL-008",
+      "S9036"
+    ],
+    [
+      "PD-WRL-008",
+      "S9047"
+    ],
+    [
+      "PD-WRL-008",
+      "S9048"
+    ],
+    [
+      "PD-WRL-009",
+      "S0566"
+    ],
+    [
+      "PD-WRL-009",
+      "S0599"
+    ],
+    [
+      "PD-WRL-009",
+      "S0621"
+    ],
+    [
+      "PD-WRL-009",
+      "S0625"
+    ],
+    [
+      "PD-WRL-009",
+      "S0857"
+    ],
+    [
+      "PD-WRL-009",
+      "S9007"
+    ],
+    [
+      "PD-WRL-009",
+      "S9030"
+    ],
+    [
+      "PD-WRL-010",
+      "S9007"
+    ],
+    [
+      "PD-WRL-010",
+      "S9010"
+    ],
+    [
+      "PD-WRL-010",
+      "S9021"
+    ],
+    [
+      "PD-WRL-010",
+      "S9024"
+    ],
+    [
+      "PD-WRL-010",
+      "S9027"
+    ],
+    [
+      "PD-WRL-011",
+      "S9008"
+    ],
+    [
+      "PD-WRL-011",
+      "S9023"
+    ],
+    [
+      "PD-WRL-011",
+      "S9025"
+    ],
+    [
+      "PD-WRL-011",
+      "S9026"
+    ],
+    [
+      "PD-WRL-011",
+      "S9027"
+    ]
+  ],
+  "removeMappings": [
+    [
+      "OG-WRL-002",
+      "S0519"
+    ],
+    [
+      "OG-WRL-003",
+      "S0519"
+    ]
+  ],
+  "trims": {
+    "OG-WRL-012": [
+      "S0015",
+      "S0097",
+      "S0175",
+      "S0387",
+      "S0391",
+      "S0394",
+      "S0401",
+      "S0403",
+      "S0414",
+      "S0415",
+      "S0416",
+      "S0423",
+      "S0431",
+      "S0447",
+      "S0462",
+      "S0463",
+      "S0466",
+      "S0532",
+      "S0543",
+      "S0544",
+      "S0569",
+      "S0578",
+      "S0579",
+      "S0614",
+      "S0619",
+      "S0632",
+      "S0642",
+      "S0655",
+      "S0656",
+      "S0664",
+      "S0667",
+      "S0673",
+      "S0686",
+      "S0712",
+      "S0723",
+      "S0813",
+      "S0814",
+      "S0866",
+      "S0923",
+      "S9042",
+      "S9043"
+    ]
+  },
+  "jobTitleRenames": {
+    "OG-WRL-010": "Security Program Management",
+    "PD-WRL-006": "Cyber Threat Intelligence"
+  }
+}
