@@ -14,16 +14,24 @@ Data model:
   - Skills/Knowledge/Tasks are many-to-many with Work Roles in the fork.
   - Each skill carries a short display name (title) and its full statement
     (text); the script fails if any skill has no title.
+  - Each skill has a color tag (data/skill-colors.csv); roles get a color mix,
+    label, and wheel position derived from their skills (scripts/color_layout.py).
   - The fork resolves every orphaned statement, so every skill must project
     onto at least one Work Role; the script fails if that ever stops holding.
 """
 
+import csv
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import color_layout
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "nice-framework-v2-2-0-forked.json"
 OUTPUT = ROOT / "app" / "public" / "data" / "skills-graph.json"
+TAGS = ROOT / "data" / "skill-colors.csv"
 
 
 def main():
@@ -113,6 +121,13 @@ def main():
             f"{len(untitled)} skills have no short name (title): {', '.join(untitled[:10])}..."
         )
 
+    with TAGS.open(newline="") as f:
+        tags = {r["id"]: r for r in csv.DictReader(f)}
+    untagged = sorted(set(skills) - set(tags))
+    if untagged:
+        raise SystemExit(f"{len(untagged)} skills have no color tag: {', '.join(untagged[:10])}...")
+    color_layout.layout(work_roles, skills, tags)
+
     document_names = [d["name"] for d in raw["documents"]]
 
     output = {
@@ -122,6 +137,8 @@ def main():
             "documents": document_names,
             "workRoleCount": len(work_roles),
             "skillCount": len(skills),
+            "wheel": color_layout.WHEEL,
+            "blueGroups": color_layout.BLUE_GROUPS,
         },
         "categories": categories,
         "workRoles": work_roles,

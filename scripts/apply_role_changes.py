@@ -14,6 +14,10 @@ Steps, in order (runs after apply_skill_merges.py and apply_skill_cuts.py):
   2. Merge Work Roles: every skill, task, and knowledge mapping on a merged
      role moves to the role it merges into; companion entries follow
      (job titles are combined, pathways re-pointed, color entries dropped).
+  2b. Remove Work Roles (removeRoles): the role, its companion entries, and any
+     skill, task, or knowledge item no other role uses. Skills listed in
+     `rehome` ([role, skill] pairs) are attached to a surviving role first, so
+     they are kept rather than cut.
   3. Update titles and descriptions.
   4. Add and remove individual role-to-skill mappings.
   5. Trim roles to an approved skill list.
@@ -117,6 +121,40 @@ def main():
             targets.append(t)
         feeder["targets"] = targets
     colors["work_role_colors"] = [c for c in colors["work_role_colors"] if c["work_role_id"] not in merges]
+
+    # 2b. Role removals, with everything only they used
+    gone_roles = {r for r in cfg.get("removeRoles", []) if r in el}
+    cut_items = set()
+    if gone_roles:
+        for role, skill in cfg.get("rehome", []):
+            if role in el and skill in el:
+                rels.append(rel(role, skill))
+        rels[:] = [r for r in rels
+                   if r["source_element_identifier"] not in gone_roles
+                   and r["dest_element_identifier"] not in gone_roles]
+        for r in gone_roles:
+            el.pop(r)
+        used = {r["dest_element_identifier"] for r in rels
+                if el.get(r["source_element_identifier"], {}).get("element_type") == "work_role"}
+        cut_items = {k for k, e in el.items()
+                     if e["element_type"] in ("skill", "task", "knowledge") and k not in used}
+        rels[:] = [r for r in rels
+                   if r["source_element_identifier"] not in cut_items
+                   and r["dest_element_identifier"] not in cut_items]
+        for k in cut_items:
+            el.pop(k)
+        raw["elements"] = [e for e in raw["elements"] if e["element_identifier"] in el]
+        jobs["work_role_job_titles"] = [j for j in jobs["work_role_job_titles"]
+                                        if j["work_role_id"] not in gone_roles]
+        colors["work_role_colors"] = [c for c in colors["work_role_colors"]
+                                      if c["work_role_id"] not in gone_roles]
+        for feeder in paths["feeder_roles"]:
+            feeder["targets"] = [t for t in feeder["targets"] if t["work_role_id"] not in gone_roles]
+        paths["feeder_roles"] = [f for f in paths["feeder_roles"] if f["targets"]]
+        print(f"removed {len(gone_roles)} role(s); also cut "
+              f"{sum(1 for k in cut_items if k.startswith('S'))} skills and "
+              f"{sum(1 for k in cut_items if k.startswith('T'))} tasks, "
+              f"{sum(1 for k in cut_items if k.startswith('K'))} knowledge items")
 
     # 3. Title and description updates
     for rid, upd in cfg["roleUpdates"].items():

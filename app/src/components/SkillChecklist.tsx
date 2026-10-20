@@ -1,5 +1,6 @@
 import type { Assessment, AssessmentValue, Skill } from "../types";
 import { skillLabel } from "../filters";
+import { ColorMark } from "./ColorMark";
 
 const OPTIONS: { value: AssessmentValue; label: string }[] = [
   { value: "have", label: "Have" },
@@ -21,7 +22,7 @@ export function SkillChecklist({ skills, assessment, onChange }: SkillChecklistP
         return (
           <li key={skill.id} className="skill-checklist__row">
             <span className="skill-checklist__text" title={skill.text}>
-              {skillLabel(skill)}
+              <ColorMark color={skill.color} /> {skillLabel(skill)}
             </span>
             <span className="skill-checklist__options">
               {OPTIONS.map((opt) => (

@@ -1,7 +1,8 @@
 import { useMemo } from "react";
 import type { GraphData } from "../types";
-import { CATEGORY_COLORS } from "../constants";
 import { titleKey, type Candidates, type TitleEntry } from "../filters";
+import { SpectralStrip } from "./SpectralStrip";
+import { Difficulty } from "./Difficulty";
 
 interface RoleFacetProps {
   graph: GraphData;
@@ -9,8 +10,8 @@ interface RoleFacetProps {
   titleMatches: TitleEntry[];
   candidates: Candidates;
   skillCount: number;
-  focusedRoleId: string | null;
-  onFocus: (roleId: string) => void;
+  selectedRoleIds: string[];
+  onToggleRole: (roleId: string) => void;
   onTitle: (key: string) => void;
   emptyActions: EmptyAction[];
   onClearAll: () => void;
@@ -29,8 +30,8 @@ export function RoleFacet({
   titleMatches,
   candidates,
   skillCount,
-  focusedRoleId,
-  onFocus,
+  selectedRoleIds,
+  onToggleRole,
   onTitle,
   emptyActions,
   onClearAll,
@@ -49,26 +50,23 @@ export function RoleFacet({
     const role = graph.workRoles[id];
     const pathway = candidates.pathway.get(id);
     const overlap = candidates.skillOverlap.get(id);
+    const selected = selectedRoleIds.includes(id);
     return (
       <li key={id}>
         <button
           type="button"
-          className={"role-row" + (id === focusedRoleId ? " role-row--focused" : "")}
-          aria-pressed={id === focusedRoleId}
-          onClick={() => onFocus(id)}
+          className={"role-row" + (selected ? " role-row--focused" : "")}
+          aria-pressed={selected}
+          onClick={() => onToggleRole(id)}
         >
-          <span className="role-row__dot" style={{ background: CATEGORY_COLORS[role.category] }} />
+          <SpectralStrip mix={role.mix} label={role.label} />
           <span className="role-row__title">{role.title}</span>
           {overlap !== undefined && skillCount > 1 && (
             <span className="badge">
               {overlap}/{skillCount} skills
             </span>
           )}
-          {pathway && (
-            <span className={`badge badge--${pathway.transition_difficulty.toLowerCase()}`}>
-              {pathway.transition_difficulty}
-            </span>
-          )}
+          {pathway && <Difficulty level={pathway.transition_difficulty} />}
         </button>
         {pathway && <p className="role-row__note">{pathway.rationale}</p>}
       </li>
@@ -81,11 +79,7 @@ export function RoleFacet({
         <ul className="list list--titles">
           {titleMatches.map((entry) => (
             <li key={entry.title}>
-              <button
-                type="button"
-                className="title-row"
-                onClick={() => onTitle(titleKey(entry.title))}
-              >
+              <button type="button" className="title-row" onClick={() => onTitle(titleKey(entry.title))}>
                 <span className="tag">Title</span>
                 <span className="title-row__text">{entry.title}</span>
                 <span className="title-row__count">
@@ -120,9 +114,7 @@ export function RoleFacet({
 
       {visibleRoleIds.length === 0 &&
         titleMatches.length === 0 &&
-        !(candidates.active && candidates.roleIds.length === 0) && (
-          <p className="empty">No matching roles.</p>
-        )}
+        !(candidates.active && candidates.roleIds.length === 0) && <p className="empty">No matching roles.</p>}
 
       <div className="facet__scroll">
         {grouped
@@ -131,7 +123,7 @@ export function RoleFacet({
               if (!ids || ids.length === 0) return null;
               return (
                 <div key={catId} className="role-group">
-                  <h4 style={{ color: CATEGORY_COLORS[catId] }}>{catTitle}</h4>
+                  <h4>{catTitle}</h4>
                   <ul className="list">{ids.map(renderRole)}</ul>
                 </div>
               );

@@ -1,3 +1,5 @@
+import type { ColorName } from "./theme";
+
 export interface WorkRole {
   id: string;
   title: string;
@@ -6,6 +8,10 @@ export interface WorkRole {
   skills: string[];
   tasks: string[];
   knowledge: string[];
+  /** Share of each color among the role's colored (non-center) skills. */
+  mix: Partial<Record<ColorName, number>>;
+  /** "Blue", "Hybrid: Yellow/Green", or "General". */
+  label: string;
 }
 
 export interface Skill {
@@ -15,6 +21,10 @@ export interface Skill {
   /** Full statement, shown as hover detail. */
   text: string;
   workRoles: string[];
+  color: ColorName;
+  group?: string;
+  x: number;
+  y: number;
 }
 
 export interface GraphData {
@@ -65,4 +75,3 @@ export type AssessmentValue = "have" | "partial" | "missing";
 
 export type Assessment = Record<string, AssessmentValue>;
 
-export type ViewMode = "overview" | "gap" | "discovery";

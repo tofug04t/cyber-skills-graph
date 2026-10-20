@@ -501,35 +501,127 @@
     "OG-WRL-011": "OG-WRL-010",
     "OG-WRL-015": "OG-WRL-010",
     "OG-WRL-016": "OG-WRL-012",
-    "IN-WRL-002": "PD-WRL-002"
+    "IN-WRL-002": "PD-WRL-002",
+    "DD-WRL-003": "DD-WRL-012",
+    "DD-WRL-005": "DD-WRL-012",
+    "DD-WRL-002": "DD-WRL-001",
+    "PD-WRL-004": "DD-WRL-004",
+    "OG-WRL-002": "OG-WRL-019",
+    "OG-WRL-018": "OG-WRL-019",
+    "IO-WRL-006": "PD-WRL-001",
+    "OG-WRL-003": "OG-WRL-010"
   },
   "roleUpdates": {
     "OG-WRL-010": {
-      "title": "Security Program Management",
-      "text": "Responsible for leading security and technology programs and projects -- setting priorities, managing budgets, schedules, and vendors, and keeping products and systems secure and supported throughout their lifecycle."
+      "title": "Security Program Manager",
+      "text": "Responsible for planning, running, and reporting on security programs and projects -- scope, budget, schedule, priorities, vendors, and the people and skills the program needs."
     },
     "PD-WRL-006": {
-      "title": "Cyber Threat Intelligence",
+      "title": "Threat Intelligence Analyst",
       "text": "Responsible for collecting and analyzing information about threat actors, their tools, and their techniques, and turning it into intelligence that helps the organization anticipate, detect, and respond to attacks."
     },
-    "IN-WRL-001": {
-      "text": "Responsible for investigating computer intrusions and cybercrimes using a full range of investigative tools and processes, balancing the need to preserve evidence against the need to contain the threat."
-    },
     "PD-WRL-002": {
-      "text": "Responsible for collecting, preserving, and analyzing digital evidence from computers, networks, and devices to investigate incidents and support internal, legal, or law-enforcement processes."
+      "text": "Responsible for collecting, preserving, and analyzing digital evidence from computers, networks, and devices to investigate incidents and support internal, legal, or law-enforcement processes.",
+      "title": "Digital Forensics Analyst"
+    },
+    "DD-WRL-001": {
+      "title": "Security Architect",
+      "text": "Responsible for designing the security of an organization's systems and technology architecture -- selecting controls, cryptography, and network and identity designs so security requirements are met by design."
+    },
+    "DD-WRL-004": {
+      "title": "Security Engineer",
+      "text": "Responsible for building and maintaining the security of systems and infrastructure -- implementing and hardening controls, securing platforms and networks, and integrating security into how systems are designed, built, and run."
+    },
+    "DD-WRL-008": {
+      "title": "Security Researcher"
+    },
+    "DD-WRL-009": {
+      "title": "OT Security Engineer"
+    },
+    "DD-WRL-010": {
+      "title": "AI Security Engineer"
+    },
+    "DD-WRL-011": {
+      "title": "Cloud Security Engineer"
+    },
+    "DD-WRL-012": {
+      "title": "Application Security Engineer",
+      "text": "Responsible for securing software throughout its lifecycle -- building security into code and design, reviewing code and architecture for weaknesses, testing applications for vulnerabilities, and driving the fixes."
+    },
+    "DD-WRL-013": {
+      "title": "DevSecOps Engineer"
+    },
+    "IO-WRL-008": {
+      "title": "IAM Engineer"
+    },
+    "IO-WRL-009": {
+      "title": "Cyber Range Engineer"
+    },
+    "OG-WRL-004": {
+      "title": "Security Instructional Designer"
+    },
+    "OG-WRL-005": {
+      "title": "Security Instructor"
+    },
+    "OG-WRL-006": {
+      "title": "Cybersecurity Counsel"
+    },
+    "OG-WRL-007": {
+      "title": "CISO"
+    },
+    "OG-WRL-008": {
+      "title": "Privacy Analyst"
+    },
+    "OG-WRL-012": {
+      "title": "IT Auditor"
+    },
+    "OG-WRL-017": {
+      "title": "Third-Party Risk Analyst"
+    },
+    "OG-WRL-019": {
+      "title": "GRC Analyst",
+      "text": "Responsible for governance, risk, and compliance work -- writing and maintaining security policies, assessing risk, mapping controls to frameworks, and monitoring ongoing compliance."
+    },
+    "OG-WRL-020": {
+      "title": "Security Awareness Manager"
+    },
+    "PD-WRL-001": {
+      "title": "SOC Analyst",
+      "text": "Responsible for monitoring, detecting, and triaging security events and alerts across an organization's systems and networks, and escalating and responding to confirmed threats."
+    },
+    "PD-WRL-003": {
+      "title": "Incident Responder"
+    },
+    "PD-WRL-005": {
+      "title": "Insider Risk Analyst"
+    },
+    "PD-WRL-007": {
+      "title": "Vulnerability Management Analyst"
+    },
+    "PD-WRL-008": {
+      "title": "Penetration Tester"
+    },
+    "PD-WRL-009": {
+      "title": "Malware Analyst"
+    },
+    "PD-WRL-010": {
+      "title": "Detection Engineer"
+    },
+    "PD-WRL-011": {
+      "title": "Threat Hunter"
     }
   },
   "addMappings": [
     [
-      "DD-WRL-003",
+      "DD-WRL-012",
       "S9011"
     ],
     [
-      "DD-WRL-003",
+      "DD-WRL-012",
       "S9038"
     ],
     [
-      "DD-WRL-005",
+      "DD-WRL-012",
       "S9039"
     ],
     [
@@ -577,14 +669,6 @@
       "S9031"
     ],
     [
-      "DD-WRL-012",
-      "S9038"
-    ],
-    [
-      "DD-WRL-012",
-      "S9039"
-    ],
-    [
       "DD-WRL-013",
       "S9011"
     ],
@@ -607,46 +691,6 @@
     [
       "DD-WRL-013",
       "S9041"
-    ],
-    [
-      "IO-WRL-001",
-      "S9007"
-    ],
-    [
-      "IO-WRL-004",
-      "S9004"
-    ],
-    [
-      "IO-WRL-004",
-      "S9005"
-    ],
-    [
-      "IO-WRL-004",
-      "S9006"
-    ],
-    [
-      "IO-WRL-005",
-      "S9001"
-    ],
-    [
-      "IO-WRL-005",
-      "S9002"
-    ],
-    [
-      "IO-WRL-005",
-      "S9003"
-    ],
-    [
-      "IO-WRL-005",
-      "S9008"
-    ],
-    [
-      "IO-WRL-005",
-      "S9009"
-    ],
-    [
-      "IO-WRL-005",
-      "S9019"
     ],
     [
       "IO-WRL-008",
@@ -681,7 +725,7 @@
       "S9037"
     ],
     [
-      "OG-WRL-002",
+      "OG-WRL-019",
       "S9049"
     ],
     [
@@ -721,52 +765,40 @@
       "S9044"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S0423"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S0451"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S0459"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S0667"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S9016"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S9042"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S9043"
     ],
     [
-      "OG-WRL-018",
+      "OG-WRL-019",
       "S9045"
-    ],
-    [
-      "OG-WRL-019",
-      "S9042"
-    ],
-    [
-      "OG-WRL-019",
-      "S9043"
     ],
     [
       "OG-WRL-019",
       "S9044"
-    ],
-    [
-      "OG-WRL-019",
-      "S9045"
     ],
     [
       "OG-WRL-020",
@@ -845,19 +877,19 @@
       "S9028"
     ],
     [
-      "PD-WRL-004",
+      "DD-WRL-004",
       "S9001"
     ],
     [
-      "PD-WRL-004",
+      "DD-WRL-004",
       "S9002"
     ],
     [
-      "PD-WRL-004",
+      "DD-WRL-004",
       "S9006"
     ],
     [
-      "PD-WRL-004",
+      "DD-WRL-004",
       "S9029"
     ],
     [
@@ -1021,16 +1053,7 @@
       "S9027"
     ]
   ],
-  "removeMappings": [
-    [
-      "OG-WRL-002",
-      "S0519"
-    ],
-    [
-      "OG-WRL-003",
-      "S0519"
-    ]
-  ],
+  "removeMappings": [],
   "trims": {
     "OG-WRL-012": [
       "S0015",
@@ -1079,5 +1102,97 @@
   "jobTitleRenames": {
     "OG-WRL-010": "Security Program Management",
     "PD-WRL-006": "Cyber Threat Intelligence"
-  }
+  },
+  "removeRoles": [
+    "DD-WRL-007",
+    "IO-WRL-002",
+    "IO-WRL-003",
+    "IO-WRL-001",
+    "IO-WRL-007",
+    "IO-WRL-004",
+    "IO-WRL-005",
+    "DD-WRL-006",
+    "OG-WRL-013",
+    "OG-WRL-014",
+    "IN-WRL-001"
+  ],
+  "removeRolesNote": "Roles removed 2026-10-20 (all with the skills, tasks, and knowledge no remaining role uses, except the skills in `rehome`): DD-WRL-007 Systems Testing and Evaluation (military); IO-WRL-001/002/003/004/005/007 and DD-WRL-006, general IT/data jobs that are not security roles (most already exist as Background options); OG-WRL-013 Systems Authorization, OG-WRL-014 Systems Security Management, and IN-WRL-001 Cybercrime Investigation, too government-specific.",
+  "rehome": [
+    [
+      "PD-WRL-002",
+      "S0471"
+    ],
+    [
+      "PD-WRL-001",
+      "S0841"
+    ],
+    [
+      "PD-WRL-006",
+      "S0852"
+    ],
+    [
+      "DD-WRL-004",
+      "S0542"
+    ],
+    [
+      "OG-WRL-019",
+      "S0808"
+    ],
+    [
+      "OG-WRL-008",
+      "S0808"
+    ],
+    [
+      "PD-WRL-008",
+      "S0845"
+    ],
+    [
+      "DD-WRL-004",
+      "S0845"
+    ],
+    [
+      "PD-WRL-001",
+      "S0682"
+    ],
+    [
+      "PD-WRL-008",
+      "S0682"
+    ],
+    [
+      "DD-WRL-004",
+      "S0577"
+    ],
+    [
+      "DD-WRL-004",
+      "S0584"
+    ],
+    [
+      "PD-WRL-003",
+      "S0677"
+    ],
+    [
+      "PD-WRL-009",
+      "S0626"
+    ],
+    [
+      "PD-WRL-010",
+      "S0726"
+    ],
+    [
+      "PD-WRL-006",
+      "S0011"
+    ],
+    [
+      "DD-WRL-001",
+      "S0554"
+    ],
+    [
+      "DD-WRL-001",
+      "S0830"
+    ],
+    [
+      "DD-WRL-001",
+      "S0891"
+    ]
+  ]
 }

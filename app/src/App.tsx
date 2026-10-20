@@ -7,10 +7,11 @@ import { AppliedFilters, type AppliedChip } from "./components/AppliedFilters";
 import { SkillPicker } from "./components/SkillPicker";
 import { BackgroundFacet } from "./components/BackgroundFacet";
 import { RoleDetail } from "./components/RoleDetail";
+import { WheelLegend } from "./components/WheelLegend";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Toast } from "./components/Toast";
 import { AboutDialog } from "./components/AboutDialog";
-import { applyHighlight, buildGapElements, buildOverviewElements } from "./graphViews";
+import { buildWheelNodes } from "./graphViews";
 import {
   buildTitleIndex,
   computeCandidates,
@@ -19,6 +20,7 @@ import {
   matchSkills,
   searchTitles,
   skillLabel,
+  skillsOfRoles,
   pathwaysIntoRole,
   titleKey,
   titlesForRole,
@@ -29,7 +31,7 @@ import type { Assessment, AssessmentValue } from "./types";
 import "./App.css";
 
 interface UrlState {
-  role: string | null;
+  roleIds: string[];
   skillIds: string[];
   title: string | null;
   feederId: string | null;
@@ -39,7 +41,7 @@ interface UrlState {
 type Facet = "role" | "skill" | "background";
 
 interface Snapshot {
-  roleId: string | null;
+  roleIds: string[];
   skillIds: string[];
   activeTitle: string | null;
   feederId: string | null;
@@ -63,8 +65,9 @@ function parseUrlState(): UrlState {
     const [id, value] = pair.split(":");
     if (id && (value === "have" || value === "partial" || value === "missing")) assessment[id] = value;
   }
+  const roles = `${params.get("roles") ?? ""},${params.get("role") ?? ""}`;
   return {
-    role: params.get("role"),
+    roleIds: [...new Set(roles.split(",").filter(Boolean))],
     skillIds: (params.get("skills") ?? "").split(",").filter(Boolean).slice(0, 2),
     title: params.get("title"),
     feederId: params.get("bg"),
@@ -77,7 +80,7 @@ function App() {
   const [theme, toggleTheme] = useTheme();
   const initial = useMemo(() => parseUrlState(), []);
 
-  const [roleId, setRoleId] = useState<string | null>(initial.role);
+  const [roleIds, setRoleIds] = useState<string[]>(initial.roleIds);
   const [skillIds, setSkillIds] = useState<string[]>(initial.skillIds);
   const [activeTitle, setActiveTitle] = useState<string | null>(initial.title);
   const [feederId, setFeederId] = useState<string | null>(initial.feederId);
@@ -86,15 +89,15 @@ function App() {
   const [query, setQuery] = useState("");
   const [overrides, setOverrides] = useState<Partial<Record<Facet, boolean>>>({});
   const [open, setOpen] = useState({
-    role: !initial.role,
+    role: true,
     skill: initial.skillIds.length > 0,
     background: initial.feederId !== null,
   });
 
   useEffect(() => {
     const params = new URLSearchParams();
-    if (roleId) {
-      params.set("role", roleId);
+    if (roleIds.length > 0) {
+      params.set("roles", roleIds.join(","));
       const entries = Object.entries(assessment);
       if (entries.length > 0) params.set("a", entries.map(([id, v]) => `${id}:${v}`).join(","));
     }
@@ -103,7 +106,7 @@ function App() {
     if (feederId) params.set("bg", feederId);
     const query = params.toString();
     window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
-  }, [roleId, skillIds, activeTitle, feederId, assessment]);
+  }, [roleIds, skillIds, activeTitle, feederId, assessment]);
 
   const titleIndex = useMemo(() => (jobTitles ? buildTitleIndex(jobTitles) : null), [jobTitles]);
 
@@ -128,42 +131,36 @@ function App() {
     [graph, pathways, titleIndex, candidates, query]
   );
 
-  const baseElements = useMemo(() => (graph ? buildOverviewElements(graph, theme) : null), [graph, theme]);
+  const selectedRoles = useMemo(
+    () => (graph ? roleIds.filter((id) => graph.workRoles[id]) : []),
+    [graph, roleIds]
+  );
 
-  const focusedRole = graph && roleId ? (graph.workRoles[roleId] ?? null) : null;
-
+  // Selected roles light up their skills; a title or background filter previews its candidate roles.
   const view = useMemo(() => {
-    if (!graph || !baseElements || !candidates) return null;
-    if (focusedRole) {
-      return {
-        ...buildGapElements(graph, focusedRole.id, assessment, theme),
-        layoutKey: `gap:${focusedRole.id}`,
-        fitIds: [] as string[],
-      };
-    }
-    if (!candidates.active) {
-      return { ...baseElements, layoutKey: "overview", fitIds: [] as string[] };
-    }
-    const roleSet = new Set(candidates.roleIds);
-    const skillSet = new Set(skillIds);
+    if (!graph || !candidates) return null;
+    const previewRoles =
+      selectedRoles.length > 0 ? selectedRoles : activeTitle || feederId ? candidates.roleIds : [];
+    const highlight = new Set([...skillsOfRoles(graph, previewRoles), ...skillIds]);
+    const active = highlight.size > 0;
     return {
-      ...applyHighlight(graph, baseElements, roleSet, skillSet, theme),
-      layoutKey: "overview",
-      fitIds: [...candidates.roleIds, ...skillIds],
+      nodes: buildWheelNodes(graph, theme, {
+        highlight: active ? highlight : null,
+        selected: new Set(skillIds),
+        assessment: selectedRoles.length > 0 ? assessment : null,
+      }),
+      fitIds: active ? [...highlight] : [],
     };
-  }, [graph, baseElements, candidates, focusedRole, assessment, theme, skillIds]);
+  }, [graph, candidates, selectedRoles, activeTitle, feederId, skillIds, assessment, theme]);
 
   const [undo, setUndo] = useState<Snapshot | null>(null);
 
-  const clearFocus = () => {
-    setRoleId(null);
-    setOpen((o) => ({ ...o, role: true }));
-  };
+  const clearRoles = () => setRoleIds([]);
 
   const clearAll = () => {
-    if (!roleId && skillIds.length === 0 && !activeTitle && !feederId) return;
-    setUndo({ roleId, skillIds, activeTitle, feederId, open });
-    setRoleId(null);
+    if (roleIds.length === 0 && skillIds.length === 0 && !activeTitle && !feederId) return;
+    setUndo({ roleIds, skillIds, activeTitle, feederId, open });
+    setRoleIds([]);
     setSkillIds([]);
     setActiveTitle(null);
     setFeederId(null);
@@ -172,7 +169,7 @@ function App() {
 
   const undoClear = () => {
     if (!undo) return;
-    setRoleId(undo.roleId);
+    setRoleIds(undo.roleIds);
     setSkillIds(undo.skillIds);
     setActiveTitle(undo.activeTitle);
     setFeederId(undo.feederId);
@@ -186,10 +183,10 @@ function App() {
     return () => clearTimeout(timer);
   }, [undo]);
 
-  // Esc peels one layer: the focused role first, then the filters.
+  // Esc peels one layer: the selected roles first, then the filters.
   const escapeRef = useRef<() => void>(() => {});
   useEffect(() => {
-    escapeRef.current = () => (roleId ? clearFocus() : clearAll());
+    escapeRef.current = () => (roleIds.length > 0 ? clearRoles() : clearAll());
   });
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -232,24 +229,17 @@ function App() {
     setOverrides({});
   };
 
-  const focusRole = (id: string) => {
-    updateQuery("");
-    setRoleId(id);
-    setOpen((o) => ({ ...o, role: false }));
-  };
+  const toggleRole = (id: string) =>
+    setRoleIds((prev) => (prev.includes(id) ? prev.filter((r) => r !== id) : [...prev, id]));
 
   const toggleSkill = (id: string) =>
     setSkillIds((prev) =>
       prev.includes(id) ? prev.filter((s) => s !== id) : prev.length >= 2 ? prev : [...prev, id]
     );
 
-  const handleNodeClick = (id: string, kind: "workRole" | "skill") => {
-    if (kind === "workRole") {
-      focusRole(id);
-    } else if (!focusedRole) {
-      toggleSkill(id);
-      setOpen((o) => ({ ...o, skill: true }));
-    }
+  const handleNodeClick = (id: string) => {
+    toggleSkill(id);
+    setOpen((o) => ({ ...o, skill: true }));
   };
 
   const feeder = pathways.feeder_roles.find((f) => f.feeder_id === feederId);
@@ -291,14 +281,17 @@ function App() {
   ];
 
   const chips: AppliedChip[] = [
-    ...(focusedRole
-      ? [{ key: "role", kind: "Role", label: focusedRole.title, onRemove: clearFocus }]
-      : []),
+    ...selectedRoles.map((id) => ({
+      key: `role:${id}`,
+      kind: "Role",
+      label: graph.workRoles[id].title,
+      onRemove: () => toggleRole(id),
+    })),
     ...filterItems.map((i) => ({ key: i.key, kind: i.kind, label: i.label, onRemove: i.remove })),
   ];
 
   const summary =
-    !focusedRole && candidates.active
+    candidates.active
       ? `${candidates.roleIds.length} of ${Object.keys(graph.workRoles).length} roles`
       : null;
 
@@ -329,9 +322,9 @@ function App() {
       <div className="app__body">
         <aside className="app__panel">
           <p className="hint">
-            {focusedRole
-              ? "Mark each skill below to see your gap on the graph."
-              : "Search everything below, or browse each section. You can also click the graph."}
+            {selectedRoles.length > 0
+              ? "Selected roles light up their skills. Mark each skill below to see your gap."
+              : "Search everything below, or browse each section. You can also click a skill on the wheel."}
           </p>
 
           <input
@@ -352,8 +345,10 @@ function App() {
             summary={
               <>
                 {matchCount("role")}
-                {focusedRole ? (
-                  <span className="badge badge--accent">{focusedRole.title}</span>
+                {selectedRoles.length > 0 ? (
+                  <span className="badge badge--accent">
+                    {selectedRoles.length === 1 ? graph.workRoles[selectedRoles[0]].title : `${selectedRoles.length} selected`}
+                  </span>
                 ) : activeTitle ? (
                   <span className="badge badge--accent">
                     {titleIndex.get(activeTitle)?.title ?? activeTitle}
@@ -368,8 +363,8 @@ function App() {
               titleMatches={matches.titles}
               candidates={candidates}
               skillCount={skillIds.length}
-              focusedRoleId={roleId}
-              onFocus={focusRole}
+              selectedRoleIds={selectedRoles}
+              onToggleRole={toggleRole}
               onTitle={(key) => {
                 setActiveTitle(key);
                 updateQuery("");
@@ -414,48 +409,49 @@ function App() {
             />
           </FacetSection>
 
-          {focusedRole && (
-            <RoleDetail
-              role={focusedRole}
-              skills={focusedRole.skills.map((id) => graph.skills[id]).filter(Boolean)}
-              titles={titlesForRole(jobTitles, focusedRole.id)}
-              pathways={pathwaysIntoRole(pathways, focusedRole.id)}
-              assessment={assessment}
-              onAssess={(skillId: string, value: AssessmentValue) =>
-                setAssessment((prev) => ({ ...prev, [skillId]: value }))
-              }
-              onTitle={(t) => {
-                setActiveTitle(titleKey(t));
-                clearFocus();
-              }}
-              onResetMarks={() =>
-                setAssessment((prev) => {
-                  const next = { ...prev };
-                  for (const id of focusedRole.skills) delete next[id];
-                  return next;
-                })
-              }
-              onClose={clearFocus}
-            />
-          )}
+          {selectedRoles.map((id) => {
+            const role = graph.workRoles[id];
+            return (
+              <RoleDetail
+                key={id}
+                role={role}
+                skills={role.skills.map((sid) => graph.skills[sid]).filter(Boolean)}
+                titles={titlesForRole(jobTitles, id)}
+                pathways={pathwaysIntoRole(pathways, id)}
+                assessment={assessment}
+                defaultOpen={selectedRoles.length === 1}
+                onAssess={(skillId: string, value: AssessmentValue) =>
+                  setAssessment((prev) => ({ ...prev, [skillId]: value }))
+                }
+                onTitle={(t) => setActiveTitle(titleKey(t))}
+                onResetMarks={() =>
+                  setAssessment((prev) => {
+                    const next = { ...prev };
+                    for (const sid of role.skills) delete next[sid];
+                    return next;
+                  })
+                }
+                onRemove={() => toggleRole(id)}
+              />
+            );
+          })}
         </aside>
 
         <main className="app__graph">
           <GraphCanvas
             nodes={view.nodes}
-            edges={view.edges}
             theme={theme}
-            layoutKey={view.layoutKey}
             fitIds={view.fitIds}
             onNodeClick={handleNodeClick}
-            onBackgroundClick={() => focusedRole && clearFocus()}
+            onBackgroundClick={() => selectedRoles.length > 0 && clearRoles()}
           />
+          <WheelLegend />
         </main>
       </div>
 
       <AboutDialog open={aboutOpen} onClose={() => setAboutOpen(false)} />
 
-      {undo && !roleId && skillIds.length === 0 && !activeTitle && !feederId && (
+      {undo && roleIds.length === 0 && skillIds.length === 0 && !activeTitle && !feederId && (
         <Toast message="Filters cleared" actionLabel="Undo" onAction={undoClear} />
       )}
     </div>
