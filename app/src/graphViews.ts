@@ -1,111 +1,59 @@
 import type { Assessment, GraphData } from "./types";
-import type { GraphEdge, GraphNode } from "./components/GraphCanvas";
-import { ASSESSMENT_HAVE, ASSESSMENT_PARTIAL, CATEGORY_COLORS } from "./constants";
-import { GRAPH_THEMES, type Theme } from "./theme";
+import type { GraphNode } from "./components/GraphCanvas";
+import { GRAPH_THEMES, PALETTE, SHAPES, type Theme } from "./theme";
 import { skillLabel } from "./filters";
 
-const ROLE_BASE_SIZE = 14;
-const SKILL_BASE_SIZE = 6;
+const BASE_SIZE = 9;
+// Saved coordinates span about +/-1100; this keeps dots readable at the default zoom.
+const POS_SCALE = 0.5;
 
-interface GraphElements {
-  nodes: GraphNode[];
-  edges: GraphEdge[];
+interface WheelOptions {
+  /** Skills to emphasize; null means nothing is filtered. */
+  highlight: Set<string> | null;
+  /** Skills picked in the Skill filter, drawn larger. */
+  selected: Set<string>;
+  /** When roles are selected, highlighted skills show their have/partial/missing state. */
+  assessment: Assessment | null;
 }
 
-export function buildOverviewElements(graph: GraphData, theme: Theme): GraphElements {
+// Hue is always the skill's own color. Selection and assessment use fill, ring, and size only.
+export function buildWheelNodes(graph: GraphData, theme: Theme, opts: WheelOptions): GraphNode[] {
   const colors = GRAPH_THEMES[theme];
-  const nodes: GraphNode[] = [];
-  const edges: GraphEdge[] = [];
-
-  for (const role of Object.values(graph.workRoles)) {
-    nodes.push({
-      id: role.id,
-      label: role.title,
-      kind: "workRole",
-      color: CATEGORY_COLORS[role.category] ?? "#888",
-      size: ROLE_BASE_SIZE + Math.sqrt(role.skills.length) * 2,
-    });
-  }
-
-  for (const skill of Object.values(graph.skills)) {
-    nodes.push({
+  return Object.values(graph.skills).map((skill): GraphNode => {
+    const on = !opts.highlight || opts.highlight.has(skill.id);
+    const isSelected = opts.selected.has(skill.id);
+    const node: GraphNode = {
       id: skill.id,
-      label: "",
-      kind: "skill",
-      color: colors.skill,
-      size: SKILL_BASE_SIZE + Math.sqrt(skill.workRoles.length),
-    });
-    for (const roleId of skill.workRoles) {
-      edges.push({ id: `${roleId}-${skill.id}`, source: roleId, target: skill.id });
-    }
-  }
-
-  return { nodes, edges };
-}
-
-export function applyHighlight(
-  graph: GraphData,
-  base: GraphElements,
-  roleIds: Set<string>,
-  skillIds: Set<string>,
-  theme: Theme
-): GraphElements {
-  const colors = GRAPH_THEMES[theme];
-  const nodes = base.nodes.map((n): GraphNode => {
-    if (n.kind === "workRole") {
-      const on = roleIds.has(n.id);
-      return { ...n, faded: !on, size: on ? n.size + 4 : n.size };
-    }
-    const on = skillIds.has(n.id);
-    if (!on) return { ...n, faded: true };
-    return {
-      ...n,
-      faded: false,
-      color: colors.selectedSkill,
-      size: SKILL_BASE_SIZE + 8,
-      label: skillLabel(graph.skills[n.id]),
+      // names only appear once something is highlighted; the overview stays clean
+      label: on && opts.highlight ? skillLabel(skill) : "",
+      color: PALETTE[theme][skill.color],
+      shape: SHAPES[skill.color],
+      size: BASE_SIZE + Math.sqrt(skill.workRoles.length) + (on && opts.highlight ? 3 : 0) + (isSelected ? 6 : 0),
+      x: skill.x * POS_SCALE,
+      y: skill.y * POS_SCALE,
+      faded: !on,
+      fillOpacity: 1,
+      borderWidth: 1,
+      borderColor: colors.nodeBorder,
     };
+    if (isSelected) {
+      node.borderWidth = 3;
+      node.borderColor = colors.ring;
+    } else if (on && opts.assessment) {
+      const state = opts.assessment[skill.id] ?? "missing";
+      if (state === "missing") {
+        node.fillOpacity = 0.25;
+        node.borderWidth = 2;
+        node.borderColor = node.color;
+      } else if (state === "partial") {
+        node.fillOpacity = 0.6;
+        node.borderWidth = 2;
+        node.borderColor = node.color;
+      } else {
+        node.borderWidth = 3;
+        node.borderColor = colors.ring;
+      }
+    }
+    return node;
   });
-  const edges = base.edges.map(
-    (e): GraphEdge => ({ ...e, faded: !(roleIds.has(e.source) && skillIds.has(e.target)) })
-  );
-  return { nodes, edges };
-}
-
-export function buildGapElements(
-  graph: GraphData,
-  targetRoleId: string,
-  assessment: Assessment,
-  theme: Theme
-): GraphElements {
-  const role = graph.workRoles[targetRoleId];
-  if (!role) return { nodes: [], edges: [] };
-  const colors = GRAPH_THEMES[theme];
-  const byValue = { have: ASSESSMENT_HAVE, partial: ASSESSMENT_PARTIAL, missing: colors.missing };
-
-  const nodes: GraphNode[] = [
-    {
-      id: role.id,
-      label: role.title,
-      kind: "workRole",
-      color: CATEGORY_COLORS[role.category] ?? "#888",
-      size: ROLE_BASE_SIZE + 10,
-    },
-  ];
-  const edges: GraphEdge[] = [];
-
-  for (const skillId of role.skills) {
-    const skill = graph.skills[skillId];
-    if (!skill) continue;
-    nodes.push({
-      id: skill.id,
-      label: skillLabel(skill),
-      kind: "skill",
-      color: byValue[assessment[skillId] ?? "missing"],
-      size: SKILL_BASE_SIZE + 4,
-    });
-    edges.push({ id: `${role.id}-${skill.id}`, source: role.id, target: skill.id });
-  }
-
-  return { nodes, edges };
 }

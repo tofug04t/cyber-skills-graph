@@ -1,7 +1,8 @@
 import type { Assessment, AssessmentValue, Skill, WorkRole } from "../types";
-import { CATEGORY_COLORS } from "../constants";
 import type { PathwayIn } from "../filters";
 import { SkillChecklist } from "./SkillChecklist";
+import { SpectralStrip } from "./SpectralStrip";
+import { Difficulty } from "./Difficulty";
 
 interface RoleDetailProps {
   role: WorkRole;
@@ -9,10 +10,12 @@ interface RoleDetailProps {
   titles: string[];
   pathways: PathwayIn[];
   assessment: Assessment;
+  /** Start expanded; with several roles selected only the first ones need to be. */
+  defaultOpen: boolean;
   onAssess: (skillId: string, value: AssessmentValue) => void;
   onTitle: (title: string) => void;
   onResetMarks: () => void;
-  onClose: () => void;
+  onRemove: () => void;
 }
 
 export function RoleDetail({
@@ -21,20 +24,29 @@ export function RoleDetail({
   titles,
   pathways,
   assessment,
+  defaultOpen,
   onAssess,
   onTitle,
   onResetMarks,
-  onClose,
+  onRemove,
 }: RoleDetailProps) {
   return (
-    <div className="card role-detail">
-      <div className="role-detail__header">
-        <span className="role-row__dot" style={{ background: CATEGORY_COLORS[role.category] }} />
+    <details className="card role-detail" open={defaultOpen}>
+      <summary className="role-detail__header">
+        <SpectralStrip mix={role.mix} label={role.label} />
         <h3>{role.title}</h3>
-        <button type="button" className="link-button" onClick={onClose}>
-          All roles
+        <span className="role-detail__label">{role.label}</span>
+        <button
+          type="button"
+          className="link-button"
+          onClick={(e) => {
+            e.preventDefault();
+            onRemove();
+          }}
+        >
+          Remove
         </button>
-      </div>
+      </summary>
       <p className="role-detail__text">{role.text}</p>
 
       {titles.length > 0 && (
@@ -57,24 +69,22 @@ export function RoleDetail({
             {pathways.map(({ feeder, target }) => (
               <li key={feeder.feeder_id}>
                 <span className="pathway-list__title">{feeder.feeder_title}</span>
-                <span className={`badge badge--${target.transition_difficulty.toLowerCase()}`}>
-                  {target.transition_difficulty}
-                </span>
+                <Difficulty level={target.transition_difficulty} />
                 <p className="role-row__note">{target.rationale}</p>
               </li>
             ))}
           </ul>
         ) : (
           <p className="hint">
-            No entry pathways from other fields are mapped for this role yet. It may be reached from
-            other cybersecurity roles.
+            No entry pathways from other fields are mapped for this role yet. It may be reached from other
+            cybersecurity roles.
           </p>
         )}
       </div>
 
       <div className="role-detail__section">
         <div className="role-detail__skills-header">
-          <h4 className="subheading">Your skills ({skills.length})</h4>
+          <h4 className="subheading">Skills ({skills.length})</h4>
           {skills.some((s) => assessment[s.id] && assessment[s.id] !== "missing") && (
             <button type="button" className="link-button" onClick={onResetMarks}>
               Reset marks
@@ -83,6 +93,6 @@ export function RoleDetail({
         </div>
         <SkillChecklist skills={skills} assessment={assessment} onChange={onAssess} />
       </div>
-    </div>
+    </details>
   );
 }

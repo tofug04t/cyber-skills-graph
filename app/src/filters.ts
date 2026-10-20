@@ -159,3 +159,9 @@ export function matchFeeders(pathways: PathwaysData, query: string): FeederRole[
     )
     .sort((a, b) => a.feeder_title.localeCompare(b.feeder_title));
 }
+
+export function skillsOfRoles(graph: GraphData, roleIds: string[]): Set<string> {
+  const ids = new Set<string>();
+  for (const roleId of roleIds) for (const sid of graph.workRoles[roleId]?.skills ?? []) ids.add(sid);
+  return ids;
+}

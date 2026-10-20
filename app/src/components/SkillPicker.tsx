@@ -1,5 +1,6 @@
 import type { Skill } from "../types";
 import { skillLabel } from "../filters";
+import { ColorMark } from "./ColorMark";
 
 interface SkillPickerProps {
   skills: Skill[];
@@ -30,6 +31,7 @@ export function SkillPicker({ skills, selected, onToggle }: SkillPickerProps) {
                   disabled={full && !isSelected}
                   onClick={() => onToggle(skill.id)}
                 >
+                  <ColorMark color={skill.color} />
                   <span className="role-row__title" title={skill.text}>
                     {skillLabel(skill)}
                   </span>

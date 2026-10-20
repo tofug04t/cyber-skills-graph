@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import type { Theme } from "./theme";
+import { COLOR_NAMES, PALETTE, type Theme } from "./theme";
 
 const STORAGE_KEY = "theme";
 
@@ -18,6 +18,9 @@ export function useTheme(): [Theme, () => void] {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    for (const name of COLOR_NAMES) {
+      document.documentElement.style.setProperty(`--c-${name}`, PALETTE[theme][name]);
+    }
     try {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch {
