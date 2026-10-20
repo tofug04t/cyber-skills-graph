@@ -215,12 +215,6 @@
       "typical_background": "Legal research, regulatory analysis, contract review, and formal writing.",
       "targets": [
         {
-          "work_role_id": "OG-WRL-006",
-          "work_role_title": "Cybersecurity Counsel",
-          "transition_difficulty": "Low",
-          "rationale": "Directly applies existing legal training to a cybersecurity-specific practice area."
-        },
-        {
           "work_role_id": "OG-WRL-008",
           "work_role_title": "Privacy Analyst",
           "transition_difficulty": "Medium",
