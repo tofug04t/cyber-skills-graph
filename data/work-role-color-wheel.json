@@ -51,13 +51,6 @@
       "rationale": "Delivers security awareness, training, and education -- the training/education function itself."
     },
     {
-      "work_role_id": "OG-WRL-006",
-      "work_role_title": "Cybersecurity Counsel",
-      "primary_color": "White",
-      "secondary_color": null,
-      "rationale": "Legal/governance function."
-    },
-    {
       "work_role_id": "OG-WRL-007",
       "work_role_title": "CISO",
       "primary_color": "White",

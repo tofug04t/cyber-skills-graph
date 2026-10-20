@@ -442,3 +442,17 @@ Test applied to every role: it must be a job title that people are hired under a
 **Job titles** on the merged roles were trimmed to security jobs only. Titles have not been validated against postings.
 
 **Counts after this pass:** 30 Work Roles, 381 skills. The Investigation category now has no roles.
+
+---
+
+## 16. Skill-to-role coverage pass (2026-10-20)
+
+After the role restructure, half the skills (192 of 381) were attached to a single role and many foundations had one (Active Directory only to IAM Engineer), because the removed IT roles had been carrying them. Every skill with one or two roles was reviewed and given the additional roles that genuinely use it.
+
+- **594 role-to-skill mappings added** (listed in `addMappings` in `data/role-changes.json`, applied by `scripts/apply_role_changes.py`). Skills with exactly one role went from 192 to 19; with two, from 105 to 54; most skills now sit on three or four roles.
+- **Foundations** (Linux, Windows, Active Directory, TCP/IP, DNS, PowerShell, Bash, regex, version control, command line) now attach to every role that uses them in practice; Active Directory has 9.
+- **Defense** skills were spread across the defensive roles that overlap in real work (SOC, incident response, forensics, threat hunting, detection engineering, insider risk, threat intelligence); governance skills across GRC, program, and executive roles; engineering skills across the architecture, engineering, cloud, DevSecOps, and OT roles.
+- **Effect:** role skill counts are now realistic (SOC Analyst 98, Incident Responder 92, Security Engineer 94, down to IAM Engineer 12). Role color mixes and the wheel positions are recomputed; labels are mostly unchanged, with Application Security Engineer now Hybrid: Yellow/Green.
+- No skill was removed from any role in this pass. Mappings are judgment calls and expected to be refined.
+
+**Addendum (2026-10-20): Cybersecurity Counsel removed.** Not a realistic path for most people (it requires a law degree). All 13 of its skills are shared with other roles, so none were cut. Now 29 Work Roles, 381 skills.
