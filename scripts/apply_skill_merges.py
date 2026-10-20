@@ -12,8 +12,8 @@ For each merged skill:
   - duplicate relationships created by re-pointing are dropped;
   - the merged skill element itself is removed.
 
-Safe to re-run: merges already applied are skipped. Fails if a merge target
-is missing or is itself merged away (no chains), or if any Work Role ends up
+Safe to re-run: merges already applied are skipped. Fails if a pending merge's
+target is missing or is itself merged away (no chains), or if any Work Role ends up
 with fewer distinct skills than it had before, after resolving merges.
 """
 
@@ -44,7 +44,8 @@ def main():
     for src, dst in merges.items():
         if dst in merges:
             raise SystemExit(f"Merge chain: {src} -> {dst}, but {dst} is also merged away")
-        if dst not in elements:
+        # A target removed later (e.g. with its role) only matters while its merge is pending.
+        if src in elements and dst not in elements:
             raise SystemExit(f"Merge target {dst} (for {src}) is not in the fork")
 
     pending = {k: v for k, v in merges.items() if k in elements}

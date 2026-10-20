@@ -13,32 +13,26 @@
       "typical_background": "Proficient in one or more programming languages, software design and testing practices, version control, and the general software development lifecycle. Typically lacks formal security-specific training.",
       "targets": [
         {
-          "work_role_id": "DD-WRL-003",
-          "work_role_title": "Secure Software Development",
+          "work_role_id": "DD-WRL-012",
+          "work_role_title": "Application Security Engineer",
           "transition_difficulty": "Low",
           "rationale": "Nearly identical day-to-day work, with security requirements and threat modeling layered on top of existing development skills."
         },
         {
-          "work_role_id": "DD-WRL-005",
-          "work_role_title": "Software Security Assessment",
-          "transition_difficulty": "Medium",
-          "rationale": "Requires learning to think adversarially about code they didn't write, plus vulnerability classes and testing tools -- but code fluency transfers directly."
-        },
-        {
           "work_role_id": "DD-WRL-010",
-          "work_role_title": "AI/ML Security",
+          "work_role_title": "AI Security Engineer",
           "transition_difficulty": "Medium",
           "rationale": "Especially relevant for engineers already working with ML pipelines; requires learning adversarial ML concepts and security-specific evaluation techniques."
         },
         {
           "work_role_id": "DD-WRL-004",
-          "work_role_title": "Secure Systems Development",
+          "work_role_title": "Security Engineer",
           "transition_difficulty": "Low",
           "rationale": "Same skillset applied to systems rather than application code."
         },
         {
           "work_role_id": "DD-WRL-008",
-          "work_role_title": "Technology Research and Development",
+          "work_role_title": "Security Researcher",
           "transition_difficulty": "Medium",
           "rationale": "Strong engineering fundamentals transfer directly into applied security research."
         }
@@ -50,20 +44,20 @@
       "typical_background": "Comfortable with CI/CD pipelines, infrastructure-as-code, cloud platforms, containerization, and automation scripting.",
       "targets": [
         {
-          "work_role_id": "IO-WRL-006",
-          "work_role_title": "Systems Security Analysis",
+          "work_role_id": "PD-WRL-001",
+          "work_role_title": "SOC Analyst",
           "transition_difficulty": "Low",
           "rationale": "Automation and systems fluency transfers directly; mainly needs security-specific monitoring and analysis knowledge."
         },
         {
-          "work_role_id": "PD-WRL-004",
-          "work_role_title": "Infrastructure Support",
+          "work_role_id": "DD-WRL-004",
+          "work_role_title": "Security Engineer",
           "transition_difficulty": "Low",
           "rationale": "Very close overlap -- DevOps already operates and hardens the infrastructure this role secures."
         },
         {
-          "work_role_id": "OG-WRL-018",
-          "work_role_title": "Security Compliance Monitoring",
+          "work_role_id": "OG-WRL-019",
+          "work_role_title": "GRC Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Natural fit for practitioners already building monitoring/alerting pipelines; requires learning compliance frameworks on top."
         }
@@ -75,28 +69,16 @@
       "typical_background": "Deep familiarity with OS administration, patching, user/account management, backup and recovery, and enterprise IT operations.",
       "targets": [
         {
-          "work_role_id": "IO-WRL-006",
-          "work_role_title": "Systems Security Analysis",
+          "work_role_id": "PD-WRL-001",
+          "work_role_title": "SOC Analyst",
           "transition_difficulty": "Low",
           "rationale": "Direct extension of existing systems knowledge into a security-analysis lens."
         },
         {
-          "work_role_id": "PD-WRL-001",
-          "work_role_title": "Defensive Cybersecurity",
-          "transition_difficulty": "Medium",
-          "rationale": "Classic SOC-analyst on-ramp; requires learning detection tooling and threat concepts on top of existing ops fluency."
-        },
-        {
           "work_role_id": "PD-WRL-003",
-          "work_role_title": "Incident Response",
+          "work_role_title": "Incident Responder",
           "transition_difficulty": "Medium",
           "rationale": "Deep systems knowledge is directly useful for understanding what's normal vs. compromised during response."
-        },
-        {
-          "work_role_id": "OG-WRL-014",
-          "work_role_title": "Systems Security Management",
-          "transition_difficulty": "Medium",
-          "rationale": "Natural next step for a senior admin moving into owning a system's overall security posture."
         }
       ]
     },
@@ -106,26 +88,20 @@
       "typical_background": "Deep knowledge of routing/switching, network protocols, firewalls, and network architecture.",
       "targets": [
         {
-          "work_role_id": "PD-WRL-004",
-          "work_role_title": "Infrastructure Support",
+          "work_role_id": "DD-WRL-004",
+          "work_role_title": "Security Engineer",
           "transition_difficulty": "Low",
           "rationale": "Directly builds on existing network infrastructure expertise."
         },
         {
-          "work_role_id": "IO-WRL-004",
-          "work_role_title": "Network Operations",
-          "transition_difficulty": "Low",
-          "rationale": "Directly extends existing network-operations expertise with a security lens added."
-        },
-        {
           "work_role_id": "PD-WRL-001",
-          "work_role_title": "Defensive Cybersecurity",
+          "work_role_title": "SOC Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Network visibility is central to defensive monitoring; requires learning detection/analysis tooling."
         },
         {
           "work_role_id": "PD-WRL-007",
-          "work_role_title": "Vulnerability Analysis",
+          "work_role_title": "Vulnerability Management Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Deep protocol knowledge is a strong foundation for finding network-level weaknesses."
         }
@@ -137,14 +113,8 @@
       "typical_background": "Structured testing methodology, test-case design, defect tracking, and often some scripting/automation.",
       "targets": [
         {
-          "work_role_id": "DD-WRL-007",
-          "work_role_title": "Systems Testing and Evaluation",
-          "transition_difficulty": "Low",
-          "rationale": "Nearly identical skill set, just applied to security requirements instead of functional ones."
-        },
-        {
-          "work_role_id": "DD-WRL-005",
-          "work_role_title": "Software Security Assessment",
+          "work_role_id": "DD-WRL-012",
+          "work_role_title": "Application Security Engineer",
           "transition_difficulty": "Medium",
           "rationale": "Testing discipline transfers well; requires learning vulnerability classes and adversarial thinking."
         }
@@ -156,14 +126,14 @@
       "typical_background": "Deep database platform knowledge, query optimization, backup/recovery, and access control within database systems.",
       "targets": [
         {
-          "work_role_id": "IO-WRL-006",
-          "work_role_title": "Systems Security Analysis",
+          "work_role_id": "PD-WRL-001",
+          "work_role_title": "SOC Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Database-specific expertise becomes one input into broader systems security analysis."
         },
         {
           "work_role_id": "OG-WRL-008",
-          "work_role_title": "Privacy Compliance",
+          "work_role_title": "Privacy Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Data classification and access-control fluency is directly relevant to technical privacy work."
         }
@@ -176,21 +146,15 @@
       "targets": [
         {
           "work_role_id": "PD-WRL-006",
-          "work_role_title": "Cyber Threat Intelligence",
+          "work_role_title": "Threat Intelligence Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Analytical rigor transfers well; requires learning threat-intelligence tradecraft and adversary frameworks."
         },
         {
           "work_role_id": "DD-WRL-010",
-          "work_role_title": "AI/ML Security",
+          "work_role_title": "AI Security Engineer",
           "transition_difficulty": "Medium",
           "rationale": "Especially strong fit for data scientists already familiar with ML model development and evaluation."
-        },
-        {
-          "work_role_id": "IO-WRL-001",
-          "work_role_title": "Data Analysis",
-          "transition_difficulty": "Low",
-          "rationale": "Directly applies existing analytical skills to security-specific datasets."
         }
       ]
     },
@@ -201,21 +165,15 @@
       "targets": [
         {
           "work_role_id": "PD-WRL-001",
-          "work_role_title": "Defensive Cybersecurity",
+          "work_role_title": "SOC Analyst",
           "transition_difficulty": "Medium",
           "rationale": "The single most common real-world on-ramp into a SOC analyst role; requires substantial new security training, but the troubleshooting mindset transfers well."
         },
         {
           "work_role_id": "PD-WRL-003",
-          "work_role_title": "Incident Response",
+          "work_role_title": "Incident Responder",
           "transition_difficulty": "Medium",
           "rationale": "Broad exposure to how systems normally behave is a real asset in spotting what's abnormal during an incident."
-        },
-        {
-          "work_role_id": "IO-WRL-005",
-          "work_role_title": "Systems Administration",
-          "transition_difficulty": "Low",
-          "rationale": "Natural next step up in general IT operations before specializing into security."
         }
       ]
     },
@@ -226,15 +184,9 @@
       "targets": [
         {
           "work_role_id": "OG-WRL-010",
-          "work_role_title": "Security Program Management",
+          "work_role_title": "Security Program Manager",
           "transition_difficulty": "Low",
           "rationale": "Same core PM discipline, applied to security-relevant projects."
-        },
-        {
-          "work_role_id": "DD-WRL-006",
-          "work_role_title": "Systems Requirements Planning",
-          "transition_difficulty": "Medium",
-          "rationale": "Requirements-gathering and stakeholder-translation skills transfer directly; needs security-specific technical depth."
         }
       ]
     },
@@ -245,13 +197,13 @@
       "targets": [
         {
           "work_role_id": "OG-WRL-012",
-          "work_role_title": "IT/Security Controls Auditor",
+          "work_role_title": "IT Auditor",
           "transition_difficulty": "Medium",
           "rationale": "Audit methodology transfers directly; requires learning IT/security-specific control frameworks."
         },
         {
           "work_role_id": "OG-WRL-008",
-          "work_role_title": "Privacy Compliance",
+          "work_role_title": "Privacy Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Regulatory fluency transfers well, especially from healthcare (HIPAA) or finance (GLBA) backgrounds."
         }
@@ -264,13 +216,13 @@
       "targets": [
         {
           "work_role_id": "OG-WRL-006",
-          "work_role_title": "Cybersecurity Legal Advice",
+          "work_role_title": "Cybersecurity Counsel",
           "transition_difficulty": "Low",
           "rationale": "Directly applies existing legal training to a cybersecurity-specific practice area."
         },
         {
           "work_role_id": "OG-WRL-008",
-          "work_role_title": "Privacy Compliance",
+          "work_role_title": "Privacy Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Strong fit for attorneys with a privacy-law background specifically."
         }
@@ -282,20 +234,14 @@
       "typical_background": "Investigative procedure, evidence handling and chain-of-custody discipline, and structured report writing.",
       "targets": [
         {
-          "work_role_id": "IN-WRL-001",
-          "work_role_title": "Cybercrime Investigation",
-          "transition_difficulty": "Medium",
-          "rationale": "Investigative procedure and evidentiary discipline transfer directly; requires learning digital-specific technical skills."
-        },
-        {
           "work_role_id": "PD-WRL-002",
-          "work_role_title": "Digital Forensics",
+          "work_role_title": "Digital Forensics Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Chain-of-custody rigor is directly relevant; requires learning digital forensics tooling."
         },
         {
           "work_role_id": "PD-WRL-005",
-          "work_role_title": "Insider Threat Analysis",
+          "work_role_title": "Insider Risk Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Investigative background is a strong foundation for insider-threat casework."
         }
@@ -308,13 +254,13 @@
       "targets": [
         {
           "work_role_id": "PD-WRL-006",
-          "work_role_title": "Cyber Threat Intelligence",
+          "work_role_title": "Threat Intelligence Analyst",
           "transition_difficulty": "Low",
           "rationale": "Threat-actor assessment tradecraft transfers almost directly; mainly needs cyber-specific technical depth."
         },
         {
           "work_role_id": "PD-WRL-005",
-          "work_role_title": "Insider Threat Analysis",
+          "work_role_title": "Insider Risk Analyst",
           "transition_difficulty": "Low",
           "rationale": "Structured analytic techniques transfer directly to insider-risk casework."
         }
@@ -327,13 +273,13 @@
       "targets": [
         {
           "work_role_id": "OG-WRL-004",
-          "work_role_title": "Cybersecurity Curriculum Development",
+          "work_role_title": "Security Instructional Designer",
           "transition_difficulty": "Low",
           "rationale": "Directly applies existing instructional-design skills to cybersecurity content."
         },
         {
           "work_role_id": "OG-WRL-005",
-          "work_role_title": "Cybersecurity Instruction",
+          "work_role_title": "Security Instructor",
           "transition_difficulty": "Low",
           "rationale": "Directly applies existing training-delivery skills; needs cybersecurity subject-matter depth."
         }
@@ -346,15 +292,9 @@
       "targets": [
         {
           "work_role_id": "OG-WRL-004",
-          "work_role_title": "Cybersecurity Curriculum Development",
+          "work_role_title": "Security Instructional Designer",
           "transition_difficulty": "Medium",
           "rationale": "Documentation skills transfer well to curriculum content; needs cybersecurity subject-matter depth."
-        },
-        {
-          "work_role_id": "IO-WRL-003",
-          "work_role_title": "Knowledge Management",
-          "transition_difficulty": "Low",
-          "rationale": "Directly applies existing information-architecture skills to organizational knowledge assets."
         }
       ]
     },
@@ -364,22 +304,16 @@
       "typical_background": "Risk quantification, business impact analysis, and reporting to leadership and boards.",
       "targets": [
         {
-          "work_role_id": "OG-WRL-002",
-          "work_role_title": "Cybersecurity Policy and Planning",
+          "work_role_id": "OG-WRL-019",
+          "work_role_title": "GRC Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Risk-analysis discipline transfers directly; needs cybersecurity-specific threat and control knowledge."
         },
         {
           "work_role_id": "OG-WRL-017",
-          "work_role_title": "Cybersecurity Supply Chain Risk Management",
+          "work_role_title": "Third-Party Risk Analyst",
           "transition_difficulty": "Medium",
           "rationale": "Business risk-quantification skills transfer directly to vendor/supply-chain risk."
-        },
-        {
-          "work_role_id": "OG-WRL-018",
-          "work_role_title": "Security Compliance Monitoring",
-          "transition_difficulty": "Medium",
-          "rationale": "Reporting and metrics discipline transfers directly to compliance monitoring."
         }
       ]
     },
@@ -390,15 +324,9 @@
       "targets": [
         {
           "work_role_id": "DD-WRL-001",
-          "work_role_title": "Cybersecurity Architecture",
+          "work_role_title": "Security Architect",
           "transition_difficulty": "Medium",
           "rationale": "Broad exposure to many vendors' architectures is a real head start, though hands-on design depth still needs to be built."
-        },
-        {
-          "work_role_id": "IO-WRL-007",
-          "work_role_title": "Technical Support",
-          "transition_difficulty": "Low",
-          "rationale": "Directly applies existing product knowledge and customer-facing skills."
         }
       ]
     },
@@ -409,13 +337,13 @@
       "targets": [
         {
           "work_role_id": "PD-WRL-008",
-          "work_role_title": "Penetration Testing and Red Teaming",
+          "work_role_title": "Penetration Tester",
           "transition_difficulty": "Low",
           "rationale": "This is the dominant real-world on-ramp into red-team roles -- more so than any adjacent job title. Worth modeling explicitly since it's a prior *practice*, not a prior job."
         },
         {
           "work_role_id": "PD-WRL-007",
-          "work_role_title": "Vulnerability Analysis",
+          "work_role_title": "Vulnerability Management Analyst",
           "transition_difficulty": "Low",
           "rationale": "Hands-on exploitation experience transfers directly to structured vulnerability assessment work."
         }
@@ -428,13 +356,13 @@
       "targets": [
         {
           "work_role_id": "DD-WRL-009",
-          "work_role_title": "Operational Technology (OT) Cybersecurity Engineering",
+          "work_role_title": "OT Security Engineer",
           "transition_difficulty": "Low",
           "rationale": "This is the single most natural feeder into OT security -- deep plant/process knowledge is the hard-to-teach part; cybersecurity concepts layer on top."
         },
         {
-          "work_role_id": "PD-WRL-004",
-          "work_role_title": "Infrastructure Support",
+          "work_role_id": "DD-WRL-004",
+          "work_role_title": "Security Engineer",
           "transition_difficulty": "Medium",
           "rationale": "Physical infrastructure fluency transfers, but requires substantial new IT/network security depth."
         }

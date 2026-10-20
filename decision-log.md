@@ -392,3 +392,53 @@ Second data pass, part 4. Every skill now has a short, vendor-neutral display na
 
 - **Data:** the name goes in each skill's `title` (empty in NIST's file); the original statement stays in `text`. Names are in `data/skill-names.json`, applied by `scripts/apply_skill_names.py`. `scripts/etl.py` now emits `title` for every skill and fails if any skill lacks one.
 - **App:** the graph, skill picker, checklist, and applied-filter chips show the short name. The picker and checklist show the full statement on hover. Skill search matches either the name or the statement. The graph canvas has no hover behavior yet, so nodes show the name only.
+
+---
+
+## 14. Color system and a role removal (2026-10-20)
+
+**Color tags.** Every skill carries one color tag (`data/skill-colors.csv`, validated by `scripts/check_skill_colors.py`). Roles are not tagged: a role's color mix, label, and position are derived from the tags of its skills (`scripts/color_layout.py`), with the middle (non-security) skills left out of the mix. The wheel runs red, purple, blue, green, yellow, orange, white.
+
+| Color | Meaning |
+|---|---|
+| Red | offense: attacking, testing, breaking |
+| Purple | turning findings into fixes: threat hunting, purple teaming, adversary emulation for defense |
+| Blue | defense: monitoring, threat intel, DFIR (groups: monitoring, threat intel, forensics, incident response) |
+| Green | securing and automating infrastructure and operations |
+| Yellow | securing software as it's built, including product security |
+| Orange | teaching security, technical and awareness |
+| White | security governance, risk, compliance, and leadership |
+| Middle | non-security skills, technical or not |
+
+Calls worth knowing: generic building skills (testing, architecture, requirements, programming) are Middle, not Yellow; vulnerability scanning is Blue (monitoring); vulnerability triage and patching are Purple; leadership skills are White. Tags are a first pass and expected to evolve.
+
+**Role removed: DD-WRL-007 Systems Testing and Evaluation.** A military test-and-evaluation job with no general-industry equivalent. Its job titles, color entry, and pathway target were removed with it, and the "QA / Test Engineer" background keeps its other target. Skills, tasks, and knowledge that no other role used were cut with it: 9 skills (Integration testing, Test scenario design, Test readiness reviews, Test infrastructure planning, Test asset management, Test resource estimation, Test result analysis, Performance specification analysis, Analysis pipeline design) and 13 tasks. Eleven skills it shared with other roles stay. Applied by the new `removeRoles` step in `scripts/apply_role_changes.py`.
+
+**Counts after this pass:** 48 Work Roles, 412 skills.
+
+---
+
+## 15. Roles restructured to real job titles (2026-10-20)
+
+Test applied to every role: it must be a job title that people are hired under and that can be researched in job postings, not a category of skills or a government function. 48 roles became 30, each named as a job title.
+
+**Merged** (the old roles were categories, or already shared one title):
+- Secure Software Development, Software Security Assessment, Application Security -> **Application Security Engineer**
+- Cybersecurity Architecture, Enterprise Architecture -> **Security Architect**
+- Secure Systems Development, Infrastructure Support -> **Security Engineer**
+- Cybersecurity Policy and Planning, GRC Analysis, Security Compliance Monitoring -> **GRC Analyst**
+- Systems Security Analysis -> **SOC Analyst** (renamed from Defensive Cybersecurity)
+- Cybersecurity Workforce Management -> **Security Program Manager**
+
+**Removed:**
+- General IT and data jobs that are not security roles (most already exist as Background options): Database Administration, Knowledge Management, Data Analysis, Technical Support, Network Operations, Systems Administration, Systems Requirements Planning.
+- Too government-specific: Systems Authorization, Systems Security Management, Cybercrime Investigation.
+- Systems Testing and Evaluation was removed earlier the same day (section 14).
+
+**Skills:** 31 skills that only the removed roles used were cut, mostly general IT, database, and data-science skills. 16 that apply to security work were rehomed to surviving roles first (for example Digital media examination to Digital Forensics Analyst, Network mapping to Penetration Tester). 174 tasks and 66 knowledge items used only by removed roles were cut with them. The cuts are not shown in the app today.
+
+**Renamed to job-title form:** Cloud Security Engineer, DevSecOps Engineer, OT Security Engineer, AI Security Engineer, IAM Engineer, Cyber Range Engineer, Security Researcher, CISO, Cybersecurity Counsel, Privacy Analyst, IT Auditor, Third-Party Risk Analyst, Security Program Manager, Security Awareness Manager, Security Instructional Designer, Security Instructor, Digital Forensics Analyst, Incident Responder, Insider Risk Analyst, Threat Intelligence Analyst, Vulnerability Management Analyst, Penetration Tester, Malware Analyst, Detection Engineer, Threat Hunter.
+
+**Job titles** on the merged roles were trimmed to security jobs only. Titles have not been validated against postings.
+
+**Counts after this pass:** 30 Work Roles, 381 skills. The Investigation category now has no roles.

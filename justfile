@@ -23,6 +23,7 @@ data:
     python3 scripts/apply_skill_cuts.py
     python3 scripts/apply_role_changes.py
     python3 scripts/apply_skill_names.py
+    python3 scripts/check_skill_colors.py
     python3 scripts/etl.py
     python3 scripts/etl_companions.py
 
