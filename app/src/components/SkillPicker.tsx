@@ -21,7 +21,7 @@ export function SkillPicker({
   return (
     <div className="skill-picker">
       {selected.length === 0 && (
-        <p className="hint">Pick one or more skills. Roles that use all of them are listed under Role.</p>
+        <p className="hint">Pick one or more skills. The roles that use them are listed under Role.</p>
       )}
       {skills.length === 0 ? (
         <p className="empty">No matching skills.</p>

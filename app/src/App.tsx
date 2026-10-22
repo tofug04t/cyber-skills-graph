@@ -7,6 +7,7 @@ import { AppliedFilters, type AppliedChip } from "./components/AppliedFilters";
 import { SkillPicker } from "./components/SkillPicker";
 import { RoleDetail } from "./components/RoleDetail";
 import { SkillDetail } from "./components/SkillDetail";
+import { MatchToggle } from "./components/MatchToggle";
 import { WheelLegend } from "./components/WheelLegend";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Toast } from "./components/Toast";
@@ -27,13 +28,15 @@ import {
 } from "./filters";
 import { useTheme } from "./useTheme";
 import { FEEDBACK_URL } from "./credits";
-import type { Assessment, AssessmentValue } from "./types";
+import type { Assessment, AssessmentValue, MatchMode } from "./types";
 import "./App.css";
 
 interface UrlState {
   roleIds: string[];
   skillIds: string[];
   title: string | null;
+  skillMode: MatchMode;
+  roleMode: MatchMode;
   assessment: Assessment;
 }
 
@@ -68,6 +71,8 @@ function parseUrlState(): UrlState {
     roleIds: [...new Set(roles.split(",").filter(Boolean))],
     skillIds: (params.get("skills") ?? "").split(",").filter(Boolean),
     title: params.get("title"),
+    skillMode: params.get("skillMatch") === "any" ? "any" : "all",
+    roleMode: params.get("roleMatch") === "all" ? "all" : "any",
     assessment,
   };
 }
@@ -80,6 +85,8 @@ function App() {
   const [roleIds, setRoleIds] = useState<string[]>(initial.roleIds);
   const [skillIds, setSkillIds] = useState<string[]>(initial.skillIds);
   const [activeTitle, setActiveTitle] = useState<string | null>(initial.title);
+  const [skillMode, setSkillMode] = useState<MatchMode>(initial.skillMode);
+  const [roleMode, setRoleMode] = useState<MatchMode>(initial.roleMode);
   const [assessment, setAssessment] = useState<Assessment>(initial.assessment);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -96,18 +103,21 @@ function App() {
     if (entries.length > 0) params.set("a", entries.map(([id, v]) => `${id}:${v}`).join(","));
     if (skillIds.length > 0) params.set("skills", skillIds.join(","));
     if (activeTitle) params.set("title", activeTitle);
+    // only the non-default modes go in the URL
+    if (skillMode === "any") params.set("skillMatch", "any");
+    if (roleMode === "all") params.set("roleMatch", "all");
     const query = params.toString();
     window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
-  }, [roleIds, skillIds, activeTitle, assessment]);
+  }, [roleIds, skillIds, activeTitle, skillMode, roleMode, assessment]);
 
   const titleIndex = useMemo(() => (jobTitles ? buildTitleIndex(jobTitles) : null), [jobTitles]);
 
   const candidates = useMemo(
     () =>
       graph && titleIndex
-        ? computeCandidates(graph, { skillIds, titleKey: activeTitle }, titleIndex)
+        ? computeCandidates(graph, { skillIds, skillMode, titleKey: activeTitle }, titleIndex)
         : null,
-    [graph, titleIndex, skillIds, activeTitle]
+    [graph, titleIndex, skillIds, skillMode, activeTitle]
   );
 
   const matches = useMemo(
@@ -127,12 +137,24 @@ function App() {
     [graph, roleIds]
   );
 
+  // Selected roles narrow the skill list too; skills you picked stay visible.
+  const visibleSkills = useMemo(() => {
+    if (!graph || !matches) return null;
+    if (selectedRoles.length === 0) return matches.skills;
+    const allowed = skillsOfRoles(graph, selectedRoles, roleMode);
+    return matches.skills.filter((s) => allowed.has(s.id) || skillIds.includes(s.id));
+  }, [graph, matches, selectedRoles, roleMode, skillIds]);
+
   // Selected roles light up their skills; a title filter previews its candidate roles.
   const view = useMemo(() => {
     if (!graph || !candidates) return null;
-    const previewRoles =
-      selectedRoles.length > 0 ? selectedRoles : activeTitle ? candidates.roleIds : [];
-    const highlight = new Set([...skillsOfRoles(graph, previewRoles), ...skillIds]);
+    const roleSkills =
+      selectedRoles.length > 0
+        ? skillsOfRoles(graph, selectedRoles, roleMode)
+        : activeTitle
+          ? skillsOfRoles(graph, candidates.roleIds)
+          : [];
+    const highlight = new Set([...roleSkills, ...skillIds]);
     const active = highlight.size > 0;
     return {
       nodes: buildWheelNodes(graph, theme, {
@@ -142,7 +164,7 @@ function App() {
       }),
       fitIds: active ? [...highlight] : [],
     };
-  }, [graph, candidates, selectedRoles, activeTitle, skillIds, assessment, theme]);
+  }, [graph, candidates, selectedRoles, roleMode, activeTitle, skillIds, assessment, theme]);
 
   const [undo, setUndo] = useState<Snapshot | null>(null);
 
@@ -188,13 +210,13 @@ function App() {
   }, []);
 
   if (error) return <div className="app-error">Failed to load data: {error}</div>;
-  if (!graph || !jobTitles || !titleIndex || !candidates || !view || !matches) {
+  if (!graph || !jobTitles || !titleIndex || !candidates || !view || !matches || !visibleSkills) {
     return <div className="app-loading">Loading NICE Framework data...</div>;
   }
 
   const counts: Record<Facet, number> = {
     role: matches.roleIds.length + matches.titles.length,
-    skill: matches.skills.length,
+    skill: visibleSkills.length,
   };
   const searching = query.trim() !== "";
   // While searching, sections with matches open themselves unless the user toggled them.
@@ -231,7 +253,7 @@ function App() {
     setOpen((o) => ({ ...o, skill: true }));
   };
 
-  const filterState: FilterState = { skillIds, titleKey: activeTitle };
+  const filterState: FilterState = { skillIds, skillMode, titleKey: activeTitle };
   const filterItems: FilterItem[] = [
     ...(activeTitle
       ? [
@@ -267,9 +289,14 @@ function App() {
   ];
 
   const summary =
-    candidates.active
-      ? `${candidates.roleIds.length} of ${Object.keys(graph.workRoles).length} roles`
-      : null;
+    [
+      candidates.active ? `${candidates.roleIds.length} of ${Object.keys(graph.workRoles).length} roles` : null,
+      selectedRoles.length > 0
+        ? `${skillsOfRoles(graph, selectedRoles, roleMode).size} of ${Object.keys(graph.skills).length} skills`
+        : null,
+    ]
+      .filter(Boolean)
+      .join(" · ") || null;
 
   const emptyActions: EmptyAction[] =
     candidates.active && candidates.roleIds.length === 0
@@ -342,11 +369,20 @@ function App() {
               </>
             }
           >
+            {selectedRoles.length > 1 && (
+              <MatchToggle
+                before="Show skills used by"
+                after="selected roles"
+                value={roleMode}
+                onChange={setRoleMode}
+              />
+            )}
             <RoleFacet
               graph={graph}
               visibleRoleIds={matches.roleIds}
               titleMatches={matches.titles}
               candidates={candidates}
+              skillCount={skillMode === "any" ? skillIds.length : 0}
               selectedRoleIds={selectedRoles}
               onToggleRole={toggleRole}
               onTitle={(key) => {
@@ -372,8 +408,16 @@ function App() {
               </>
             }
           >
+            {skillIds.length > 1 && (
+              <MatchToggle
+                before="Show roles using"
+                after="selected skills"
+                value={skillMode}
+                onChange={setSkillMode}
+              />
+            )}
             <SkillPicker
-              skills={matches.skills}
+              skills={visibleSkills}
               selected={skillIds}
               assessment={assessment}
               onAssess={assess}

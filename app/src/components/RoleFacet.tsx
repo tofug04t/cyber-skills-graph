@@ -8,6 +8,8 @@ interface RoleFacetProps {
   visibleRoleIds: string[];
   titleMatches: TitleEntry[];
   candidates: Candidates;
+  /** Skills counted for the overlap badge; 0 or 1 hides it. */
+  skillCount: number;
   selectedRoleIds: string[];
   onToggleRole: (roleId: string) => void;
   onTitle: (key: string) => void;
@@ -27,6 +29,7 @@ export function RoleFacet({
   visibleRoleIds,
   titleMatches,
   candidates,
+  skillCount,
   selectedRoleIds,
   onToggleRole,
   onTitle,
@@ -46,6 +49,7 @@ export function RoleFacet({
   const renderRole = (id: string) => {
     const role = graph.workRoles[id];
     const selected = selectedRoleIds.includes(id);
+    const overlap = candidates.skillOverlap.get(id);
     return (
       <li key={id}>
         <button
@@ -56,6 +60,11 @@ export function RoleFacet({
         >
           <SpectralStrip mix={role.mix} label={role.label} />
           <span className="role-row__title">{role.title}</span>
+          {overlap !== undefined && skillCount > 1 && (
+            <span className="badge">
+              {overlap}/{skillCount} skills
+            </span>
+          )}
         </button>
       </li>
     );

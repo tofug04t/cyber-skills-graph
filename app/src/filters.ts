@@ -1,4 +1,4 @@
-import type { GraphData, JobTitlesData, Skill } from "./types";
+import type { GraphData, JobTitlesData, MatchMode, Skill } from "./types";
 
 export interface TitleEntry {
   title: string;
@@ -43,12 +43,15 @@ export function titlesForRole(data: JobTitlesData, roleId: string): string[] {
 
 export interface FilterState {
   skillIds: string[];
+  skillMode: MatchMode;
   titleKey: string | null;
 }
 
 export interface Candidates {
   active: boolean;
   roleIds: string[];
+  /** For each role, how many of the selected skills it uses. */
+  skillOverlap: Map<string, number>;
 }
 
 export function computeCandidates(
@@ -58,19 +61,26 @@ export function computeCandidates(
 ): Candidates {
   const sets: Set<string>[] = [];
 
-  if (filters.skillIds.length > 0) sets.push(new Set(rolesForSkills(graph, filters.skillIds)));
+  const skillOverlap = skillOverlapByRole(graph, filters.skillIds);
+  if (filters.skillIds.length > 0) {
+    sets.push(new Set(rolesForSkills(graph, filters.skillIds, filters.skillMode)));
+  }
 
   if (filters.titleKey) {
     sets.push(new Set(titleIndex.get(filters.titleKey)?.roleIds ?? []));
   }
 
   if (sets.length === 0) {
-    return { active: false, roleIds: Object.keys(graph.workRoles) };
+    return { active: false, roleIds: Object.keys(graph.workRoles), skillOverlap };
   }
 
   const roleIds = [...sets[0]].filter((id) => sets.every((s) => s.has(id)) && graph.workRoles[id]);
-  roleIds.sort((a, b) => graph.workRoles[a].title.localeCompare(graph.workRoles[b].title));
-  return { active: true, roleIds };
+  roleIds.sort(
+    (a, b) =>
+      (skillOverlap.get(b) ?? 0) - (skillOverlap.get(a) ?? 0) ||
+      graph.workRoles[a].title.localeCompare(graph.workRoles[b].title)
+  );
+  return { active: true, roleIds, skillOverlap };
 }
 
 function normalize(query: string): string {
@@ -97,17 +107,30 @@ export function matchSkills(graph: GraphData, query: string): Skill[] {
     .sort((a, b) => skillLabel(a).localeCompare(skillLabel(b)));
 }
 
-export function skillsOfRoles(graph: GraphData, roleIds: string[]): Set<string> {
-  const ids = new Set<string>();
-  for (const roleId of roleIds) for (const sid of graph.workRoles[roleId]?.skills ?? []) ids.add(sid);
-  return ids;
+/** Skills used by every selected role ("all") or by at least one ("any"). */
+export function skillsOfRoles(graph: GraphData, roleIds: string[], mode: MatchMode = "any"): Set<string> {
+  const lists = roleIds.map((id) => graph.workRoles[id]?.skills ?? []);
+  const counts = new Map<string, number>();
+  for (const list of lists) for (const sid of list) counts.set(sid, (counts.get(sid) ?? 0) + 1);
+  const needed = mode === "all" ? lists.length : 1;
+  return new Set([...counts].filter(([, n]) => n >= needed).map(([sid]) => sid));
 }
 
-/** Roles that use every one of the given skills, sorted by title. */
-export function rolesForSkills(graph: GraphData, skillIds: string[]): string[] {
-  return Object.values(graph.workRoles)
-    .filter((role) => skillIds.every((sid) => graph.skills[sid]?.workRoles.includes(role.id)))
-    .map((role) => role.id)
+/** For each role, how many of the given skills it uses. */
+export function skillOverlapByRole(graph: GraphData, skillIds: string[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const sid of skillIds) {
+    for (const roleId of graph.skills[sid]?.workRoles ?? []) counts.set(roleId, (counts.get(roleId) ?? 0) + 1);
+  }
+  return counts;
+}
+
+/** Roles that use every given skill ("all") or at least one ("any"), sorted by title. */
+export function rolesForSkills(graph: GraphData, skillIds: string[], mode: MatchMode = "all"): string[] {
+  const needed = mode === "all" ? skillIds.length : 1;
+  return [...skillOverlapByRole(graph, skillIds)]
+    .filter(([roleId, n]) => n >= needed && graph.workRoles[roleId])
+    .map(([roleId]) => roleId)
     .sort((a, b) => graph.workRoles[a].title.localeCompare(graph.workRoles[b].title));
 }
 
