@@ -15,6 +15,8 @@ export interface GraphNode {
   fillOpacity: number;
   borderWidth: number;
   borderColor: string;
+  /** Two-stop gradient colors (filled half, empty half) for a half-filled dot; null for a plain fill. */
+  halfFill?: string | null;
 }
 
 interface GraphCanvasProps {
@@ -52,6 +54,8 @@ export function GraphCanvas({ nodes, theme, fitIds, onNodeClick, onBackgroundCli
           fillOpacity: n.fillOpacity,
           borderWidth: n.borderWidth,
           borderColor: n.borderColor,
+          half: n.halfFill ? 1 : 0,
+          halfStops: n.halfFill ?? "",
         },
         position: { x: n.x, y: n.y },
       })),
@@ -81,6 +85,16 @@ export function GraphCanvas({ nodes, theme, fitIds, onNodeClick, onBackgroundCli
           "text-margin-y": -4,
           // labels only appear once zoomed in far enough to read them
           "min-zoomed-font-size": 9,
+        },
+      },
+      {
+        // "Some": the lower half in the skill's color, the upper half empty
+        selector: "node[half = 1]",
+        style: {
+          "background-fill": "linear-gradient",
+          "background-gradient-direction": "to-top",
+          "background-gradient-stop-colors": "data(halfStops)",
+          "background-gradient-stop-positions": "0% 50% 50% 100%",
         },
       },
     ] as unknown as cytoscape.StylesheetJsonBlock[];

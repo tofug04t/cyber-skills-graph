@@ -61,9 +61,11 @@ export interface GraphTheme {
   labelOutline: string;
   nodeBorder: string;
   ring: string;
+  /** The map pane's own background; the empty half of a half-filled dot is painted with it. */
+  bg: string;
 }
 
 export const GRAPH_THEMES: Record<Theme, GraphTheme> = {
-  dark: { label: "#e5e5e5", labelOutline: "#0b0b0f", nodeBorder: "#2a2a33", ring: "#ffffff" },
-  light: { label: "#1C1B2E", labelOutline: "#F7F7FB", nodeBorder: "#6e6d86", ring: "#1C1B2E" },
+  dark: { label: "#e5e5e5", labelOutline: "#0b0b0f", nodeBorder: "#2a2a33", ring: "#ffffff", bg: "#0b0b0f" },
+  light: { label: "#1C1B2E", labelOutline: "#F7F7FB", nodeBorder: "#6e6d86", ring: "#1C1B2E", bg: "#f7f7fb" },
 };

@@ -12,21 +12,25 @@ interface WheelOptions {
   highlight: Set<string> | null;
   /** Skills picked in the Skill filter, drawn larger. */
   selected: Set<string>;
-  /** When roles are selected, highlighted skills show their strong/some/none level. */
+  /** When something is highlighted, those skills show their strong/some/none level. */
   assessment: Assessment | null;
 }
 
-// Hue is always the skill's own color. Selection and assessment use fill, ring, and size only.
+// Hue is always the skill's own color. Rating is the fill (empty, half, full), the outline matches the
+// dot's color, and a picked skill adds a contrasting ring and a larger size.
 export function buildWheelNodes(graph: GraphData, theme: Theme, opts: WheelOptions): GraphNode[] {
   const colors = GRAPH_THEMES[theme];
   return Object.values(graph.skills).map((skill): GraphNode => {
     const on = !opts.highlight || opts.highlight.has(skill.id);
     const isSelected = opts.selected.has(skill.id);
+    const color = PALETTE[theme][skill.color];
+    // white dots keep a gray outline: a white outline would vanish on the light background
+    const outline = skill.color === "white" ? colors.nodeBorder : color;
     const node: GraphNode = {
       id: skill.id,
       // names only appear once something is highlighted; the overview stays clean
       label: on && opts.highlight ? skillLabel(skill) : "",
-      color: PALETTE[theme][skill.color],
+      color,
       shape: SHAPES[skill.color],
       size: BASE_SIZE + Math.sqrt(skill.workRoles.length) + (on && opts.highlight ? 3 : 0) + (isSelected ? 6 : 0),
       x: skill.x * POS_SCALE,
@@ -34,25 +38,18 @@ export function buildWheelNodes(graph: GraphData, theme: Theme, opts: WheelOptio
       faded: !on,
       fillOpacity: 1,
       borderWidth: 1,
-      borderColor: colors.nodeBorder,
+      borderColor: outline,
+      halfFill: null,
     };
+    if (on && opts.assessment) {
+      node.borderWidth = 2;
+      const state = opts.assessment[skill.id] ?? "missing";
+      if (state === "missing") node.fillOpacity = 0.15;
+      else if (state === "partial") node.halfFill = `${color} ${color} ${colors.bg} ${colors.bg}`;
+    }
     if (isSelected) {
       node.borderWidth = 3;
       node.borderColor = colors.ring;
-    } else if (on && opts.assessment) {
-      const state = opts.assessment[skill.id] ?? "missing";
-      if (state === "missing") {
-        node.fillOpacity = 0.25;
-        node.borderWidth = 2;
-        node.borderColor = node.color;
-      } else if (state === "partial") {
-        node.fillOpacity = 0.6;
-        node.borderWidth = 2;
-        node.borderColor = node.color;
-      } else {
-        node.borderWidth = 3;
-        node.borderColor = colors.ring;
-      }
     }
     return node;
   });
