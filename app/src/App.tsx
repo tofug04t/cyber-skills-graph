@@ -8,6 +8,7 @@ import { SkillPicker } from "./components/SkillPicker";
 import { RoleDetail } from "./components/RoleDetail";
 import { SkillDetail } from "./components/SkillDetail";
 import { MatchToggle } from "./components/MatchToggle";
+import { HeaderMenu } from "./components/HeaderMenu";
 import { WheelLegend } from "./components/WheelLegend";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Toast } from "./components/Toast";
@@ -27,7 +28,6 @@ import {
   type FilterState,
 } from "./filters";
 import { useTheme } from "./useTheme";
-import { FEEDBACK_URL } from "./credits";
 import type { Assessment, AssessmentValue, MatchMode } from "./types";
 import "./App.css";
 
@@ -320,13 +320,8 @@ function App() {
           </p>
         </div>
         <div className="app__header-actions">
-          <a className="link-button" href={FEEDBACK_URL} target="_blank" rel="noreferrer">
-            Feedback
-          </a>
-          <button type="button" className="link-button" onClick={() => setAboutOpen(true)}>
-            About
-          </button>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
+          <HeaderMenu onAbout={() => setAboutOpen(true)} />
         </div>
       </header>
 
