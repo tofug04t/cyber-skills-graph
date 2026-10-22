@@ -27,6 +27,10 @@ data:
     python3 scripts/etl.py
     python3 scripts/etl_companions.py
 
+# Measure how distinguishable the skill colors are for color-blind viewers
+palette:
+    python3 scripts/palette_check.py
+
 # Type-check the app
 typecheck: install
     cd {{ app }} && npx tsc -b --noEmit
@@ -44,7 +48,7 @@ preview: build
     cd {{ app }} && npm run preview -- --port 4173 --strictPort
 
 # Everything that should pass before opening a PR
-check: data typecheck lint build
+check: data typecheck lint build palette
 
 # Remove build output and installed dependencies
 clean:

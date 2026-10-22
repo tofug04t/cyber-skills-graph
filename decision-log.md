@@ -486,3 +486,15 @@ The Background facet and the "Ways in" block on role details are gone from the a
 **White guardrail** (`scripts/color_layout.py`, `classify()`). White names a role only when it is a majority of the mix (`WHITE_LEAD_SHARE = 0.5`); if white leads below that, it is dropped and the other shares are renormalized before the usual General / dominant / Hybrid rules apply. White is named second only above 20% (`WHITE_SECOND_SHARE = 0.2`); at or below that, the next color becomes the runner-up, and if none is left the top color is dominant. This affects only the label: the mix strip still shows every color, and `role_mix()` and the map positions are unchanged.
 
 **Effect.** Only AI Security Engineer's label changes. The six governance roles (CISO, Privacy Analyst, Security Program Manager, IT Auditor, Third-Party Risk Analyst, GRC Analyst) stay White; IT Auditor is closest to the line at about 52% white. White disappears from Incident Responder, Digital Forensics Analyst, and Security Researcher and drops in several others. OT Security Engineer keeps about 26% white on purpose.
+
+---
+
+## 19. Palette tuned for color-blind viewers (2026-10-22)
+
+The first-pass palette had two near-collisions under color-blindness simulation: purple and blue were almost identical for protanopia and deuteranopia (distance 1.0 to 3.9 on the OKLab-times-100 scale, where about 7 or more reads as distinguishable at a glance), and red/center (tritanopia) and red/green (deuteranopia) were close.
+
+**Method.** `scripts/palette_check.py` (run with `just palette`) simulates protanopia, deuteranopia and tritanopia (Machado et al. 2009, full severity) and reports the closest pair of colors and the closest color to the background on each theme. It fails below 7 between any pair. The palette was found by a bounded search that kept each color in its named hue family and near its original lightness, with a minimum 3:1 contrast with the background in the light theme (yellow excepted, as before).
+
+**Result.** Every pair is at least 8.6 apart in the dark theme and 10.2 in the light theme, across normal vision and all three simulations. Changed in dark: purple (lighter lavender), blue (slightly deeper). Changed in light: red (deeper), orange (slightly deeper), blue (deeper), purple (lighter violet). Green, yellow and white are unchanged. **Middle** moved from hot pink to a neutral slate gray (#9494A3 dark, #6B6B7A light): every hue that kept the pairs apart for color-blind viewers (orchid, plum, teal) landed too close to a named category, and non-security skills are the one group with no category color, so a neutral fits. Pink stays under 7 for tritanopia and brown collapses into red under deuteranopia.
+
+**Limits.** Colors still collapse toward one family for some viewers (red, orange and green all read as khaki under deuteranopia), so shape stays the primary cue and color the second; the legend names every category. The simulation measures distance, not a real viewer: it has not been tested with color-blind people, and feedback from some is welcome.

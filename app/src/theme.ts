@@ -5,27 +5,28 @@ export type ColorName = "red" | "purple" | "blue" | "green" | "yellow" | "orange
 /** Wheel order, then the center. */
 export const COLOR_NAMES: ColorName[] = ["red", "purple", "blue", "green", "yellow", "orange", "white", "center"];
 
-// Provisional values: still to be tuned for color-blind distinctness on both themes.
+// Tuned so every pair stays distinguishable (OKLab distance of about 7 or more) for normal vision and for
+// protan/deutan/tritan simulations on both themes; `just palette` re-measures after any edit.
 export const PALETTE: Record<Theme, Record<ColorName, string>> = {
   dark: {
     red: "#FF5A5F",
-    purple: "#B08CFF",
-    blue: "#4DA3FF",
+    purple: "#CAA3F5",
+    blue: "#518BFA",
     green: "#34D399",
     yellow: "#FFD23F",
     orange: "#FF9F43",
     white: "#E8E8F0",
-    center: "#FF4FD8",
+    center: "#9494A3",
   },
   light: {
-    red: "#D92D3A",
-    purple: "#7A4FE0",
-    blue: "#1F6FE5",
+    red: "#AF0916",
+    purple: "#A56FF1",
+    blue: "#1151CC",
     green: "#0F9D6B",
     yellow: "#D4A000",
-    orange: "#E8650A",
+    orange: "#D16800",
     white: "#FFFFFF",
-    center: "#D6249F",
+    center: "#6B6B7A",
   },
 };
 
