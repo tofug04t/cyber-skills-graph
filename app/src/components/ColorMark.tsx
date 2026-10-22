@@ -23,7 +23,8 @@ export function ColorMark({ color, size = 12, named = true }: { color: ColorName
         height={size}
         viewBox="0 0 16 16"
         aria-hidden="true"
-        style={{ fill: `var(--c-${color})` }}
+        // the outline matches the shape; white keeps the gray outline from the stylesheet, since white-on-white would vanish
+        style={{ fill: `var(--c-${color})`, stroke: color === "white" ? undefined : `var(--c-${color})` }}
       >
         <path d={SHAPE_PATHS[color]} />
       </svg>
