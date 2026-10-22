@@ -65,7 +65,7 @@ function parseUrlState(): UrlState {
   const roles = `${params.get("roles") ?? ""},${params.get("role") ?? ""}`;
   return {
     roleIds: [...new Set(roles.split(",").filter(Boolean))],
-    skillIds: (params.get("skills") ?? "").split(",").filter(Boolean).slice(0, 2),
+    skillIds: (params.get("skills") ?? "").split(",").filter(Boolean),
     title: params.get("title"),
     assessment,
   };
@@ -222,9 +222,7 @@ function App() {
     setRoleIds((prev) => (prev.includes(id) ? prev.filter((r) => r !== id) : [...prev, id]));
 
   const toggleSkill = (id: string) =>
-    setSkillIds((prev) =>
-      prev.includes(id) ? prev.filter((s) => s !== id) : prev.length >= 2 ? prev : [...prev, id]
-    );
+    setSkillIds((prev) => (prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]));
 
   const handleNodeClick = (id: string) => {
     toggleSkill(id);
@@ -341,7 +339,6 @@ function App() {
               visibleRoleIds={matches.roleIds}
               titleMatches={matches.titles}
               candidates={candidates}
-              skillCount={skillIds.length}
               selectedRoleIds={selectedRoles}
               onToggleRole={toggleRole}
               onTitle={(key) => {
