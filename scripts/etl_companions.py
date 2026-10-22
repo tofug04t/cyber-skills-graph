@@ -4,7 +4,9 @@ Build-time validation + copy for the companion datasets that join to the
 forked NICE data by work_role_id.
 
 Sources (data/):  work-role-job-titles.json, adjacent-role-pathways.json
-Output (app/public/data/): the same files, unchanged, once validated.
+Output (app/public/data/): work-role-job-titles.json, unchanged, once validated.
+adjacent-role-pathways.json is validated but not shipped: the Background feeder
+interaction was removed pending a redesign (see decision-log.md).
 
 Checks against data/nice-framework-v2-2-0-forked.json:
   - every work_role_id in a companion file must exist in the fork (error)
@@ -81,9 +83,8 @@ def main():
         print(f"  {rid} {roles[rid]}")
 
     OUT.mkdir(parents=True, exist_ok=True)
-    for name in ("work-role-job-titles.json", "adjacent-role-pathways.json"):
-        shutil.copyfile(DATA / name, OUT / name)
-    print(f"Copied 2 companion files to {OUT.relative_to(ROOT)}")
+    shutil.copyfile(DATA / "work-role-job-titles.json", OUT / "work-role-job-titles.json")
+    print(f"Copied the job-titles file to {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

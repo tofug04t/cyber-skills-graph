@@ -50,27 +50,6 @@ export interface JobTitlesData {
   work_role_job_titles: WorkRoleJobTitles[];
 }
 
-export type TransitionDifficulty = "Low" | "Medium" | "High";
-
-export interface PathwayTarget {
-  work_role_id: string;
-  work_role_title: string;
-  transition_difficulty: TransitionDifficulty;
-  rationale: string;
-}
-
-export interface FeederRole {
-  feeder_id: string;
-  feeder_title: string;
-  typical_background: string;
-  targets: PathwayTarget[];
-}
-
-export interface PathwaysData {
-  notes: string[];
-  feeder_roles: FeederRole[];
-}
-
 export type AssessmentValue = "have" | "partial" | "missing";
 
 export type Assessment = Record<string, AssessmentValue>;

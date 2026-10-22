@@ -1,14 +1,4 @@
-import type {
-  FeederRole,
-  GraphData,
-  JobTitlesData,
-  PathwaysData,
-  PathwayTarget,
-  Skill,
-  TransitionDifficulty,
-} from "./types";
-
-export const DIFFICULTY_ORDER: Record<TransitionDifficulty, number> = { Low: 0, Medium: 1, High: 2 };
+import type { GraphData, JobTitlesData, Skill } from "./types";
 
 export interface TitleEntry {
   title: string;
@@ -51,45 +41,23 @@ export function titlesForRole(data: JobTitlesData, roleId: string): string[] {
   return data.work_role_job_titles.find((w) => w.work_role_id === roleId)?.job_titles ?? [];
 }
 
-export interface PathwayIn {
-  feeder: FeederRole;
-  target: PathwayTarget;
-}
-
-export function pathwaysIntoRole(pathways: PathwaysData, roleId: string): PathwayIn[] {
-  const found: PathwayIn[] = [];
-  for (const feeder of pathways.feeder_roles) {
-    for (const target of feeder.targets) {
-      if (target.work_role_id === roleId) found.push({ feeder, target });
-    }
-  }
-  return found.sort(
-    (a, b) =>
-      DIFFICULTY_ORDER[a.target.transition_difficulty] - DIFFICULTY_ORDER[b.target.transition_difficulty]
-  );
-}
-
 export interface FilterState {
   skillIds: string[];
   titleKey: string | null;
-  feederId: string | null;
 }
 
 export interface Candidates {
   active: boolean;
   roleIds: string[];
   skillOverlap: Map<string, number>;
-  pathway: Map<string, PathwayTarget>;
 }
 
 export function computeCandidates(
   graph: GraphData,
   filters: FilterState,
-  titleIndex: TitleIndex,
-  pathways: PathwaysData
+  titleIndex: TitleIndex
 ): Candidates {
   const skillOverlap = new Map<string, number>();
-  const pathway = new Map<string, PathwayTarget>();
   const sets: Set<string>[] = [];
 
   if (filters.skillIds.length > 0) {
@@ -105,25 +73,17 @@ export function computeCandidates(
     sets.push(new Set(titleIndex.get(filters.titleKey)?.roleIds ?? []));
   }
 
-  if (filters.feederId) {
-    const feeder = pathways.feeder_roles.find((f) => f.feeder_id === filters.feederId);
-    for (const target of feeder?.targets ?? []) pathway.set(target.work_role_id, target);
-    sets.push(new Set(pathway.keys()));
-  }
-
   if (sets.length === 0) {
-    return { active: false, roleIds: Object.keys(graph.workRoles), skillOverlap, pathway };
+    return { active: false, roleIds: Object.keys(graph.workRoles), skillOverlap };
   }
 
   const roleIds = [...sets[0]].filter((id) => sets.every((s) => s.has(id)) && graph.workRoles[id]);
   roleIds.sort(
     (a, b) =>
       (skillOverlap.get(b) ?? 0) - (skillOverlap.get(a) ?? 0) ||
-      DIFFICULTY_ORDER[pathway.get(a)?.transition_difficulty ?? "High"] -
-        DIFFICULTY_ORDER[pathway.get(b)?.transition_difficulty ?? "High"] ||
       graph.workRoles[a].title.localeCompare(graph.workRoles[b].title)
   );
-  return { active: true, roleIds, skillOverlap, pathway };
+  return { active: true, roleIds, skillOverlap };
 }
 
 function normalize(query: string): string {
@@ -148,16 +108,6 @@ export function matchSkills(graph: GraphData, query: string): Skill[] {
   return Object.values(graph.skills)
     .filter((s) => !q || s.title.toLowerCase().includes(q) || s.text.toLowerCase().includes(q))
     .sort((a, b) => skillLabel(a).localeCompare(skillLabel(b)));
-}
-
-export function matchFeeders(pathways: PathwaysData, query: string): FeederRole[] {
-  const q = normalize(query);
-  return pathways.feeder_roles
-    .filter(
-      (f) =>
-        !q || f.feeder_title.toLowerCase().includes(q) || f.typical_background.toLowerCase().includes(q)
-    )
-    .sort((a, b) => a.feeder_title.localeCompare(b.feeder_title));
 }
 
 export function skillsOfRoles(graph: GraphData, roleIds: string[]): Set<string> {

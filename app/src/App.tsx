@@ -5,7 +5,6 @@ import { FacetSection } from "./components/FacetSection";
 import { RoleFacet, type EmptyAction } from "./components/RoleFacet";
 import { AppliedFilters, type AppliedChip } from "./components/AppliedFilters";
 import { SkillPicker } from "./components/SkillPicker";
-import { BackgroundFacet } from "./components/BackgroundFacet";
 import { RoleDetail } from "./components/RoleDetail";
 import { WheelLegend } from "./components/WheelLegend";
 import { ThemeToggle } from "./components/ThemeToggle";
@@ -15,14 +14,12 @@ import { buildWheelNodes } from "./graphViews";
 import {
   buildTitleIndex,
   computeCandidates,
-  matchFeeders,
   matchRoles,
   matchSkills,
   searchTitles,
   skillLabel,
   skillsOfRoles,
   rolesForSkills,
-  pathwaysIntoRole,
   titleKey,
   titlesForRole,
   type FilterState,
@@ -36,18 +33,16 @@ interface UrlState {
   roleIds: string[];
   skillIds: string[];
   title: string | null;
-  feederId: string | null;
   assessment: Assessment;
 }
 
-type Facet = "role" | "skill" | "background";
+type Facet = "role" | "skill";
 
 interface Snapshot {
   roleIds: string[];
   skillIds: string[];
   activeTitle: string | null;
-  feederId: string | null;
-  open: { role: boolean; skill: boolean; background: boolean };
+  open: { role: boolean; skill: boolean };
 }
 
 const UNDO_MS = 8000;
@@ -72,20 +67,18 @@ function parseUrlState(): UrlState {
     roleIds: [...new Set(roles.split(",").filter(Boolean))],
     skillIds: (params.get("skills") ?? "").split(",").filter(Boolean).slice(0, 2),
     title: params.get("title"),
-    feederId: params.get("bg"),
     assessment,
   };
 }
 
 function App() {
-  const { graph, jobTitles, pathways, error } = useGraphData();
+  const { graph, jobTitles, error } = useGraphData();
   const [theme, toggleTheme] = useTheme();
   const initial = useMemo(() => parseUrlState(), []);
 
   const [roleIds, setRoleIds] = useState<string[]>(initial.roleIds);
   const [skillIds, setSkillIds] = useState<string[]>(initial.skillIds);
   const [activeTitle, setActiveTitle] = useState<string | null>(initial.title);
-  const [feederId, setFeederId] = useState<string | null>(initial.feederId);
   const [assessment, setAssessment] = useState<Assessment>(initial.assessment);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -93,7 +86,6 @@ function App() {
   const [open, setOpen] = useState({
     role: true,
     skill: initial.skillIds.length > 0,
-    background: initial.feederId !== null,
   });
 
   useEffect(() => {
@@ -105,32 +97,30 @@ function App() {
     }
     if (skillIds.length > 0) params.set("skills", skillIds.join(","));
     if (activeTitle) params.set("title", activeTitle);
-    if (feederId) params.set("bg", feederId);
     const query = params.toString();
     window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
-  }, [roleIds, skillIds, activeTitle, feederId, assessment]);
+  }, [roleIds, skillIds, activeTitle, assessment]);
 
   const titleIndex = useMemo(() => (jobTitles ? buildTitleIndex(jobTitles) : null), [jobTitles]);
 
   const candidates = useMemo(
     () =>
-      graph && titleIndex && pathways
-        ? computeCandidates(graph, { skillIds, titleKey: activeTitle, feederId }, titleIndex, pathways)
+      graph && titleIndex
+        ? computeCandidates(graph, { skillIds, titleKey: activeTitle }, titleIndex)
         : null,
-    [graph, titleIndex, pathways, skillIds, activeTitle, feederId]
+    [graph, titleIndex, skillIds, activeTitle]
   );
 
   const matches = useMemo(
     () =>
-      graph && pathways && titleIndex && candidates
+      graph && titleIndex && candidates
         ? {
             roleIds: matchRoles(graph, candidates.roleIds, query),
             titles: searchTitles(titleIndex, query),
             skills: matchSkills(graph, query),
-            feeders: matchFeeders(pathways, query),
           }
         : null,
-    [graph, pathways, titleIndex, candidates, query]
+    [graph, titleIndex, candidates, query]
   );
 
   const selectedRoles = useMemo(
@@ -138,11 +128,11 @@ function App() {
     [graph, roleIds]
   );
 
-  // Selected roles light up their skills; a title or background filter previews its candidate roles.
+  // Selected roles light up their skills; a title filter previews its candidate roles.
   const view = useMemo(() => {
     if (!graph || !candidates) return null;
     const previewRoles =
-      selectedRoles.length > 0 ? selectedRoles : activeTitle || feederId ? candidates.roleIds : [];
+      selectedRoles.length > 0 ? selectedRoles : activeTitle ? candidates.roleIds : [];
     const highlight = new Set([...skillsOfRoles(graph, previewRoles), ...skillIds]);
     const active = highlight.size > 0;
     return {
@@ -153,20 +143,19 @@ function App() {
       }),
       fitIds: active ? [...highlight] : [],
     };
-  }, [graph, candidates, selectedRoles, activeTitle, feederId, skillIds, assessment, theme]);
+  }, [graph, candidates, selectedRoles, activeTitle, skillIds, assessment, theme]);
 
   const [undo, setUndo] = useState<Snapshot | null>(null);
 
   const clearRoles = () => setRoleIds([]);
 
   const clearAll = () => {
-    if (roleIds.length === 0 && skillIds.length === 0 && !activeTitle && !feederId) return;
-    setUndo({ roleIds, skillIds, activeTitle, feederId, open });
+    if (roleIds.length === 0 && skillIds.length === 0 && !activeTitle) return;
+    setUndo({ roleIds, skillIds, activeTitle, open });
     setRoleIds([]);
     setSkillIds([]);
     setActiveTitle(null);
-    setFeederId(null);
-    setOpen({ role: true, skill: false, background: false });
+    setOpen({ role: true, skill: false });
   };
 
   const undoClear = () => {
@@ -174,7 +163,6 @@ function App() {
     setRoleIds(undo.roleIds);
     setSkillIds(undo.skillIds);
     setActiveTitle(undo.activeTitle);
-    setFeederId(undo.feederId);
     setOpen(undo.open);
     setUndo(null);
   };
@@ -201,14 +189,13 @@ function App() {
   }, []);
 
   if (error) return <div className="app-error">Failed to load data: {error}</div>;
-  if (!graph || !jobTitles || !pathways || !titleIndex || !candidates || !view || !matches) {
+  if (!graph || !jobTitles || !titleIndex || !candidates || !view || !matches) {
     return <div className="app-loading">Loading NICE Framework data...</div>;
   }
 
   const counts: Record<Facet, number> = {
     role: matches.roleIds.length + matches.titles.length,
     skill: matches.skills.length,
-    background: matches.feeders.length,
   };
   const searching = query.trim() !== "";
   // While searching, sections with matches open themselves unless the user toggled them.
@@ -244,9 +231,7 @@ function App() {
     setOpen((o) => ({ ...o, skill: true }));
   };
 
-  const feeder = pathways.feeder_roles.find((f) => f.feeder_id === feederId);
-
-  const filterState: FilterState = { skillIds, titleKey: activeTitle, feederId };
+  const filterState: FilterState = { skillIds, titleKey: activeTitle };
   const filterItems: FilterItem[] = [
     ...(activeTitle
       ? [
@@ -269,17 +254,6 @@ function App() {
       }),
       remove: () => toggleSkill(id),
     })),
-    ...(feeder
-      ? [
-          {
-            key: "bg",
-            kind: "Background",
-            label: feeder.feeder_title,
-            without: (f: FilterState): FilterState => ({ ...f, feederId: null }),
-            remove: () => setFeederId(null),
-          },
-        ]
-      : []),
   ];
 
   const chips: AppliedChip[] = [
@@ -303,7 +277,7 @@ function App() {
           .map((i) => ({
             key: i.key,
             label: `${i.kind.toLowerCase()}: ${i.label}`,
-            count: computeCandidates(graph, i.without(filterState), titleIndex, pathways).roleIds.length,
+            count: computeCandidates(graph, i.without(filterState), titleIndex).roleIds.length,
             onApply: i.remove,
           }))
           .filter((a) => a.count > 0)
@@ -336,7 +310,7 @@ function App() {
             type="search"
             className="input search"
             placeholder="Search roles, skills, job titles..."
-            aria-label="Search roles, skills, job titles, and backgrounds"
+            aria-label="Search roles, skills, and job titles"
             value={query}
             onChange={(e) => updateQuery(e.target.value)}
           />
@@ -403,25 +377,6 @@ function App() {
             />
           </FacetSection>
 
-          <FacetSection
-            label="Background"
-            open={isOpen("background")}
-            onToggle={() => toggleFacet("background")}
-            summary={
-              <>
-                {matchCount("background")}
-                {feeder ? <span className="badge badge--accent">{feeder.feeder_title}</span> : null}
-              </>
-            }
-          >
-            <BackgroundFacet
-              pathways={pathways}
-              feeders={matches.feeders}
-              feederId={feederId}
-              onSelect={setFeederId}
-            />
-          </FacetSection>
-
           {selectedRoles.map((id) => {
             const role = graph.workRoles[id];
             return (
@@ -430,7 +385,6 @@ function App() {
                 role={role}
                 skills={role.skills.map((sid) => graph.skills[sid]).filter(Boolean)}
                 titles={titlesForRole(jobTitles, id)}
-                pathways={pathwaysIntoRole(pathways, id)}
                 assessment={assessment}
                 defaultOpen={selectedRoles.length === 1}
                 onAssess={(skillId: string, value: AssessmentValue) =>
@@ -464,7 +418,7 @@ function App() {
 
       <AboutDialog open={aboutOpen} onClose={() => setAboutOpen(false)} />
 
-      {undo && roleIds.length === 0 && skillIds.length === 0 && !activeTitle && !feederId && (
+      {undo && roleIds.length === 0 && skillIds.length === 0 && !activeTitle && (
         <Toast message="Filters cleared" actionLabel="Undo" onAction={undoClear} />
       )}
     </div>
