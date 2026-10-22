@@ -97,7 +97,8 @@ export function GraphCanvas({ nodes, theme, fitIds, onNodeClick, onBackgroundCli
       const wanted = fitKey ? new Set(fitKey.split(",")) : null;
       const targets = wanted ? cy.nodes().filter((n) => wanted.has(n.id())) : cy.nodes();
       if (targets.length === 0) return;
-      cy.fit(targets, wanted ? 80 : 50);
+      // padding shrinks with the pane so a short phone map still zooms in
+      cy.fit(targets, Math.min(wanted ? 80 : 50, cy.height() * 0.12));
       if (cy.zoom() > MAX_FIT_ZOOM) {
         cy.zoom(MAX_FIT_ZOOM);
         cy.center(targets);
