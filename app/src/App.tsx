@@ -6,6 +6,7 @@ import { RoleFacet, type EmptyAction } from "./components/RoleFacet";
 import { AppliedFilters, type AppliedChip } from "./components/AppliedFilters";
 import { SkillPicker } from "./components/SkillPicker";
 import { RoleDetail } from "./components/RoleDetail";
+import { SkillDetail } from "./components/SkillDetail";
 import { WheelLegend } from "./components/WheelLegend";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Toast } from "./components/Toast";
@@ -19,6 +20,7 @@ import {
   searchTitles,
   skillLabel,
   skillsOfRoles,
+  relatedSkills,
   rolesForSkills,
   titleKey,
   titlesForRole,
@@ -90,11 +92,9 @@ function App() {
 
   useEffect(() => {
     const params = new URLSearchParams();
-    if (roleIds.length > 0) {
-      params.set("roles", roleIds.join(","));
-      const entries = Object.entries(assessment);
-      if (entries.length > 0) params.set("a", entries.map(([id, v]) => `${id}:${v}`).join(","));
-    }
+    if (roleIds.length > 0) params.set("roles", roleIds.join(","));
+    const entries = Object.entries(assessment);
+    if (entries.length > 0) params.set("a", entries.map(([id, v]) => `${id}:${v}`).join(","));
     if (skillIds.length > 0) params.set("skills", skillIds.join(","));
     if (activeTitle) params.set("title", activeTitle);
     const query = params.toString();
@@ -139,7 +139,7 @@ function App() {
       nodes: buildWheelNodes(graph, theme, {
         highlight: active ? highlight : null,
         selected: new Set(skillIds),
-        assessment: selectedRoles.length > 0 ? assessment : null,
+        assessment: active ? assessment : null,
       }),
       fitIds: active ? [...highlight] : [],
     };
@@ -223,6 +223,9 @@ function App() {
 
   const toggleSkill = (id: string) =>
     setSkillIds((prev) => (prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]));
+
+  const assess = (skillId: string, value: AssessmentValue) =>
+    setAssessment((prev) => ({ ...prev, [skillId]: value }));
 
   const handleNodeClick = (id: string) => {
     toggleSkill(id);
@@ -371,15 +374,28 @@ function App() {
             }
           >
             <SkillPicker
-              graph={graph}
               skills={matches.skills}
               selected={skillIds}
-              roles={rolesForSkills(graph, skillIds)}
-              selectedRoleIds={selectedRoles}
+              assessment={assessment}
+              onAssess={assess}
               onToggle={toggleSkill}
-              onToggleRole={toggleRole}
             />
           </FacetSection>
+
+          {skillIds.map((id) => (
+            <SkillDetail
+              key={id}
+              graph={graph}
+              skill={graph.skills[id]}
+              related={relatedSkills(graph, id)}
+              assessment={assessment}
+              defaultOpen={skillIds.length === 1}
+              onAssess={assess}
+              onToggleRole={toggleRole}
+              onAddSkill={toggleSkill}
+              onRemove={() => toggleSkill(id)}
+            />
+          ))}
 
           {selectedRoles.map((id) => {
             const role = graph.workRoles[id];
@@ -391,9 +407,7 @@ function App() {
                 titles={titlesForRole(jobTitles, id)}
                 assessment={assessment}
                 defaultOpen={selectedRoles.length === 1}
-                onAssess={(skillId: string, value: AssessmentValue) =>
-                  setAssessment((prev) => ({ ...prev, [skillId]: value }))
-                }
+                onAssess={assess}
                 onTitle={(t) => setActiveTitle(titleKey(t))}
                 onResetMarks={() =>
                   setAssessment((prev) => {

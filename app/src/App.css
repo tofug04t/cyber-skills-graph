@@ -805,16 +805,28 @@
   color: var(--text);
 }
 
-/* roles used by the selected skills */
-.skill-roles {
-  margin-bottom: 4px;
-}
-
-.skill-roles__list {
-  max-height: 200px;
-  overflow-y: auto;
-}
-
 a.link-button {
   text-decoration: none;
+}
+
+/* skill picker rows with a quick mark control */
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-row .role-row {
+  flex: 1;
+  min-width: 0;
+}
+
+.mark-select {
+  flex-shrink: 0;
+  font-size: 11px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--muted);
 }

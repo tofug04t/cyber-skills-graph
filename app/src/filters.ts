@@ -110,3 +110,18 @@ export function rolesForSkills(graph: GraphData, skillIds: string[]): string[] {
     .map((role) => role.id)
     .sort((a, b) => graph.workRoles[a].title.localeCompare(graph.workRoles[b].title));
 }
+
+/** Skills that share the most roles with this one (Jaccard overlap), best first. */
+export function relatedSkills(graph: GraphData, skillId: string, limit = 6): Skill[] {
+  const roles = new Set(graph.skills[skillId]?.workRoles ?? []);
+  return Object.values(graph.skills)
+    .filter((s) => s.id !== skillId)
+    .map((s) => {
+      const shared = s.workRoles.filter((r) => roles.has(r)).length;
+      return { skill: s, score: shared / (roles.size + s.workRoles.length - shared) };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || skillLabel(a.skill).localeCompare(skillLabel(b.skill)))
+    .slice(0, limit)
+    .map((x) => x.skill);
+}
