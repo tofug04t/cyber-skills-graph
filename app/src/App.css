@@ -1045,3 +1045,94 @@
   background: var(--hover);
   color: var(--text);
 }
+
+/* phones: map pinned on top, panel scrolls below it */
+@media (max-width: 720px) {
+  .app__header {
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    padding: 8px 16px;
+  }
+
+  /* lets the subtitle drop to its own full-width row under the title and menu */
+  .app__title {
+    display: contents;
+  }
+
+  .app__subtitle {
+    order: 3;
+    flex: 0 0 100%;
+  }
+
+  .app__body {
+    flex-direction: column;
+  }
+
+  .app__graph {
+    order: -1;
+    flex: none;
+    height: 38vh;
+    height: 38dvh;
+    min-height: 200px;
+  }
+
+  .app__panel {
+    width: auto;
+    flex: 1;
+    min-height: 0;
+    border-right: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .legend {
+    max-height: calc(100% - 24px);
+    overflow-y: auto;
+  }
+
+  /* bigger touch targets */
+  .skill-checklist__option {
+    padding: 9px 0;
+  }
+
+  .mark-select {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .chip,
+  .applied__chip {
+    padding: 7px 12px;
+  }
+
+  .match-toggle__option {
+    padding: 7px 14px;
+  }
+
+  .icon-button {
+    width: 32px;
+    height: 32px;
+    margin: -8px -8px 0 0;
+  }
+
+  .menu__trigger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .menu__item {
+    padding: 11px 12px;
+  }
+
+  .link-button {
+    padding: 8px 4px;
+  }
+
+  .role-row {
+    min-height: 40px;
+  }
+
+  .theme-toggle__cell {
+    width: 34px;
+    height: 30px;
+  }
+}
