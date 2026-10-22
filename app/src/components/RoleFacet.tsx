@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import type { GraphData } from "../types";
 import { titleKey, type Candidates, type TitleEntry } from "../filters";
 import { SpectralStrip } from "./SpectralStrip";
-import { Difficulty } from "./Difficulty";
 
 interface RoleFacetProps {
   graph: GraphData;
@@ -48,7 +47,6 @@ export function RoleFacet({
 
   const renderRole = (id: string) => {
     const role = graph.workRoles[id];
-    const pathway = candidates.pathway.get(id);
     const overlap = candidates.skillOverlap.get(id);
     const selected = selectedRoleIds.includes(id);
     return (
@@ -66,9 +64,7 @@ export function RoleFacet({
               {overlap}/{skillCount} skills
             </span>
           )}
-          {pathway && <Difficulty level={pathway.transition_difficulty} />}
         </button>
-        {pathway && <p className="role-row__note">{pathway.rationale}</p>}
       </li>
     );
   };

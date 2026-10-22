@@ -456,3 +456,12 @@ After the role restructure, half the skills (192 of 381) were attached to a sing
 - No skill was removed from any role in this pass. Mappings are judgment calls and expected to be refined.
 
 **Addendum (2026-10-20): Cybersecurity Counsel removed.** Not a realistic path for most people (it requires a law degree). All 13 of its skills are shared with other roles, so none were cut. Now 29 Work Roles, 381 skills.
+
+---
+
+## 17. Background / feeder interaction removed (2026-10-22)
+
+The Background facet and the "Ways in" block on role details are gone from the app. Picking one background and seeing ranked roles is too blunt an answer to "how do I get there from where I am", and tester feedback showed the guidance can contradict real learning paths (for example Help Desk to SOC to Pentest, where the data only listed CTF Player for Penetration Tester). The redesign will need internal progressions as well as outside entry points, and probably a student / new grad starting point.
+
+- `data/adjacent-role-pathways.json` is kept and still validated by `scripts/etl_companions.py`, but it is no longer copied to `app/public/data/` or loaded by the app.
+- The `?bg=` URL parameter no longer does anything.

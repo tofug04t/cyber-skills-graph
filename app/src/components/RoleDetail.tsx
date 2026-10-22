@@ -1,14 +1,11 @@
 import type { Assessment, AssessmentValue, Skill, WorkRole } from "../types";
-import type { PathwayIn } from "../filters";
 import { SkillChecklist } from "./SkillChecklist";
 import { SpectralStrip } from "./SpectralStrip";
-import { Difficulty } from "./Difficulty";
 
 interface RoleDetailProps {
   role: WorkRole;
   skills: Skill[];
   titles: string[];
-  pathways: PathwayIn[];
   assessment: Assessment;
   /** Start expanded; with several roles selected only the first ones need to be. */
   defaultOpen: boolean;
@@ -22,7 +19,6 @@ export function RoleDetail({
   role,
   skills,
   titles,
-  pathways,
   assessment,
   defaultOpen,
   onAssess,
@@ -61,26 +57,6 @@ export function RoleDetail({
           </div>
         </div>
       )}
-
-      <div className="role-detail__section">
-        <h4 className="subheading">Ways in</h4>
-        {pathways.length > 0 ? (
-          <ul className="pathway-list">
-            {pathways.map(({ feeder, target }) => (
-              <li key={feeder.feeder_id}>
-                <span className="pathway-list__title">{feeder.feeder_title}</span>
-                <Difficulty level={target.transition_difficulty} />
-                <p className="role-row__note">{target.rationale}</p>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="hint">
-            No entry pathways from other fields are mapped for this role yet. It may be reached from other
-            cybersecurity roles.
-          </p>
-        )}
-      </div>
 
       <div className="role-detail__section">
         <div className="role-detail__skills-header">

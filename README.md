@@ -10,7 +10,7 @@ Found a problem or have an idea? [Share feedback](https://forms.gle/EPC65MYimKe3
 
 ## About the data
 
-The roles, skills, job titles, and pathways are one person's interpretation, not an official standard. They were inspired by the [NIST NICE Framework](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center) (SP 800-181 Rev. 1) and other sources. [`decision-log.md`](decision-log.md) records how the dataset was built and changed. See the About dialog in the app for credits.
+The roles, skills, and job titles are one person's interpretation, not an official standard. They were inspired by the [NIST NICE Framework](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center) (SP 800-181 Rev. 1) and other sources. [`decision-log.md`](decision-log.md) records how the dataset was built and changed. See the About dialog in the app for credits.
 
 ## Run it locally
 
@@ -24,7 +24,7 @@ just          # list all recipes
 
 ## How it fits together
 
-A static React + TypeScript + Vite app, with the graph drawn by Cytoscape.js. There is no backend; the app loads three JSON files from `app/public/data/`. Python scripts in `scripts/` rebuild those files from the source data in `data/`, and `just data` runs them all.
+A static React + TypeScript + Vite app, with the graph drawn by Cytoscape.js. There is no backend; the app loads two JSON files from `app/public/data/`. Python scripts in `scripts/` rebuild those files from the source data in `data/`, and `just data` runs them all.
 
 ## License
 
