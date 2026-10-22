@@ -1,7 +1,7 @@
 import type { Assessment, AssessmentValue, Skill } from "../types";
 import { skillLabel } from "../filters";
 import { ColorMark } from "./ColorMark";
-import { MARK_OPTIONS } from "./MarkButtons";
+import { MARK_OPTIONS } from "../constants";
 
 interface SkillPickerProps {
   skills: Skill[];

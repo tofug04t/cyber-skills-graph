@@ -21,7 +21,6 @@ import {
   skillLabel,
   skillsOfRoles,
   relatedSkills,
-  rolesForSkills,
   titleKey,
   titlesForRole,
   type FilterState,
