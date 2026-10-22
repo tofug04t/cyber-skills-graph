@@ -3,6 +3,7 @@ import { skillLabel } from "../filters";
 import { MEANINGS } from "../theme";
 import { ColorMark } from "./ColorMark";
 import { MarkButtons } from "./MarkButtons";
+import { RemoveButton } from "./RemoveButton";
 import { SpectralStrip } from "./SpectralStrip";
 
 interface SkillDetailProps {
@@ -37,16 +38,7 @@ export function SkillDetail({
         <span className="role-detail__label" title={MEANINGS[skill.color].blurb}>
           {MEANINGS[skill.color].name}
         </span>
-        <button
-          type="button"
-          className="link-button"
-          onClick={(e) => {
-            e.preventDefault();
-            onRemove();
-          }}
-        >
-          Remove
-        </button>
+        <RemoveButton label={`Remove ${skillLabel(skill)}`} onClick={onRemove} />
       </summary>
       <p className="role-detail__text">{skill.text}</p>
 

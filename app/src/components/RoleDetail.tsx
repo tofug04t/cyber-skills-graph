@@ -1,6 +1,7 @@
 import type { Assessment, AssessmentValue, Skill, WorkRole } from "../types";
 import { SkillChecklist } from "./SkillChecklist";
 import { CopyLinkButton } from "./CopyLinkButton";
+import { RemoveButton } from "./RemoveButton";
 import { SpectralStrip } from "./SpectralStrip";
 
 interface RoleDetailProps {
@@ -40,25 +41,16 @@ export function RoleDetail({
   const { have, partial, total } = gapCounts(skills, assessment);
   return (
     <details className="card role-detail" open={defaultOpen}>
-      <summary className="role-detail__header">
-        <SpectralStrip mix={role.mix} label={role.label} />
+      <summary className="role-detail__header role-detail__header--role">
         <h3>{role.title}</h3>
+        <SpectralStrip mix={role.mix} label={role.label} />
         <span className="role-detail__label">{role.label}</span>
         {have + partial > 0 && (
           <span className="badge" title={`Strong in ${have} of ${total} skills`}>
             {have}/{total}
           </span>
         )}
-        <button
-          type="button"
-          className="link-button"
-          onClick={(e) => {
-            e.preventDefault();
-            onRemove();
-          }}
-        >
-          Remove
-        </button>
+        <RemoveButton label={`Remove ${role.title}`} onClick={onRemove} />
       </summary>
       <p className="role-detail__text">{role.text}</p>
 

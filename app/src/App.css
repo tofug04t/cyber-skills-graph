@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  /* contains .sr-only (absolute) text, which otherwise made the whole page scroll */
+  position: relative;
+  overflow: hidden;
 }
 
 .app-loading,
@@ -99,6 +102,7 @@
 .app__panel {
   width: 340px;
   flex-shrink: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 16px;
   border-right: 1px solid var(--border);
@@ -383,11 +387,75 @@
 }
 
 .role-detail__header {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  column-gap: 8px;
+  row-gap: 2px;
   align-items: center;
-  gap: 8px;
   cursor: pointer;
   list-style: none;
+}
+
+.role-detail__header > :first-child {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+}
+
+.role-detail__header h3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.role-detail__header > .icon-button {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.role-detail__label {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.role-detail__header > .badge {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end;
+}
+
+/* role cards: title on top, a full-width color bar, then the label and rating badge */
+.role-detail__header--role {
+  grid-template-columns: minmax(0, 1fr) auto;
+  row-gap: 6px;
+}
+
+.role-detail__header--role h3 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.role-detail__header--role > .icon-button {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.role-detail__header--role > .spectral {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: auto;
+  width: 100%;
+  height: 10px;
+}
+
+.role-detail__header--role .role-detail__label {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.role-detail__header--role > .badge {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .role-detail__header::-webkit-details-marker {
@@ -403,7 +471,6 @@
 .role-detail__header h3 {
   margin: 0;
   font-size: 15px;
-  flex: 1;
 }
 
 .role-detail__text {
@@ -945,4 +1012,36 @@
 .menu__item:hover,
 .menu__item:focus-visible {
   background: var(--hover);
+}
+
+/* thin, low-contrast scrollbars that strengthen on hover */
+.app__panel,
+.facet__scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--input-border) transparent;
+}
+
+.app__panel:hover,
+.facet__scroll:hover {
+  scrollbar-color: var(--muted) transparent;
+}
+
+/* small corner close button */
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin: -4px -4px 0 0;
+  align-self: start;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--muted);
+}
+
+.icon-button:hover {
+  background: var(--hover);
+  color: var(--text);
 }
