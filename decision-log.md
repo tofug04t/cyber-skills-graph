@@ -465,3 +465,24 @@ The Background facet and the "Ways in" block on role details are gone from the a
 
 - `data/adjacent-role-pathways.json` is kept and still validated by `scripts/etl_companions.py`, but it is no longer copied to `app/public/data/` or loaded by the app.
 - The `?bg=` URL parameter no longer does anything.
+
+---
+
+## 18. Keeping technical roles from reading as White (2026-10-22)
+
+**Problem.** AI Security Engineer (DD-WRL-010) was labeled White. It had few colored skills (6), and some of them were tagged White when another color fit better, so its mix came out 67% white.
+
+**Considered and rejected: weighting skills by how many roles share them.** The idea was to down-weight widely shared skills so they count less toward a role's mix. Simulated, it changed only two labels and slightly raised white in some roles, because generic shared skills are already tagged Middle and left out of the mix. It would also have moved the map. Not adopted.
+
+**Retags (9 skills, all previously White)**, in `data/skill-colors.csv`:
+
+- **Green:** Security product evaluation (S0509), Recovery planning (S0575), Data asset inventory (S0808), Critical infrastructure identification (S0465)
+- **Blue (incident response):** Security operations coordination (S0432)
+- **Yellow:** Model supply chain review (S9050), AI output validation (S0957)
+- **Middle:** SOP development (S0407), Decision-making under uncertainty (S0922)
+
+**AI Security Engineer gets 5 existing skills** (`addMappings` in `data/role-changes.json`): Threat modeling (S0588), Container security (S9013), Secrets management (S9041), Anomaly detection (S0648), Log analysis (S0866). Its mix is now about yellow 27%, with blue, green, red, and white at 18% each, labeled Hybrid: Yellow/Red. A yellow-led label is intended: the role is new and still varies between organizations.
+
+**White guardrail** (`scripts/color_layout.py`, `classify()`). White names a role only when it is a majority of the mix (`WHITE_LEAD_SHARE = 0.5`); if white leads below that, it is dropped and the other shares are renormalized before the usual General / dominant / Hybrid rules apply. White is named second only above 20% (`WHITE_SECOND_SHARE = 0.2`); at or below that, the next color becomes the runner-up, and if none is left the top color is dominant. This affects only the label: the mix strip still shows every color, and `role_mix()` and the map positions are unchanged.
+
+**Effect.** Only AI Security Engineer's label changes. The six governance roles (CISO, Privacy Analyst, Security Program Manager, IT Auditor, Third-Party Risk Analyst, GRC Analyst) stay White; IT Auditor is closest to the line at about 52% white. White disappears from Incident Responder, Digital Forensics Analyst, and Security Researcher and drops in several others. OT Security Engineer keeps about 26% white on purpose.

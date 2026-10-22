@@ -17,6 +17,8 @@ BLUE_GROUPS = ["monitoring", "threat-intel", "forensics", "incident-response"]
 MIN_COLORED = 3  # fewer colored skills than this: the role is "general"
 DOMINANT_SHARE = 0.45  # a color dominates when it has this share...
 DOMINANT_LEAD = 1.5  # ...and this multiple of the runner-up
+WHITE_LEAD_SHARE = 0.5   # white names a role only as a majority of its mix
+WHITE_SECOND_SHARE = 0.2 # white is named second only above this share
 
 STEP = 2 * math.pi / len(WHEEL)
 
@@ -50,7 +52,17 @@ def classify(mix, total):
     if total < MIN_COLORED:
         return None, "General"
     ranked = sorted(mix.items(), key=lambda kv: -kv[1])
-    (c1, s1), second = ranked[0], (ranked[1] if len(ranked) > 1 else (None, 0))
+    # White guardrail (label only; the mix itself is unchanged): white leads a
+    # label only as a majority, and is named second only above a small share.
+    if ranked[0][0] == "white" and ranked[0][1] < WHITE_LEAD_SHARE:
+        rest = ranked[1:]
+        rest_total = sum(s for _, s in rest)
+        ranked = [(c, s / rest_total) for c, s in rest]
+    elif len(ranked) > 1 and ranked[1][0] == "white" and ranked[1][1] <= WHITE_SECOND_SHARE:
+        ranked = ranked[:1] + ranked[2:]
+    if len(ranked) < 2:
+        return ranked[0][0], ranked[0][0].capitalize()
+    (c1, s1), second = ranked[0], ranked[1]
     if s1 >= DOMINANT_SHARE and s1 >= DOMINANT_LEAD * second[1]:
         return c1, c1.capitalize()
     return None, f"Hybrid: {c1.capitalize()}/{second[0].capitalize()}"
