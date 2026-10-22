@@ -1,5 +1,6 @@
 import type { Assessment, AssessmentValue, Skill, WorkRole } from "../types";
 import { SkillChecklist } from "./SkillChecklist";
+import { CopyLinkButton } from "./CopyLinkButton";
 import { SpectralStrip } from "./SpectralStrip";
 
 interface RoleDetailProps {
@@ -97,6 +98,7 @@ export function RoleDetail({
               <strong>{have}</strong> strong
               {partial > 0 && <>, {partial} some</>} of {total} skills
             </p>
+            <CopyLinkButton label="Copy link to your results" />
           </div>
         ) : (
           <p className="hint">Rate each skill Strong, Some or None to see where you stand.</p>

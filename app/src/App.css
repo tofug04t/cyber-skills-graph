@@ -805,10 +805,6 @@
   color: var(--text);
 }
 
-a.link-button {
-  text-decoration: none;
-}
-
 /* skill picker rows with a quick mark control */
 .skill-row {
   display: flex;
@@ -895,4 +891,58 @@ a.link-button {
   margin: 6px 0 0;
   font-size: 13px;
   color: var(--text-2);
+}
+
+/* header overflow menu */
+.menu {
+  position: relative;
+}
+
+.menu__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--muted);
+}
+
+.menu__trigger:hover,
+.menu__trigger[aria-expanded="true"] {
+  background: var(--hover);
+  color: var(--text);
+}
+
+.menu__list {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  min-width: 160px;
+  padding: 4px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.menu__item {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--text);
+  font-size: 13px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.menu__item:hover,
+.menu__item:focus-visible {
+  background: var(--hover);
 }
