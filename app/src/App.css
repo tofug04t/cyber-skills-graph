@@ -830,3 +830,41 @@ a.link-button {
   background: var(--input-bg);
   color: var(--muted);
 }
+
+/* All / Any switch for combining several selections */
+.match-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.match-toggle__options {
+  display: inline-flex;
+}
+
+.match-toggle__option {
+  font-size: 11px;
+  padding: 2px 10px;
+  border: 1px solid var(--input-border);
+  background: transparent;
+  color: var(--muted);
+}
+
+.match-toggle__option:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.match-toggle__option:last-child {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+
+.match-toggle__option--active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent-fg);
+}

@@ -50,6 +50,9 @@ export interface JobTitlesData {
   work_role_job_titles: WorkRoleJobTitles[];
 }
 
+/** How several selected items combine: every one, or at least one. */
+export type MatchMode = "all" | "any";
+
 export type AssessmentValue = "have" | "partial" | "missing";
 
 export type Assessment = Record<string, AssessmentValue>;
