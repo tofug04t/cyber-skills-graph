@@ -334,8 +334,8 @@ function App() {
         <aside className="app__panel">
           <p className="hint">
             {selectedRoles.length > 0
-              ? "Selected roles light up their skills. Mark each skill below to see your gap."
-              : "Pick a role to see its skills, or pick skills you already have to see which roles use them. You can also click a skill on the map. Mark each skill Have, Partial or Missing to see your gaps."}
+              ? "Selected roles light up their skills. Rate each skill below to see your gap."
+              : "Pick a role to see its skills, or pick skills you already have to see which roles use them. You can also click a skill on the map. Rate each skill Strong, Some or None to see your gaps."}
           </p>
 
           <input

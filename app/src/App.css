@@ -868,3 +868,31 @@ a.link-button {
   border-color: var(--accent-border);
   color: var(--accent-fg);
 }
+
+/* gap summary on role cards */
+.gap-summary {
+  margin: 6px 0 4px;
+}
+
+.gap-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--chip-bg);
+}
+
+.gap-bar__have {
+  background: var(--accent-border);
+}
+
+.gap-bar__partial {
+  background: var(--accent-border);
+  opacity: 0.4;
+}
+
+.gap-summary__text {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--text-2);
+}

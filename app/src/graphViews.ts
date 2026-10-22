@@ -12,7 +12,7 @@ interface WheelOptions {
   highlight: Set<string> | null;
   /** Skills picked in the Skill filter, drawn larger. */
   selected: Set<string>;
-  /** When roles are selected, highlighted skills show their have/partial/missing state. */
+  /** When roles are selected, highlighted skills show their strong/some/none level. */
   assessment: Assessment | null;
 }
 

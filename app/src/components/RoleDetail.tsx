@@ -15,6 +15,16 @@ interface RoleDetailProps {
   onRemove: () => void;
 }
 
+function gapCounts(skills: Skill[], assessment: Assessment) {
+  let have = 0;
+  let partial = 0;
+  for (const s of skills) {
+    if (assessment[s.id] === "have") have++;
+    else if (assessment[s.id] === "partial") partial++;
+  }
+  return { have, partial, total: skills.length };
+}
+
 export function RoleDetail({
   role,
   skills,
@@ -26,12 +36,18 @@ export function RoleDetail({
   onResetMarks,
   onRemove,
 }: RoleDetailProps) {
+  const { have, partial, total } = gapCounts(skills, assessment);
   return (
     <details className="card role-detail" open={defaultOpen}>
       <summary className="role-detail__header">
         <SpectralStrip mix={role.mix} label={role.label} />
         <h3>{role.title}</h3>
         <span className="role-detail__label">{role.label}</span>
+        {have + partial > 0 && (
+          <span className="badge" title={`Strong in ${have} of ${total} skills`}>
+            {have}/{total}
+          </span>
+        )}
         <button
           type="button"
           className="link-button"
@@ -63,10 +79,28 @@ export function RoleDetail({
           <h4 className="subheading">Skills ({skills.length})</h4>
           {skills.some((s) => assessment[s.id] && assessment[s.id] !== "missing") && (
             <button type="button" className="link-button" onClick={onResetMarks}>
-              Reset marks
+              Reset ratings
             </button>
           )}
         </div>
+        {have + partial > 0 ? (
+          <div className="gap-summary">
+            <div
+              className="gap-bar"
+              role="img"
+              aria-label={`${have} strong and ${partial} some, of ${total} skills`}
+            >
+              <span className="gap-bar__have" style={{ width: `${(have / total) * 100}%` }} />
+              <span className="gap-bar__partial" style={{ width: `${(partial / total) * 100}%` }} />
+            </div>
+            <p className="gap-summary__text">
+              <strong>{have}</strong> strong
+              {partial > 0 && <>, {partial} some</>} of {total} skills
+            </p>
+          </div>
+        ) : (
+          <p className="hint">Rate each skill Strong, Some or None to see where you stand.</p>
+        )}
         <SkillChecklist skills={skills} assessment={assessment} onChange={onAssess} />
       </div>
     </details>

@@ -52,7 +52,7 @@ export function SkillPicker({
                   onChange={(e) => onAssess(skill.id, e.target.value as AssessmentValue)}
                 >
                   <option value="" disabled>
-                    Mark
+                    Rate
                   </option>
                   {MARK_OPTIONS.map((o) => (
                     <option key={o.value} value={o.value}>
