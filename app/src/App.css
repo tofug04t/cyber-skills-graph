@@ -803,3 +803,17 @@
 .legend strong {
   color: var(--text);
 }
+
+/* roles used by the selected skills */
+.skill-roles {
+  margin-bottom: 4px;
+}
+
+.skill-roles__list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+a.link-button {
+  text-decoration: none;
+}

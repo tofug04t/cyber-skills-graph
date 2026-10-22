@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { CREDITS } from "../credits";
+import { CREDITS, FEEDBACK_URL } from "../credits";
 
 interface AboutDialogProps {
   open: boolean;
@@ -39,6 +39,14 @@ export function AboutDialog({ open, onClose }: AboutDialogProps) {
           them. The roles, skills, job titles, and pathways are one person's interpretation, not an
           official standard. They were inspired by the NIST NICE Framework (SP 800-181 Rev. 1) and
           other sources.
+        </p>
+
+        <p>
+          Spotted something off, or have an idea?{" "}
+          <a href={FEEDBACK_URL} target="_blank" rel="noreferrer">
+            Share feedback
+          </a>
+          .
         </p>
 
         <h3 className="subheading">Credits</h3>

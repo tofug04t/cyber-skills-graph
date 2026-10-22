@@ -165,3 +165,21 @@ export function skillsOfRoles(graph: GraphData, roleIds: string[]): Set<string> 
   for (const roleId of roleIds) for (const sid of graph.workRoles[roleId]?.skills ?? []) ids.add(sid);
   return ids;
 }
+
+export interface SkillRole {
+  roleId: string;
+  /** How many of the selected skills this role uses. */
+  overlap: number;
+}
+
+/** Roles that use any of the given skills, most overlap first. */
+export function rolesForSkills(graph: GraphData, skillIds: string[]): SkillRole[] {
+  const counts = new Map<string, number>();
+  for (const sid of skillIds) {
+    for (const roleId of graph.skills[sid]?.workRoles ?? []) counts.set(roleId, (counts.get(roleId) ?? 0) + 1);
+  }
+  return [...counts]
+    .filter(([roleId]) => graph.workRoles[roleId])
+    .map(([roleId, overlap]) => ({ roleId, overlap }))
+    .sort((a, b) => b.overlap - a.overlap || graph.workRoles[a.roleId].title.localeCompare(graph.workRoles[b.roleId].title));
+}

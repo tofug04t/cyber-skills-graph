@@ -4,6 +4,10 @@ An explorable map of cybersecurity Work Roles, the skills they use, and the path
 
 **Live site:** https://tofug04t.github.io/cyber-skills-graph/
 
+## Feedback
+
+Found a problem or have an idea? [Share feedback](https://forms.gle/EPC65MYimKe3G7Dc6).
+
 ## About the data
 
 The roles, skills, job titles, and pathways are one person's interpretation, not an official standard. They were inspired by the [NIST NICE Framework](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center) (SP 800-181 Rev. 1) and other sources. [`decision-log.md`](decision-log.md) records how the dataset was built and changed. See the About dialog in the app for credits.

@@ -21,12 +21,14 @@ import {
   searchTitles,
   skillLabel,
   skillsOfRoles,
+  rolesForSkills,
   pathwaysIntoRole,
   titleKey,
   titlesForRole,
   type FilterState,
 } from "./filters";
 import { useTheme } from "./useTheme";
+import { FEEDBACK_URL } from "./credits";
 import type { Assessment, AssessmentValue } from "./types";
 import "./App.css";
 
@@ -312,6 +314,9 @@ function App() {
       <header className="app__header">
         <h1>Cyber Skills Graph</h1>
         <div className="app__header-actions">
+          <a className="link-button" href={FEEDBACK_URL} target="_blank" rel="noreferrer">
+            Feedback
+          </a>
           <button type="button" className="link-button" onClick={() => setAboutOpen(true)}>
             About
           </button>
@@ -387,7 +392,15 @@ function App() {
               </>
             }
           >
-            <SkillPicker skills={matches.skills} selected={skillIds} onToggle={toggleSkill} />
+            <SkillPicker
+              graph={graph}
+              skills={matches.skills}
+              selected={skillIds}
+              roles={rolesForSkills(graph, skillIds)}
+              selectedRoleIds={selectedRoles}
+              onToggle={toggleSkill}
+              onToggleRole={toggleRole}
+            />
           </FacetSection>
 
           <FacetSection
