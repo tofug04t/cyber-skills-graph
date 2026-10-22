@@ -1,3 +1,5 @@
+export const FEEDBACK_URL = "https://forms.gle/EPC65MYimKe3G7Dc6";
+
 export interface Credit {
   name: string;
   reason: string;
