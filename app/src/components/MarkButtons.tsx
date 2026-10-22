@@ -6,7 +6,7 @@ interface MarkButtonsProps {
   onChange: (value: AssessmentValue) => void;
 }
 
-/** Have / Partial / Missing for one skill; an unmarked skill counts as missing. */
+/** Strong / Some / None for one skill; an unmarked skill counts as none. Values stay have/partial/missing so saved links keep working. */
 export function MarkButtons({ value, onChange }: MarkButtonsProps) {
   return (
     <span className="skill-checklist__options">
