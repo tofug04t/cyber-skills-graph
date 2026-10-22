@@ -2,17 +2,22 @@ import type { ReactNode } from "react";
 
 interface FacetSectionProps {
   label: string;
+  /** Plain-language prompt shown above the label. */
+  question?: string;
   open: boolean;
   onToggle: () => void;
   summary?: ReactNode;
   children: ReactNode;
 }
 
-export function FacetSection({ label, open, onToggle, summary, children }: FacetSectionProps) {
+export function FacetSection({ label, question, open, onToggle, summary, children }: FacetSectionProps) {
   return (
     <section className="facet">
       <button type="button" className="facet__header" aria-expanded={open} onClick={onToggle}>
-        <span className="facet__label">{label}</span>
+        <span className="facet__title">
+          {question && <span className="facet__question">{question}</span>}
+          <span className="facet__label">{label}</span>
+        </span>
         <span className="facet__summary">{summary}</span>
         <svg
           className={"facet__chevron" + (open ? " facet__chevron--open" : "")}

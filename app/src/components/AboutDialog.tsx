@@ -35,8 +35,7 @@ export function AboutDialog({ open, onClose }: AboutDialogProps) {
         </div>
 
         <p>
-          An explorable map of cybersecurity Work Roles, the skills they use, and the paths into
-          them. The roles, skills, and job titles are one person's interpretation, not an
+          An explorable map of cybersecurity roles and the skills they use. The roles, skills, and job titles are one person's interpretation, not an
           official standard. They were inspired by the NIST NICE Framework (SP 800-181 Rev. 1) and
           other sources.
         </p>
