@@ -47020,6 +47020,46 @@
       "dest_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
       "relationship_identifier": "projection",
       "provenance_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0"
+    },
+    {
+      "source_element_identifier": "DD-WRL-010",
+      "source_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "dest_element_identifier": "S0588",
+      "dest_doc_identifier": "SP_800_181_2_2_0",
+      "relationship_identifier": "projection",
+      "provenance_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0"
+    },
+    {
+      "source_element_identifier": "DD-WRL-010",
+      "source_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "dest_element_identifier": "S9013",
+      "dest_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "relationship_identifier": "projection",
+      "provenance_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0"
+    },
+    {
+      "source_element_identifier": "DD-WRL-010",
+      "source_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "dest_element_identifier": "S9041",
+      "dest_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "relationship_identifier": "projection",
+      "provenance_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0"
+    },
+    {
+      "source_element_identifier": "DD-WRL-010",
+      "source_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "dest_element_identifier": "S0648",
+      "dest_doc_identifier": "SP_800_181_2_2_0",
+      "relationship_identifier": "projection",
+      "provenance_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0"
+    },
+    {
+      "source_element_identifier": "DD-WRL-010",
+      "source_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0",
+      "dest_element_identifier": "S0866",
+      "dest_doc_identifier": "SP_800_181_2_2_0",
+      "relationship_identifier": "projection",
+      "provenance_doc_identifier": "MHP_SKILLS_GRAPH_FORK_1_0"
     }
   ]
 }
