@@ -1,12 +1,7 @@
 import type { Assessment, AssessmentValue, Skill } from "../types";
 import { skillLabel } from "../filters";
 import { ColorMark } from "./ColorMark";
-
-const OPTIONS: { value: AssessmentValue; label: string }[] = [
-  { value: "have", label: "Have" },
-  { value: "partial", label: "Partial" },
-  { value: "missing", label: "Missing" },
-];
+import { MarkButtons } from "./MarkButtons";
 
 interface SkillChecklistProps {
   skills: Skill[];
@@ -17,33 +12,14 @@ interface SkillChecklistProps {
 export function SkillChecklist({ skills, assessment, onChange }: SkillChecklistProps) {
   return (
     <ul className="skill-checklist">
-      {skills.map((skill) => {
-        const current = assessment[skill.id] ?? "missing";
-        return (
-          <li key={skill.id} className="skill-checklist__row">
-            <span className="skill-checklist__text" title={skill.text}>
-              <ColorMark color={skill.color} /> {skillLabel(skill)}
-            </span>
-            <span className="skill-checklist__options">
-              {OPTIONS.map((opt) => (
-                <button
-                  key={opt.value}
-                  type="button"
-                  className={
-                    "skill-checklist__option" +
-                    (current === opt.value ? " skill-checklist__option--active" : "") +
-                    ` skill-checklist__option--${opt.value}`
-                  }
-                  onClick={() => onChange(skill.id, opt.value)}
-                  aria-pressed={current === opt.value}
-                >
-                  {opt.label}
-                </button>
-              ))}
-            </span>
-          </li>
-        );
-      })}
+      {skills.map((skill) => (
+        <li key={skill.id} className="skill-checklist__row">
+          <span className="skill-checklist__text" title={skill.text}>
+            <ColorMark color={skill.color} /> {skillLabel(skill)}
+          </span>
+          <MarkButtons value={assessment[skill.id] ?? "missing"} onChange={(v) => onChange(skill.id, v)} />
+        </li>
+      ))}
     </ul>
   );
 }
