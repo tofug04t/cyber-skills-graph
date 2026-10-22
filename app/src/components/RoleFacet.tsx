@@ -63,6 +63,9 @@ export function RoleFacet({
 
   return (
     <div className="role-facet">
+      {selectedRoleIds.length === 0 && (
+        <p className="hint">Select one role, or several to compare. Then mark which of its skills you have.</p>
+      )}
       {titleMatches.length > 0 && (
         <ul className="list list--titles">
           {titleMatches.map((entry) => (

@@ -284,7 +284,12 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>Cyber Skills Graph</h1>
+        <div className="app__title">
+          <h1>Cyber Skills Graph</h1>
+          <p className="app__subtitle">
+            Explore cybersecurity jobs, the skills they use, and check how your own skills measure up.
+          </p>
+        </div>
         <div className="app__header-actions">
           <a className="link-button" href={FEEDBACK_URL} target="_blank" rel="noreferrer">
             Feedback
@@ -301,7 +306,7 @@ function App() {
           <p className="hint">
             {selectedRoles.length > 0
               ? "Selected roles light up their skills. Mark each skill below to see your gap."
-              : "Search everything below, or browse each section. You can also click a skill on the wheel."}
+              : "Pick a role to see its skills, or pick skills you already have to see which roles use them. You can also click a skill on the map. Mark each skill Have, Partial or Missing to see your gaps."}
           </p>
 
           <input
@@ -317,6 +322,7 @@ function App() {
 
           <FacetSection
             label="Role"
+            question="Know the job you want?"
             open={isOpen("role")}
             onToggle={() => toggleFacet("role")}
             summary={
@@ -352,6 +358,7 @@ function App() {
 
           <FacetSection
             label="Skill"
+            question="Know what you're good at?"
             open={isOpen("skill")}
             onToggle={() => toggleFacet("skill")}
             summary={

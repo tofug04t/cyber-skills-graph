@@ -1,6 +1,6 @@
 # Cyber Skills Graph
 
-An explorable map of cybersecurity Work Roles, the skills they use, and the paths into them. Search by role, skill, job title, or the background you're coming from, then mark the skills you have to see your gaps on the graph.
+An explorable map of cybersecurity roles and the skills they use. Search by role, skill, or job title, then mark the skills you have to see your gaps on the graph.
 
 **Live site:** https://tofug04t.github.io/cyber-skills-graph/
 

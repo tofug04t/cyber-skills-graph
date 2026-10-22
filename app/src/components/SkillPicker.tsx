@@ -48,7 +48,7 @@ export function SkillPicker({ graph, skills, selected, roles, selectedRoleIds, o
           )}
         </div>
       ) : (
-        <p className="hint">Pick skills to see the roles that use them.</p>
+        <p className="hint">Pick one or more skills. Roles that use all of them are listed here.</p>
       )}
       {skills.length === 0 ? (
         <p className="empty">No matching skills.</p>
