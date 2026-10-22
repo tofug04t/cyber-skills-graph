@@ -18,7 +18,7 @@
   --accent-fg: #ffffff;
   --accent-text: #9d9dff;
   --chip-bg: #1c1c24;
-  --mark-stroke: transparent;
+  --mark-stroke: #8a8a98;
 }
 
 :root[data-theme="light"] {
