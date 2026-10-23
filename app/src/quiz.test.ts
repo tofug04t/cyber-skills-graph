@@ -15,13 +15,13 @@ const titles = (a: QuizAnswers, marks: Assessment = {}) =>
 // Personas from the spec. They check plausibility (not exact lists) and that no role wins every run.
 const PERSONAS: Record<string, { answers: QuizAnswers; marks?: Assessment }> = {
   "student interested in investigating": {
-    answers: answers({ field: "student", time: "year", coding: "some", picked: ["watch"] }),
+    answers: answers({ field: "student", time: "evenings", coding: "some", picked: ["watch"] }),
   },
   "IT help desk worker": {
     answers: answers({
       field: "helpdesk",
       activities: { troubleshoot: "yes", machines: "some", network: "some" },
-      time: "year",
+      time: "evenings",
       coding: "some",
       picked: ["watch"],
     }),
@@ -30,7 +30,7 @@ const PERSONAS: Record<string, { answers: QuizAnswers; marks?: Assessment }> = {
     answers: answers({
       field: "teaching",
       activities: { explain: "yes", docs: "yes" },
-      time: "year",
+      time: "evenings",
       coding: "avoid",
       picked: ["teach", "rules"],
     }),
@@ -39,13 +39,13 @@ const PERSONAS: Record<string, { answers: QuizAnswers; marks?: Assessment }> = {
     answers: answers({
       field: "developer",
       activities: { software: "yes", script: "yes" },
-      time: "months",
+      time: "couple",
       coding: "enjoy",
       picked: ["software", "break"],
     }),
   },
   "someone with many Strong marks": {
-    answers: answers({ time: "long", coding: "some", picked: ["watch", "fix"] }),
+    answers: answers({ time: "most", coding: "some", picked: ["watch", "fix"] }),
     marks: Object.fromEntries(
       Object.values(graph.skills)
         .filter((s) => s.color === "blue" || s.color === "purple")
@@ -109,7 +109,7 @@ describe("role quiz scoring", () => {
   });
 
   it("drops roles whose dominant color the person excluded", () => {
-    const base = answers({ field: "sysadmin", picked: ["build"], coding: "some", time: "year" });
+    const base = answers({ field: "sysadmin", picked: ["build"], coding: "some", time: "evenings" });
     const without = suggestRoles(graph, data, { ...base, excluded: ["rules"] }, {}).map((s) => graph.workRoles[s.roleId]);
     for (const role of without) {
       const top = Object.entries(role.mix).sort((a, b) => b[1] - a[1])[0][0];
