@@ -49,6 +49,7 @@ export function RoleDetail({
         <SpectralStrip mix={role.mix} label={role.label} />
         <span className="role-detail__label">{role.label}</span>
         {reason && <p className="role-detail__reason">{reason}</p>}
+        <p className="role-detail__text">{role.text}</p>
         {have + partial > 0 && (
           <span className="badge" title={`Strong in ${have} of ${total} skills`}>
             {have}/{total}
@@ -56,7 +57,6 @@ export function RoleDetail({
         )}
         <RemoveButton label={`Remove ${role.title}`} onClick={onRemove} />
       </summary>
-      <p className="role-detail__text">{role.text}</p>
 
       {titles.length > 0 && (
         <div className="role-detail__section">
