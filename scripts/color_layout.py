@@ -11,6 +11,8 @@ Everything is deterministic so the committed data only changes when tags do.
 
 import math
 
+from ids import natural_key
+
 WHEEL = ["red", "purple", "blue", "green", "yellow", "orange", "white"]
 BLUE_GROUPS = ["monitoring", "threat-intel", "forensics", "incident-response"]
 
@@ -97,7 +99,7 @@ def layout(work_roles, skills, tags, scale=1000):
     Roles are not drawn on the map, so only skills keep coordinates; role
     positions exist just to place the skills near the roles that use them.
     """
-    role_ids = sorted(work_roles)
+    role_ids = sorted(work_roles, key=natural_key)
     for rid in role_ids:
         mix, total = role_mix(work_roles[rid]["skills"], tags)
         dominant, label = classify(mix, total)
@@ -124,7 +126,7 @@ def layout(work_roles, skills, tags, scale=1000):
     role_pos = {rid: tuple(role_pts[i]) for i, rid in enumerate(role_ids)}
 
     # skills: between their roles and their own wedge; center skills gather in the middle
-    skill_ids = sorted(skills)
+    skill_ids = sorted(skills, key=natural_key)
     skill_targets = []
     for sid in skill_ids:
         roles = skills[sid]["workRoles"]

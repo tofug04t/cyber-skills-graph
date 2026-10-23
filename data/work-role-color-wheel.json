@@ -2,140 +2,140 @@
   "color_wheel_scheme": "SANS-style extended color wheel (Red/Blue/Purple/Yellow/Green/Orange/White)",
   "work_role_colors": [
     {
-      "work_role_id": "DD-WRL-001",
+      "work_role_id": "r1",
       "work_role_title": "Security Architect",
       "primary_color": "Yellow",
       "secondary_color": "Green",
       "rationale": "Designs security into systems being built (Yellow); sets hardening standards that bridge into ops (Green)."
     },
     {
-      "work_role_id": "DD-WRL-004",
+      "work_role_id": "r2",
       "work_role_title": "Security Engineer",
       "primary_color": "Yellow",
       "secondary_color": null,
       "rationale": "Builds systems."
     },
     {
-      "work_role_id": "DD-WRL-008",
+      "work_role_id": "r3",
       "work_role_title": "Security Researcher",
       "primary_color": "Yellow",
       "secondary_color": null,
       "rationale": "Research and engineering of new capabilities."
     },
     {
-      "work_role_id": "DD-WRL-009",
+      "work_role_id": "r4",
       "work_role_title": "OT Security Engineer",
       "primary_color": "Yellow",
       "secondary_color": "Green",
       "rationale": "Engineers industrial systems (Yellow); hardens them against operational cyber events (Green)."
     },
     {
-      "work_role_id": "DD-WRL-010",
+      "work_role_id": "r5",
       "work_role_title": "AI Security Engineer",
       "primary_color": "Yellow",
       "secondary_color": "Red",
       "rationale": "Builds/evaluates AI systems (Yellow); adversarial testing of models (prompting for failure, hallucination-hunting) is inherently attacker-mindset work (Red)."
     },
     {
-      "work_role_id": "OG-WRL-004",
+      "work_role_id": "r11",
       "work_role_title": "Security Instructional Designer",
       "primary_color": "Orange",
       "secondary_color": null,
       "rationale": "Develops security awareness, training, and education content -- this is the training/education function itself."
     },
     {
-      "work_role_id": "OG-WRL-005",
+      "work_role_id": "r12",
       "work_role_title": "Security Instructor",
       "primary_color": "Orange",
       "secondary_color": null,
       "rationale": "Delivers security awareness, training, and education -- the training/education function itself."
     },
     {
-      "work_role_id": "OG-WRL-007",
+      "work_role_id": "r13",
       "work_role_title": "CISO",
       "primary_color": "White",
       "secondary_color": null,
       "rationale": "Executive governance function."
     },
     {
-      "work_role_id": "OG-WRL-008",
+      "work_role_id": "r14",
       "work_role_title": "Privacy Analyst",
       "primary_color": "White",
       "secondary_color": null,
       "rationale": "Governance/compliance function."
     },
     {
-      "work_role_id": "OG-WRL-010",
+      "work_role_id": "r15",
       "work_role_title": "Security Program Manager",
       "primary_color": "White",
       "secondary_color": null,
       "rationale": "Program governance function."
     },
     {
-      "work_role_id": "OG-WRL-012",
+      "work_role_id": "r16",
       "work_role_title": "IT Auditor",
       "primary_color": "White",
       "secondary_color": null,
       "rationale": "Independent audit/assurance function."
     },
     {
-      "work_role_id": "OG-WRL-017",
+      "work_role_id": "r17",
       "work_role_title": "Third-Party Risk Analyst",
       "primary_color": "White",
       "secondary_color": null,
       "rationale": "Supply-chain governance/risk function."
     },
     {
-      "work_role_id": "PD-WRL-001",
+      "work_role_id": "r20",
       "work_role_title": "SOC Analyst",
       "primary_color": "Blue",
       "secondary_color": "Purple",
       "rationale": "Core defensive operations (Blue); often the blue side of purple-team exercises (Purple)."
     },
     {
-      "work_role_id": "PD-WRL-002",
+      "work_role_id": "r21",
       "work_role_title": "Digital Forensics Analyst",
       "primary_color": "Blue",
       "secondary_color": null,
       "rationale": "Defensive/forensic investigation."
     },
     {
-      "work_role_id": "PD-WRL-003",
+      "work_role_id": "r22",
       "work_role_title": "Incident Responder",
       "primary_color": "Blue",
       "secondary_color": null,
       "rationale": "Defensive incident handling."
     },
     {
-      "work_role_id": "PD-WRL-005",
+      "work_role_id": "r23",
       "work_role_title": "Insider Risk Analyst",
       "primary_color": "Blue",
       "secondary_color": null,
       "rationale": "Defensive/investigative analysis of insider risk."
     },
     {
-      "work_role_id": "PD-WRL-006",
+      "work_role_id": "r24",
       "work_role_title": "Threat Intelligence Analyst",
       "primary_color": "Blue",
       "secondary_color": "Red",
       "rationale": "Defensive threat awareness (Blue); intelligence directly informs adversary emulation for red teams (Red)."
     },
     {
-      "work_role_id": "PD-WRL-007",
+      "work_role_id": "r25",
       "work_role_title": "Vulnerability Management Analyst",
       "primary_color": "Blue",
       "secondary_color": "Red",
       "rationale": "Defensive posture assessment (Blue); technique overlap with offensive vulnerability discovery (Red)."
     },
     {
-      "work_role_id": "PD-WRL-008",
+      "work_role_id": "r26",
       "work_role_title": "Penetration Tester",
       "primary_color": "Red",
       "secondary_color": "Purple",
       "rationale": "Core offensive simulation (Red); purple-team exercises are collaborative red+blue work usually led from the red side (Purple)."
     },
     {
-      "work_role_id": "PD-WRL-009",
+      "work_role_id": "r27",
       "work_role_title": "Malware Analyst",
       "primary_color": "Blue",
       "secondary_color": "Red",

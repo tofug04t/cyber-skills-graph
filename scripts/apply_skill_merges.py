@@ -31,7 +31,7 @@ def role_skill_sets(raw, resolve):
     out = {}
     for r in raw["relationships"]:
         s, d = r["source_element_identifier"], r["dest_element_identifier"]
-        if types.get(s) == "work_role" and d.startswith("S"):
+        if types.get(s) == "work_role" and types.get(d) == "skill":
             out.setdefault(s, set()).add(resolve(d))
     return out
 

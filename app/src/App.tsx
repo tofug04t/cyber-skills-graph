@@ -31,17 +31,9 @@ import {
   type FilterState,
 } from "./filters";
 import { useTheme } from "./useTheme";
+import { buildUrlQuery, parseUrlState } from "./urlState";
 import type { Assessment, AssessmentValue, MatchMode } from "./types";
 import "./App.css";
-
-interface UrlState {
-  roleIds: string[];
-  skillIds: string[];
-  title: string | null;
-  skillMode: MatchMode;
-  roleMode: MatchMode;
-  assessment: Assessment;
-}
 
 type Facet = "role" | "skill";
 
@@ -65,28 +57,10 @@ interface FilterItem {
   remove: () => void;
 }
 
-function parseUrlState(): UrlState {
-  const params = new URLSearchParams(window.location.search);
-  const assessment: Assessment = {};
-  for (const pair of (params.get("a") ?? "").split(",")) {
-    const [id, value] = pair.split(":");
-    if (id && (value === "have" || value === "partial" || value === "missing")) assessment[id] = value;
-  }
-  const roles = `${params.get("roles") ?? ""},${params.get("role") ?? ""}`;
-  return {
-    roleIds: [...new Set(roles.split(",").filter(Boolean))],
-    skillIds: (params.get("skills") ?? "").split(",").filter(Boolean),
-    title: params.get("title"),
-    skillMode: params.get("skillMatch") === "any" ? "any" : "all",
-    roleMode: params.get("roleMatch") === "all" ? "all" : "any",
-    assessment,
-  };
-}
-
 function App() {
   const { graph, jobTitles, error } = useGraphData();
   const [theme, toggleTheme] = useTheme();
-  const initial = useMemo(() => parseUrlState(), []);
+  const initial = useMemo(() => parseUrlState(window.location.search), []);
 
   const [roleIds, setRoleIds] = useState<string[]>(initial.roleIds);
   const [skillIds, setSkillIds] = useState<string[]>(initial.skillIds);
@@ -103,16 +77,7 @@ function App() {
   });
 
   useEffect(() => {
-    const params = new URLSearchParams();
-    if (roleIds.length > 0) params.set("roles", roleIds.join(","));
-    const entries = Object.entries(assessment);
-    if (entries.length > 0) params.set("a", entries.map(([id, v]) => `${id}:${v}`).join(","));
-    if (skillIds.length > 0) params.set("skills", skillIds.join(","));
-    if (activeTitle) params.set("title", activeTitle);
-    // only the non-default modes go in the URL
-    if (skillMode === "any") params.set("skillMatch", "any");
-    if (roleMode === "all") params.set("roleMatch", "all");
-    const query = params.toString();
+    const query = buildUrlQuery({ roleIds, skillIds, title: activeTitle, skillMode, roleMode, assessment });
     window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
   }, [roleIds, skillIds, activeTitle, skillMode, roleMode, assessment]);
 
