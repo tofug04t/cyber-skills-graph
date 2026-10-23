@@ -52,14 +52,18 @@ export function AboutDialog({ open, onClose }: AboutDialogProps) {
         <ul className="about__credits">
           {CREDITS.map((credit) => (
             <li key={credit.name}>
-              {credit.url ? (
-                <a href={credit.url} target="_blank" rel="noreferrer">
-                  {credit.name}
-                </a>
+              <strong>{credit.name}</strong>{" "}
+              {credit.link ? (
+                <>
+                  {credit.reason.split(credit.link.text)[0]}
+                  <a href={credit.link.url} target="_blank" rel="noreferrer">
+                    {credit.link.text}
+                  </a>
+                  {credit.reason.split(credit.link.text)[1]}
+                </>
               ) : (
-                <strong>{credit.name}</strong>
-              )}{" "}
-              {credit.reason}
+                credit.reason
+              )}
             </li>
           ))}
         </ul>
