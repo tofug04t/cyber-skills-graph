@@ -24,8 +24,10 @@ export interface QuizData {
     maxPicks: number;
     /** Stop adding suggestions beyond minPicks once a score falls below this share of the best. */
     dropoff: number;
-    weights: { coverage: number; interest: number; gap: number; coding: number };
+    weights: { coverage: number; interest: number; gap: number; coding: number; starting: number };
   };
+  /** Common first roles in security; they get a bonus that fades as the person already covers the role. */
+  startingRoles: string[];
   background: {
     field: { question: string; options: { id: string; label: string; skills: string[] }[] };
     activities: { question: string; items: QuizActivity[] };
@@ -74,6 +76,7 @@ interface Scored {
   score: number;
   coverageTerm: number;
   interestTerm: number;
+  startingTerm: number;
   known: number;
   /** Share of the role's Middle skills the person already has; only a tiebreaker. */
   middle: number;
@@ -160,7 +163,7 @@ export function suggestRoles(
       const middle = middleSkills.length
         ? middleSkills.reduce((sum, id) => sum + (credits.get(id) ?? 0), 0) / middleSkills.length
         : 0;
-      return { role, coverage, interest, gapPenalty, codingPenalty, score: 0, coverageTerm: 0, interestTerm: 0, known, middle };
+      return { role, coverage, interest, gapPenalty, codingPenalty, score: 0, coverageTerm: 0, interestTerm: 0, startingTerm: 0, known, middle };
     });
 
   // Interest is stretched across roles so the weights compare like with like; coverage saturates
@@ -171,7 +174,13 @@ export function suggestRoles(
   for (const s of scored) {
     s.coverageTerm = Math.min(1, s.coverage / scoring.coverageScale);
     s.interestTerm = interestRange > 0 ? (s.interest - minInterest) / interestRange : 0;
-    s.score = w.coverage * s.coverageTerm + w.interest * s.interestTerm - w.gap * s.gapPenalty - w.coding * s.codingPenalty;
+    s.startingTerm = data.startingRoles.includes(s.role.id) ? 1 - s.coverageTerm : 0;
+    s.score =
+      w.coverage * s.coverageTerm +
+      w.interest * s.interestTerm +
+      w.starting * s.startingTerm -
+      w.gap * s.gapPenalty -
+      w.coding * s.codingPenalty;
   }
 
   const byTitle = (a: Scored, b: Scored) => a.role.title.localeCompare(b.role.title);
@@ -225,23 +234,38 @@ function pick(
       roleId: s.role.id,
       reason: reasonFor(
         s,
-        kinds.get(s) ?? (data.scoring.weights.coverage * s.coverageTerm >= data.scoring.weights.interest * s.interestTerm ? "close" : "interest"),
+        kinds.get(s) ?? strongestTerm(s, data),
         data,
         answers
       ),
     }));
 }
 
-function reasonFor(s: Scored, kind: "close" | "interest", data: QuizData, answers: QuizAnswers): string {
-  if (kind === "close" && s.known >= data.scoring.minCloseSkills) {
-    return `Close to where you are: you already cover ${Math.round(s.known)} of its ${s.role.skills.length} skills.`;
-  }
+type Kind = "close" | "interest" | "start";
+
+/** Which part of the score did most for a role that was not a guaranteed pick. */
+function strongestTerm(s: Scored, data: QuizData): Kind {
+  const w = data.scoring.weights;
+  const terms: [Kind, number][] = [
+    ["close", w.coverage * s.coverageTerm],
+    ["interest", w.interest * s.interestTerm],
+    ["start", w.starting * s.startingTerm],
+  ];
+  return terms.sort((a, b) => b[1] - a[1])[0][0];
+}
+
+function reasonFor(s: Scored, kind: Kind, data: QuizData, answers: QuizAnswers): string {
+  const covered = s.known >= data.scoring.minCloseSkills ? Math.round(s.known) : 0;
+  const coverNote = `you already cover ${covered} of its ${s.role.skills.length} skills`;
+  if (kind === "close" && covered) return `Close to where you are: ${coverNote}.`;
   // The picked interest this role leans on most.
   const cards = data.interests.cards.filter((c) => answers.picked.includes(c.id));
   const top = cards.sort((a, b) => (s.role.mix[b.color] ?? 0) - (s.role.mix[a.color] ?? 0))[0];
-  if (!top) return "Fits your answers.";
-  if (s.known >= data.scoring.minCloseSkills) {
-    return `Matches your interest in ${top.phrase}; you already cover ${Math.round(s.known)} of its ${s.role.skills.length} skills.`;
+  if (kind === "start") {
+    const fits = top && (s.role.mix[top.color] ?? 0) >= 0.3 ? ` that fits your interest in ${top.phrase}` : "";
+    return `A common first role in security${fits}${covered ? `; ${coverNote}` : ""}.`;
   }
-  return `Matches your interest in ${top.phrase}; a bigger stretch.`;
+  if (!top) return "Fits your answers.";
+  const first = s.startingTerm > 0.5 ? " and is a common first role in security" : "";
+  return `Matches your interest in ${top.phrase}${first}; ${covered ? coverNote : "a bigger stretch"}.`;
 }
