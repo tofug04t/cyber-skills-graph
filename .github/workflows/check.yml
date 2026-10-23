@@ -1,0 +1,55 @@
+name: Check
+
+# Runs on every pull request (including from forks, with a read-only token and no secrets).
+# Mirrors `just check`; keep the two in step.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Regenerate data
+        run: |
+          python3 scripts/apply_skill_merges.py
+          python3 scripts/apply_skill_cuts.py
+          python3 scripts/apply_role_changes.py
+          python3 scripts/apply_skill_names.py
+          python3 scripts/check_skill_colors.py
+          python3 scripts/etl.py
+          python3 scripts/etl_companions.py
+
+      - name: Committed data matches the source files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --short
+            echo "::error::Regenerating the data changed files. Run 'just data' and commit the result."
+            exit 1
+          fi
+
+      - run: npm ci
+        working-directory: app
+      - run: npx tsc -b --noEmit
+        working-directory: app
+      - run: npm run lint
+        working-directory: app
+      - run: npm run build
+        working-directory: app
+
+      - name: Palette is distinguishable for color-blind viewers
+        run: python3 scripts/palette_check.py
