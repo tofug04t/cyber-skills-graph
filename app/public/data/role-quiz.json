@@ -1,0 +1,327 @@
+{
+  "version": 1,
+  "_notes": [
+    "Draft content for the optional role quiz (see decision log). Question wording, skill mappings and every number under 'scoring' are first guesses to be edited.",
+    "Skill ids must exist in the forked NICE data; scripts/etl_companions.py checks that, plus colors and credits."
+  ],
+  "scoring": {
+    "smoothing": 10,
+    "fieldCredit": 0.5,
+    "minCloseSkills": 3,
+    "adaptiveSkip": 0.7,
+    "minPicks": 3,
+    "maxPicks": 5,
+    "dropoff": 0.5,
+    "weights": {
+      "coverage": 1.0,
+      "interest": 0.8,
+      "gap": 0.5,
+      "coding": 0.3
+    },
+    "coverageScale": 0.5
+  },
+  "background": {
+    "field": {
+      "question": "What was your previous field?",
+      "options": [
+        {
+          "id": "student",
+          "label": "Student or new grad",
+          "skills": [
+            "S0387",
+            "S0610"
+          ]
+        },
+        {
+          "id": "helpdesk",
+          "label": "IT help desk or support",
+          "skills": [
+            "S9002",
+            "S9003",
+            "S9004",
+            "S9005",
+            "S0577",
+            "S0610",
+            "S0824",
+            "S0678"
+          ]
+        },
+        {
+          "id": "sysadmin",
+          "label": "Systems or network admin",
+          "skills": [
+            "S9001",
+            "S9002",
+            "S9003",
+            "S9004",
+            "S9005",
+            "S9008",
+            "S9009",
+            "S0678",
+            "S0472",
+            "S0606"
+          ]
+        },
+        {
+          "id": "developer",
+          "label": "Software development",
+          "skills": [
+            "S0597",
+            "S9007",
+            "S9011",
+            "S0560",
+            "S0558",
+            "S9010",
+            "S9009",
+            "S0463",
+            "S0571"
+          ]
+        },
+        {
+          "id": "teaching",
+          "label": "Teaching or training",
+          "skills": [
+            "S0602",
+            "S0395",
+            "S0791",
+            "S0610",
+            "S0392",
+            "S0601"
+          ]
+        },
+        {
+          "id": "audit",
+          "label": "Audit, compliance, or legal",
+          "skills": [
+            "S0686",
+            "S0619",
+            "S0459",
+            "S0579",
+            "S0664",
+            "S0416",
+            "S9043"
+          ]
+        },
+        {
+          "id": "military",
+          "label": "Military",
+          "skills": [
+            "S0610",
+            "S0788",
+            "S0728",
+            "S0791"
+          ]
+        },
+        {
+          "id": "other",
+          "label": "Something else",
+          "skills": []
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "skills": []
+        }
+      ]
+    },
+    "activities": {
+      "question": "How much of this have you done?",
+      "items": [
+        {
+          "id": "script",
+          "text": "I've written a script to automate something.",
+          "skills": [
+            "S0650",
+            "S9007",
+            "S9008",
+            "S9009"
+          ]
+        },
+        {
+          "id": "machines",
+          "text": "I've set up or managed Linux or Windows machines.",
+          "skills": [
+            "S9001",
+            "S9002",
+            "S9003",
+            "S0678",
+            "S0472"
+          ]
+        },
+        {
+          "id": "troubleshoot",
+          "text": "I've helped people troubleshoot computer problems.",
+          "skills": [
+            "S0577",
+            "S0824",
+            "S0610",
+            "S0175"
+          ]
+        },
+        {
+          "id": "network",
+          "text": "I've configured a network, router, or firewall.",
+          "skills": [
+            "S9004",
+            "S9005",
+            "S0584",
+            "S9006",
+            "S0523"
+          ]
+        },
+        {
+          "id": "docs",
+          "text": "I've written procedures, policies, or documentation others follow.",
+          "skills": [
+            "S0391",
+            "S0407",
+            "S0579",
+            "S0387",
+            "S0564"
+          ]
+        },
+        {
+          "id": "explain",
+          "text": "I've explained technical things to non-technical people.",
+          "skills": [
+            "S0923",
+            "S0791",
+            "S0610",
+            "S0602"
+          ]
+        },
+        {
+          "id": "investigate",
+          "text": "I've investigated something by digging through logs or data.",
+          "skills": [
+            "S0866",
+            "S0175",
+            "S9010",
+            "S0435"
+          ]
+        },
+        {
+          "id": "software",
+          "text": "I've built or contributed to software.",
+          "skills": [
+            "S0597",
+            "S9011",
+            "S0560",
+            "S0463",
+            "S0558"
+          ]
+        },
+        {
+          "id": "cloud",
+          "text": "I've worked with cloud services or containers.",
+          "skills": [
+            "S9012",
+            "S9013",
+            "S9015",
+            "S9016"
+          ]
+        },
+        {
+          "id": "risk",
+          "text": "I've reviewed risks, controls, or vulnerabilities.",
+          "skills": [
+            "S0686",
+            "S0543",
+            "S0619"
+          ]
+        }
+      ]
+    }
+  },
+  "appetite": {
+    "time": {
+      "question": "How much time can you put into learning?",
+      "options": [
+        {
+          "id": "months",
+          "label": "A few months",
+          "gapTolerance": 0.75
+        },
+        {
+          "id": "year",
+          "label": "About a year",
+          "gapTolerance": 0.88
+        },
+        {
+          "id": "long",
+          "label": "Two years or more",
+          "gapTolerance": 1.0
+        }
+      ]
+    },
+    "coding": {
+      "question": "How do you feel about coding?",
+      "options": [
+        {
+          "id": "avoid",
+          "label": "I'd rather avoid it",
+          "codingPenalty": 1
+        },
+        {
+          "id": "some",
+          "label": "I'm fine with some",
+          "codingPenalty": 0
+        },
+        {
+          "id": "enjoy",
+          "label": "I enjoy it",
+          "codingPenalty": 0
+        }
+      ]
+    }
+  },
+  "interests": {
+    "pickQuestion": "Pick up to 3 that sound like you.",
+    "excludeQuestion": "Any that are definitely not for you?",
+    "maxPick": 3,
+    "cards": [
+      {
+        "id": "break",
+        "text": "Breaking things to see how they fail",
+        "phrase": "breaking things",
+        "color": "red"
+      },
+      {
+        "id": "fix",
+        "text": "Turning attack findings into fixes",
+        "phrase": "turning attacks into fixes",
+        "color": "purple"
+      },
+      {
+        "id": "watch",
+        "text": "Watching for trouble and investigating",
+        "phrase": "investigating",
+        "color": "blue"
+      },
+      {
+        "id": "build",
+        "text": "Building tools and automation",
+        "phrase": "building tools and automation",
+        "color": "green"
+      },
+      {
+        "id": "software",
+        "text": "Making software safer",
+        "phrase": "making software safer",
+        "color": "yellow"
+      },
+      {
+        "id": "teach",
+        "text": "Teaching and helping people learn",
+        "phrase": "teaching",
+        "color": "orange"
+      },
+      {
+        "id": "rules",
+        "text": "Rules, risk, and leading teams",
+        "phrase": "rules, risk, and leadership",
+        "color": "white"
+      }
+    ]
+  }
+}
