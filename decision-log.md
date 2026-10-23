@@ -498,3 +498,21 @@ The first-pass palette had two near-collisions under color-blindness simulation:
 **Result.** Every pair is at least 8.6 apart in the dark theme and 10.2 in the light theme, across normal vision and all three simulations. Changed in dark: purple (lighter lavender), blue (slightly deeper). Changed in light: red (deeper), orange (slightly deeper), blue (deeper), purple (lighter violet). Green, yellow and white are unchanged. **Middle** moved from hot pink to a neutral slate gray (#9494A3 dark, #6B6B7A light): every hue that kept the pairs apart for color-blind viewers (orchid, plum, teal) landed too close to a named category, and non-security skills are the one group with no category color, so a neutral fits. Pink stays under 7 for tritanopia and brown collapses into red under deuteranopia.
 
 **Limits.** Colors still collapse toward one family for some viewers (red, orange and green all read as khaki under deuteranopia), so shape stays the primary cue and color the second; the legend names every category. The simulation measures distance, not a real viewer: it has not been tested with color-blind people, and feedback from some is welcome.
+
+---
+
+## 20. Optional role quiz, built behind a switch (2026-10-23)
+
+An intake quiz that asks about background, appetite for learning, and interests, then suggests 3 to 5 roles. It replaces the Background / feeder interaction removed in section 17, and its answer is deliberately weaker than that feature's: the roles are applied as ordinary selected roles, with a one-line reason on each card, so the person can change them like any other selection.
+
+**It is off.** `QUIZ_ENABLED` in `app/src/features.ts` is `false`; with it off the quiz is not in the built JavaScript at all. Turning it on is that one line, plus a rebuild. Removing it for good means deleting `app/src/quiz.ts`, `quiz.test.ts`, `features.ts`, `components/QuizEntry.tsx`, `components/QuizDialog.tsx`, `data/role-quiz.json` and the validation in `scripts/etl_companions.py`, then the hunks tagged `// quiz` in `App.tsx` and the optional `reason` on `RoleDetail`. It adds no URL parameters and stores nothing, so shared links never depend on it.
+
+**Behavior.** Read-only on the person's Strong / Some / None ratings: they count as known credit (an explicit None stays 0, which beats any inferred answer) and are never written. Retaking starts fresh and replaces the selected roles; Undo restores the previous roles exactly. Activities whose skills are mostly rated already are skipped. With no answers at all, nothing is suggested and nothing changes.
+
+**Scoring** (`quiz.ts`, pure functions; every number is in `data/role-quiz.json`): smoothed coverage of the role's skills, the role's color mix against the picked and excluded interests, a gap penalty for the share still to learn beyond what the time available allows, and a penalty for coding-heavy roles when the person would rather avoid coding. One "close" pick and one "interest" pick are guaranteed; the rest fill by score, stopping early when the next score falls below half the best.
+
+**Open questions and limits.**
+- **No core vs nice-to-have weighting.** SOC Analyst lists 98 skills, so a help desk worker looks far from it even though Help Desk to SOC is the usual path. The quiz asks "investigating" and returns Digital Forensics, Malware Analyst and Threat Hunter ahead of SOC. A per-role "good first role" hint in the data would fix this; it is an opinion for the dataset's owner to make.
+- **Busy map.** Five suggested roles light 117 to 158 of the 381 skills, and no skill is shared by all five, so setting role match to All would light nothing. The top suggestion's card opens first and the rest start collapsed.
+- **Mappings are first guesses.** The previous-field and activity-to-skill mappings, the question wording and all weights are a draft to edit before launch.
+- **Not tested with real people.** Persona runs check plausibility, not usefulness.

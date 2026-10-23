@@ -239,5 +239,9 @@ function reasonFor(s: Scored, kind: "close" | "interest", data: QuizData, answer
   // The picked interest this role leans on most.
   const cards = data.interests.cards.filter((c) => answers.picked.includes(c.id));
   const top = cards.sort((a, b) => (s.role.mix[b.color] ?? 0) - (s.role.mix[a.color] ?? 0))[0];
-  return top ? `Matches your interest in ${top.phrase}; a bigger stretch.` : "Fits your answers.";
+  if (!top) return "Fits your answers.";
+  if (s.known >= data.scoring.minCloseSkills) {
+    return `Matches your interest in ${top.phrase}; you already cover ${Math.round(s.known)} of its ${s.role.skills.length} skills.`;
+  }
+  return `Matches your interest in ${top.phrase}; a bigger stretch.`;
 }
