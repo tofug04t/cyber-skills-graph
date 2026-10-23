@@ -35,7 +35,7 @@ OUT = ROOT / "app" / "public" / "data"
 INTEREST_COLORS = {"red", "purple", "blue", "green", "yellow", "orange", "white"}
 
 
-def validate_quiz(quiz, skills):
+def validate_quiz(quiz, skills, roles):
     errors = []
 
     def check_skills(where, ids):
@@ -63,6 +63,10 @@ def validate_quiz(quiz, skills):
     for c in cards:
         if c["color"] not in INTEREST_COLORS:
             errors.append(f"quiz: card '{c['id']}' has invalid color '{c['color']}'")
+
+    for rid in quiz["startingRoles"]:
+        if rid not in roles:
+            errors.append(f"quiz: startingRoles has unknown work_role_id {rid}")
 
     scoring = quiz["scoring"]
     if scoring["coverageScale"] <= 0:
@@ -127,7 +131,7 @@ def main():
                     f"but fork says '{roles[rid]}'"
                 )
 
-    errors += validate_quiz(quiz, skills)
+    errors += validate_quiz(quiz, skills, roles)
 
     for w in warnings:
         print(f"warning: {w}")

@@ -2,7 +2,8 @@
   "version": 1,
   "_notes": [
     "Draft content for the optional role quiz (see decision log). Question wording, skill mappings and every number under 'scoring' are first guesses to be edited.",
-    "Skill ids must exist in the forked NICE data; scripts/etl_companions.py checks that, plus colors and credits."
+    "Skill ids must exist in the forked NICE data; scripts/etl_companions.py checks that, plus colors and credits.",
+    "startingRoles are common first roles in security (SOC Analyst, Vulnerability Management Analyst, GRC Analyst). Each gets a bonus that is largest when you cover little of the role, so newcomers see them and people already deep in a role do not. Edit the list freely."
   ],
   "scoring": {
     "smoothing": 10,
@@ -10,15 +11,16 @@
     "minCloseSkills": 3,
     "adaptiveSkip": 0.7,
     "minPicks": 3,
-    "maxPicks": 5,
+    "maxPicks": 3,
     "dropoff": 0.5,
     "weights": {
-      "coverage": 1.0,
+      "coverage": 1.2,
       "interest": 0.8,
       "gap": 0.5,
-      "coding": 0.3
+      "coding": 0.3,
+      "starting": 0.6
     },
-    "coverageScale": 0.5
+    "coverageScale": 0.2
   },
   "background": {
     "field": {
@@ -323,5 +325,10 @@
         "color": "white"
       }
     ]
-  }
+  },
+  "startingRoles": [
+    "PD-WRL-001",
+    "PD-WRL-007",
+    "OG-WRL-019"
+  ]
 }

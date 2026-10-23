@@ -55,7 +55,7 @@ const PERSONAS: Record<string, { answers: QuizAnswers; marks?: Assessment }> = {
 };
 
 describe("role quiz scoring", () => {
-  it("suggests 3 to 5 known roles for every persona", () => {
+  it("suggests no more than the cap, and at least the minimum, for every persona", () => {
     for (const [name, p] of Object.entries(PERSONAS)) {
       const found = suggestRoles(graph, data, p.answers, p.marks ?? {});
       expect(found.length, name).toBeGreaterThanOrEqual(data.scoring.minPicks);
@@ -69,6 +69,18 @@ describe("role quiz scoring", () => {
         for (const s of found) console.log(`  ${graph.workRoles[s.roleId].title}: ${s.reason}`);
       }
     }
+  });
+
+  it("offers a common first role to someone coming from help desk work", () => {
+    const found = titles(PERSONAS["IT help desk worker"].answers);
+    expect(found).toContain("SOC Analyst");
+  });
+
+  it("stops boosting a first role the person already covers", () => {
+    const strong = Object.fromEntries(graph.workRoles["PD-WRL-001"].skills.map((id) => [id, "have" as const]));
+    const found = suggestRoles(graph, data, answers({ picked: ["watch"] }), strong).find((s) => s.roleId === "PD-WRL-001");
+    // covered in full: it may still be suggested, but as a close match, not as a first step
+    expect(found?.reason ?? "").not.toMatch(/common first role/);
   });
 
   it("is deterministic", () => {
