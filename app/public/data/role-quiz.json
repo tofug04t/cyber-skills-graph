@@ -237,21 +237,26 @@
   },
   "appetite": {
     "time": {
-      "question": "How much time can you put into learning?",
+      "question": "How much time could you put into learning, in a typical week?",
       "options": [
         {
-          "id": "months",
-          "label": "A few months",
+          "id": "couple",
+          "label": "A couple of hours a week",
           "gapTolerance": 0.75
         },
         {
-          "id": "year",
-          "label": "About a year",
-          "gapTolerance": 0.88
+          "id": "evenings",
+          "label": "A few evenings a week",
+          "gapTolerance": 0.85
         },
         {
-          "id": "long",
-          "label": "Two years or more",
+          "id": "most",
+          "label": "Most evenings and weekends",
+          "gapTolerance": 0.92
+        },
+        {
+          "id": "fulltime",
+          "label": "Nearly full-time (studying or between jobs)",
           "gapTolerance": 1.0
         }
       ]
