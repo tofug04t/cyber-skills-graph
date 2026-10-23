@@ -39,6 +39,10 @@ typecheck: install
 lint: install
     cd {{ app }} && npm run lint
 
+# Run the unit tests
+test: install
+    cd {{ app }} && npm test
+
 # Production build into app/dist
 build: install
     cd {{ app }} && npm run build
@@ -48,7 +52,7 @@ preview: build
     cd {{ app }} && npm run preview -- --port 4173 --strictPort
 
 # Everything that should pass before opening a PR
-check: data typecheck lint build palette
+check: data typecheck lint test build palette
 
 # Remove build output and installed dependencies
 clean:
