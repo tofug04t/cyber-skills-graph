@@ -9,6 +9,9 @@ import { RoleDetail } from "./components/RoleDetail";
 import { SkillDetail } from "./components/SkillDetail";
 import { MatchToggle } from "./components/MatchToggle";
 import { HeaderMenu } from "./components/HeaderMenu";
+import { QuizEntry } from "./components/QuizEntry"; // quiz
+import { QUIZ_ENABLED } from "./features"; // quiz
+import type { QuizSuggestion } from "./quiz"; // quiz
 import { WheelLegend } from "./components/WheelLegend";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Toast } from "./components/Toast";
@@ -47,6 +50,9 @@ interface Snapshot {
   skillIds: string[];
   activeTitle: string | null;
   open: { role: boolean; skill: boolean };
+  /** Set when the undo belongs to the quiz: its toast text, and the roles it applied. */
+  message?: string; // quiz
+  appliedRoleIds?: string[]; // quiz
 }
 
 const UNDO_MS = 8000;
@@ -179,6 +185,23 @@ function App() {
     setOpen({ role: true, skill: false });
   };
 
+  // quiz: replace the selected roles with the suggestions, keeping a way back
+  const [reasons, setReasons] = useState<Map<string, string>>(new Map());
+  const applyQuiz = (suggestions: QuizSuggestion[]) => {
+    const ids = suggestions.map((s) => s.roleId);
+    setUndo({ roleIds, skillIds, activeTitle, open, message: `Showing ${ids.length} suggested roles`, appliedRoleIds: ids });
+    setRoleIds(ids);
+    setReasons(new Map(suggestions.map((s) => [s.roleId, s.reason])));
+  };
+  // quiz: a reason goes away with its role (adjusted during render, not in an effect)
+  const [seenRoleIds, setSeenRoleIds] = useState(roleIds);
+  if (roleIds !== seenRoleIds) {
+    setSeenRoleIds(roleIds);
+    if ([...reasons.keys()].some((id) => !roleIds.includes(id))) {
+      setReasons(new Map([...reasons].filter(([id]) => roleIds.includes(id))));
+    }
+  }
+
   const undoClear = () => {
     if (!undo) return;
     setRoleIds(undo.roleIds);
@@ -310,6 +333,11 @@ function App() {
           .filter((a) => a.count > 0)
       : [];
 
+  // The undo offer holds while the screen is still the state it describes: cleared, or the quiz's roles.
+  const undoStillApplies = undo?.appliedRoleIds // quiz
+    ? roleIds.length === undo.appliedRoleIds.length && undo.appliedRoleIds.every((id) => roleIds.includes(id))
+    : roleIds.length === 0 && skillIds.length === 0 && !activeTitle;
+
   return (
     <div className="app">
       <header className="app__header">
@@ -320,6 +348,7 @@ function App() {
           </p>
         </div>
         <div className="app__header-actions">
+          {QUIZ_ENABLED && <QuizEntry graph={graph} assessment={assessment} onApply={applyQuiz} />}
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <HeaderMenu onAbout={() => setAboutOpen(true)} />
         </div>
@@ -444,7 +473,8 @@ function App() {
                 skills={role.skills.map((sid) => graph.skills[sid]).filter(Boolean)}
                 titles={titlesForRole(jobTitles, id)}
                 assessment={assessment}
-                defaultOpen={selectedRoles.length === 1}
+                defaultOpen={selectedRoles.length === 1 || id === [...reasons.keys()][0]}
+                reason={reasons.get(id)}
                 onAssess={assess}
                 onTitle={(t) => setActiveTitle(titleKey(t))}
                 onResetMarks={() =>
@@ -474,8 +504,8 @@ function App() {
 
       <AboutDialog open={aboutOpen} onClose={() => setAboutOpen(false)} />
 
-      {undo && roleIds.length === 0 && skillIds.length === 0 && !activeTitle && (
-        <Toast message="Filters cleared" actionLabel="Undo" onAction={undoClear} />
+      {undo && undoStillApplies && (
+        <Toast message={undo.message ?? "Filters cleared"} actionLabel="Undo" onAction={undoClear} />
       )}
     </div>
   );

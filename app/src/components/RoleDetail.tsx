@@ -11,6 +11,8 @@ interface RoleDetailProps {
   assessment: Assessment;
   /** Start expanded; with several roles selected only the first ones need to be. */
   defaultOpen: boolean;
+  /** Why the quiz suggested this role; shown under the title. */
+  reason?: string;
   onAssess: (skillId: string, value: AssessmentValue) => void;
   onTitle: (title: string) => void;
   onResetMarks: () => void;
@@ -33,6 +35,7 @@ export function RoleDetail({
   titles,
   assessment,
   defaultOpen,
+  reason,
   onAssess,
   onTitle,
   onResetMarks,
@@ -45,6 +48,7 @@ export function RoleDetail({
         <h3>{role.title}</h3>
         <SpectralStrip mix={role.mix} label={role.label} />
         <span className="role-detail__label">{role.label}</span>
+        {reason && <p className="role-detail__reason">{reason}</p>}
         {have + partial > 0 && (
           <span className="badge" title={`Strong in ${have} of ${total} skills`}>
             {have}/{total}
