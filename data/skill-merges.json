@@ -2,79 +2,79 @@
   "description": "Skill merges approved 2026-10-19. Each merged skill's Work Role and Competency Area mappings are moved to the skill it merges into; the merged skill element is removed. Applied by scripts/apply_skill_merges.py.",
   "merges": {
     "S0077": {
-      "into": "S0596",
+      "into": "s125",
       "text": "Skill in securing network communications",
       "intoText": "Skill in encrypting network communications",
       "reason": "Overlaps encrypting network communications"
     },
     "S0111": {
-      "into": "S0824",
+      "into": "s236",
       "text": "Skill in interfacing with customers",
       "intoText": "Skill in communicating with customers",
       "reason": "Same as communicating with customers"
     },
     "S0141": {
-      "into": "S0578",
+      "into": "s113",
       "text": "Skill in assessing security systems designs",
       "intoText": "Skill in evaluating security designs",
       "reason": "Same as evaluating security designs"
     },
     "S0221": {
-      "into": "S0156",
+      "into": "s6",
       "text": "Skill in extracting information from packet captures",
       "intoText": "Skill in performing packet-level analysis",
       "reason": "Same as packet analysis"
     },
     "S0379": {
-      "into": "S0380",
+      "into": "s12",
       "text": "Skill in verifying participation in a security awareness program",
       "intoText": "Skill in facilitating cybersecurity awareness briefings",
       "reason": "Fold into Security awareness training"
     },
     "S0385": {
-      "into": "S0923",
+      "into": "s287",
       "text": "Skill in communicating complex concepts",
       "intoText": "Skill in communicating at varying levels of technical detail with stakeholders of various backgrounds",
       "reason": "Fold into Technical communication"
     },
     "S0386": {
-      "into": "S0610",
+      "into": "s137",
       "text": "Skill in communicating verbally",
       "intoText": "Skill in communicating effectively",
       "reason": "Fold into Communication"
     },
     "S0388": {
-      "into": "S0389",
+      "into": "s16",
       "text": "Skill in facilitating small group discussions",
       "intoText": "Skill in facilitating group discussions",
       "reason": "Same as facilitating group discussions"
     },
     "S0397": {
-      "into": "S0556",
+      "into": "s98",
       "text": "Skill in assessing requirements",
       "intoText": "Skill in performing requirements analysis",
       "reason": "Same as requirements analysis"
     },
     "S0402": {
-      "into": "S0403",
+      "into": "s26",
       "text": "Skill in verifying data",
       "intoText": "Skill in validating data",
       "reason": "Merge with data validation"
     },
     "S0408": {
-      "into": "S0407",
+      "into": "s29",
       "text": "Skill in maintaining standard operating procedures (SOPs)",
       "intoText": "Skill in developing standard operating procedures (SOPs)",
       "reason": "Develop vs maintain"
     },
     "S0409": {
-      "into": "S0854",
+      "into": "s253",
       "text": "Skill in deriving evaluative conclusions from data",
       "intoText": "Skill in performing data analysis",
       "reason": "Fold into Data analysis"
     },
     "S0411": {
-      "into": "S0410",
+      "into": "s30",
       "text": "Skill in developing career paths",
       "intoText": "Skill in creating career path definitions",
       "reason": "Duplicate"
@@ -86,37 +86,37 @@
       "reason": "Same as operating network systems"
     },
     "S0426": {
-      "into": "S0428",
+      "into": "s41",
       "text": "Skill in building architectures",
       "intoText": "Skill in designing architectures",
       "reason": "Build vs design"
     },
     "S0427": {
-      "into": "S0429",
+      "into": "s42",
       "text": "Skill in building frameworks",
       "intoText": "Skill in designing frameworks",
       "reason": "Build vs design"
     },
     "S0433": {
-      "into": "S0709",
+      "into": "s189",
       "text": "Skill in creating analytics",
       "intoText": "Skill in developing analytics",
       "reason": "Same as developing analytics"
     },
     "S0446": {
-      "into": "S0516",
+      "into": "s80",
       "text": "Skill in mimicking threat actors",
       "intoText": "Skill in performing threat emulation tactics",
       "reason": "Same as threat emulation"
     },
     "S0449": {
-      "into": "S0448",
+      "into": "s54",
       "text": "Skill in maintaining automated security control systems",
       "intoText": "Skill in creating automated security control systems",
       "reason": "Create vs maintain"
     },
     "S0453": {
-      "into": "S0452",
+      "into": "s57",
       "text": "Skill in creating a risk management strategy",
       "intoText": "Skill in creating a risk management program",
       "reason": "Program vs strategy"
@@ -134,55 +134,55 @@
       "reason": "Fold into System authorization"
     },
     "S0458": {
-      "into": "S0821",
+      "into": "s235",
       "text": "Skill in coordinating efforts between stakeholders",
       "intoText": "Skill in collaborating with internal and external stakeholders",
       "reason": "Fold into Stakeholder collaboration"
     },
     "S0467": {
-      "into": "S0468",
+      "into": "s65",
       "text": "Skill in conducting an education needs assessment",
       "intoText": "Skill in conducting a training needs assessment",
       "reason": "Education vs training"
     },
     "S0470": {
-      "into": "S0469",
+      "into": "s66",
       "text": "Skill in using the TOR network",
       "intoText": "Skill in navigating the dark web",
       "reason": "Fold into Dark web research"
     },
     "S0473": {
-      "into": "S0472",
+      "into": "s68",
       "text": "Skill in maintaining virtual machines",
       "intoText": "Skill in developing virtual machines",
       "reason": "Develop vs maintain"
     },
     "S0475": {
-      "into": "S0603",
+      "into": "s131",
       "text": "Skill in recognizing digital forensics data",
       "intoText": "Skill in identifying forensics data in diverse media",
       "reason": "Duplicate"
     },
     "S0477": {
-      "into": "S0648",
+      "into": "s161",
       "text": "Skill in identifying anomalous activity",
       "intoText": "Skill in detecting anomalies",
       "reason": "Duplicate"
     },
     "S0482": {
-      "into": "S0612",
+      "into": "s138",
       "text": "Skill in performing forensic data analysis",
       "intoText": "Skill in performing digital forensics analysis",
       "reason": "Duplicate"
     },
     "S0485": {
-      "into": "S0484",
+      "into": "s74",
       "text": "Skill in implementing user credential management systems",
       "intoText": "Skill in developing user credential management systems",
       "reason": "Develop vs implement"
     },
     "S0486": {
-      "into": "S0657",
+      "into": "s168",
       "text": "Skill in implementing enterprise key escrow systems",
       "intoText": "Skill in implementing Public Key Infrastructure (PKI) encryption",
       "reason": "Fold into PKI"
@@ -194,61 +194,61 @@
       "reason": "Operate vs maintain"
     },
     "S0490": {
-      "into": "S0755",
+      "into": "s210",
       "text": "Skill in recreating network topologies",
       "intoText": "Skill in reconstructing a network",
       "reason": "Duplicate of reconstructing a network"
     },
     "S0491": {
-      "into": "S0608",
+      "into": "s135",
       "text": "Skill in processing digital forensic data",
       "intoText": "Skill in processing digital evidence",
       "reason": "Duplicate"
     },
     "S0504": {
-      "into": "S0544",
+      "into": "s89",
       "text": "Skill in identifying vulnerabilities",
       "intoText": "Skill in recognizing vulnerabilities",
       "reason": "Duplicate"
     },
     "S0506": {
-      "into": "S0893",
+      "into": "s272",
       "text": "Skill in identifying customer information needs",
       "intoText": "Skill in performing user needs analysis",
       "reason": "Duplicate"
     },
     "S0512": {
-      "into": "S0869",
+      "into": "s262",
       "text": "Skill in extracting metadata",
       "intoText": "Skill in performing metadata analysis",
       "reason": "Fold into Metadata analysis"
     },
     "S0515": {
-      "into": "S0801",
+      "into": "s223",
       "text": "Skill in identifying partner capabilities",
       "intoText": "Skill in assessing partner operations capabilities",
       "reason": "Duplicate"
     },
     "S0517": {
-      "into": "S0799",
+      "into": "s221",
       "text": "Skill in anticipating threats",
       "intoText": "Skill in anticipating new security threats",
       "reason": "Duplicate"
     },
     "S0531": {
-      "into": "S0509",
+      "into": "s78",
       "text": "Skill in assessing security hardware and software",
       "intoText": "Skill in evaluating security products",
       "reason": "Duplicate"
     },
     "S0535": {
-      "into": "S0890",
+      "into": "s269",
       "text": "Skill in performing threat factor analysis",
       "intoText": "Skill in performing threat analysis",
       "reason": "Fold into Threat analysis"
     },
     "S0541": {
-      "into": "S0705",
+      "into": "s187",
       "text": "Skill in providing software updates",
       "intoText": "Skill in installing patches",
       "reason": "Fold into Patch management"
@@ -260,103 +260,103 @@
       "reason": "Design vs implement"
     },
     "S0567": {
-      "into": "S0566",
+      "into": "s106",
       "text": "Skill in deploying signatures",
       "intoText": "Skill in developing signatures",
       "reason": "Develop vs deploy"
     },
     "S0574": {
-      "into": "S0569",
+      "into": "s107",
       "text": "Skill in developing security system controls",
       "intoText": "Skill in designing security controls",
       "reason": "Duplicate"
     },
     "S0576": {
-      "into": "S0575",
+      "into": "s111",
       "text": "Skill in testing network infrastructure contingency and recovery plans",
       "intoText": "Skill in developing network infrastructure contingency and recovery plans",
       "reason": "Develop vs test"
     },
     "S0582": {
-      "into": "S0581",
+      "into": "s116",
       "text": "Skill in troubleshooting system performance",
       "intoText": "Skill in configuring systems for performance enhancement",
       "reason": "Close enough to tuning"
     },
     "S0585": {
-      "into": "S0584",
+      "into": "s117",
       "text": "Skill in installing network devices",
       "intoText": "Skill in configuring network devices",
       "reason": "Fold into configuration"
     },
     "S0593": {
-      "into": "S0806",
+      "into": "s225",
       "text": "Skill in handling incidents",
       "intoText": "Skill in performing incident responses",
       "reason": "Duplicate"
     },
     "S0595": {
-      "into": "S0594",
+      "into": "s124",
       "text": "Skill in repairing system peripherals",
       "intoText": "Skill in repairing hardware",
       "reason": "Peripherals"
     },
     "S0600": {
-      "into": "S0401",
+      "into": "s25",
       "text": "Skill in collecting relevant data from a variety of sources",
       "intoText": "Skill in collecting data",
       "reason": "Fold into Data collection"
     },
     "S0605": {
-      "into": "S0609",
+      "into": "s136",
       "text": "Skill in storing digital evidence",
       "intoText": "Skill in transporting digital evidence",
       "reason": "Fold into Evidence handling"
     },
     "S0611": {
-      "into": "S0594",
+      "into": "s124",
       "text": "Skill in disassembling Personal Computers (PCs)",
       "intoText": "Skill in repairing hardware",
       "reason": "Fold into Hardware repair"
     },
     "S0623": {
-      "into": "S0883",
+      "into": "s267",
       "text": "Skill in performing source code analysis",
       "intoText": "Skill in performing static code analysis",
       "reason": "Duplicate"
     },
     "S0627": {
-      "into": "S0617",
+      "into": "s143",
       "text": "Skill in reading signatures",
       "intoText": "Skill in interpreting signatures",
       "reason": "Duplicate"
     },
     "S0641": {
-      "into": "S0866",
+      "into": "s260",
       "text": "Skill in reviewing logs",
       "intoText": "Skill in performing log file analysis",
       "reason": "Duplicate"
     },
     "S0665": {
-      "into": "S0564",
+      "into": "s104",
       "text": "Skill in creating policies that reflect legal, regulatory, and organizational requirements",
       "intoText": "Skill in creating system security policies",
       "reason": "Duplicate"
     },
     "S0669": {
-      "into": "S0668",
+      "into": "s175",
       "text": "Skill in integrating technology processes and solutions",
       "intoText": "Skill in designing technology processes and solutions",
       "reason": "Design vs integrate"
     },
     "S0671": {
-      "into": "S0575",
+      "into": "s111",
       "text": "Skill in implementing network infrastructure contingency and recovery plans",
       "intoText": "Skill in developing network infrastructure contingency and recovery plans",
       "reason": "Develop vs implement"
     },
     "S0675": {
-      "into": "S0581",
+      "into": "s116",
       "text": "Skill in optimizing system performance",
       "intoText": "Skill in configuring systems for performance enhancement",
       "reason": "Duplicate"
@@ -374,19 +374,19 @@
       "reason": "Duplicate"
     },
     "S0685": {
-      "into": "S0613",
+      "into": "s139",
       "text": "Skill in configuring computer protection components",
       "intoText": "Skill in configuring software-based computer protection tools",
       "reason": "Duplicate"
     },
     "S0688": {
-      "into": "S0874",
+      "into": "s264",
       "text": "Skill in performing network data analysis",
       "intoText": "Skill in performing network traffic analysis",
       "reason": "Duplicate"
     },
     "S0696": {
-      "into": "S0469",
+      "into": "s66",
       "text": "Skill in conducting deep web research",
       "intoText": "Skill in navigating the dark web",
       "reason": "Fold into Dark web research"
@@ -398,43 +398,43 @@
       "reason": "Duplicate"
     },
     "S0703": {
-      "into": "S0845",
+      "into": "s247",
       "text": "Skill in depicting data on a network map",
       "intoText": "Skill in mapping networks",
       "reason": "Duplicate"
     },
     "S0706": {
-      "into": "S0705",
+      "into": "s187",
       "text": "Skill in identifying patch signatures",
       "intoText": "Skill in installing patches",
       "reason": "Fold into Patch management"
     },
     "S0708": {
-      "into": "S0707",
+      "into": "s188",
       "text": "Skill in executing comprehensive cyber operations assessment programs",
       "intoText": "Skill in developing comprehensive cyber operations assessment programs",
       "reason": "Develop vs execute"
     },
     "S0711": {
-      "into": "S0869",
+      "into": "s262",
       "text": "Skill in interpreting metadata",
       "intoText": "Skill in performing metadata analysis",
       "reason": "Duplicate"
     },
     "S0713": {
-      "into": "S0712",
+      "into": "s190",
       "text": "Skill in evaluating information quality",
       "intoText": "Skill in evaluating data source quality",
       "reason": "Duplicate"
     },
     "S0733": {
-      "into": "S0732",
+      "into": "s201",
       "text": "Skill in interpreting malicious network activity in traffic",
       "intoText": "Skill in recognizing malicious network activity in traffic",
       "reason": "Recognize vs interpret"
     },
     "S0735": {
-      "into": "S0597",
+      "into": "s126",
       "text": "Skill in programming",
       "intoText": "Skill in writing code in a currently supported programming language",
       "reason": "Duplicate"
@@ -446,115 +446,115 @@
       "reason": "Duplicate"
     },
     "S0744": {
-      "into": "S0391",
+      "into": "s18",
       "text": "Skill in performing technical writing",
       "intoText": "Skill in creating technical documentation",
       "reason": "Fold into Technical documentation"
     },
     "S0751": {
-      "into": "S0695",
+      "into": "s186",
       "text": "Skill in conducting open-source searches",
       "intoText": "Skill in performing Open Source Intelligence (OSINT) research",
       "reason": "Duplicate"
     },
     "S0762": {
-      "into": "S0398",
+      "into": "s24",
       "text": "Skill in integrating organization objectives",
       "intoText": "Skill in analyzing organizational objectives",
       "reason": "Duplicate"
     },
     "S0804": {
-      "into": "S0492",
+      "into": "s75",
       "text": "Skill in assessing an organization's threat environment",
       "intoText": "Skill in performing threat environment analysis",
       "reason": "Duplicate"
     },
     "S0815": {
-      "into": "S0577",
+      "into": "s112",
       "text": "Skill in troubleshooting network equipment",
       "intoText": "Skill in troubleshooting computer networks",
       "reason": "Duplicate"
     },
     "S0818": {
-      "into": "S0817",
+      "into": "s234",
       "text": "Skill in building internal and external stakeholder relationships",
       "intoText": "Skill in building internal and external relationships",
       "reason": "Duplicate"
     },
     "S0822": {
-      "into": "S0821",
+      "into": "s235",
       "text": "Skill in collaborating with stakeholders",
       "intoText": "Skill in collaborating with internal and external stakeholders",
       "reason": "Duplicate"
     },
     "S0827": {
-      "into": "S0821",
+      "into": "s235",
       "text": "Skill in communicating with internal and external stakeholders",
       "intoText": "Skill in collaborating with internal and external stakeholders",
       "reason": "Duplicate"
     },
     "S0828": {
-      "into": "S0401",
+      "into": "s25",
       "text": "Skill in compiling data",
       "intoText": "Skill in collecting data",
       "reason": "Fold into Data collection"
     },
     "S0837": {
-      "into": "S0650",
+      "into": "s162",
       "text": "Skill in executing computer scripts to automate tasks",
       "intoText": "Skill in writing scripts",
       "reason": "Duplicate"
     },
     "S0838": {
-      "into": "S0648",
+      "into": "s161",
       "text": "Skill in identifying anomalous activities",
       "intoText": "Skill in detecting anomalies",
       "reason": "Duplicate"
     },
     "S0856": {
-      "into": "S0612",
+      "into": "s138",
       "text": "Skill in performing digital evidence analysis",
       "intoText": "Skill in performing digital forensics analysis",
       "reason": "Fold into Digital forensics"
     },
     "S0870": {
-      "into": "S0893",
+      "into": "s272",
       "text": "Skill in performing needs analysis",
       "intoText": "Skill in performing user needs analysis",
       "reason": "Duplicate"
     },
     "S0871": {
-      "into": "S0874",
+      "into": "s264",
       "text": "Skill in performing network analysis",
       "intoText": "Skill in performing network traffic analysis",
       "reason": "Duplicate"
     },
     "S0875": {
-      "into": "S0156",
+      "into": "s6",
       "text": "Skill in performing network traffic packet analysis",
       "intoText": "Skill in performing packet-level analysis",
       "reason": "Duplicate"
     },
     "S0878": {
-      "into": "S0686",
+      "into": "s184",
       "text": "Skill in performing risk analysis",
       "intoText": "Skill in performing risk assessments",
       "reason": "Fold into Risk assessment"
     },
     "S0880": {
-      "into": "S0853",
+      "into": "s252",
       "text": "Skill in performing security architecture analysis",
       "intoText": "Skill in performing cybersecurity architecture analysis",
       "reason": "Duplicate"
     },
     "S0885": {
-      "into": "S0846",
+      "into": "s248",
       "text": "Skill in performing system activity analysis",
       "intoText": "Skill in monitoring system activity",
       "reason": "Duplicate"
     },
     "S0886": {
-      "into": "S0554",
+      "into": "s96",
       "text": "Skill in performing system analysis",
       "intoText": "Skill in performing systems analysis",
       "reason": "Duplicate"
@@ -566,97 +566,97 @@
       "reason": "Duplicate"
     },
     "S0896": {
-      "into": "S0848",
+      "into": "s249",
       "text": "Skill in recognizing behavioral patterns",
       "intoText": "Skill in performing behavioral analysis",
       "reason": "Fold into Behavioral analysis"
     },
     "S0897": {
-      "into": "S0748",
+      "into": "s207",
       "text": "Skill in retrieving data",
       "intoText": "Skill in querying data",
       "reason": "Fold into Data querying"
     },
     "S0902": {
-      "into": "S0817",
+      "into": "s234",
       "text": "Skill in building relationships remotely and in person",
       "intoText": "Skill in building internal and external relationships",
       "reason": "Duplicate"
     },
     "S0904": {
-      "into": "S0859",
+      "into": "s256",
       "text": "Skill in correlating data from multiple tools",
       "intoText": "Skill in performing event correlation",
       "reason": "Fold into Event correlation"
     },
     "S0909": {
-      "into": "S0900",
+      "into": "s275",
       "text": "Skill in integrating information from multiple sources",
       "intoText": "Skill in analyzing information from multiple sources",
       "reason": "Duplicate"
     },
     "S0911": {
-      "into": "S0748",
+      "into": "s207",
       "text": "Skill in performing data queries",
       "intoText": "Skill in querying data",
       "reason": "Duplicate"
     },
     "S0912": {
-      "into": "S0848",
+      "into": "s249",
       "text": "Skill in performing human behavioral analysis",
       "intoText": "Skill in performing behavioral analysis",
       "reason": "Duplicate"
     },
     "S0918": {
-      "into": "S0451",
+      "into": "s56",
       "text": "Skill in conducting ongoing monitoring of system properties and behaviors",
       "intoText": "Skill in deploying continuous monitoring technologies",
       "reason": "Fold into Continuous monitoring"
     },
     "S0920": {
-      "into": "S0683",
+      "into": "s183",
       "text": "Skill in establishing segmentation of system assets based on criticality and trustworthiness",
       "intoText": "Skill in implementing network segregation",
       "reason": "Fold into Network segmentation"
     },
     "S0927": {
-      "into": "S0575",
+      "into": "s111",
       "text": "Skill in defining contingency plans",
       "intoText": "Skill in developing network infrastructure contingency and recovery plans",
       "reason": "Fold into Recovery planning"
     },
     "S0933": {
-      "into": "S0932",
+      "into": "s295",
       "text": "Skill in designing enhanced controls for critical assets",
       "intoText": "Skill in protecting critical assets",
       "reason": "Duplicate"
     },
     "S0939": {
-      "into": "S0863",
+      "into": "s259",
       "text": "Skill in performing event analysis",
       "intoText": "Skill in performing incident analysis",
       "reason": "Fold into Incident analysis"
     },
     "S0940": {
-      "into": "S0861",
+      "into": "s258",
       "text": "Skill in performing risk-based gap analysis",
       "intoText": "Skill in performing gap analysis",
       "reason": "Fold into Gap analysis"
     },
     "S0947": {
-      "into": "S0686",
+      "into": "s184",
       "text": "Skill in interpreting risk assessments",
       "intoText": "Skill in performing risk assessments",
       "reason": "Fold into Risk assessment"
     },
     "S0956": {
-      "into": "S0955",
+      "into": "s313",
       "text": "Skill in evaluating the performance of algorithms",
       "intoText": "Skill in evaluating machine learning models",
       "reason": "Fold into ML model evaluation"
     },
     "S0962": {
-      "into": "S0961",
+      "into": "s318",
       "text": "Skill in applying supply chain controls",
       "intoText": "Skill in selecting supply chain controls",
       "reason": "Select vs apply"

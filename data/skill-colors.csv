@@ -1,382 +1,382 @@
 id,title,statement,color,blue_group,review,roles
-S0011,Information searching,Skill in conducting information searches,center,,,Knowledge Management
-S0015,Test execution,Skill in conducting test events,center,,,Systems Testing and Evaluation; IT/Security Controls Auditor
-S0066,Capability gap analysis,Skill in identifying gaps in technical capabilities,center,,check,Systems Requirements Planning; Cybersecurity Curriculum Development
-S0080,Damage assessment,Skill in performing damage assessments,blue,incident-response,,Incident Response
-S0097,Security control implementation,Skill in applying security controls,green,,,Cybersecurity Instruction; IT/Security Controls Auditor
-S0156,Packet analysis,Skill in performing packet-level analysis,blue,monitoring,,Cybersecurity Instruction; Defensive Cybersecurity; Digital Forensics
-S0172,Secure coding,Skill in applying secure coding techniques,yellow,,,Cybersecurity Architecture; Secure Software Development; Secure Systems Development; Technology Research and Development; Application Security; Data Analysis
-S0175,Root cause analysis,Skill in performing root cause analysis,center,,,Secure Software Development; Software Security Assessment; IT/Security Controls Auditor
-S0194,Anonymous research,Skill in conducting non-attributable research,blue,threat-intel,,Cyber Threat Intelligence
-S0208,Network device location,Skill in determining the physical location of network devices,center,,,Infrastructure Support
-S0378,Decryption,Skill in decrypting information,blue,forensics,,Digital Forensics; Insider Threat Analysis
-S0380,Security awareness training,Skill in facilitating cybersecurity awareness briefings,orange,,,Cybersecurity Instruction; Security Awareness
-S0381,Training program development,Skill in developing training programs,orange,,,Cybersecurity Instruction
-S0383,Enterprise IT architecture analysis,Skill in analyzing an organization's enterprise information technology architecture,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development
-S0387,Written communication,Skill in communicating in writing,center,,,Cybersecurity Architecture; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Instruction; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management
-S0389,Group facilitation,Skill in facilitating group discussions,center,,,Cybersecurity Instruction
-S0390,Learner assessment,Skill in assessing learner comprehension,orange,,,Cybersecurity Instruction
-S0391,Technical documentation,Skill in creating technical documentation,center,,,Secure Systems Development; Technology Research and Development; Operational Technology (OT) Cybersecurity Engineering; Knowledge Management; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Insider Threat Analysis
-S0392,Learner feedback,Skill in providing training and education feedback to learners,orange,,,Cybersecurity Instruction
-S0393,Assessment design,Skill in developing assessments,orange,,,Cybersecurity Workforce Management; Cybersecurity Instruction
-S0394,Security assessment design,Skill in developing security assessments,white,,check,Cybersecurity Workforce Management; Cybersecurity Instruction; IT/Security Controls Auditor
-S0395,Instructional materials,Skill in developing instructional materials,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Privacy Compliance
-S0396,Requirements forecasting,Skill in forecasting requirements,white,,,Cybersecurity Workforce Management; Systems Authorization
-S0398,Business objective analysis,Skill in analyzing organizational objectives,center,,check,Cybersecurity Architecture; Enterprise Architecture; Systems Administration; Cybersecurity Workforce Management; Systems Authorization
-S0401,Data collection,Skill in collecting data,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Cybersecurity Instruction; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management; Defensive Cybersecurity; Cyber Threat Intelligence
-S0403,Data validation,Skill in validating data,center,,,Systems Testing and Evaluation; IT/Security Controls Auditor
-S0404,Market research,Skill in conducting market research,center,,,Security Program Management; Cybersecurity Supply Chain Risk Management
-S0406,Policy planning,Skill in developing policy plans,white,,,Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Executive Cybersecurity Leadership; Privacy Compliance; Systems Authorization; Cybersecurity Supply Chain Risk Management
-S0407,SOP development,Skill in developing standard operating procedures (SOPs),center,,check,Systems Administration; Technical Support; Privacy Compliance
-S0410,Career path design,Skill in creating career path definitions,white,,,Cybersecurity Workforce Management
-S0414,Legal analysis,Skill in evaluating laws,white,,,Cybersecurity Legal Advice; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Systems Authorization
-S0415,Regulatory analysis,Skill in evaluating regulations,white,,,Cybersecurity Legal Advice; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Systems Authorization
-S0416,Policy analysis,Skill in evaluating policies,white,,,Cybersecurity Legal Advice; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Systems Authorization
-S0417,Secure deployment,Skill in deploying software securely,yellow,,,Secure Software Development
-S0418,Secure network architecture,Skill in applying secure network architectures,green,,,Cybersecurity Architecture; Secure Systems Development
-S0419,Systems design,Skill in designing systems,center,,,Cybersecurity Architecture; Secure Systems Development
-S0420,Technology integration,Skill in integrating multiple technologies,center,,,Enterprise Architecture
-S0422,Workforce trend analysis,Skill in evaluating workforce trends,white,,,Cybersecurity Workforce Management
-S0423,Process conformance review,Skill in analyzing processes to ensure conformance with procedural requirements,white,,,Secure Systems Development; Security Program Management; IT/Security Controls Auditor; Security Compliance Monitoring
-S0424,Command line,Skill in executing command line tools,center,,,Network Operations; Cybersecurity Curriculum Development; Cybersecurity Instruction
-S0428,Architecture design,Skill in designing architectures,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development
-S0429,Framework design,Skill in designing frameworks,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development
-S0430,Collaboration,Skill in collaborating with others,center,,,Cybersecurity Architecture; Secure Systems Development; Operational Technology (OT) Cybersecurity Engineering; Systems Administration; Cybersecurity Curriculum Development; Cybersecurity Instruction; Systems Authorization; Cyber Threat Intelligence
-S0431,Critical thinking,Skill in applying critical thinking,center,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Digital Forensics
-S0432,Security operations coordination,Skill in coordinating cybersecurity operations across an organization,blue,incident-response,,Systems Authorization; Cybersecurity Supply Chain Risk Management
-S0434,Incomplete data analysis,Skill in extrapolating from incomplete data sets,blue,threat-intel,,Cyber Threat Intelligence
-S0435,Large dataset analysis,Skill in analyzing large data sets,blue,threat-intel,,Cyber Threat Intelligence
-S0436,Threat intel reporting,Skill in creating target intelligence products,blue,threat-intel,,Cyber Threat Intelligence
-S0438,Working under pressure,"Skill in functioning effectively in a dynamic, fast-paced environment",center,,,Systems Administration; Cyber Threat Intelligence
-S0442,Network data collection,Skill in collecting network data,blue,monitoring,,Insider Threat Analysis
-S0443,Bias mitigation,Skill in mitigating cognitive biases,blue,threat-intel,,Cyber Threat Intelligence
-S0444,Deception detection,Skill in mitigating deception in reporting and analysis,blue,threat-intel,,Cyber Threat Intelligence
-S0447,Privacy-security alignment,Skill in aligning privacy and cybersecurity objectives,white,,,Privacy Compliance; IT/Security Controls Auditor; Systems Authorization
-S0448,Security automation,Skill in creating automated security control systems,green,,,Cloud Security Engineering; DevSecOps; Systems Administration; Detection Engineering
-S0450,Privacy notices,Skill in authoring privacy disclosure statements,white,,,Cybersecurity Legal Advice; Privacy Compliance
-S0451,Continuous monitoring,Skill in deploying continuous monitoring technologies,blue,monitoring,,Network Operations; Systems Administration; Systems Security Analysis; Security Compliance Monitoring
-S0452,Risk management program,Skill in creating a risk management program,white,,,Cybersecurity Policy and Planning
-S0459,Assessment reporting,Skill in creating security assessment reports,white,,,Operational Technology (OT) Cybersecurity Engineering; Security Compliance Monitoring
-S0460,Contract compliance,Skill in verifying contractor compliance with contracts,white,,,Cybersecurity Legal Advice; Cybersecurity Supply Chain Risk Management
-S0461,Security in contracts,Skill in integrating security requirements and contracts,white,,,Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Supply Chain Risk Management
-S0462,Secure acquisition,Skill in integrating information security requirements in the acquisitions process,white,,,Secure Systems Development; Security Program Management; IT/Security Controls Auditor; Systems Security Management; Cybersecurity Supply Chain Risk Management
-S0463,Software quality control,Skill in implementing software quality control processes,center,,,Secure Systems Development; Security Program Management; IT/Security Controls Auditor; Systems Security Management
-S0465,Critical infrastructure identification,Skill in identifying critical infrastructure systems,green,,check,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Requirements Planning; Technology Research and Development; Systems Authorization; Systems Security Management
-S0466,Insecure design identification,Skill in identifying systems designed without security considerations,yellow,,check,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Requirements Planning; Technology Research and Development; IT/Security Controls Auditor; Systems Authorization; Systems Security Management
-S0468,Training needs assessment,Skill in conducting a training needs assessment,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction
-S0469,Dark web research,Skill in navigating the dark web,blue,threat-intel,,Cybercrime Investigation; Cyber Threat Intelligence
-S0471,Digital media examination,Skill in examining digital media,blue,forensics,,Cybercrime Investigation
-S0472,Virtual machines,Skill in developing virtual machines,center,,,Systems Administration; Cyber Range Engineering; Cybersecurity Instruction; Digital Forensics; Cyber Threat Intelligence
-S0476,File extension abuse,Skill in identifying filename extension abuse,blue,forensics,,Digital Forensics
-S0479,Supplier risk assessment,Skill in evaluating supplier trustworthiness,white,,,Cybercrime Investigation; Systems Security Analysis; Security Program Management; Systems Security Management; Cybersecurity Supply Chain Risk Management
-S0480,Product risk assessment,Skill in evaluating product trustworthiness,white,,,Systems Security Analysis; Cybersecurity Supply Chain Risk Management
-S0481,Digital footprint analysis,Skill in identifying forensic digital footprints,blue,forensics,,Technology Research and Development
-S0483,Communication vulnerability analysis,Skill in identifying software communications vulnerabilities,red,,,Technology Research and Development; Systems Security Analysis; Cybersecurity Instruction; Defensive Cybersecurity; Incident Response; Vulnerability Analysis
-S0484,Credential management,Skill in developing user credential management systems,green,,,Systems Security Analysis; Identity and Access Management
-S0492,Threat landscape analysis,Skill in performing threat environment analysis,blue,threat-intel,,Vulnerability Analysis
-S0497,Client profiling,Skill in developing client organization profiles,center,,,Systems Requirements Planning; Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Systems Authorization
-S0505,Intrusion analysis,Skill in performing intrusion data analysis,blue,monitoring,,Cyber Threat Intelligence
-S0509,Security product evaluation,Skill in evaluating security products,green,,check,Operational Technology (OT) Cybersecurity Engineering; Cybercrime Investigation; Systems Security Management; Cybersecurity Supply Chain Risk Management; Defensive Cybersecurity; Incident Response; Cyber Threat Intelligence
-S0511,Prioritization,Skill in establishing priorities,center,,,Executive Cybersecurity Leadership; Cyber Threat Intelligence
-S0516,Threat emulation,Skill in performing threat emulation tactics,purple,,,Cyber Range Engineering; Cyber Threat Intelligence; Penetration Testing and Red Teaming; Detection Engineering
-S0518,Threat actor assessment,Skill in assessing threat actors,blue,threat-intel,,Cyber Threat Intelligence
-S0519,Exploitation detection,Skill in detecting exploitation activities,blue,monitoring,,Defensive Cybersecurity; Incident Response
-S0523,Network building,Skill in constructing networks,center,,,Network Operations; Cyber Range Engineering
-S0532,Configuration analysis,Skill in analyzing software configurations,green,,,Secure Systems Development; Technology Research and Development; IT/Security Controls Auditor; Vulnerability Analysis
-S0537,Wireless system design,Skill in designing wireless communications systems,center,,,Privacy Compliance; Cyber Threat Intelligence
-S0540,Network threat identification,Skill in identifying network threats,blue,monitoring,,Privacy Compliance; Insider Threat Analysis; Cyber Threat Intelligence
-S0542,Access control lists,Skill in developing access control lists,green,,,Network Operations
-S0543,Vulnerability scanning,Skill in scanning for vulnerabilities,blue,monitoring,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Technology Research and Development; Systems Security Analysis; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Defensive Cybersecurity; Vulnerability Analysis; Penetration Testing and Red Teaming
-S0544,Vulnerability identification,Skill in recognizing vulnerabilities,red,,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Technology Research and Development; Systems Security Analysis; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Defensive Cybersecurity; Incident Response; Vulnerability Analysis
-S0547,Malware identification,Skill in identifying malware,blue,forensics,,Incident Response; Malware Analysis and Reverse Engineering
-S0548,Malware capture,Skill in capturing malware,blue,forensics,,Incident Response; Malware Analysis and Reverse Engineering
-S0549,Malware containment,Skill in containing malware,blue,incident-response,,Incident Response; Malware Analysis and Reverse Engineering
-S0550,Malware reporting,Skill in reporting malware,blue,forensics,,Incident Response; Malware Analysis and Reverse Engineering
-S0552,Host access control,Skill in applying host access controls,green,,,Infrastructure Support
-S0553,Network access control,Skill in applying network access controls,green,,,Infrastructure Support
-S0554,Systems analysis,Skill in performing systems analysis,center,,,Systems Requirements Planning
-S0555,Capability analysis,Skill in performing capabilities analysis,center,,check,Systems Requirements Planning; Security Program Management; Cyber Threat Intelligence
-S0556,Requirements analysis,Skill in performing requirements analysis,center,,,Systems Requirements Planning; Cybersecurity Workforce Management; Security Program Management; Systems Authorization; Cyber Threat Intelligence
-S0558,Algorithm development,Skill in developing algorithms,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Insider Threat Analysis
-S0559,Data structure analysis,Skill in performing data structure analysis,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Insider Threat Analysis
-S0560,Debugging,Skill in debugging software,center,,,Secure Software Development
-S0562,Mathematical modeling,Skill in creating mathematical models,center,,,Secure Software Development; Software Security Assessment; Technology Research and Development; Data Analysis
-S0563,Statistical modeling,Skill in creating statistical models,center,,,Secure Software Development; Software Security Assessment; Technology Research and Development; Data Analysis
-S0564,Security policy writing,Skill in creating system security policies,white,,,Executive Cybersecurity Leadership; Systems Security Management; Cybersecurity Supply Chain Risk Management; GRC Analysis
-S0565,Input validation,Skill in implementing input validation,yellow,,,Secure Software Development; Application Security
-S0566,Detection signatures,Skill in developing signatures,purple,,check,Defensive Cybersecurity; Malware Analysis and Reverse Engineering; Detection Engineering
-S0569,Security control design,Skill in designing security controls,green,,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Security Analysis; IT/Security Controls Auditor; Systems Security Management; Defensive Cybersecurity; Vulnerability Analysis
-S0570,Hardware integration,Skill in designing the integration of hardware solutions,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Security Analysis
-S0571,Software integration,Skill in designing the integration of software solutions,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Security Analysis
-S0572,Intrusion detection,Skill in detecting host- and network-based intrusions,blue,monitoring,,Cybersecurity Instruction; Systems Security Management; Defensive Cybersecurity; Incident Response; Vulnerability Analysis
-S0575,Recovery planning,Skill in developing network infrastructure contingency and recovery plans,green,,,Network Operations; Cybersecurity Policy and Planning; Digital Forensics
-S0577,Network troubleshooting,Skill in troubleshooting computer networks,center,,,Network Operations; Systems Administration
-S0578,Security design review,Skill in evaluating security designs,green,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Operational Technology (OT) Cybersecurity Engineering; Systems Security Analysis; IT/Security Controls Auditor; Systems Security Management; Defensive Cybersecurity; Vulnerability Analysis
-S0579,Report writing,Skill in preparing reports,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Security Program Management; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management; GRC Analysis; Digital Forensics; Insider Threat Analysis; Cyber Threat Intelligence
-S0580,Performance monitoring,Skill in monitoring system performance,center,,,Security Program Management
-S0581,Performance tuning,Skill in configuring systems for performance enhancement,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Requirements Planning; Technology Research and Development; Network Operations; Systems Administration; Systems Security Analysis; Technical Support; Security Program Management; Vulnerability Analysis
-S0584,Network device configuration,Skill in configuring network devices,center,,,Network Operations
-S0587,Directory services,Skill in maintaining directory services,center,,,Systems Administration; Identity and Access Management
-S0588,Threat modeling,Skill in performing threat modeling,yellow,,check,Application Security; Insider Threat Analysis; Vulnerability Analysis
-S0589,Evidence integrity,Skill in preserving digital evidence integrity,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
-S0590,Use case development,Skill in building use cases,center,,,Cybersecurity Architecture; Enterprise Architecture; Systems Requirements Planning
-S0591,Social engineering,Skill in performing social engineering,red,,,Cybersecurity Instruction; Vulnerability Analysis; Penetration Testing and Red Teaming
-S0592,Sensor tuning,Skill in tuning network sensors,blue,monitoring,,Cybersecurity Instruction; Infrastructure Support; Detection Engineering
-S0594,Hardware repair,Skill in repairing hardware,center,,,Technical Support; Digital Forensics
-S0596,Network encryption,Skill in encrypting network communications,green,,,Cybersecurity Architecture; Network Operations; Incident Response; Infrastructure Support
-S0597,Programming,Skill in writing code in a currently supported programming language,center,,check,Enterprise Architecture; Secure Software Development; Systems Testing and Evaluation; Data Analysis; Systems Security Analysis; Cybersecurity Instruction; Vulnerability Analysis
-S0598,Test planning,Skill in creating test plans,center,,,Cybersecurity Architecture; Systems Testing and Evaluation
-S0599,Memory analysis,Skill in performing memory dump analysis,blue,forensics,,Digital Forensics; Malware Analysis and Reverse Engineering; Threat Hunting
-S0601,Curriculum development,Skill in developing curricula,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Privacy Compliance
-S0602,Teaching,Skill in teaching training programs,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Privacy Compliance
-S0603,Forensic data identification,Skill in identifying forensics data in diverse media,blue,forensics,,Technology Research and Development; Digital Forensics
-S0604,Forensic data extraction,Skill in extracting forensics data in diverse media,blue,forensics,,Digital Forensics
-S0606,OS internals,Skill in manipulating operating system components,center,,,Systems Administration; Digital Forensics
-S0607,Evidence collection,Skill in collecting digital evidence,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
-S0608,Evidence processing,Skill in processing digital evidence,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
-S0609,Evidence handling,Skill in transporting digital evidence,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
-S0610,Communication,Skill in communicating effectively,center,,,Cybersecurity Architecture; Operational Technology (OT) Cybersecurity Engineering; Data Analysis; Cybersecurity Curriculum Development; Cybersecurity Instruction; Cybersecurity Legal Advice; Executive Cybersecurity Leadership; Privacy Compliance; Cybersecurity Supply Chain Risk Management; Insider Threat Analysis
-S0612,Digital forensics,Skill in performing digital forensics analysis,blue,forensics,,Technology Research and Development; Cybercrime Investigation; Cybersecurity Instruction; Digital Forensics
-S0613,Endpoint protection,Skill in configuring software-based computer protection tools,green,,,Cybersecurity Architecture; Network Operations; Systems Administration; Cyber Range Engineering; Cybersecurity Instruction
-S0614,Vulnerability classification,Skill in categorizing types of vulnerabilities,purple,,check,IT/Security Controls Auditor; Defensive Cybersecurity; Incident Response
-S0615,Malware defense,Skill in protecting a network against malware,blue,monitoring,,Network Operations; Incident Response; Infrastructure Support; Malware Analysis and Reverse Engineering
-S0616,Black-box testing,Skill in applying black-box software testing,red,,check,Software Security Assessment; Systems Security Management
-S0617,Signature analysis,Skill in interpreting signatures,blue,monitoring,,Software Security Assessment; Systems Security Management; Defensive Cybersecurity
-S0618,Network protection configuration,Skill in configuring network protection components,green,,,Network Operations; Cybersecurity Instruction
-S0619,Technical auditing,Skill in auditing technical systems,white,,,Secure Systems Development; IT/Security Controls Auditor
-S0621,Binary analysis,Skill in performing binary analysis,blue,forensics,,Data Analysis; Digital Forensics; Malware Analysis and Reverse Engineering
-S0622,Hashing,Skill in implementing one-way hash functions,blue,forensics,check,Data Analysis; Digital Forensics
-S0624,Volatile data analysis,Skill in performing volatile data analysis,blue,forensics,,Digital Forensics
-S0625,Debugger analysis,Skill in interpreting debugger results,blue,forensics,,Digital Forensics; Malware Analysis and Reverse Engineering
-S0626,Encoding identification,Skill in identifying common encoding techniques,center,,,Data Analysis
-S0628,Learning activity design,Skill in developing learning activities,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Security Awareness
-S0629,Instructional technology,Skill in applying technologies for instructional purposes,orange,,,Cybersecurity Instruction
-S0632,Test strategy design,Skill in designing Test and Evaluation Strategies (TES),center,,,Cybersecurity Architecture; Systems Testing and Evaluation; IT/Security Controls Auditor
-S0633,Qualification requirements,Skill in developing position qualification requirements,white,,,Cybersecurity Workforce Management; Cyber Threat Intelligence
-S0637,Multi-level security design,Skill in designing multi-level security solutions,yellow,,check,Cybersecurity Architecture
-S0640,Regression analysis,Skill in performing regression analysis,center,,,Data Analysis; Cybersecurity Supply Chain Risk Management
-S0642,Past intrusion detection,Skill in identifying evidence of past intrusions,blue,incident-response,,IT/Security Controls Auditor; Vulnerability Analysis
-S0643,System hardening,Skill in applying hardening techniques,green,,,Cybersecurity Instruction; Infrastructure Support
-S0645,Security tooling troubleshooting,Skill in troubleshooting cyber defense infrastructure anomalies,green,,,Infrastructure Support
-S0647,Workforce management,Skill in managing a workforce,white,,,Cybersecurity Workforce Management
-S0648,Anomaly detection,Skill in detecting anomalies,blue,monitoring,,Cybercrime Investigation; Data Analysis; Defensive Cybersecurity; Insider Threat Analysis
-S0650,Scripting,Skill in writing scripts,center,,,DevSecOps; Data Analysis; Systems Administration; Cyber Range Engineering; Detection Engineering
-S0651,Malware analysis,Skill in performing malware analysis,blue,forensics,,Cybercrime Investigation; Cybersecurity Instruction; Defensive Cybersecurity; Digital Forensics; Incident Response; Malware Analysis and Reverse Engineering
-S0652,Bit-level analysis,Skill in performing bit-level analysis,blue,forensics,,Digital Forensics
-S0653,Forensic imaging,Skill in creating digital evidence copies,blue,forensics,,Digital Forensics
-S0655,Security test planning,Skill in designing secure test plans,yellow,,check,Cybersecurity Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; IT/Security Controls Auditor
-S0656,Application vulnerability assessment,Skill in assessing application vulnerabilities,red,,,IT/Security Controls Auditor; Vulnerability Analysis
-S0657,PKI,Skill in implementing Public Key Infrastructure (PKI) encryption,green,,,Cybersecurity Architecture; Secure Software Development; Software Security Assessment; Systems Security Analysis
-S0658,Digital signatures,Skill in implementing digital signatures,green,,,Cybersecurity Architecture; Secure Software Development; Software Security Assessment
-S0659,Security models,Skill in applying security models,yellow,,check,Cybersecurity Architecture
-S0660,Systems engineering,Skill in performing systems engineering,center,,,Technology Research and Development
-S0664,Security policy application,Skill in applying policies that meet system security objectives,white,,,Secure Systems Development; IT/Security Controls Auditor
-S0666,Performance objectives,Skill in defining performance objectives,white,,,Cybersecurity Supply Chain Risk Management
-S0667,Control assessment,Skill in assessing security controls,white,,,Systems Security Analysis; IT/Security Controls Auditor; Security Compliance Monitoring; GRC Analysis; Defensive Cybersecurity
-S0668,Process design,Skill in designing technology processes and solutions,center,,,Technology Research and Development
-S0670,Error handling,Skill in implementing error handling in applications,yellow,,,Secure Software Development
-S0673,Security requirements translation,Skill in translating operational requirements into security controls,yellow,,,Cybersecurity Architecture; Systems Requirements Planning; Operational Technology (OT) Cybersecurity Engineering; Security Program Management; IT/Security Controls Auditor; Cyber Threat Intelligence
-S0674,System upgrades,Skill in installing system and component upgrades,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Requirements Planning; Systems Administration; Systems Security Analysis
-S0677,System recovery,Skill in recovering failed systems,center,,,Systems Administration
-S0678,OS administration,Skill in administering operating systems,center,,,Systems Administration; Digital Forensics
-S0681,Design modeling,Skill in performing design modeling,center,,,Secure Systems Development; Data Analysis
-S0682,Subnetting,Skill in applying subnet techniques,center,,,Network Operations
-S0683,Network segmentation,Skill in implementing network segregation,green,,,Cybersecurity Architecture; Enterprise Architecture; Cloud Security Engineering
-S0686,Risk assessment,Skill in performing risk assessments,white,,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Requirements Planning; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Workforce Management; Cybersecurity Curriculum Development; Cybersecurity Instruction; Cybersecurity Legal Advice; Executive Cybersecurity Leadership; Privacy Compliance; IT/Security Controls Auditor; Systems Authorization; Systems Security Management; Cybersecurity Supply Chain Risk Management; GRC Analysis; Vulnerability Analysis
-S0694,Network device auditing,Skill in auditing network devices,red,,check,Vulnerability Analysis
-S0695,OSINT,Skill in performing Open Source Intelligence (OSINT) research,blue,threat-intel,,Cybercrime Investigation; Cyber Threat Intelligence
-S0705,Patch management,Skill in installing patches,purple,,,Systems Administration; Vulnerability Analysis
-S0707,Security program assessment,Skill in developing comprehensive cyber operations assessment programs,white,,,Executive Cybersecurity Leadership
-S0709,Analytics development,Skill in developing analytics,center,,,Data Analysis; Cyber Threat Intelligence
-S0712,Source quality evaluation,Skill in evaluating data source quality,center,,,Data Analysis; Cybersecurity Policy and Planning; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Defensive Cybersecurity; Cyber Threat Intelligence
-S0718,Threat identification,Skill in identifying cybersecurity threats,blue,threat-intel,,Cyber Threat Intelligence
-S0719,Intelligence gap analysis,Skill in identifying intelligence gaps,blue,threat-intel,,Cyber Threat Intelligence
-S0722,Traceroute analysis,Skill in interpreting traceroute results,center,,,Network Operations; Defensive Cybersecurity
-S0723,Scan result analysis,Skill in interpreting vulnerability scanner results,purple,,,IT/Security Controls Auditor; Vulnerability Analysis
-S0724,Client relationships,Skill in managing client relationships,center,,,Systems Requirements Planning; Cyber Threat Intelligence
-S0725,Network visualization,Skill in performing network visualization,center,,,Cybersecurity Supply Chain Risk Management
-S0726,Data normalization,Skill in performing data normalization,center,,,Data Analysis
-S0727,Data fusion,Skill in performing data fusion,blue,threat-intel,,Cyber Threat Intelligence
-S0728,Briefing preparation,Skill in preparing briefings,center,,,Cybersecurity Architecture; Data Analysis; Database Administration; Insider Threat Analysis; Cyber Threat Intelligence
-S0731,Post-incident reporting,Skill in producing post-incident or lessons-learned reports,blue,incident-response,,Incident Response
-S0732,Malicious traffic detection,Skill in recognizing malicious network activity in traffic,blue,monitoring,,Defensive Cybersecurity; Cyber Threat Intelligence
-S0736,Vulnerability research,Skill in researching software vulnerabilities,red,,,Vulnerability Analysis
-S0737,Exploit research,Skill in researching software exploits,red,,,Vulnerability Analysis; Penetration Testing and Red Teaming
-S0738,Reverse engineering,Skill in performing reverse engineering of software,blue,forensics,,Cybersecurity Instruction; Malware Analysis and Reverse Engineering
-S0739,Threat intel analysis,Skill in analyzing intelligence products,blue,threat-intel,,Cybersecurity Instruction
-S0743,Network anomaly detection,Skill in identifying network anomalies,blue,monitoring,,Defensive Cybersecurity
-S0748,Data querying,Skill in querying data,center,,,Data Analysis; Database Administration; Insider Threat Analysis; Cyber Threat Intelligence; Threat Hunting
-S0752,Detection evasion,Skill in evading network detection,red,,,Penetration Testing and Red Teaming
-S0754,Persistence,Skill in establishing persistence,red,,,Cybersecurity Instruction; Penetration Testing and Red Teaming
-S0755,Network reconstruction,Skill in reconstructing a network,blue,forensics,,Network Operations; Defensive Cybersecurity
-S0756,Incorporating feedback,Skill in incorporating feedback,center,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Cybersecurity Supply Chain Risk Management; Cyber Threat Intelligence
-S0757,File integrity verification,Skill in verifying the integrity of files,blue,forensics,,Systems Security Analysis
-S0758,Wireless network analysis,Skill in performing wireless network analysis,red,,check,Vulnerability Analysis
-S0759,Requirements gathering,Skill in identifying requirements,center,,,Systems Requirements Planning; Security Program Management
-S0769,Progress metrics,Skill in defining progress indicators,white,,,Cybersecurity Supply Chain Risk Management
-S0788,Planning team leadership,Skill in orchestrating planning teams,white,,,Secure Systems Development
-S0791,Presenting,Skill in presenting to an audience,center,,,Cybersecurity Architecture; Systems Testing and Evaluation; Data Analysis; Database Administration; Cybersecurity Instruction; Privacy Compliance; Security Awareness; Insider Threat Analysis; Cyber Threat Intelligence
-S0796,Privacy policy writing,Skill in creating privacy policies,white,,,Privacy Compliance
-S0797,Vendor negotiation,Skill in negotiating vendor agreements,white,,,Privacy Compliance; Cybersecurity Supply Chain Risk Management
-S0798,Vendor privacy review,Skill in evaluating vendor privacy practices,white,,,Privacy Compliance
-S0799,Emerging threat analysis,Skill in anticipating new security threats,blue,threat-intel,,Executive Cybersecurity Leadership; Cyber Threat Intelligence
-S0800,Organizational analysis,Skill in analyzing organizational patterns and relationships,center,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; Cybersecurity Supply Chain Risk Management
-S0801,Partner capability assessment,Skill in assessing partner operations capabilities,white,,,Systems Requirements Planning; Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Systems Authorization
-S0805,Incident response planning,Skill in designing incident responses,blue,incident-response,,Technical Support; Incident Response
-S0806,Incident response,Skill in performing incident responses,blue,incident-response,,Operational Technology (OT) Cybersecurity Engineering; Systems Administration; Technical Support; Defensive Cybersecurity; Incident Response; Infrastructure Support
-S0807,Problem solving,Skill in solving problems,center,,,Technology Research and Development; Cybercrime Investigation; Data Analysis; Technical Support; Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; Systems Authorization
-S0808,Data asset inventory,Skill in assessing an organization’s data assets,green,,,Data Analysis
-S0809,Managed security provider coordination,Skill in utilizing cyber defense service provider information,blue,monitoring,,Defensive Cybersecurity
-S0810,Threat report response,Skill in responding to threat reports,blue,threat-intel,,Cybersecurity Supply Chain Risk Management
-S0812,Supply chain analysis,Skill in performing supply chain analysis,white,,,Cybersecurity Supply Chain Risk Management
-S0813,Third-party connection risk,Skill in identifying cybersecurity issues in external connections,white,,,Cybersecurity Architecture; Enterprise Architecture; IT/Security Controls Auditor
-S0814,Partner privacy risk,Skill in identifying privacy issues in partner interconnections,white,,,Cybersecurity Architecture; Enterprise Architecture; IT/Security Controls Auditor
-S0816,Curriculum standards,Skill in developing curriculum standards,orange,,,Cybersecurity Curriculum Development
-S0817,Relationship building,Skill in building internal and external relationships,center,,,Privacy Compliance; Cybersecurity Supply Chain Risk Management; Insider Threat Analysis
-S0821,Stakeholder collaboration,Skill in collaborating with internal and external stakeholders,center,,,Cybersecurity Architecture; Enterprise Architecture; Systems Requirements Planning; Technology Research and Development; Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Executive Cybersecurity Leadership; Privacy Compliance; Security Program Management; Cybersecurity Supply Chain Risk Management; Digital Forensics; Incident Response; Insider Threat Analysis
-S0824,Customer communication,Skill in communicating with customers,center,,,Secure Systems Development; Systems Requirements Planning; Systems Administration; Executive Cybersecurity Leadership; Cyber Threat Intelligence
-S0826,External communication,Skill in communicating with external organizations,center,,,Executive Cybersecurity Leadership; Systems Security Management
-S0829,Customer interviews,Skill in conducting customer interviews,center,,,Software Security Assessment
-S0830,Feasibility studies,Skill in conducting feasibility studies,center,,,Systems Requirements Planning
-S0831,Hardware configuration,Skill in configuring hardware,center,,,Infrastructure Support
-S0833,Incident correlation,Skill in correlating incident data,blue,incident-response,,Incident Response
-S0836,Data encryption,Skill in encrypting data,yellow,,,Secure Software Development
-S0839,Exploited weakness identification,Skill in identifying exploited system weaknesses,blue,incident-response,,Defensive Cybersecurity
-S0840,Misuse detection,Skill in identifying misuse activities,blue,monitoring,,Defensive Cybersecurity
-S0841,Violation detection,Skill in identifying possible security violations,blue,monitoring,,Systems Security Management
-S0844,Access rights management,Skill in managing account access rights,green,,,Systems Administration; Technical Support; Identity and Access Management
-S0845,Network mapping,Skill in mapping networks,center,,,Network Operations
-S0846,System activity monitoring,Skill in monitoring system activity,blue,monitoring,,Defensive Cybersecurity
-S0848,Behavioral analysis,Skill in performing behavioral analysis,blue,monitoring,,Cybercrime Investigation; Security Awareness; Insider Threat Analysis; Threat Hunting
-S0850,Cost-benefit analysis,Skill in performing cost/benefit analysis,white,,,Cybersecurity Workforce Management; Privacy Compliance; Systems Security Management
-S0852,Defense trend analysis,Skill in performing cyber defense trend analysis,blue,threat-intel,,Technical Support
-S0853,Architecture analysis,Skill in performing cybersecurity architecture analysis,green,,check,Cybersecurity Architecture; Enterprise Architecture
-S0854,Data analysis,Skill in performing data analysis,center,,,Secure Systems Development; Systems Testing and Evaluation; Cybercrime Investigation; Data Analysis; Technical Support; Cybersecurity Supply Chain Risk Management; Defensive Cybersecurity; Digital Forensics; Incident Response; Insider Threat Analysis
-S0857,Dynamic analysis,Skill in performing dynamic analysis,blue,forensics,,Application Security; Defensive Cybersecurity; Digital Forensics; Malware Analysis and Reverse Engineering
-S0858,Economic analysis,Skill in performing economic analysis,white,,,Cybersecurity Workforce Management; Privacy Compliance; Systems Security Management
-S0859,Event correlation,Skill in performing event correlation,blue,monitoring,,Defensive Cybersecurity; Insider Threat Analysis
-S0860,File system forensics,Skill in performing file system forensic analysis,blue,forensics,,Digital Forensics
-S0861,Gap analysis,Skill in performing gap analysis,white,,,Secure Systems Development; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Supply Chain Risk Management
-S0863,Incident analysis,Skill in performing incident analysis,blue,incident-response,,Operational Technology (OT) Cybersecurity Engineering; Cybercrime Investigation; Defensive Cybersecurity
-S0866,Log analysis,Skill in performing log file analysis,blue,monitoring,,Cloud Security Engineering; Cybercrime Investigation; IT/Security Controls Auditor; Defensive Cybersecurity; Digital Forensics; Incident Response; Insider Threat Analysis; Vulnerability Analysis; Detection Engineering; Threat Hunting
-S0867,Malicious activity analysis,Skill in performing malicious activity analysis,blue,monitoring,,Defensive Cybersecurity
-S0869,Metadata analysis,Skill in performing metadata analysis,blue,monitoring,,Data Analysis; Defensive Cybersecurity; Cyber Threat Intelligence
-S0872,Network flow analysis,Skill in performing network data flow analysis,blue,monitoring,,Defensive Cybersecurity
-S0874,Network traffic analysis,Skill in performing network traffic analysis,blue,monitoring,,Systems Security Analysis; Cybersecurity Instruction; Defensive Cybersecurity; Incident Response; Insider Threat Analysis; Cyber Threat Intelligence; Vulnerability Analysis; Threat Hunting
-S0876,Nodal analysis,Skill in performing nodal analysis,blue,threat-intel,,Cyber Threat Intelligence
-S0877,Quantitative analysis,Skill in performing quantitative analysis,center,,,Data Analysis; Cybersecurity Supply Chain Risk Management
-S0883,Static code analysis,Skill in performing static code analysis,yellow,,,Secure Software Development; Software Security Assessment; Application Security; Digital Forensics
-S0884,Static malware analysis,Skill in performing static malware analysis,blue,forensics,,Digital Forensics; Malware Analysis and Reverse Engineering
-S0890,Threat analysis,Skill in performing threat analysis,blue,threat-intel,,Cybercrime Investigation; Insider Threat Analysis; Cyber Threat Intelligence
-S0891,Trade-off analysis,Skill in performing trade-off analysis,center,,,Systems Requirements Planning
-S0892,Trend analysis,Skill in performing trend analysis,center,,,Technical Support; Cybersecurity Workforce Management; Defensive Cybersecurity
-S0893,User needs analysis,Skill in performing user needs analysis,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Requirements Planning; Executive Cybersecurity Leadership; Security Program Management; Cyber Threat Intelligence
-S0898,Hardware testing,Skill in testing hardware,center,,,Infrastructure Support
-S0899,Interface testing,Skill in testing interfaces,center,,,Secure Systems Development
-S0900,Multi-source analysis,Skill in analyzing information from multiple sources,blue,threat-intel,,Cybersecurity Supply Chain Risk Management; Insider Threat Analysis
-S0905,Audience analysis,Skill in determining what information may helpful to a specific audience,center,,,Insider Threat Analysis
-S0906,Insider risk gaps,Skill in identifying insider risk security gaps,white,,,Insider Threat Analysis
-S0907,Insider threat detection,Skill in identifying insider threats,blue,monitoring,,Insider Threat Analysis
-S0908,Asset prioritization,Skill in determining the importance of assets,white,,,Insider Threat Analysis
-S0910,Threat intel data analysis,Skill in performing cyberintelligence data analysis,blue,threat-intel,,Insider Threat Analysis
-S0913,Link analysis,Skill in performing link analysis,blue,threat-intel,,Insider Threat Analysis
-S0916,Recurring threat recognition,Skill in recognizing recurring threat incidents,blue,threat-intel,,Insider Threat Analysis
-S0917,Business impact forecasting,Skill in forecasting likely impacts on mission or business functions resulting from adversity,white,,,Cybersecurity Supply Chain Risk Management
-S0919,Threat impact evaluation,"Skill in evaluating threats, events, and courses of action in the context of mission or business functions",blue,threat-intel,,Cyber Threat Intelligence
-S0921,Telemetry analysis,Skill in performing telemetry analysis,blue,monitoring,,Systems Security Analysis; Threat Hunting
-S0922,Decision-making under uncertainty,Skill in making decisions under conditions of uncertainty,center,,,Executive Cybersecurity Leadership
-S0923,Technical communication,Skill in communicating at varying levels of technical detail with stakeholders of various backgrounds,center,,,Cybersecurity Architecture; Secure Systems Development; Technology Research and Development; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management; Digital Forensics; Cyber Threat Intelligence
-S0924,Crisis management,Skill in crisis management,blue,incident-response,,Incident Response
-S0925,Attack path analysis,Skill in developing and analyzing attack paths,red,,,Vulnerability Analysis; Penetration Testing and Red Teaming
-S0926,Threat catalogs,Skill in designing and maintaining threat catalogs,blue,threat-intel,,Cyber Threat Intelligence
-S0928,Loss scenarios,Skill in defining loss scenarios,white,,,Cybersecurity Policy and Planning
-S0929,Air-gapped backups,Skill in designing air-gapped data vault solutions,green,,,Cybersecurity Architecture
-S0930,Impact tolerance,Skill in defining impact tolerance statements ,white,,,Cybersecurity Supply Chain Risk Management
-S0931,Business impact analysis,Skill in conducting technical business impact analysis,white,,,Cybersecurity Policy and Planning
-S0932,Critical asset protection,Skill in protecting critical assets,green,,,Cybersecurity Architecture
-S0934,Fault tree analysis,Skill in performing Fault Tree Analysis (FTA),white,,,Operational Technology (OT) Cybersecurity Engineering
-S0935,Live acquisition,Skill in live acquisition,blue,forensics,,Digital Forensics
-S0936,Dead-box acquisition,Skill in deadbox acquisition,blue,forensics,,Digital Forensics
-S0937,Data ingestion review,Skill in inspecting data for ingestion,blue,forensics,,Digital Forensics
-S0938,Live network discovery,Skill in interacting with live systems to identify active and historical networks,blue,forensics,,Digital Forensics
-S0941,OT architecture gap analysis,Skill in identifying gaps in control system network and connectivity architecture,white,,check,Operational Technology (OT) Cybersecurity Engineering
-S0942,OT system recovery,Skill in performing system recovery for control system environments,center,,,Operational Technology (OT) Cybersecurity Engineering
-S0943,OT asset access,Skill in connecting to OT assets,center,,,Operational Technology (OT) Cybersecurity Engineering
-S0944,OT system design,Skill in designing and specifying OT systems,green,,,Operational Technology (OT) Cybersecurity Engineering
-S0945,OT vendor evaluation,Skill in evaluating OT vendor products,white,,,Operational Technology (OT) Cybersecurity Engineering
-S0946,OT network diagrams,Skill in interpreting OT network drawings,center,,,Operational Technology (OT) Cybersecurity Engineering
-S0948,Zone and conduit analysis,Skill in performing zone conduit requirement analysis,green,,,Operational Technology (OT) Cybersecurity Engineering
-S0950,Firewall rule review,Skill in reviewing access control lists and firewall rules,green,,,Operational Technology (OT) Cybersecurity Engineering
-S0951,OT protocol security,Skill in securing control system communication protocols and media,green,,,Operational Technology (OT) Cybersecurity Engineering
-S0952,AI use case design,Skill in developing appropriate system use cases,center,,,AI/ML Security
-S0953,Prompt engineering,Skill in developing prompts for generative AI systems,center,,,AI/ML Security
-S0954,Training data preparation,"Skill in dividing data into training, validation, and test data sets",center,,,AI/ML Security
-S0955,ML model evaluation,Skill in evaluating machine learning models,center,,,AI/ML Security
-S0957,AI output validation,Skill in identifying possible mistakes or hallucinations in AI-generated outputs,yellow,,check,AI/ML Security
-S0958,AI risk measurement,Skill in measuring non-explainable risk,white,,,AI/ML Security
-S0959,Team building,Skill in building multidisciplinary teams,white,,,Cybersecurity Supply Chain Risk Management
-S0960,Governance design,Skill in designing governance structures,white,,,Cybersecurity Supply Chain Risk Management
-S0961,Supply chain controls,Skill in selecting supply chain controls,white,,,Cybersecurity Supply Chain Risk Management
-S0963,Supply chain risk identification,Skill in identifying supply chain risks in common business practices,white,,,Cybersecurity Supply Chain Risk Management
-S0964,Supply chain mapping,Skill in supply chain mapping,white,,,Cybersecurity Supply Chain Risk Management
-S0965,Geopolitical risk analysis,Skill in performing geopolitical risk analysis,white,,,Cybersecurity Supply Chain Risk Management
-S0966,Threat actor reporting,Skill in reporting on adversarial capabilities,blue,threat-intel,,Cybersecurity Architecture; Penetration Testing and Red Teaming
-S0967,Cryptographic selection,Skill in selecting appropriate cryptographic solutions,green,,,Cybersecurity Architecture
-S0968,Cryptographic protocol design,Skill in developing cryptographic protocols,green,,,Cybersecurity Architecture
-S0969,Cryptographic protocol analysis,Skill in conducting security analysis of cryptographic protocols,green,,check,Cybersecurity Architecture
-S0970,Cryptographic migration,Skill in conducting cryptographic transitions,green,,,Cybersecurity Architecture
-S0971,Weak cryptography detection,"Skill in identifying weak, obsolete, or deprecated cryptographic algorithms",red,,check,Vulnerability Analysis
-S0972,Code review,Skill in performing code reviews,yellow,,,Software Security Assessment; Application Security
-S0973,Dependency mapping,Skill in dependency mapping,yellow,,,Software Security Assessment
-S0974,Software provenance,Skill in validating provenance of software components,yellow,,,Software Security Assessment; DevSecOps
-S0975,Attack framework mapping,Skill in aligning common attack frameworks to software development lifecycle (SDLC) stages,yellow,,check,Secure Software Development
-S9001,Linux administration,"Skill in administering Linux systems, including users, permissions, services, and logs",center,,,Systems Administration; Defensive Cybersecurity; Infrastructure Support
-S9002,Windows administration,"Skill in administering Windows systems, including users, Group Policy, services, and event logs",center,,,Systems Administration; Defensive Cybersecurity; Infrastructure Support
-S9003,Active Directory,"Skill in managing directory services for users, groups, computers, and authentication in Windows domains",center,,,Systems Administration; Identity and Access Management
-S9004,TCP/IP,Skill in applying the TCP/IP model and common protocols to understand and troubleshoot network traffic,center,,,Network Operations; Defensive Cybersecurity; Penetration Testing and Red Teaming
-S9005,DNS,"Skill in configuring and analyzing the Domain Name System, including spotting DNS abuse",center,,,Network Operations; Defensive Cybersecurity
-S9006,Firewall management,Skill in configuring and maintaining firewall rules and policies,green,,,Network Operations; Infrastructure Support
-S9007,Python,"Skill in writing Python programs for automation, analysis, and security tooling",center,,,Data Analysis; Penetration Testing and Red Teaming; Malware Analysis and Reverse Engineering; Detection Engineering
-S9008,PowerShell,"Skill in writing PowerShell scripts for Windows administration, automation, and investigation",center,,,Systems Administration; Penetration Testing and Red Teaming; Threat Hunting
-S9009,Bash,Skill in writing Bash shell scripts for Linux administration and automation,center,,,Systems Administration; Penetration Testing and Red Teaming
-S9010,Regex,"Skill in writing regular expressions to search, parse, and match text and log data",center,,,Defensive Cybersecurity; Detection Engineering
-S9011,Version control,Skill in using version control systems to manage code and configuration changes,center,,,Secure Software Development; DevSecOps
-S9012,Cloud IAM,Skill in designing and auditing identity and access policies in cloud platforms,green,,,Cloud Security Engineering; Identity and Access Management
-S9013,Container security,"Skill in securing container images, registries, and runtimes",green,,,Cloud Security Engineering; DevSecOps
-S9014,Kubernetes security,"Skill in securing container orchestration clusters, workloads, and their configuration",green,,,Cloud Security Engineering
-S9015,Infrastructure as code,"Skill in defining and reviewing infrastructure as code, including catching insecure configuration before deployment",green,,,Cloud Security Engineering; DevSecOps; Cyber Range Engineering
-S9016,Cloud posture management,"Skill in monitoring cloud environments for misconfiguration, drift, and policy violations",green,,,Cloud Security Engineering; Security Compliance Monitoring
-S9017,SSO and federation,Skill in implementing single sign-on and identity federation between systems and organizations,green,,,Identity and Access Management
-S9018,MFA,Skill in deploying and managing multi-factor authentication,green,,,Identity and Access Management
-S9019,Privileged access management,"Skill in controlling, monitoring, and auditing privileged accounts and administrative access",green,,,Systems Administration; Identity and Access Management
-S9020,Identity lifecycle,"Skill in managing account provisioning, changes, and deprovisioning across the employee lifecycle",green,,,Identity and Access Management
-S9021,SIEM operation,"Skill in operating a security information and event management platform to collect, search, and alert on security data",blue,monitoring,,Defensive Cybersecurity; Incident Response; Detection Engineering
-S9022,Alert triage,Skill in triaging security alerts to separate real threats from false positives and escalate appropriately,blue,monitoring,,Defensive Cybersecurity; Incident Response
-S9023,EDR operation,Skill in operating endpoint detection and response tools to investigate and contain threats on hosts,blue,monitoring,,Defensive Cybersecurity; Incident Response; Threat Hunting
-S9024,Detection rules,"Skill in writing, testing, and tuning detection rules that alert on attacker behavior",purple,,,Defensive Cybersecurity; Detection Engineering
-S9025,Threat hunting,Skill in proactively searching systems and networks for threats that evaded existing defenses,purple,,,Cyber Threat Intelligence; Threat Hunting
-S9026,Hypothesis-driven investigation,Skill in forming investigation hypotheses from threat intelligence and testing them against data,purple,,,Threat Hunting
-S9027,ATT&CK mapping,"Skill in mapping attacker behavior, detections, and controls to a common adversary-technique framework",purple,,,Cyber Threat Intelligence; Penetration Testing and Red Teaming; Detection Engineering; Threat Hunting
-S9028,Phishing analysis,"Skill in analyzing reported phishing messages, links, and attachments",blue,incident-response,,Defensive Cybersecurity; Incident Response
-S9029,Email security,"Skill in configuring and monitoring email security controls, including sender authentication and filtering",green,,,Defensive Cybersecurity; Infrastructure Support
-S9030,Sandbox analysis,Skill in detonating suspicious files in an isolated environment to observe their behavior,blue,forensics,,Malware Analysis and Reverse Engineering
-S9031,Web app testing,Skill in testing web applications for security vulnerabilities,red,,,Application Security; Penetration Testing and Red Teaming
-S9032,API testing,"Skill in testing application programming interfaces for authentication, authorization, and input-handling flaws",red,,,Penetration Testing and Red Teaming
-S9033,Privilege escalation,Skill in identifying and exploiting paths to higher privileges on compromised systems,red,,,Penetration Testing and Red Teaming
-S9034,Active Directory attacks,Skill in testing Windows domain environments for common identity and authentication attack paths,red,,,Penetration Testing and Red Teaming
-S9035,Phishing simulation,Skill in designing and running authorized phishing simulations to measure and improve resistance,orange,,check,Security Awareness; Penetration Testing and Red Teaming
-S9036,Pentest reporting,"Skill in writing penetration test reports that explain findings, risk, and remediation clearly",red,,,Penetration Testing and Red Teaming
-S9037,Scenario design,Skill in designing realistic attack and defense scenarios for exercises and training,purple,,,Cyber Range Engineering; Cybersecurity Instruction
-S9038,API security,"Skill in designing and reviewing application programming interfaces for secure authentication, authorization, and data handling",yellow,,,Secure Software Development; Application Security
-S9039,Dependency scanning,Skill in identifying vulnerable or risky third-party software dependencies,yellow,,,Software Security Assessment; Application Security; DevSecOps
-S9040,CI/CD security,Skill in securing build and deployment pipelines and the systems they run on,yellow,,,DevSecOps
-S9041,Secrets management,"Skill in storing, rotating, and controlling access to credentials, keys, and other secrets",green,,,Cloud Security Engineering; DevSecOps
-S9042,Framework mapping,Skill in mapping an organization's controls to security and compliance frameworks,white,,,Cybersecurity Legal Advice; IT/Security Controls Auditor; Security Compliance Monitoring; GRC Analysis
-S9043,Audit evidence collection,Skill in collecting and organizing evidence that security controls are in place and working,white,,,IT/Security Controls Auditor; Security Compliance Monitoring; GRC Analysis
-S9044,Vendor risk assessment,Skill in assessing the security risk of vendors and third-party services,white,,,Cybersecurity Supply Chain Risk Management; GRC Analysis
-S9045,Compliance metrics,Skill in defining and tracking metrics that show ongoing compliance status,white,,,Security Compliance Monitoring; GRC Analysis
-S9046,Program metrics,Skill in defining and reporting metrics that show a security program's effectiveness,white,,,Executive Cybersecurity Leadership; Security Awareness
-S9047,Prompt injection testing,Skill in testing AI applications for prompt injection and related input manipulation,red,,,AI/ML Security; Penetration Testing and Red Teaming
-S9048,LLM red teaming,"Skill in adversarially testing large language model systems for harmful, unsafe, or unintended behavior",red,,,AI/ML Security; Penetration Testing and Red Teaming
-S9049,AI governance,Skill in establishing policies and oversight for the responsible and secure use of AI,white,,,AI/ML Security; Cybersecurity Policy and Planning
-S9050,Model supply chain review,"Skill in evaluating the origin, integrity, and risk of third-party AI models and datasets",yellow,,,AI/ML Security
+s1,Information searching,Skill in conducting information searches,center,,,Knowledge Management
+s2,Test execution,Skill in conducting test events,center,,,Systems Testing and Evaluation; IT/Security Controls Auditor
+s3,Capability gap analysis,Skill in identifying gaps in technical capabilities,center,,check,Systems Requirements Planning; Cybersecurity Curriculum Development
+s4,Damage assessment,Skill in performing damage assessments,blue,incident-response,,Incident Response
+s5,Security control implementation,Skill in applying security controls,green,,,Cybersecurity Instruction; IT/Security Controls Auditor
+s6,Packet analysis,Skill in performing packet-level analysis,blue,monitoring,,Cybersecurity Instruction; Defensive Cybersecurity; Digital Forensics
+s7,Secure coding,Skill in applying secure coding techniques,yellow,,,Cybersecurity Architecture; Secure Software Development; Secure Systems Development; Technology Research and Development; Application Security; Data Analysis
+s8,Root cause analysis,Skill in performing root cause analysis,center,,,Secure Software Development; Software Security Assessment; IT/Security Controls Auditor
+s9,Anonymous research,Skill in conducting non-attributable research,blue,threat-intel,,Cyber Threat Intelligence
+s10,Network device location,Skill in determining the physical location of network devices,center,,,Infrastructure Support
+s11,Decryption,Skill in decrypting information,blue,forensics,,Digital Forensics; Insider Threat Analysis
+s12,Security awareness training,Skill in facilitating cybersecurity awareness briefings,orange,,,Cybersecurity Instruction; Security Awareness
+s13,Training program development,Skill in developing training programs,orange,,,Cybersecurity Instruction
+s14,Enterprise IT architecture analysis,Skill in analyzing an organization's enterprise information technology architecture,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development
+s15,Written communication,Skill in communicating in writing,center,,,Cybersecurity Architecture; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Instruction; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management
+s16,Group facilitation,Skill in facilitating group discussions,center,,,Cybersecurity Instruction
+s17,Learner assessment,Skill in assessing learner comprehension,orange,,,Cybersecurity Instruction
+s18,Technical documentation,Skill in creating technical documentation,center,,,Secure Systems Development; Technology Research and Development; Operational Technology (OT) Cybersecurity Engineering; Knowledge Management; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Insider Threat Analysis
+s19,Learner feedback,Skill in providing training and education feedback to learners,orange,,,Cybersecurity Instruction
+s20,Assessment design,Skill in developing assessments,orange,,,Cybersecurity Workforce Management; Cybersecurity Instruction
+s21,Security assessment design,Skill in developing security assessments,white,,check,Cybersecurity Workforce Management; Cybersecurity Instruction; IT/Security Controls Auditor
+s22,Instructional materials,Skill in developing instructional materials,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Privacy Compliance
+s23,Requirements forecasting,Skill in forecasting requirements,white,,,Cybersecurity Workforce Management; Systems Authorization
+s24,Business objective analysis,Skill in analyzing organizational objectives,center,,check,Cybersecurity Architecture; Enterprise Architecture; Systems Administration; Cybersecurity Workforce Management; Systems Authorization
+s25,Data collection,Skill in collecting data,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Cybersecurity Instruction; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management; Defensive Cybersecurity; Cyber Threat Intelligence
+s26,Data validation,Skill in validating data,center,,,Systems Testing and Evaluation; IT/Security Controls Auditor
+s27,Market research,Skill in conducting market research,center,,,Security Program Management; Cybersecurity Supply Chain Risk Management
+s28,Policy planning,Skill in developing policy plans,white,,,Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Executive Cybersecurity Leadership; Privacy Compliance; Systems Authorization; Cybersecurity Supply Chain Risk Management
+s29,SOP development,Skill in developing standard operating procedures (SOPs),center,,check,Systems Administration; Technical Support; Privacy Compliance
+s30,Career path design,Skill in creating career path definitions,white,,,Cybersecurity Workforce Management
+s31,Legal analysis,Skill in evaluating laws,white,,,Cybersecurity Legal Advice; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Systems Authorization
+s32,Regulatory analysis,Skill in evaluating regulations,white,,,Cybersecurity Legal Advice; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Systems Authorization
+s33,Policy analysis,Skill in evaluating policies,white,,,Cybersecurity Legal Advice; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Systems Authorization
+s34,Secure deployment,Skill in deploying software securely,yellow,,,Secure Software Development
+s35,Secure network architecture,Skill in applying secure network architectures,green,,,Cybersecurity Architecture; Secure Systems Development
+s36,Systems design,Skill in designing systems,center,,,Cybersecurity Architecture; Secure Systems Development
+s37,Technology integration,Skill in integrating multiple technologies,center,,,Enterprise Architecture
+s38,Workforce trend analysis,Skill in evaluating workforce trends,white,,,Cybersecurity Workforce Management
+s39,Process conformance review,Skill in analyzing processes to ensure conformance with procedural requirements,white,,,Secure Systems Development; Security Program Management; IT/Security Controls Auditor; Security Compliance Monitoring
+s40,Command line,Skill in executing command line tools,center,,,Network Operations; Cybersecurity Curriculum Development; Cybersecurity Instruction
+s41,Architecture design,Skill in designing architectures,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development
+s42,Framework design,Skill in designing frameworks,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development
+s43,Collaboration,Skill in collaborating with others,center,,,Cybersecurity Architecture; Secure Systems Development; Operational Technology (OT) Cybersecurity Engineering; Systems Administration; Cybersecurity Curriculum Development; Cybersecurity Instruction; Systems Authorization; Cyber Threat Intelligence
+s44,Critical thinking,Skill in applying critical thinking,center,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Digital Forensics
+s45,Security operations coordination,Skill in coordinating cybersecurity operations across an organization,blue,incident-response,,Systems Authorization; Cybersecurity Supply Chain Risk Management
+s46,Incomplete data analysis,Skill in extrapolating from incomplete data sets,blue,threat-intel,,Cyber Threat Intelligence
+s47,Large dataset analysis,Skill in analyzing large data sets,blue,threat-intel,,Cyber Threat Intelligence
+s48,Threat intel reporting,Skill in creating target intelligence products,blue,threat-intel,,Cyber Threat Intelligence
+s49,Working under pressure,"Skill in functioning effectively in a dynamic, fast-paced environment",center,,,Systems Administration; Cyber Threat Intelligence
+s50,Network data collection,Skill in collecting network data,blue,monitoring,,Insider Threat Analysis
+s51,Bias mitigation,Skill in mitigating cognitive biases,blue,threat-intel,,Cyber Threat Intelligence
+s52,Deception detection,Skill in mitigating deception in reporting and analysis,blue,threat-intel,,Cyber Threat Intelligence
+s53,Privacy-security alignment,Skill in aligning privacy and cybersecurity objectives,white,,,Privacy Compliance; IT/Security Controls Auditor; Systems Authorization
+s54,Security automation,Skill in creating automated security control systems,green,,,Cloud Security Engineering; DevSecOps; Systems Administration; Detection Engineering
+s55,Privacy notices,Skill in authoring privacy disclosure statements,white,,,Cybersecurity Legal Advice; Privacy Compliance
+s56,Continuous monitoring,Skill in deploying continuous monitoring technologies,blue,monitoring,,Network Operations; Systems Administration; Systems Security Analysis; Security Compliance Monitoring
+s57,Risk management program,Skill in creating a risk management program,white,,,Cybersecurity Policy and Planning
+s58,Assessment reporting,Skill in creating security assessment reports,white,,,Operational Technology (OT) Cybersecurity Engineering; Security Compliance Monitoring
+s59,Contract compliance,Skill in verifying contractor compliance with contracts,white,,,Cybersecurity Legal Advice; Cybersecurity Supply Chain Risk Management
+s60,Security in contracts,Skill in integrating security requirements and contracts,white,,,Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Supply Chain Risk Management
+s61,Secure acquisition,Skill in integrating information security requirements in the acquisitions process,white,,,Secure Systems Development; Security Program Management; IT/Security Controls Auditor; Systems Security Management; Cybersecurity Supply Chain Risk Management
+s62,Software quality control,Skill in implementing software quality control processes,center,,,Secure Systems Development; Security Program Management; IT/Security Controls Auditor; Systems Security Management
+s63,Critical infrastructure identification,Skill in identifying critical infrastructure systems,green,,check,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Requirements Planning; Technology Research and Development; Systems Authorization; Systems Security Management
+s64,Insecure design identification,Skill in identifying systems designed without security considerations,yellow,,check,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Requirements Planning; Technology Research and Development; IT/Security Controls Auditor; Systems Authorization; Systems Security Management
+s65,Training needs assessment,Skill in conducting a training needs assessment,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction
+s66,Dark web research,Skill in navigating the dark web,blue,threat-intel,,Cybercrime Investigation; Cyber Threat Intelligence
+s67,Digital media examination,Skill in examining digital media,blue,forensics,,Cybercrime Investigation
+s68,Virtual machines,Skill in developing virtual machines,center,,,Systems Administration; Cyber Range Engineering; Cybersecurity Instruction; Digital Forensics; Cyber Threat Intelligence
+s69,File extension abuse,Skill in identifying filename extension abuse,blue,forensics,,Digital Forensics
+s70,Supplier risk assessment,Skill in evaluating supplier trustworthiness,white,,,Cybercrime Investigation; Systems Security Analysis; Security Program Management; Systems Security Management; Cybersecurity Supply Chain Risk Management
+s71,Product risk assessment,Skill in evaluating product trustworthiness,white,,,Systems Security Analysis; Cybersecurity Supply Chain Risk Management
+s72,Digital footprint analysis,Skill in identifying forensic digital footprints,blue,forensics,,Technology Research and Development
+s73,Communication vulnerability analysis,Skill in identifying software communications vulnerabilities,red,,,Technology Research and Development; Systems Security Analysis; Cybersecurity Instruction; Defensive Cybersecurity; Incident Response; Vulnerability Analysis
+s74,Credential management,Skill in developing user credential management systems,green,,,Systems Security Analysis; Identity and Access Management
+s75,Threat landscape analysis,Skill in performing threat environment analysis,blue,threat-intel,,Vulnerability Analysis
+s76,Client profiling,Skill in developing client organization profiles,center,,,Systems Requirements Planning; Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Systems Authorization
+s77,Intrusion analysis,Skill in performing intrusion data analysis,blue,monitoring,,Cyber Threat Intelligence
+s78,Security product evaluation,Skill in evaluating security products,green,,check,Operational Technology (OT) Cybersecurity Engineering; Cybercrime Investigation; Systems Security Management; Cybersecurity Supply Chain Risk Management; Defensive Cybersecurity; Incident Response; Cyber Threat Intelligence
+s79,Prioritization,Skill in establishing priorities,center,,,Executive Cybersecurity Leadership; Cyber Threat Intelligence
+s80,Threat emulation,Skill in performing threat emulation tactics,purple,,,Cyber Range Engineering; Cyber Threat Intelligence; Penetration Testing and Red Teaming; Detection Engineering
+s81,Threat actor assessment,Skill in assessing threat actors,blue,threat-intel,,Cyber Threat Intelligence
+s82,Exploitation detection,Skill in detecting exploitation activities,blue,monitoring,,Defensive Cybersecurity; Incident Response
+s83,Network building,Skill in constructing networks,center,,,Network Operations; Cyber Range Engineering
+s84,Configuration analysis,Skill in analyzing software configurations,green,,,Secure Systems Development; Technology Research and Development; IT/Security Controls Auditor; Vulnerability Analysis
+s85,Wireless system design,Skill in designing wireless communications systems,center,,,Privacy Compliance; Cyber Threat Intelligence
+s86,Network threat identification,Skill in identifying network threats,blue,monitoring,,Privacy Compliance; Insider Threat Analysis; Cyber Threat Intelligence
+s87,Access control lists,Skill in developing access control lists,green,,,Network Operations
+s88,Vulnerability scanning,Skill in scanning for vulnerabilities,blue,monitoring,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Technology Research and Development; Systems Security Analysis; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Defensive Cybersecurity; Vulnerability Analysis; Penetration Testing and Red Teaming
+s89,Vulnerability identification,Skill in recognizing vulnerabilities,red,,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Technology Research and Development; Systems Security Analysis; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Defensive Cybersecurity; Incident Response; Vulnerability Analysis
+s90,Malware identification,Skill in identifying malware,blue,forensics,,Incident Response; Malware Analysis and Reverse Engineering
+s91,Malware capture,Skill in capturing malware,blue,forensics,,Incident Response; Malware Analysis and Reverse Engineering
+s92,Malware containment,Skill in containing malware,blue,incident-response,,Incident Response; Malware Analysis and Reverse Engineering
+s93,Malware reporting,Skill in reporting malware,blue,forensics,,Incident Response; Malware Analysis and Reverse Engineering
+s94,Host access control,Skill in applying host access controls,green,,,Infrastructure Support
+s95,Network access control,Skill in applying network access controls,green,,,Infrastructure Support
+s96,Systems analysis,Skill in performing systems analysis,center,,,Systems Requirements Planning
+s97,Capability analysis,Skill in performing capabilities analysis,center,,check,Systems Requirements Planning; Security Program Management; Cyber Threat Intelligence
+s98,Requirements analysis,Skill in performing requirements analysis,center,,,Systems Requirements Planning; Cybersecurity Workforce Management; Security Program Management; Systems Authorization; Cyber Threat Intelligence
+s99,Algorithm development,Skill in developing algorithms,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Insider Threat Analysis
+s100,Data structure analysis,Skill in performing data structure analysis,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Insider Threat Analysis
+s101,Debugging,Skill in debugging software,center,,,Secure Software Development
+s102,Mathematical modeling,Skill in creating mathematical models,center,,,Secure Software Development; Software Security Assessment; Technology Research and Development; Data Analysis
+s103,Statistical modeling,Skill in creating statistical models,center,,,Secure Software Development; Software Security Assessment; Technology Research and Development; Data Analysis
+s104,Security policy writing,Skill in creating system security policies,white,,,Executive Cybersecurity Leadership; Systems Security Management; Cybersecurity Supply Chain Risk Management; GRC Analysis
+s105,Input validation,Skill in implementing input validation,yellow,,,Secure Software Development; Application Security
+s106,Detection signatures,Skill in developing signatures,purple,,check,Defensive Cybersecurity; Malware Analysis and Reverse Engineering; Detection Engineering
+s107,Security control design,Skill in designing security controls,green,,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Security Analysis; IT/Security Controls Auditor; Systems Security Management; Defensive Cybersecurity; Vulnerability Analysis
+s108,Hardware integration,Skill in designing the integration of hardware solutions,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Security Analysis
+s109,Software integration,Skill in designing the integration of software solutions,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Security Analysis
+s110,Intrusion detection,Skill in detecting host- and network-based intrusions,blue,monitoring,,Cybersecurity Instruction; Systems Security Management; Defensive Cybersecurity; Incident Response; Vulnerability Analysis
+s111,Recovery planning,Skill in developing network infrastructure contingency and recovery plans,green,,,Network Operations; Cybersecurity Policy and Planning; Digital Forensics
+s112,Network troubleshooting,Skill in troubleshooting computer networks,center,,,Network Operations; Systems Administration
+s113,Security design review,Skill in evaluating security designs,green,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Operational Technology (OT) Cybersecurity Engineering; Systems Security Analysis; IT/Security Controls Auditor; Systems Security Management; Defensive Cybersecurity; Vulnerability Analysis
+s114,Report writing,Skill in preparing reports,center,,,Systems Testing and Evaluation; Data Analysis; Database Administration; Security Program Management; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management; GRC Analysis; Digital Forensics; Insider Threat Analysis; Cyber Threat Intelligence
+s115,Performance monitoring,Skill in monitoring system performance,center,,,Security Program Management
+s116,Performance tuning,Skill in configuring systems for performance enhancement,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Requirements Planning; Technology Research and Development; Network Operations; Systems Administration; Systems Security Analysis; Technical Support; Security Program Management; Vulnerability Analysis
+s117,Network device configuration,Skill in configuring network devices,center,,,Network Operations
+s118,Directory services,Skill in maintaining directory services,center,,,Systems Administration; Identity and Access Management
+s119,Threat modeling,Skill in performing threat modeling,yellow,,check,Application Security; Insider Threat Analysis; Vulnerability Analysis
+s120,Evidence integrity,Skill in preserving digital evidence integrity,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
+s121,Use case development,Skill in building use cases,center,,,Cybersecurity Architecture; Enterprise Architecture; Systems Requirements Planning
+s122,Social engineering,Skill in performing social engineering,red,,,Cybersecurity Instruction; Vulnerability Analysis; Penetration Testing and Red Teaming
+s123,Sensor tuning,Skill in tuning network sensors,blue,monitoring,,Cybersecurity Instruction; Infrastructure Support; Detection Engineering
+s124,Hardware repair,Skill in repairing hardware,center,,,Technical Support; Digital Forensics
+s125,Network encryption,Skill in encrypting network communications,green,,,Cybersecurity Architecture; Network Operations; Incident Response; Infrastructure Support
+s126,Programming,Skill in writing code in a currently supported programming language,center,,check,Enterprise Architecture; Secure Software Development; Systems Testing and Evaluation; Data Analysis; Systems Security Analysis; Cybersecurity Instruction; Vulnerability Analysis
+s127,Test planning,Skill in creating test plans,center,,,Cybersecurity Architecture; Systems Testing and Evaluation
+s128,Memory analysis,Skill in performing memory dump analysis,blue,forensics,,Digital Forensics; Malware Analysis and Reverse Engineering; Threat Hunting
+s129,Curriculum development,Skill in developing curricula,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Privacy Compliance
+s130,Teaching,Skill in teaching training programs,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Privacy Compliance
+s131,Forensic data identification,Skill in identifying forensics data in diverse media,blue,forensics,,Technology Research and Development; Digital Forensics
+s132,Forensic data extraction,Skill in extracting forensics data in diverse media,blue,forensics,,Digital Forensics
+s133,OS internals,Skill in manipulating operating system components,center,,,Systems Administration; Digital Forensics
+s134,Evidence collection,Skill in collecting digital evidence,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
+s135,Evidence processing,Skill in processing digital evidence,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
+s136,Evidence handling,Skill in transporting digital evidence,blue,forensics,,Cybercrime Investigation; Digital Forensics; Incident Response
+s137,Communication,Skill in communicating effectively,center,,,Cybersecurity Architecture; Operational Technology (OT) Cybersecurity Engineering; Data Analysis; Cybersecurity Curriculum Development; Cybersecurity Instruction; Cybersecurity Legal Advice; Executive Cybersecurity Leadership; Privacy Compliance; Cybersecurity Supply Chain Risk Management; Insider Threat Analysis
+s138,Digital forensics,Skill in performing digital forensics analysis,blue,forensics,,Technology Research and Development; Cybercrime Investigation; Cybersecurity Instruction; Digital Forensics
+s139,Endpoint protection,Skill in configuring software-based computer protection tools,green,,,Cybersecurity Architecture; Network Operations; Systems Administration; Cyber Range Engineering; Cybersecurity Instruction
+s140,Vulnerability classification,Skill in categorizing types of vulnerabilities,purple,,check,IT/Security Controls Auditor; Defensive Cybersecurity; Incident Response
+s141,Malware defense,Skill in protecting a network against malware,blue,monitoring,,Network Operations; Incident Response; Infrastructure Support; Malware Analysis and Reverse Engineering
+s142,Black-box testing,Skill in applying black-box software testing,red,,check,Software Security Assessment; Systems Security Management
+s143,Signature analysis,Skill in interpreting signatures,blue,monitoring,,Software Security Assessment; Systems Security Management; Defensive Cybersecurity
+s144,Network protection configuration,Skill in configuring network protection components,green,,,Network Operations; Cybersecurity Instruction
+s145,Technical auditing,Skill in auditing technical systems,white,,,Secure Systems Development; IT/Security Controls Auditor
+s146,Binary analysis,Skill in performing binary analysis,blue,forensics,,Data Analysis; Digital Forensics; Malware Analysis and Reverse Engineering
+s147,Hashing,Skill in implementing one-way hash functions,blue,forensics,check,Data Analysis; Digital Forensics
+s148,Volatile data analysis,Skill in performing volatile data analysis,blue,forensics,,Digital Forensics
+s149,Debugger analysis,Skill in interpreting debugger results,blue,forensics,,Digital Forensics; Malware Analysis and Reverse Engineering
+s150,Encoding identification,Skill in identifying common encoding techniques,center,,,Data Analysis
+s151,Learning activity design,Skill in developing learning activities,orange,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Security Awareness
+s152,Instructional technology,Skill in applying technologies for instructional purposes,orange,,,Cybersecurity Instruction
+s153,Test strategy design,Skill in designing Test and Evaluation Strategies (TES),center,,,Cybersecurity Architecture; Systems Testing and Evaluation; IT/Security Controls Auditor
+s154,Qualification requirements,Skill in developing position qualification requirements,white,,,Cybersecurity Workforce Management; Cyber Threat Intelligence
+s155,Multi-level security design,Skill in designing multi-level security solutions,yellow,,check,Cybersecurity Architecture
+s156,Regression analysis,Skill in performing regression analysis,center,,,Data Analysis; Cybersecurity Supply Chain Risk Management
+s157,Past intrusion detection,Skill in identifying evidence of past intrusions,blue,incident-response,,IT/Security Controls Auditor; Vulnerability Analysis
+s158,System hardening,Skill in applying hardening techniques,green,,,Cybersecurity Instruction; Infrastructure Support
+s159,Security tooling troubleshooting,Skill in troubleshooting cyber defense infrastructure anomalies,green,,,Infrastructure Support
+s160,Workforce management,Skill in managing a workforce,white,,,Cybersecurity Workforce Management
+s161,Anomaly detection,Skill in detecting anomalies,blue,monitoring,,Cybercrime Investigation; Data Analysis; Defensive Cybersecurity; Insider Threat Analysis
+s162,Scripting,Skill in writing scripts,center,,,DevSecOps; Data Analysis; Systems Administration; Cyber Range Engineering; Detection Engineering
+s163,Malware analysis,Skill in performing malware analysis,blue,forensics,,Cybercrime Investigation; Cybersecurity Instruction; Defensive Cybersecurity; Digital Forensics; Incident Response; Malware Analysis and Reverse Engineering
+s164,Bit-level analysis,Skill in performing bit-level analysis,blue,forensics,,Digital Forensics
+s165,Forensic imaging,Skill in creating digital evidence copies,blue,forensics,,Digital Forensics
+s166,Security test planning,Skill in designing secure test plans,yellow,,check,Cybersecurity Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; IT/Security Controls Auditor
+s167,Application vulnerability assessment,Skill in assessing application vulnerabilities,red,,,IT/Security Controls Auditor; Vulnerability Analysis
+s168,PKI,Skill in implementing Public Key Infrastructure (PKI) encryption,green,,,Cybersecurity Architecture; Secure Software Development; Software Security Assessment; Systems Security Analysis
+s169,Digital signatures,Skill in implementing digital signatures,green,,,Cybersecurity Architecture; Secure Software Development; Software Security Assessment
+s170,Security models,Skill in applying security models,yellow,,check,Cybersecurity Architecture
+s171,Systems engineering,Skill in performing systems engineering,center,,,Technology Research and Development
+s172,Security policy application,Skill in applying policies that meet system security objectives,white,,,Secure Systems Development; IT/Security Controls Auditor
+s173,Performance objectives,Skill in defining performance objectives,white,,,Cybersecurity Supply Chain Risk Management
+s174,Control assessment,Skill in assessing security controls,white,,,Systems Security Analysis; IT/Security Controls Auditor; Security Compliance Monitoring; GRC Analysis; Defensive Cybersecurity
+s175,Process design,Skill in designing technology processes and solutions,center,,,Technology Research and Development
+s176,Error handling,Skill in implementing error handling in applications,yellow,,,Secure Software Development
+s177,Security requirements translation,Skill in translating operational requirements into security controls,yellow,,,Cybersecurity Architecture; Systems Requirements Planning; Operational Technology (OT) Cybersecurity Engineering; Security Program Management; IT/Security Controls Auditor; Cyber Threat Intelligence
+s178,System upgrades,Skill in installing system and component upgrades,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Requirements Planning; Systems Administration; Systems Security Analysis
+s179,System recovery,Skill in recovering failed systems,center,,,Systems Administration
+s180,OS administration,Skill in administering operating systems,center,,,Systems Administration; Digital Forensics
+s181,Design modeling,Skill in performing design modeling,center,,,Secure Systems Development; Data Analysis
+s182,Subnetting,Skill in applying subnet techniques,center,,,Network Operations
+s183,Network segmentation,Skill in implementing network segregation,green,,,Cybersecurity Architecture; Enterprise Architecture; Cloud Security Engineering
+s184,Risk assessment,Skill in performing risk assessments,white,,,Cybersecurity Architecture; Enterprise Architecture; Secure Software Development; Secure Systems Development; Software Security Assessment; Systems Requirements Planning; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Workforce Management; Cybersecurity Curriculum Development; Cybersecurity Instruction; Cybersecurity Legal Advice; Executive Cybersecurity Leadership; Privacy Compliance; IT/Security Controls Auditor; Systems Authorization; Systems Security Management; Cybersecurity Supply Chain Risk Management; GRC Analysis; Vulnerability Analysis
+s185,Network device auditing,Skill in auditing network devices,red,,check,Vulnerability Analysis
+s186,OSINT,Skill in performing Open Source Intelligence (OSINT) research,blue,threat-intel,,Cybercrime Investigation; Cyber Threat Intelligence
+s187,Patch management,Skill in installing patches,purple,,,Systems Administration; Vulnerability Analysis
+s188,Security program assessment,Skill in developing comprehensive cyber operations assessment programs,white,,,Executive Cybersecurity Leadership
+s189,Analytics development,Skill in developing analytics,center,,,Data Analysis; Cyber Threat Intelligence
+s190,Source quality evaluation,Skill in evaluating data source quality,center,,,Data Analysis; Cybersecurity Policy and Planning; Cybersecurity Curriculum Development; Cybersecurity Instruction; IT/Security Controls Auditor; Defensive Cybersecurity; Cyber Threat Intelligence
+s191,Threat identification,Skill in identifying cybersecurity threats,blue,threat-intel,,Cyber Threat Intelligence
+s192,Intelligence gap analysis,Skill in identifying intelligence gaps,blue,threat-intel,,Cyber Threat Intelligence
+s193,Traceroute analysis,Skill in interpreting traceroute results,center,,,Network Operations; Defensive Cybersecurity
+s194,Scan result analysis,Skill in interpreting vulnerability scanner results,purple,,,IT/Security Controls Auditor; Vulnerability Analysis
+s195,Client relationships,Skill in managing client relationships,center,,,Systems Requirements Planning; Cyber Threat Intelligence
+s196,Network visualization,Skill in performing network visualization,center,,,Cybersecurity Supply Chain Risk Management
+s197,Data normalization,Skill in performing data normalization,center,,,Data Analysis
+s198,Data fusion,Skill in performing data fusion,blue,threat-intel,,Cyber Threat Intelligence
+s199,Briefing preparation,Skill in preparing briefings,center,,,Cybersecurity Architecture; Data Analysis; Database Administration; Insider Threat Analysis; Cyber Threat Intelligence
+s200,Post-incident reporting,Skill in producing post-incident or lessons-learned reports,blue,incident-response,,Incident Response
+s201,Malicious traffic detection,Skill in recognizing malicious network activity in traffic,blue,monitoring,,Defensive Cybersecurity; Cyber Threat Intelligence
+s202,Vulnerability research,Skill in researching software vulnerabilities,red,,,Vulnerability Analysis
+s203,Exploit research,Skill in researching software exploits,red,,,Vulnerability Analysis; Penetration Testing and Red Teaming
+s204,Reverse engineering,Skill in performing reverse engineering of software,blue,forensics,,Cybersecurity Instruction; Malware Analysis and Reverse Engineering
+s205,Threat intel analysis,Skill in analyzing intelligence products,blue,threat-intel,,Cybersecurity Instruction
+s206,Network anomaly detection,Skill in identifying network anomalies,blue,monitoring,,Defensive Cybersecurity
+s207,Data querying,Skill in querying data,center,,,Data Analysis; Database Administration; Insider Threat Analysis; Cyber Threat Intelligence; Threat Hunting
+s208,Detection evasion,Skill in evading network detection,red,,,Penetration Testing and Red Teaming
+s209,Persistence,Skill in establishing persistence,red,,,Cybersecurity Instruction; Penetration Testing and Red Teaming
+s210,Network reconstruction,Skill in reconstructing a network,blue,forensics,,Network Operations; Defensive Cybersecurity
+s211,Incorporating feedback,Skill in incorporating feedback,center,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Cybersecurity Supply Chain Risk Management; Cyber Threat Intelligence
+s212,File integrity verification,Skill in verifying the integrity of files,blue,forensics,,Systems Security Analysis
+s213,Wireless network analysis,Skill in performing wireless network analysis,red,,check,Vulnerability Analysis
+s214,Requirements gathering,Skill in identifying requirements,center,,,Systems Requirements Planning; Security Program Management
+s215,Progress metrics,Skill in defining progress indicators,white,,,Cybersecurity Supply Chain Risk Management
+s216,Planning team leadership,Skill in orchestrating planning teams,white,,,Secure Systems Development
+s217,Presenting,Skill in presenting to an audience,center,,,Cybersecurity Architecture; Systems Testing and Evaluation; Data Analysis; Database Administration; Cybersecurity Instruction; Privacy Compliance; Security Awareness; Insider Threat Analysis; Cyber Threat Intelligence
+s218,Privacy policy writing,Skill in creating privacy policies,white,,,Privacy Compliance
+s219,Vendor negotiation,Skill in negotiating vendor agreements,white,,,Privacy Compliance; Cybersecurity Supply Chain Risk Management
+s220,Vendor privacy review,Skill in evaluating vendor privacy practices,white,,,Privacy Compliance
+s221,Emerging threat analysis,Skill in anticipating new security threats,blue,threat-intel,,Executive Cybersecurity Leadership; Cyber Threat Intelligence
+s222,Organizational analysis,Skill in analyzing organizational patterns and relationships,center,,,Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; Cybersecurity Supply Chain Risk Management
+s223,Partner capability assessment,Skill in assessing partner operations capabilities,white,,,Systems Requirements Planning; Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Systems Authorization
+s224,Incident response planning,Skill in designing incident responses,blue,incident-response,,Technical Support; Incident Response
+s225,Incident response,Skill in performing incident responses,blue,incident-response,,Operational Technology (OT) Cybersecurity Engineering; Systems Administration; Technical Support; Defensive Cybersecurity; Incident Response; Infrastructure Support
+s226,Problem solving,Skill in solving problems,center,,,Technology Research and Development; Cybercrime Investigation; Data Analysis; Technical Support; Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; Systems Authorization
+s227,Data asset inventory,Skill in assessing an organization’s data assets,green,,,Data Analysis
+s228,Managed security provider coordination,Skill in utilizing cyber defense service provider information,blue,monitoring,,Defensive Cybersecurity
+s229,Threat report response,Skill in responding to threat reports,blue,threat-intel,,Cybersecurity Supply Chain Risk Management
+s230,Supply chain analysis,Skill in performing supply chain analysis,white,,,Cybersecurity Supply Chain Risk Management
+s231,Third-party connection risk,Skill in identifying cybersecurity issues in external connections,white,,,Cybersecurity Architecture; Enterprise Architecture; IT/Security Controls Auditor
+s232,Partner privacy risk,Skill in identifying privacy issues in partner interconnections,white,,,Cybersecurity Architecture; Enterprise Architecture; IT/Security Controls Auditor
+s233,Curriculum standards,Skill in developing curriculum standards,orange,,,Cybersecurity Curriculum Development
+s234,Relationship building,Skill in building internal and external relationships,center,,,Privacy Compliance; Cybersecurity Supply Chain Risk Management; Insider Threat Analysis
+s235,Stakeholder collaboration,Skill in collaborating with internal and external stakeholders,center,,,Cybersecurity Architecture; Enterprise Architecture; Systems Requirements Planning; Technology Research and Development; Cybersecurity Policy and Planning; Cybersecurity Workforce Management; Executive Cybersecurity Leadership; Privacy Compliance; Security Program Management; Cybersecurity Supply Chain Risk Management; Digital Forensics; Incident Response; Insider Threat Analysis
+s236,Customer communication,Skill in communicating with customers,center,,,Secure Systems Development; Systems Requirements Planning; Systems Administration; Executive Cybersecurity Leadership; Cyber Threat Intelligence
+s237,External communication,Skill in communicating with external organizations,center,,,Executive Cybersecurity Leadership; Systems Security Management
+s238,Customer interviews,Skill in conducting customer interviews,center,,,Software Security Assessment
+s239,Feasibility studies,Skill in conducting feasibility studies,center,,,Systems Requirements Planning
+s240,Hardware configuration,Skill in configuring hardware,center,,,Infrastructure Support
+s241,Incident correlation,Skill in correlating incident data,blue,incident-response,,Incident Response
+s242,Data encryption,Skill in encrypting data,yellow,,,Secure Software Development
+s243,Exploited weakness identification,Skill in identifying exploited system weaknesses,blue,incident-response,,Defensive Cybersecurity
+s244,Misuse detection,Skill in identifying misuse activities,blue,monitoring,,Defensive Cybersecurity
+s245,Violation detection,Skill in identifying possible security violations,blue,monitoring,,Systems Security Management
+s246,Access rights management,Skill in managing account access rights,green,,,Systems Administration; Technical Support; Identity and Access Management
+s247,Network mapping,Skill in mapping networks,center,,,Network Operations
+s248,System activity monitoring,Skill in monitoring system activity,blue,monitoring,,Defensive Cybersecurity
+s249,Behavioral analysis,Skill in performing behavioral analysis,blue,monitoring,,Cybercrime Investigation; Security Awareness; Insider Threat Analysis; Threat Hunting
+s250,Cost-benefit analysis,Skill in performing cost/benefit analysis,white,,,Cybersecurity Workforce Management; Privacy Compliance; Systems Security Management
+s251,Defense trend analysis,Skill in performing cyber defense trend analysis,blue,threat-intel,,Technical Support
+s252,Architecture analysis,Skill in performing cybersecurity architecture analysis,green,,check,Cybersecurity Architecture; Enterprise Architecture
+s253,Data analysis,Skill in performing data analysis,center,,,Secure Systems Development; Systems Testing and Evaluation; Cybercrime Investigation; Data Analysis; Technical Support; Cybersecurity Supply Chain Risk Management; Defensive Cybersecurity; Digital Forensics; Incident Response; Insider Threat Analysis
+s254,Dynamic analysis,Skill in performing dynamic analysis,blue,forensics,,Application Security; Defensive Cybersecurity; Digital Forensics; Malware Analysis and Reverse Engineering
+s255,Economic analysis,Skill in performing economic analysis,white,,,Cybersecurity Workforce Management; Privacy Compliance; Systems Security Management
+s256,Event correlation,Skill in performing event correlation,blue,monitoring,,Defensive Cybersecurity; Insider Threat Analysis
+s257,File system forensics,Skill in performing file system forensic analysis,blue,forensics,,Digital Forensics
+s258,Gap analysis,Skill in performing gap analysis,white,,,Secure Systems Development; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Supply Chain Risk Management
+s259,Incident analysis,Skill in performing incident analysis,blue,incident-response,,Operational Technology (OT) Cybersecurity Engineering; Cybercrime Investigation; Defensive Cybersecurity
+s260,Log analysis,Skill in performing log file analysis,blue,monitoring,,Cloud Security Engineering; Cybercrime Investigation; IT/Security Controls Auditor; Defensive Cybersecurity; Digital Forensics; Incident Response; Insider Threat Analysis; Vulnerability Analysis; Detection Engineering; Threat Hunting
+s261,Malicious activity analysis,Skill in performing malicious activity analysis,blue,monitoring,,Defensive Cybersecurity
+s262,Metadata analysis,Skill in performing metadata analysis,blue,monitoring,,Data Analysis; Defensive Cybersecurity; Cyber Threat Intelligence
+s263,Network flow analysis,Skill in performing network data flow analysis,blue,monitoring,,Defensive Cybersecurity
+s264,Network traffic analysis,Skill in performing network traffic analysis,blue,monitoring,,Systems Security Analysis; Cybersecurity Instruction; Defensive Cybersecurity; Incident Response; Insider Threat Analysis; Cyber Threat Intelligence; Vulnerability Analysis; Threat Hunting
+s265,Nodal analysis,Skill in performing nodal analysis,blue,threat-intel,,Cyber Threat Intelligence
+s266,Quantitative analysis,Skill in performing quantitative analysis,center,,,Data Analysis; Cybersecurity Supply Chain Risk Management
+s267,Static code analysis,Skill in performing static code analysis,yellow,,,Secure Software Development; Software Security Assessment; Application Security; Digital Forensics
+s268,Static malware analysis,Skill in performing static malware analysis,blue,forensics,,Digital Forensics; Malware Analysis and Reverse Engineering
+s269,Threat analysis,Skill in performing threat analysis,blue,threat-intel,,Cybercrime Investigation; Insider Threat Analysis; Cyber Threat Intelligence
+s270,Trade-off analysis,Skill in performing trade-off analysis,center,,,Systems Requirements Planning
+s271,Trend analysis,Skill in performing trend analysis,center,,,Technical Support; Cybersecurity Workforce Management; Defensive Cybersecurity
+s272,User needs analysis,Skill in performing user needs analysis,center,,,Cybersecurity Architecture; Enterprise Architecture; Secure Systems Development; Systems Requirements Planning; Executive Cybersecurity Leadership; Security Program Management; Cyber Threat Intelligence
+s273,Hardware testing,Skill in testing hardware,center,,,Infrastructure Support
+s274,Interface testing,Skill in testing interfaces,center,,,Secure Systems Development
+s275,Multi-source analysis,Skill in analyzing information from multiple sources,blue,threat-intel,,Cybersecurity Supply Chain Risk Management; Insider Threat Analysis
+s276,Audience analysis,Skill in determining what information may helpful to a specific audience,center,,,Insider Threat Analysis
+s277,Insider risk gaps,Skill in identifying insider risk security gaps,white,,,Insider Threat Analysis
+s278,Insider threat detection,Skill in identifying insider threats,blue,monitoring,,Insider Threat Analysis
+s279,Asset prioritization,Skill in determining the importance of assets,white,,,Insider Threat Analysis
+s280,Threat intel data analysis,Skill in performing cyberintelligence data analysis,blue,threat-intel,,Insider Threat Analysis
+s281,Link analysis,Skill in performing link analysis,blue,threat-intel,,Insider Threat Analysis
+s282,Recurring threat recognition,Skill in recognizing recurring threat incidents,blue,threat-intel,,Insider Threat Analysis
+s283,Business impact forecasting,Skill in forecasting likely impacts on mission or business functions resulting from adversity,white,,,Cybersecurity Supply Chain Risk Management
+s284,Threat impact evaluation,"Skill in evaluating threats, events, and courses of action in the context of mission or business functions",blue,threat-intel,,Cyber Threat Intelligence
+s285,Telemetry analysis,Skill in performing telemetry analysis,blue,monitoring,,Systems Security Analysis; Threat Hunting
+s286,Decision-making under uncertainty,Skill in making decisions under conditions of uncertainty,center,,,Executive Cybersecurity Leadership
+s287,Technical communication,Skill in communicating at varying levels of technical detail with stakeholders of various backgrounds,center,,,Cybersecurity Architecture; Secure Systems Development; Technology Research and Development; Operational Technology (OT) Cybersecurity Engineering; Cybersecurity Curriculum Development; Cybersecurity Instruction; Executive Cybersecurity Leadership; IT/Security Controls Auditor; Cybersecurity Supply Chain Risk Management; Digital Forensics; Cyber Threat Intelligence
+s288,Crisis management,Skill in crisis management,blue,incident-response,,Incident Response
+s289,Attack path analysis,Skill in developing and analyzing attack paths,red,,,Vulnerability Analysis; Penetration Testing and Red Teaming
+s290,Threat catalogs,Skill in designing and maintaining threat catalogs,blue,threat-intel,,Cyber Threat Intelligence
+s291,Loss scenarios,Skill in defining loss scenarios,white,,,Cybersecurity Policy and Planning
+s292,Air-gapped backups,Skill in designing air-gapped data vault solutions,green,,,Cybersecurity Architecture
+s293,Impact tolerance,Skill in defining impact tolerance statements ,white,,,Cybersecurity Supply Chain Risk Management
+s294,Business impact analysis,Skill in conducting technical business impact analysis,white,,,Cybersecurity Policy and Planning
+s295,Critical asset protection,Skill in protecting critical assets,green,,,Cybersecurity Architecture
+s296,Fault tree analysis,Skill in performing Fault Tree Analysis (FTA),white,,,Operational Technology (OT) Cybersecurity Engineering
+s297,Live acquisition,Skill in live acquisition,blue,forensics,,Digital Forensics
+s298,Dead-box acquisition,Skill in deadbox acquisition,blue,forensics,,Digital Forensics
+s299,Data ingestion review,Skill in inspecting data for ingestion,blue,forensics,,Digital Forensics
+s300,Live network discovery,Skill in interacting with live systems to identify active and historical networks,blue,forensics,,Digital Forensics
+s301,OT architecture gap analysis,Skill in identifying gaps in control system network and connectivity architecture,white,,check,Operational Technology (OT) Cybersecurity Engineering
+s302,OT system recovery,Skill in performing system recovery for control system environments,center,,,Operational Technology (OT) Cybersecurity Engineering
+s303,OT asset access,Skill in connecting to OT assets,center,,,Operational Technology (OT) Cybersecurity Engineering
+s304,OT system design,Skill in designing and specifying OT systems,green,,,Operational Technology (OT) Cybersecurity Engineering
+s305,OT vendor evaluation,Skill in evaluating OT vendor products,white,,,Operational Technology (OT) Cybersecurity Engineering
+s306,OT network diagrams,Skill in interpreting OT network drawings,center,,,Operational Technology (OT) Cybersecurity Engineering
+s307,Zone and conduit analysis,Skill in performing zone conduit requirement analysis,green,,,Operational Technology (OT) Cybersecurity Engineering
+s308,Firewall rule review,Skill in reviewing access control lists and firewall rules,green,,,Operational Technology (OT) Cybersecurity Engineering
+s309,OT protocol security,Skill in securing control system communication protocols and media,green,,,Operational Technology (OT) Cybersecurity Engineering
+s310,AI use case design,Skill in developing appropriate system use cases,center,,,AI/ML Security
+s311,Prompt engineering,Skill in developing prompts for generative AI systems,center,,,AI/ML Security
+s312,Training data preparation,"Skill in dividing data into training, validation, and test data sets",center,,,AI/ML Security
+s313,ML model evaluation,Skill in evaluating machine learning models,center,,,AI/ML Security
+s314,AI output validation,Skill in identifying possible mistakes or hallucinations in AI-generated outputs,yellow,,check,AI/ML Security
+s315,AI risk measurement,Skill in measuring non-explainable risk,white,,,AI/ML Security
+s316,Team building,Skill in building multidisciplinary teams,white,,,Cybersecurity Supply Chain Risk Management
+s317,Governance design,Skill in designing governance structures,white,,,Cybersecurity Supply Chain Risk Management
+s318,Supply chain controls,Skill in selecting supply chain controls,white,,,Cybersecurity Supply Chain Risk Management
+s319,Supply chain risk identification,Skill in identifying supply chain risks in common business practices,white,,,Cybersecurity Supply Chain Risk Management
+s320,Supply chain mapping,Skill in supply chain mapping,white,,,Cybersecurity Supply Chain Risk Management
+s321,Geopolitical risk analysis,Skill in performing geopolitical risk analysis,white,,,Cybersecurity Supply Chain Risk Management
+s322,Threat actor reporting,Skill in reporting on adversarial capabilities,blue,threat-intel,,Cybersecurity Architecture; Penetration Testing and Red Teaming
+s323,Cryptographic selection,Skill in selecting appropriate cryptographic solutions,green,,,Cybersecurity Architecture
+s324,Cryptographic protocol design,Skill in developing cryptographic protocols,green,,,Cybersecurity Architecture
+s325,Cryptographic protocol analysis,Skill in conducting security analysis of cryptographic protocols,green,,check,Cybersecurity Architecture
+s326,Cryptographic migration,Skill in conducting cryptographic transitions,green,,,Cybersecurity Architecture
+s327,Weak cryptography detection,"Skill in identifying weak, obsolete, or deprecated cryptographic algorithms",red,,check,Vulnerability Analysis
+s328,Code review,Skill in performing code reviews,yellow,,,Software Security Assessment; Application Security
+s329,Dependency mapping,Skill in dependency mapping,yellow,,,Software Security Assessment
+s330,Software provenance,Skill in validating provenance of software components,yellow,,,Software Security Assessment; DevSecOps
+s331,Attack framework mapping,Skill in aligning common attack frameworks to software development lifecycle (SDLC) stages,yellow,,check,Secure Software Development
+s332,Linux administration,"Skill in administering Linux systems, including users, permissions, services, and logs",center,,,Systems Administration; Defensive Cybersecurity; Infrastructure Support
+s333,Windows administration,"Skill in administering Windows systems, including users, Group Policy, services, and event logs",center,,,Systems Administration; Defensive Cybersecurity; Infrastructure Support
+s334,Active Directory,"Skill in managing directory services for users, groups, computers, and authentication in Windows domains",center,,,Systems Administration; Identity and Access Management
+s335,TCP/IP,Skill in applying the TCP/IP model and common protocols to understand and troubleshoot network traffic,center,,,Network Operations; Defensive Cybersecurity; Penetration Testing and Red Teaming
+s336,DNS,"Skill in configuring and analyzing the Domain Name System, including spotting DNS abuse",center,,,Network Operations; Defensive Cybersecurity
+s337,Firewall management,Skill in configuring and maintaining firewall rules and policies,green,,,Network Operations; Infrastructure Support
+s338,Python,"Skill in writing Python programs for automation, analysis, and security tooling",center,,,Data Analysis; Penetration Testing and Red Teaming; Malware Analysis and Reverse Engineering; Detection Engineering
+s339,PowerShell,"Skill in writing PowerShell scripts for Windows administration, automation, and investigation",center,,,Systems Administration; Penetration Testing and Red Teaming; Threat Hunting
+s340,Bash,Skill in writing Bash shell scripts for Linux administration and automation,center,,,Systems Administration; Penetration Testing and Red Teaming
+s341,Regex,"Skill in writing regular expressions to search, parse, and match text and log data",center,,,Defensive Cybersecurity; Detection Engineering
+s342,Version control,Skill in using version control systems to manage code and configuration changes,center,,,Secure Software Development; DevSecOps
+s343,Cloud IAM,Skill in designing and auditing identity and access policies in cloud platforms,green,,,Cloud Security Engineering; Identity and Access Management
+s344,Container security,"Skill in securing container images, registries, and runtimes",green,,,Cloud Security Engineering; DevSecOps
+s345,Kubernetes security,"Skill in securing container orchestration clusters, workloads, and their configuration",green,,,Cloud Security Engineering
+s346,Infrastructure as code,"Skill in defining and reviewing infrastructure as code, including catching insecure configuration before deployment",green,,,Cloud Security Engineering; DevSecOps; Cyber Range Engineering
+s347,Cloud posture management,"Skill in monitoring cloud environments for misconfiguration, drift, and policy violations",green,,,Cloud Security Engineering; Security Compliance Monitoring
+s348,SSO and federation,Skill in implementing single sign-on and identity federation between systems and organizations,green,,,Identity and Access Management
+s349,MFA,Skill in deploying and managing multi-factor authentication,green,,,Identity and Access Management
+s350,Privileged access management,"Skill in controlling, monitoring, and auditing privileged accounts and administrative access",green,,,Systems Administration; Identity and Access Management
+s351,Identity lifecycle,"Skill in managing account provisioning, changes, and deprovisioning across the employee lifecycle",green,,,Identity and Access Management
+s352,SIEM operation,"Skill in operating a security information and event management platform to collect, search, and alert on security data",blue,monitoring,,Defensive Cybersecurity; Incident Response; Detection Engineering
+s353,Alert triage,Skill in triaging security alerts to separate real threats from false positives and escalate appropriately,blue,monitoring,,Defensive Cybersecurity; Incident Response
+s354,EDR operation,Skill in operating endpoint detection and response tools to investigate and contain threats on hosts,blue,monitoring,,Defensive Cybersecurity; Incident Response; Threat Hunting
+s355,Detection rules,"Skill in writing, testing, and tuning detection rules that alert on attacker behavior",purple,,,Defensive Cybersecurity; Detection Engineering
+s356,Threat hunting,Skill in proactively searching systems and networks for threats that evaded existing defenses,purple,,,Cyber Threat Intelligence; Threat Hunting
+s357,Hypothesis-driven investigation,Skill in forming investigation hypotheses from threat intelligence and testing them against data,purple,,,Threat Hunting
+s358,ATT&CK mapping,"Skill in mapping attacker behavior, detections, and controls to a common adversary-technique framework",purple,,,Cyber Threat Intelligence; Penetration Testing and Red Teaming; Detection Engineering; Threat Hunting
+s359,Phishing analysis,"Skill in analyzing reported phishing messages, links, and attachments",blue,incident-response,,Defensive Cybersecurity; Incident Response
+s360,Email security,"Skill in configuring and monitoring email security controls, including sender authentication and filtering",green,,,Defensive Cybersecurity; Infrastructure Support
+s361,Sandbox analysis,Skill in detonating suspicious files in an isolated environment to observe their behavior,blue,forensics,,Malware Analysis and Reverse Engineering
+s362,Web app testing,Skill in testing web applications for security vulnerabilities,red,,,Application Security; Penetration Testing and Red Teaming
+s363,API testing,"Skill in testing application programming interfaces for authentication, authorization, and input-handling flaws",red,,,Penetration Testing and Red Teaming
+s364,Privilege escalation,Skill in identifying and exploiting paths to higher privileges on compromised systems,red,,,Penetration Testing and Red Teaming
+s365,Active Directory attacks,Skill in testing Windows domain environments for common identity and authentication attack paths,red,,,Penetration Testing and Red Teaming
+s366,Phishing simulation,Skill in designing and running authorized phishing simulations to measure and improve resistance,orange,,check,Security Awareness; Penetration Testing and Red Teaming
+s367,Pentest reporting,"Skill in writing penetration test reports that explain findings, risk, and remediation clearly",red,,,Penetration Testing and Red Teaming
+s368,Scenario design,Skill in designing realistic attack and defense scenarios for exercises and training,purple,,,Cyber Range Engineering; Cybersecurity Instruction
+s369,API security,"Skill in designing and reviewing application programming interfaces for secure authentication, authorization, and data handling",yellow,,,Secure Software Development; Application Security
+s370,Dependency scanning,Skill in identifying vulnerable or risky third-party software dependencies,yellow,,,Software Security Assessment; Application Security; DevSecOps
+s371,CI/CD security,Skill in securing build and deployment pipelines and the systems they run on,yellow,,,DevSecOps
+s372,Secrets management,"Skill in storing, rotating, and controlling access to credentials, keys, and other secrets",green,,,Cloud Security Engineering; DevSecOps
+s373,Framework mapping,Skill in mapping an organization's controls to security and compliance frameworks,white,,,Cybersecurity Legal Advice; IT/Security Controls Auditor; Security Compliance Monitoring; GRC Analysis
+s374,Audit evidence collection,Skill in collecting and organizing evidence that security controls are in place and working,white,,,IT/Security Controls Auditor; Security Compliance Monitoring; GRC Analysis
+s375,Vendor risk assessment,Skill in assessing the security risk of vendors and third-party services,white,,,Cybersecurity Supply Chain Risk Management; GRC Analysis
+s376,Compliance metrics,Skill in defining and tracking metrics that show ongoing compliance status,white,,,Security Compliance Monitoring; GRC Analysis
+s377,Program metrics,Skill in defining and reporting metrics that show a security program's effectiveness,white,,,Executive Cybersecurity Leadership; Security Awareness
+s378,Prompt injection testing,Skill in testing AI applications for prompt injection and related input manipulation,red,,,AI/ML Security; Penetration Testing and Red Teaming
+s379,LLM red teaming,"Skill in adversarially testing large language model systems for harmful, unsafe, or unintended behavior",red,,,AI/ML Security; Penetration Testing and Red Teaming
+s380,AI governance,Skill in establishing policies and oversight for the responsible and secure use of AI,white,,,AI/ML Security; Cybersecurity Policy and Planning
+s381,Model supply chain review,"Skill in evaluating the origin, integrity, and risk of third-party AI models and datasets",yellow,,,AI/ML Security

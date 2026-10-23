@@ -30,88 +30,88 @@
           "id": "student",
           "label": "Student or new grad",
           "skills": [
-            "S0387",
-            "S0610"
+            "s15",
+            "s137"
           ]
         },
         {
           "id": "helpdesk",
           "label": "IT help desk or support",
           "skills": [
-            "S9002",
-            "S9003",
-            "S9004",
-            "S9005",
-            "S0577",
-            "S0610",
-            "S0824",
-            "S0678"
+            "s333",
+            "s334",
+            "s335",
+            "s336",
+            "s112",
+            "s137",
+            "s236",
+            "s180"
           ]
         },
         {
           "id": "sysadmin",
           "label": "Systems or network admin",
           "skills": [
-            "S9001",
-            "S9002",
-            "S9003",
-            "S9004",
-            "S9005",
-            "S9008",
-            "S9009",
-            "S0678",
-            "S0472",
-            "S0606"
+            "s332",
+            "s333",
+            "s334",
+            "s335",
+            "s336",
+            "s339",
+            "s340",
+            "s180",
+            "s68",
+            "s133"
           ]
         },
         {
           "id": "developer",
           "label": "Software development",
           "skills": [
-            "S0597",
-            "S9007",
-            "S9011",
-            "S0560",
-            "S0558",
-            "S9010",
-            "S9009",
-            "S0463",
-            "S0571"
+            "s126",
+            "s338",
+            "s342",
+            "s101",
+            "s99",
+            "s341",
+            "s340",
+            "s62",
+            "s109"
           ]
         },
         {
           "id": "teaching",
           "label": "Teaching or training",
           "skills": [
-            "S0602",
-            "S0395",
-            "S0791",
-            "S0610",
-            "S0392",
-            "S0601"
+            "s130",
+            "s22",
+            "s217",
+            "s137",
+            "s19",
+            "s129"
           ]
         },
         {
           "id": "audit",
           "label": "Audit, compliance, or legal",
           "skills": [
-            "S0686",
-            "S0619",
-            "S0459",
-            "S0579",
-            "S0664",
-            "S0416",
-            "S9043"
+            "s184",
+            "s145",
+            "s58",
+            "s114",
+            "s172",
+            "s33",
+            "s374"
           ]
         },
         {
           "id": "military",
           "label": "Military",
           "skills": [
-            "S0610",
-            "S0788",
-            "S0728",
-            "S0791"
+            "s137",
+            "s216",
+            "s199",
+            "s217"
           ]
         },
         {
@@ -133,103 +133,103 @@
           "id": "script",
           "text": "I've written a script to automate something.",
           "skills": [
-            "S0650",
-            "S9007",
-            "S9008",
-            "S9009"
+            "s162",
+            "s338",
+            "s339",
+            "s340"
           ]
         },
         {
           "id": "machines",
           "text": "I've set up or managed Linux or Windows machines.",
           "skills": [
-            "S9001",
-            "S9002",
-            "S9003",
-            "S0678",
-            "S0472"
+            "s332",
+            "s333",
+            "s334",
+            "s180",
+            "s68"
           ]
         },
         {
           "id": "troubleshoot",
           "text": "I've helped people troubleshoot computer problems.",
           "skills": [
-            "S0577",
-            "S0824",
-            "S0610",
-            "S0175"
+            "s112",
+            "s236",
+            "s137",
+            "s8"
           ]
         },
         {
           "id": "network",
           "text": "I've configured a network, router, or firewall.",
           "skills": [
-            "S9004",
-            "S9005",
-            "S0584",
-            "S9006",
-            "S0523"
+            "s335",
+            "s336",
+            "s117",
+            "s337",
+            "s83"
           ]
         },
         {
           "id": "docs",
           "text": "I've written procedures, policies, or documentation others follow.",
           "skills": [
-            "S0391",
-            "S0407",
-            "S0579",
-            "S0387",
-            "S0564"
+            "s18",
+            "s29",
+            "s114",
+            "s15",
+            "s104"
           ]
         },
         {
           "id": "explain",
           "text": "I've explained technical things to non-technical people.",
           "skills": [
-            "S0923",
-            "S0791",
-            "S0610",
-            "S0602"
+            "s287",
+            "s217",
+            "s137",
+            "s130"
           ]
         },
         {
           "id": "investigate",
           "text": "I've investigated something by digging through logs or data.",
           "skills": [
-            "S0866",
-            "S0175",
-            "S9010",
-            "S0435"
+            "s260",
+            "s8",
+            "s341",
+            "s47"
           ]
         },
         {
           "id": "software",
           "text": "I've built or contributed to software.",
           "skills": [
-            "S0597",
-            "S9011",
-            "S0560",
-            "S0463",
-            "S0558"
+            "s126",
+            "s342",
+            "s101",
+            "s62",
+            "s99"
           ]
         },
         {
           "id": "cloud",
           "text": "I've worked with cloud services or containers.",
           "skills": [
-            "S9012",
-            "S9013",
-            "S9015",
-            "S9016"
+            "s343",
+            "s344",
+            "s346",
+            "s347"
           ]
         },
         {
           "id": "risk",
           "text": "I've reviewed risks, controls, or vulnerabilities.",
           "skills": [
-            "S0686",
-            "S0543",
-            "S0619"
+            "s184",
+            "s88",
+            "s145"
           ]
         }
       ]
@@ -332,8 +332,8 @@
     ]
   },
   "startingRoles": [
-    "PD-WRL-001",
-    "PD-WRL-007",
-    "OG-WRL-019"
+    "r20",
+    "r25",
+    "r18"
   ]
 }

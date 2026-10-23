@@ -1,302 +1,302 @@
 {
-  "description": "Role and addition changes approved 2026-10-19 in the skills data review. Applied by scripts/apply_role_changes.py after skill merges and cuts. New skills (S9001+) and new roles carry the fork's doc_identifier (MHP_SKILLS_GRAPH_FORK_1_0), marking them as authored rather than NIST-sourced.",
+  "description": "Role and addition changes approved 2026-10-19 in the skills data review. Applied by scripts/apply_role_changes.py after skill merges and cuts. New skills (s332 onward) and new roles carry the fork's doc_identifier (MHP_SKILLS_GRAPH_FORK_1_0), marking them as authored rather than NIST-sourced.",
   "newSkills": [
     {
-      "id": "S9001",
+      "id": "s332",
       "title": "Linux administration",
       "text": "Skill in administering Linux systems, including users, permissions, services, and logs",
       "area": "Foundations"
     },
     {
-      "id": "S9002",
+      "id": "s333",
       "title": "Windows administration",
       "text": "Skill in administering Windows systems, including users, Group Policy, services, and event logs",
       "area": "Foundations"
     },
     {
-      "id": "S9003",
+      "id": "s334",
       "title": "Active Directory",
       "text": "Skill in managing directory services for users, groups, computers, and authentication in Windows domains",
       "area": "Foundations"
     },
     {
-      "id": "S9004",
+      "id": "s335",
       "title": "TCP/IP",
       "text": "Skill in applying the TCP/IP model and common protocols to understand and troubleshoot network traffic",
       "area": "Foundations"
     },
     {
-      "id": "S9005",
+      "id": "s336",
       "title": "DNS",
       "text": "Skill in configuring and analyzing the Domain Name System, including spotting DNS abuse",
       "area": "Foundations"
     },
     {
-      "id": "S9006",
+      "id": "s337",
       "title": "Firewall management",
       "text": "Skill in configuring and maintaining firewall rules and policies",
       "area": "Foundations"
     },
     {
-      "id": "S9007",
+      "id": "s338",
       "title": "Python",
       "text": "Skill in writing Python programs for automation, analysis, and security tooling",
       "area": "Foundations"
     },
     {
-      "id": "S9008",
+      "id": "s339",
       "title": "PowerShell",
       "text": "Skill in writing PowerShell scripts for Windows administration, automation, and investigation",
       "area": "Foundations"
     },
     {
-      "id": "S9009",
+      "id": "s340",
       "title": "Bash",
       "text": "Skill in writing Bash shell scripts for Linux administration and automation",
       "area": "Foundations"
     },
     {
-      "id": "S9010",
+      "id": "s341",
       "title": "Regex",
       "text": "Skill in writing regular expressions to search, parse, and match text and log data",
       "area": "Foundations"
     },
     {
-      "id": "S9011",
+      "id": "s342",
       "title": "Version control",
       "text": "Skill in using version control systems to manage code and configuration changes",
       "area": "Foundations"
     },
     {
-      "id": "S9012",
+      "id": "s343",
       "title": "Cloud IAM",
       "text": "Skill in designing and auditing identity and access policies in cloud platforms",
       "area": "Cloud"
     },
     {
-      "id": "S9013",
+      "id": "s344",
       "title": "Container security",
       "text": "Skill in securing container images, registries, and runtimes",
       "area": "Cloud"
     },
     {
-      "id": "S9014",
+      "id": "s345",
       "title": "Kubernetes security",
       "text": "Skill in securing container orchestration clusters, workloads, and their configuration",
       "area": "Cloud"
     },
     {
-      "id": "S9015",
+      "id": "s346",
       "title": "Infrastructure as code",
       "text": "Skill in defining and reviewing infrastructure as code, including catching insecure configuration before deployment",
       "area": "Cloud"
     },
     {
-      "id": "S9016",
+      "id": "s347",
       "title": "Cloud posture management",
       "text": "Skill in monitoring cloud environments for misconfiguration, drift, and policy violations",
       "area": "Cloud"
     },
     {
-      "id": "S9017",
+      "id": "s348",
       "title": "SSO and federation",
       "text": "Skill in implementing single sign-on and identity federation between systems and organizations",
       "area": "Identity"
     },
     {
-      "id": "S9018",
+      "id": "s349",
       "title": "MFA",
       "text": "Skill in deploying and managing multi-factor authentication",
       "area": "Identity"
     },
     {
-      "id": "S9019",
+      "id": "s350",
       "title": "Privileged access management",
       "text": "Skill in controlling, monitoring, and auditing privileged accounts and administrative access",
       "area": "Identity"
     },
     {
-      "id": "S9020",
+      "id": "s351",
       "title": "Identity lifecycle",
       "text": "Skill in managing account provisioning, changes, and deprovisioning across the employee lifecycle",
       "area": "Identity"
     },
     {
-      "id": "S9021",
+      "id": "s352",
       "title": "SIEM operation",
       "text": "Skill in operating a security information and event management platform to collect, search, and alert on security data",
       "area": "Defense"
     },
     {
-      "id": "S9022",
+      "id": "s353",
       "title": "Alert triage",
       "text": "Skill in triaging security alerts to separate real threats from false positives and escalate appropriately",
       "area": "Defense"
     },
     {
-      "id": "S9023",
+      "id": "s354",
       "title": "EDR operation",
       "text": "Skill in operating endpoint detection and response tools to investigate and contain threats on hosts",
       "area": "Defense"
     },
     {
-      "id": "S9024",
+      "id": "s355",
       "title": "Detection rules",
       "text": "Skill in writing, testing, and tuning detection rules that alert on attacker behavior",
       "area": "Defense"
     },
     {
-      "id": "S9025",
+      "id": "s356",
       "title": "Threat hunting",
       "text": "Skill in proactively searching systems and networks for threats that evaded existing defenses",
       "area": "Defense"
     },
     {
-      "id": "S9026",
+      "id": "s357",
       "title": "Hypothesis-driven investigation",
       "text": "Skill in forming investigation hypotheses from threat intelligence and testing them against data",
       "area": "Defense"
     },
     {
-      "id": "S9027",
+      "id": "s358",
       "title": "ATT&CK mapping",
       "text": "Skill in mapping attacker behavior, detections, and controls to a common adversary-technique framework",
       "area": "Defense"
     },
     {
-      "id": "S9028",
+      "id": "s359",
       "title": "Phishing analysis",
       "text": "Skill in analyzing reported phishing messages, links, and attachments",
       "area": "Defense"
     },
     {
-      "id": "S9029",
+      "id": "s360",
       "title": "Email security",
       "text": "Skill in configuring and monitoring email security controls, including sender authentication and filtering",
       "area": "Defense"
     },
     {
-      "id": "S9030",
+      "id": "s361",
       "title": "Sandbox analysis",
       "text": "Skill in detonating suspicious files in an isolated environment to observe their behavior",
       "area": "Defense"
     },
     {
-      "id": "S9031",
+      "id": "s362",
       "title": "Web app testing",
       "text": "Skill in testing web applications for security vulnerabilities",
       "area": "Offense"
     },
     {
-      "id": "S9032",
+      "id": "s363",
       "title": "API testing",
       "text": "Skill in testing application programming interfaces for authentication, authorization, and input-handling flaws",
       "area": "Offense"
     },
     {
-      "id": "S9033",
+      "id": "s364",
       "title": "Privilege escalation",
       "text": "Skill in identifying and exploiting paths to higher privileges on compromised systems",
       "area": "Offense"
     },
     {
-      "id": "S9034",
+      "id": "s365",
       "title": "Active Directory attacks",
       "text": "Skill in testing Windows domain environments for common identity and authentication attack paths",
       "area": "Offense"
     },
     {
-      "id": "S9035",
+      "id": "s366",
       "title": "Phishing simulation",
       "text": "Skill in designing and running authorized phishing simulations to measure and improve resistance",
       "area": "Offense"
     },
     {
-      "id": "S9036",
+      "id": "s367",
       "title": "Pentest reporting",
       "text": "Skill in writing penetration test reports that explain findings, risk, and remediation clearly",
       "area": "Offense"
     },
     {
-      "id": "S9037",
+      "id": "s368",
       "title": "Scenario design",
       "text": "Skill in designing realistic attack and defense scenarios for exercises and training",
       "area": "Offense"
     },
     {
-      "id": "S9038",
+      "id": "s369",
       "title": "API security",
       "text": "Skill in designing and reviewing application programming interfaces for secure authentication, authorization, and data handling",
       "area": "AppSec"
     },
     {
-      "id": "S9039",
+      "id": "s370",
       "title": "Dependency scanning",
       "text": "Skill in identifying vulnerable or risky third-party software dependencies",
       "area": "AppSec"
     },
     {
-      "id": "S9040",
+      "id": "s371",
       "title": "CI/CD security",
       "text": "Skill in securing build and deployment pipelines and the systems they run on",
       "area": "AppSec"
     },
     {
-      "id": "S9041",
+      "id": "s372",
       "title": "Secrets management",
       "text": "Skill in storing, rotating, and controlling access to credentials, keys, and other secrets",
       "area": "AppSec"
     },
     {
-      "id": "S9042",
+      "id": "s373",
       "title": "Framework mapping",
       "text": "Skill in mapping an organization's controls to security and compliance frameworks",
       "area": "GRC"
     },
     {
-      "id": "S9043",
+      "id": "s374",
       "title": "Audit evidence collection",
       "text": "Skill in collecting and organizing evidence that security controls are in place and working",
       "area": "GRC"
     },
     {
-      "id": "S9044",
+      "id": "s375",
       "title": "Vendor risk assessment",
       "text": "Skill in assessing the security risk of vendors and third-party services",
       "area": "GRC"
     },
     {
-      "id": "S9045",
+      "id": "s376",
       "title": "Compliance metrics",
       "text": "Skill in defining and tracking metrics that show ongoing compliance status",
       "area": "GRC"
     },
     {
-      "id": "S9046",
+      "id": "s377",
       "title": "Program metrics",
       "text": "Skill in defining and reporting metrics that show a security program's effectiveness",
       "area": "GRC"
     },
     {
-      "id": "S9047",
+      "id": "s378",
       "title": "Prompt injection testing",
       "text": "Skill in testing AI applications for prompt injection and related input manipulation",
       "area": "AI"
     },
     {
-      "id": "S9048",
+      "id": "s379",
       "title": "LLM red teaming",
       "text": "Skill in adversarially testing large language model systems for harmful, unsafe, or unintended behavior",
       "area": "AI"
     },
     {
-      "id": "S9049",
+      "id": "s380",
       "title": "AI governance",
       "text": "Skill in establishing policies and oversight for the responsible and secure use of AI",
       "area": "AI"
     },
     {
-      "id": "S9050",
+      "id": "s381",
       "title": "Model supply chain review",
       "text": "Skill in evaluating the origin, integrity, and risk of third-party AI models and datasets",
       "area": "AI"
@@ -304,20 +304,20 @@
   ],
   "newRoles": [
     {
-      "id": "DD-WRL-011",
-      "category": "DD",
+      "id": "r6",
+      "category": "c1",
       "title": "Cloud Security Engineering",
       "text": "Responsible for securing cloud environments -- designing and enforcing identity, network, and configuration controls across cloud platforms, and monitoring for misconfiguration and drift.",
       "skills": [
-        "S9012",
-        "S9016",
-        "S9013",
-        "S9014",
-        "S9015",
-        "S9041",
-        "S0683",
-        "S0866",
-        "S0448"
+        "s343",
+        "s347",
+        "s344",
+        "s345",
+        "s346",
+        "s372",
+        "s183",
+        "s260",
+        "s54"
       ],
       "jobTitles": [
         "Cloud Security Engineer",
@@ -326,20 +326,20 @@
       ]
     },
     {
-      "id": "IO-WRL-008",
-      "category": "IO",
+      "id": "r9",
+      "category": "c3",
       "title": "Identity and Access Management",
       "text": "Responsible for designing and operating the systems that control who can access what -- account lifecycle, single sign-on, multi-factor authentication, and privileged access.",
       "skills": [
-        "S9020",
-        "S9017",
-        "S9018",
-        "S9019",
-        "S0587",
-        "S0844",
-        "S0484",
-        "S9003",
-        "S9012"
+        "s351",
+        "s348",
+        "s349",
+        "s350",
+        "s118",
+        "s246",
+        "s74",
+        "s334",
+        "s343"
       ],
       "jobTitles": [
         "IAM Engineer",
@@ -349,20 +349,20 @@
       ]
     },
     {
-      "id": "PD-WRL-010",
-      "category": "PD",
+      "id": "r28",
+      "category": "c5",
       "title": "Detection Engineering",
       "text": "Responsible for building, testing, and tuning the detections that alert on attacker behavior, validating coverage against known techniques and working with red teams to close gaps.",
       "skills": [
-        "S9024",
-        "S0566",
-        "S9027",
-        "S0866",
-        "S9021",
-        "S0516",
-        "S0592",
-        "S0650",
-        "S0448"
+        "s355",
+        "s106",
+        "s358",
+        "s260",
+        "s352",
+        "s80",
+        "s123",
+        "s162",
+        "s54"
       ],
       "jobTitles": [
         "Detection Engineer",
@@ -371,20 +371,20 @@
       ]
     },
     {
-      "id": "PD-WRL-011",
-      "category": "PD",
+      "id": "r29",
+      "category": "c5",
       "title": "Threat Hunting",
       "text": "Responsible for proactively searching systems and networks for attackers who evaded existing defenses, forming hypotheses from threat intelligence and testing them against telemetry.",
       "skills": [
-        "S9025",
-        "S9026",
-        "S0921",
-        "S0866",
-        "S0874",
-        "S0599",
-        "S9027",
-        "S0748",
-        "S0848"
+        "s356",
+        "s357",
+        "s285",
+        "s260",
+        "s264",
+        "s128",
+        "s358",
+        "s207",
+        "s249"
       ],
       "jobTitles": [
         "Threat Hunter",
@@ -392,20 +392,20 @@
       ]
     },
     {
-      "id": "DD-WRL-012",
-      "category": "DD",
+      "id": "r7",
+      "category": "c1",
       "title": "Application Security",
       "text": "Responsible for helping development teams build secure software through threat modeling, code review, security testing, and guidance on fixing vulnerabilities.",
       "skills": [
-        "S0588",
-        "S0972",
-        "S0883",
-        "S0857",
-        "S9039",
-        "S9038",
-        "S9031",
-        "S0172",
-        "S0565"
+        "s119",
+        "s328",
+        "s267",
+        "s254",
+        "s370",
+        "s369",
+        "s362",
+        "s7",
+        "s105"
       ],
       "jobTitles": [
         "Application Security Engineer",
@@ -414,19 +414,19 @@
       ]
     },
     {
-      "id": "DD-WRL-013",
-      "category": "DD",
+      "id": "r8",
+      "category": "c1",
       "title": "DevSecOps",
       "text": "Responsible for building security into software delivery pipelines and platforms, automating checks so code and infrastructure ship securely by default.",
       "skills": [
-        "S9040",
-        "S9041",
-        "S9015",
-        "S9039",
-        "S9013",
-        "S0974",
-        "S0448",
-        "S0650"
+        "s371",
+        "s372",
+        "s346",
+        "s370",
+        "s344",
+        "s330",
+        "s54",
+        "s162"
       ],
       "jobTitles": [
         "DevSecOps Engineer",
@@ -435,19 +435,19 @@
       ]
     },
     {
-      "id": "OG-WRL-019",
-      "category": "OG",
+      "id": "r18",
+      "category": "c4",
       "title": "GRC Analysis",
       "text": "Responsible for supporting governance, risk, and compliance programs -- mapping controls to frameworks, collecting audit evidence, assessing risk, and tracking remediation.",
       "skills": [
-        "S9042",
-        "S9043",
-        "S0686",
-        "S0667",
-        "S9044",
-        "S0564",
-        "S9045",
-        "S0579"
+        "s373",
+        "s374",
+        "s184",
+        "s174",
+        "s375",
+        "s104",
+        "s376",
+        "s114"
       ],
       "jobTitles": [
         "GRC Analyst",
@@ -457,17 +457,17 @@
       ]
     },
     {
-      "id": "OG-WRL-020",
-      "category": "OG",
+      "id": "r19",
+      "category": "c4",
       "title": "Security Awareness",
       "text": "Responsible for building the training, phishing simulations, and communication that help employees recognize and report threats and reduce human risk.",
       "skills": [
-        "S0380",
-        "S9035",
-        "S0628",
-        "S0848",
-        "S0791",
-        "S9046"
+        "s12",
+        "s366",
+        "s151",
+        "s249",
+        "s217",
+        "s377"
       ],
       "jobTitles": [
         "Security Awareness Manager",
@@ -476,18 +476,18 @@
       ]
     },
     {
-      "id": "IO-WRL-009",
-      "category": "IO",
+      "id": "r10",
+      "category": "c3",
       "title": "Cyber Range Engineering",
       "text": "Responsible for designing, building, and operating simulated environments for security training, exercises, and testing, combining infrastructure engineering with attack and defense scenarios.",
       "skills": [
-        "S0472",
-        "S0523",
-        "S9015",
-        "S0516",
-        "S0613",
-        "S9037",
-        "S0650"
+        "s68",
+        "s83",
+        "s346",
+        "s80",
+        "s139",
+        "s368",
+        "s162"
       ],
       "jobTitles": [
         "Cyber Range Engineer",
@@ -497,2968 +497,2968 @@
     }
   ],
   "roleMerges": {
-    "OG-WRL-009": "OG-WRL-010",
-    "OG-WRL-011": "OG-WRL-010",
-    "OG-WRL-015": "OG-WRL-010",
-    "OG-WRL-016": "OG-WRL-012",
-    "IN-WRL-002": "PD-WRL-002",
-    "DD-WRL-003": "DD-WRL-012",
-    "DD-WRL-005": "DD-WRL-012",
-    "DD-WRL-002": "DD-WRL-001",
-    "PD-WRL-004": "DD-WRL-004",
-    "OG-WRL-002": "OG-WRL-019",
-    "OG-WRL-018": "OG-WRL-019",
-    "IO-WRL-006": "PD-WRL-001",
-    "OG-WRL-003": "OG-WRL-010"
+    "OG-WRL-009": "r15",
+    "OG-WRL-011": "r15",
+    "OG-WRL-015": "r15",
+    "OG-WRL-016": "r16",
+    "IN-WRL-002": "r21",
+    "DD-WRL-003": "r7",
+    "DD-WRL-005": "r7",
+    "DD-WRL-002": "r1",
+    "PD-WRL-004": "r2",
+    "OG-WRL-002": "r18",
+    "OG-WRL-018": "r18",
+    "IO-WRL-006": "r20",
+    "OG-WRL-003": "r15"
   },
   "roleUpdates": {
-    "OG-WRL-010": {
+    "r15": {
       "title": "Security Program Manager",
       "text": "Responsible for planning, running, and reporting on security programs and projects -- scope, budget, schedule, priorities, vendors, and the people and skills the program needs."
     },
-    "PD-WRL-006": {
+    "r24": {
       "title": "Threat Intelligence Analyst",
       "text": "Responsible for collecting and analyzing information about threat actors, their tools, and their techniques, and turning it into intelligence that helps the organization anticipate, detect, and respond to attacks."
     },
-    "PD-WRL-002": {
+    "r21": {
       "text": "Responsible for collecting, preserving, and analyzing digital evidence from computers, networks, and devices to investigate incidents and support internal, legal, or law-enforcement processes.",
       "title": "Digital Forensics Analyst"
     },
-    "DD-WRL-001": {
+    "r1": {
       "title": "Security Architect",
       "text": "Responsible for designing the security of an organization's systems and technology architecture -- selecting controls, cryptography, and network and identity designs so security requirements are met by design."
     },
-    "DD-WRL-004": {
+    "r2": {
       "title": "Security Engineer",
       "text": "Responsible for building and maintaining the security of systems and infrastructure -- implementing and hardening controls, securing platforms and networks, and integrating security into how systems are designed, built, and run."
     },
-    "DD-WRL-008": {
+    "r3": {
       "title": "Security Researcher"
     },
-    "DD-WRL-009": {
+    "r4": {
       "title": "OT Security Engineer"
     },
-    "DD-WRL-010": {
+    "r5": {
       "title": "AI Security Engineer"
     },
-    "DD-WRL-011": {
+    "r6": {
       "title": "Cloud Security Engineer"
     },
-    "DD-WRL-012": {
+    "r7": {
       "title": "Application Security Engineer",
       "text": "Responsible for securing software throughout its lifecycle -- building security into code and design, reviewing code and architecture for weaknesses, testing applications for vulnerabilities, and driving the fixes."
     },
-    "DD-WRL-013": {
+    "r8": {
       "title": "DevSecOps Engineer"
     },
-    "IO-WRL-008": {
+    "r9": {
       "title": "IAM Engineer"
     },
-    "IO-WRL-009": {
+    "r10": {
       "title": "Cyber Range Engineer"
     },
-    "OG-WRL-004": {
+    "r11": {
       "title": "Security Instructional Designer"
     },
-    "OG-WRL-005": {
+    "r12": {
       "title": "Security Instructor"
     },
-    "OG-WRL-007": {
+    "r13": {
       "title": "CISO"
     },
-    "OG-WRL-008": {
+    "r14": {
       "title": "Privacy Analyst"
     },
-    "OG-WRL-012": {
+    "r16": {
       "title": "IT Auditor"
     },
-    "OG-WRL-017": {
+    "r17": {
       "title": "Third-Party Risk Analyst"
     },
-    "OG-WRL-019": {
+    "r18": {
       "title": "GRC Analyst",
       "text": "Responsible for governance, risk, and compliance work -- writing and maintaining security policies, assessing risk, mapping controls to frameworks, and monitoring ongoing compliance."
     },
-    "OG-WRL-020": {
+    "r19": {
       "title": "Security Awareness Manager"
     },
-    "PD-WRL-001": {
+    "r20": {
       "title": "SOC Analyst",
       "text": "Responsible for monitoring, detecting, and triaging security events and alerts across an organization's systems and networks, and escalating and responding to confirmed threats."
     },
-    "PD-WRL-003": {
+    "r22": {
       "title": "Incident Responder"
     },
-    "PD-WRL-005": {
+    "r23": {
       "title": "Insider Risk Analyst"
     },
-    "PD-WRL-007": {
+    "r25": {
       "title": "Vulnerability Management Analyst"
     },
-    "PD-WRL-008": {
+    "r26": {
       "title": "Penetration Tester"
     },
-    "PD-WRL-009": {
+    "r27": {
       "title": "Malware Analyst"
     },
-    "PD-WRL-010": {
+    "r28": {
       "title": "Detection Engineer"
     },
-    "PD-WRL-011": {
+    "r29": {
       "title": "Threat Hunter"
     }
   },
   "addMappings": [
     [
-      "DD-WRL-012",
-      "S9011"
+      "r7",
+      "s342"
     ],
     [
-      "DD-WRL-012",
-      "S9038"
+      "r7",
+      "s369"
     ],
     [
-      "DD-WRL-012",
-      "S9039"
+      "r7",
+      "s370"
     ],
     [
-      "DD-WRL-010",
-      "S9047"
+      "r5",
+      "s378"
     ],
     [
-      "DD-WRL-010",
-      "S9048"
+      "r5",
+      "s379"
     ],
     [
-      "DD-WRL-010",
-      "S9049"
+      "r5",
+      "s380"
     ],
     [
-      "DD-WRL-010",
-      "S9050"
+      "r5",
+      "s381"
     ],
     [
-      "DD-WRL-011",
-      "S9012"
+      "r6",
+      "s343"
     ],
     [
-      "DD-WRL-011",
-      "S9013"
+      "r6",
+      "s344"
     ],
     [
-      "DD-WRL-011",
-      "S9014"
+      "r6",
+      "s345"
     ],
     [
-      "DD-WRL-011",
-      "S9015"
+      "r6",
+      "s346"
     ],
     [
-      "DD-WRL-011",
-      "S9016"
+      "r6",
+      "s347"
     ],
     [
-      "DD-WRL-011",
-      "S9041"
+      "r6",
+      "s372"
     ],
     [
-      "DD-WRL-012",
-      "S9031"
+      "r7",
+      "s362"
     ],
     [
-      "DD-WRL-013",
-      "S9011"
+      "r8",
+      "s342"
     ],
     [
-      "DD-WRL-013",
-      "S9013"
+      "r8",
+      "s344"
     ],
     [
-      "DD-WRL-013",
-      "S9015"
+      "r8",
+      "s346"
     ],
     [
-      "DD-WRL-013",
-      "S9039"
+      "r8",
+      "s370"
     ],
     [
-      "DD-WRL-013",
-      "S9040"
+      "r8",
+      "s371"
     ],
     [
-      "DD-WRL-013",
-      "S9041"
+      "r8",
+      "s372"
     ],
     [
-      "IO-WRL-008",
-      "S9003"
+      "r9",
+      "s334"
     ],
     [
-      "IO-WRL-008",
-      "S9012"
+      "r9",
+      "s343"
     ],
     [
-      "IO-WRL-008",
-      "S9017"
+      "r9",
+      "s348"
     ],
     [
-      "IO-WRL-008",
-      "S9018"
+      "r9",
+      "s349"
     ],
     [
-      "IO-WRL-008",
-      "S9019"
+      "r9",
+      "s350"
     ],
     [
-      "IO-WRL-008",
-      "S9020"
+      "r9",
+      "s351"
     ],
     [
-      "IO-WRL-009",
-      "S9015"
+      "r10",
+      "s346"
     ],
     [
-      "IO-WRL-009",
-      "S9037"
+      "r10",
+      "s368"
     ],
     [
-      "OG-WRL-019",
-      "S9049"
+      "r18",
+      "s380"
     ],
     [
-      "OG-WRL-005",
-      "S9037"
+      "r12",
+      "s368"
     ],
     [
-      "OG-WRL-007",
-      "S9046"
+      "r13",
+      "s377"
     ],
     [
-      "OG-WRL-012",
-      "S9042"
+      "r16",
+      "s373"
     ],
     [
-      "OG-WRL-012",
-      "S9043"
+      "r16",
+      "s374"
     ],
     [
-      "OG-WRL-017",
-      "S9044"
+      "r17",
+      "s375"
     ],
     [
-      "OG-WRL-019",
-      "S0423"
+      "r18",
+      "s39"
     ],
     [
-      "OG-WRL-019",
-      "S0451"
+      "r18",
+      "s56"
     ],
     [
-      "OG-WRL-019",
-      "S0459"
+      "r18",
+      "s58"
     ],
     [
-      "OG-WRL-019",
-      "S0667"
+      "r18",
+      "s174"
     ],
     [
-      "OG-WRL-019",
-      "S9016"
+      "r18",
+      "s347"
     ],
     [
-      "OG-WRL-019",
-      "S9042"
+      "r18",
+      "s373"
     ],
     [
-      "OG-WRL-019",
-      "S9043"
+      "r18",
+      "s374"
     ],
     [
-      "OG-WRL-019",
-      "S9045"
+      "r18",
+      "s376"
     ],
     [
-      "OG-WRL-019",
-      "S9044"
+      "r18",
+      "s375"
     ],
     [
-      "OG-WRL-020",
-      "S9035"
+      "r19",
+      "s366"
     ],
     [
-      "OG-WRL-020",
-      "S9046"
+      "r19",
+      "s377"
     ],
     [
-      "PD-WRL-001",
-      "S0519"
+      "r20",
+      "s82"
     ],
     [
-      "PD-WRL-001",
-      "S9001"
+      "r20",
+      "s332"
     ],
     [
-      "PD-WRL-001",
-      "S9002"
+      "r20",
+      "s333"
     ],
     [
-      "PD-WRL-001",
-      "S9004"
+      "r20",
+      "s335"
     ],
     [
-      "PD-WRL-001",
-      "S9005"
+      "r20",
+      "s336"
     ],
     [
-      "PD-WRL-001",
-      "S9010"
+      "r20",
+      "s341"
     ],
     [
-      "PD-WRL-001",
-      "S9021"
+      "r20",
+      "s352"
     ],
     [
-      "PD-WRL-001",
-      "S9022"
+      "r20",
+      "s353"
     ],
     [
-      "PD-WRL-001",
-      "S9023"
+      "r20",
+      "s354"
     ],
     [
-      "PD-WRL-001",
-      "S9024"
+      "r20",
+      "s355"
     ],
     [
-      "PD-WRL-001",
-      "S9028"
+      "r20",
+      "s359"
     ],
     [
-      "PD-WRL-001",
-      "S9029"
+      "r20",
+      "s360"
     ],
     [
-      "PD-WRL-003",
-      "S0519"
+      "r22",
+      "s82"
     ],
     [
-      "PD-WRL-003",
-      "S9021"
+      "r22",
+      "s352"
     ],
     [
-      "PD-WRL-003",
-      "S9022"
+      "r22",
+      "s353"
     ],
     [
-      "PD-WRL-003",
-      "S9023"
+      "r22",
+      "s354"
     ],
     [
-      "PD-WRL-003",
-      "S9028"
+      "r22",
+      "s359"
     ],
     [
-      "DD-WRL-004",
-      "S9001"
+      "r2",
+      "s332"
     ],
     [
-      "DD-WRL-004",
-      "S9002"
+      "r2",
+      "s333"
     ],
     [
-      "DD-WRL-004",
-      "S9006"
+      "r2",
+      "s337"
     ],
     [
-      "DD-WRL-004",
-      "S9029"
+      "r2",
+      "s360"
     ],
     [
-      "PD-WRL-006",
-      "S0518"
+      "r24",
+      "s81"
     ],
     [
-      "PD-WRL-006",
-      "S0695"
+      "r24",
+      "s186"
     ],
     [
-      "PD-WRL-006",
-      "S9025"
+      "r24",
+      "s356"
     ],
     [
-      "PD-WRL-006",
-      "S9027"
+      "r24",
+      "s358"
     ],
     [
-      "PD-WRL-008",
-      "S0516"
+      "r26",
+      "s80"
     ],
     [
-      "PD-WRL-008",
-      "S0543"
+      "r26",
+      "s88"
     ],
     [
-      "PD-WRL-008",
-      "S0591"
+      "r26",
+      "s122"
     ],
     [
-      "PD-WRL-008",
-      "S0737"
+      "r26",
+      "s203"
     ],
     [
-      "PD-WRL-008",
-      "S0754"
+      "r26",
+      "s209"
     ],
     [
-      "PD-WRL-008",
-      "S0925"
+      "r26",
+      "s289"
     ],
     [
-      "PD-WRL-008",
-      "S9004"
+      "r26",
+      "s335"
     ],
     [
-      "PD-WRL-008",
-      "S9007"
+      "r26",
+      "s338"
     ],
     [
-      "PD-WRL-008",
-      "S9008"
+      "r26",
+      "s339"
     ],
     [
-      "PD-WRL-008",
-      "S9009"
+      "r26",
+      "s340"
     ],
     [
-      "PD-WRL-008",
-      "S9027"
+      "r26",
+      "s358"
     ],
     [
-      "PD-WRL-008",
-      "S9031"
+      "r26",
+      "s362"
     ],
     [
-      "PD-WRL-008",
-      "S9032"
+      "r26",
+      "s363"
     ],
     [
-      "PD-WRL-008",
-      "S9033"
+      "r26",
+      "s364"
     ],
     [
-      "PD-WRL-008",
-      "S9034"
+      "r26",
+      "s365"
     ],
     [
-      "PD-WRL-008",
-      "S9035"
+      "r26",
+      "s366"
     ],
     [
-      "PD-WRL-008",
-      "S9036"
+      "r26",
+      "s367"
     ],
     [
-      "PD-WRL-008",
-      "S9047"
+      "r26",
+      "s378"
     ],
     [
-      "PD-WRL-008",
-      "S9048"
+      "r26",
+      "s379"
     ],
     [
-      "PD-WRL-009",
-      "S0566"
+      "r27",
+      "s106"
     ],
     [
-      "PD-WRL-009",
-      "S0599"
+      "r27",
+      "s128"
     ],
     [
-      "PD-WRL-009",
-      "S0621"
+      "r27",
+      "s146"
     ],
     [
-      "PD-WRL-009",
-      "S0625"
+      "r27",
+      "s149"
     ],
     [
-      "PD-WRL-009",
-      "S0857"
+      "r27",
+      "s254"
     ],
     [
-      "PD-WRL-009",
-      "S9007"
+      "r27",
+      "s338"
     ],
     [
-      "PD-WRL-009",
-      "S9030"
+      "r27",
+      "s361"
     ],
     [
-      "PD-WRL-010",
-      "S9007"
+      "r28",
+      "s338"
     ],
     [
-      "PD-WRL-010",
-      "S9010"
+      "r28",
+      "s341"
     ],
     [
-      "PD-WRL-010",
-      "S9021"
+      "r28",
+      "s352"
     ],
     [
-      "PD-WRL-010",
-      "S9024"
+      "r28",
+      "s355"
     ],
     [
-      "PD-WRL-010",
-      "S9027"
+      "r28",
+      "s358"
     ],
     [
-      "PD-WRL-011",
-      "S9008"
+      "r29",
+      "s339"
     ],
     [
-      "PD-WRL-011",
-      "S9023"
+      "r29",
+      "s354"
     ],
     [
-      "PD-WRL-011",
-      "S9025"
+      "r29",
+      "s356"
     ],
     [
-      "PD-WRL-011",
-      "S9026"
+      "r29",
+      "s357"
     ],
     [
-      "PD-WRL-011",
-      "S9027"
+      "r29",
+      "s358"
     ],
     [
-      "PD-WRL-005",
-      "S0011"
+      "r23",
+      "s1"
     ],
     [
-      "PD-WRL-008",
-      "S0011"
+      "r26",
+      "s1"
     ],
     [
-      "DD-WRL-012",
-      "S0015"
+      "r7",
+      "s2"
     ],
     [
-      "OG-WRL-010",
-      "S0066"
+      "r15",
+      "s3"
     ],
     [
-      "OG-WRL-019",
-      "S0066"
+      "r18",
+      "s3"
     ],
     [
-      "OG-WRL-007",
-      "S0066"
+      "r13",
+      "s3"
     ],
     [
-      "PD-WRL-003",
-      "S0175"
+      "r22",
+      "s8"
     ],
     [
-      "PD-WRL-001",
-      "S0175"
+      "r20",
+      "s8"
     ],
     [
-      "PD-WRL-002",
-      "S0175"
+      "r21",
+      "s8"
     ],
     [
-      "DD-WRL-004",
-      "S0175"
+      "r2",
+      "s8"
     ],
     [
-      "PD-WRL-003",
-      "S0208"
+      "r22",
+      "s10"
     ],
     [
-      "DD-WRL-011",
-      "S0383"
+      "r6",
+      "s14"
     ],
     [
-      "OG-WRL-004",
-      "S0389"
+      "r11",
+      "s16"
     ],
     [
-      "OG-WRL-020",
-      "S0389"
+      "r19",
+      "s16"
     ],
     [
-      "OG-WRL-010",
-      "S0389"
+      "r15",
+      "s16"
     ],
     [
-      "OG-WRL-007",
-      "S0398"
+      "r13",
+      "s24"
     ],
     [
-      "OG-WRL-019",
-      "S0398"
+      "r18",
+      "s24"
     ],
     [
-      "OG-WRL-017",
-      "S0398"
+      "r17",
+      "s24"
     ],
     [
-      "PD-WRL-010",
-      "S0403"
+      "r28",
+      "s26"
     ],
     [
-      "PD-WRL-006",
-      "S0403"
+      "r24",
+      "s26"
     ],
     [
-      "OG-WRL-007",
-      "S0404"
+      "r13",
+      "s27"
     ],
     [
-      "DD-WRL-011",
-      "S0419"
+      "r6",
+      "s36"
     ],
     [
-      "DD-WRL-009",
-      "S0419"
+      "r4",
+      "s36"
     ],
     [
-      "DD-WRL-013",
-      "S0419"
+      "r8",
+      "s36"
     ],
     [
-      "DD-WRL-012",
-      "S0419"
+      "r7",
+      "s36"
     ],
     [
-      "DD-WRL-004",
-      "S0420"
+      "r2",
+      "s37"
     ],
     [
-      "DD-WRL-009",
-      "S0420"
+      "r4",
+      "s37"
     ],
     [
-      "DD-WRL-013",
-      "S0420"
+      "r8",
+      "s37"
     ],
     [
-      "DD-WRL-011",
-      "S0420"
+      "r6",
+      "s37"
     ],
     [
-      "PD-WRL-001",
-      "S0424"
+      "r20",
+      "s40"
     ],
     [
-      "PD-WRL-003",
-      "S0424"
+      "r22",
+      "s40"
     ],
     [
-      "PD-WRL-002",
-      "S0424"
+      "r21",
+      "s40"
     ],
     [
-      "PD-WRL-008",
-      "S0424"
+      "r26",
+      "s40"
     ],
     [
-      "PD-WRL-011",
-      "S0424"
+      "r29",
+      "s40"
     ],
     [
-      "PD-WRL-009",
-      "S0424"
+      "r27",
+      "s40"
     ],
     [
-      "DD-WRL-004",
-      "S0424"
+      "r2",
+      "s40"
     ],
     [
-      "PD-WRL-007",
-      "S0424"
+      "r25",
+      "s40"
     ],
     [
-      "DD-WRL-013",
-      "S0424"
+      "r8",
+      "s40"
     ],
     [
-      "DD-WRL-011",
-      "S0424"
+      "r6",
+      "s40"
     ],
     [
-      "DD-WRL-011",
-      "S0428"
+      "r6",
+      "s41"
     ],
     [
-      "DD-WRL-009",
-      "S0428"
+      "r4",
+      "s41"
     ],
     [
-      "DD-WRL-012",
-      "S0428"
+      "r7",
+      "s41"
     ],
     [
-      "OG-WRL-019",
-      "S0429"
+      "r18",
+      "s42"
     ],
     [
-      "OG-WRL-010",
-      "S0429"
+      "r15",
+      "s42"
     ],
     [
-      "PD-WRL-003",
-      "S0438"
+      "r22",
+      "s49"
     ],
     [
-      "PD-WRL-001",
-      "S0438"
+      "r20",
+      "s49"
     ],
     [
-      "OG-WRL-007",
-      "S0438"
+      "r13",
+      "s49"
     ],
     [
-      "PD-WRL-002",
-      "S0438"
+      "r21",
+      "s49"
     ],
     [
-      "PD-WRL-008",
-      "S0497"
+      "r26",
+      "s76"
     ],
     [
-      "OG-WRL-010",
-      "S0511"
+      "r15",
+      "s79"
     ],
     [
-      "PD-WRL-001",
-      "S0511"
+      "r20",
+      "s79"
     ],
     [
-      "PD-WRL-003",
-      "S0511"
+      "r22",
+      "s79"
     ],
     [
-      "PD-WRL-007",
-      "S0511"
+      "r25",
+      "s79"
     ],
     [
-      "OG-WRL-019",
-      "S0511"
+      "r18",
+      "s79"
     ],
     [
-      "DD-WRL-004",
-      "S0523"
+      "r2",
+      "s83"
     ],
     [
-      "DD-WRL-009",
-      "S0523"
+      "r4",
+      "s83"
     ],
     [
-      "DD-WRL-004",
-      "S0537"
+      "r2",
+      "s85"
     ],
     [
-      "DD-WRL-009",
-      "S0537"
+      "r4",
+      "s85"
     ],
     [
-      "DD-WRL-004",
-      "S0554"
+      "r2",
+      "s96"
     ],
     [
-      "DD-WRL-009",
-      "S0554"
+      "r4",
+      "s96"
     ],
     [
-      "OG-WRL-007",
-      "S0555"
+      "r13",
+      "s97"
     ],
     [
-      "DD-WRL-001",
-      "S0556"
+      "r1",
+      "s98"
     ],
     [
-      "DD-WRL-004",
-      "S0556"
+      "r2",
+      "s98"
     ],
     [
-      "DD-WRL-012",
-      "S0556"
+      "r7",
+      "s98"
     ],
     [
-      "DD-WRL-008",
-      "S0558"
+      "r3",
+      "s99"
     ],
     [
-      "DD-WRL-010",
-      "S0558"
+      "r5",
+      "s99"
     ],
     [
-      "PD-WRL-010",
-      "S0558"
+      "r28",
+      "s99"
     ],
     [
-      "DD-WRL-010",
-      "S0559"
+      "r5",
+      "s100"
     ],
     [
-      "PD-WRL-009",
-      "S0560"
+      "r27",
+      "s101"
     ],
     [
-      "DD-WRL-008",
-      "S0560"
+      "r3",
+      "s101"
     ],
     [
-      "DD-WRL-010",
-      "S0562"
+      "r5",
+      "s102"
     ],
     [
-      "DD-WRL-010",
-      "S0563"
+      "r5",
+      "s103"
     ],
     [
-      "PD-WRL-010",
-      "S0563"
+      "r28",
+      "s103"
     ],
     [
-      "IO-WRL-009",
-      "S0577"
+      "r10",
+      "s112"
     ],
     [
-      "DD-WRL-009",
-      "S0577"
+      "r4",
+      "s112"
     ],
     [
-      "PD-WRL-001",
-      "S0577"
+      "r20",
+      "s112"
     ],
     [
-      "DD-WRL-004",
-      "S0580"
+      "r2",
+      "s115"
     ],
     [
-      "PD-WRL-001",
-      "S0580"
+      "r20",
+      "s115"
     ],
     [
-      "DD-WRL-009",
-      "S0584"
+      "r4",
+      "s117"
     ],
     [
-      "IO-WRL-009",
-      "S0584"
+      "r10",
+      "s117"
     ],
     [
-      "DD-WRL-004",
-      "S0587"
+      "r2",
+      "s118"
     ],
     [
-      "PD-WRL-001",
-      "S0587"
+      "r20",
+      "s118"
     ],
     [
-      "PD-WRL-008",
-      "S0587"
+      "r26",
+      "s118"
     ],
     [
-      "PD-WRL-010",
-      "S0590"
+      "r28",
+      "s121"
     ],
     [
-      "PD-WRL-001",
-      "S0590"
+      "r20",
+      "s121"
     ],
     [
-      "DD-WRL-012",
-      "S0598"
+      "r7",
+      "s127"
     ],
     [
-      "PD-WRL-008",
-      "S0598"
+      "r26",
+      "s127"
     ],
     [
-      "OG-WRL-012",
-      "S0598"
+      "r16",
+      "s127"
     ],
     [
-      "PD-WRL-009",
-      "S0606"
+      "r27",
+      "s133"
     ],
     [
-      "PD-WRL-003",
-      "S0606"
+      "r22",
+      "s133"
     ],
     [
-      "PD-WRL-008",
-      "S0606"
+      "r26",
+      "s133"
     ],
     [
-      "PD-WRL-011",
-      "S0606"
+      "r29",
+      "s133"
     ],
     [
-      "DD-WRL-008",
-      "S0606"
+      "r3",
+      "s133"
     ],
     [
-      "PD-WRL-002",
-      "S0626"
+      "r21",
+      "s150"
     ],
     [
-      "PD-WRL-003",
-      "S0626"
+      "r22",
+      "s150"
     ],
     [
-      "PD-WRL-001",
-      "S0626"
+      "r20",
+      "s150"
     ],
     [
-      "DD-WRL-012",
-      "S0632"
+      "r7",
+      "s153"
     ],
     [
-      "DD-WRL-010",
-      "S0640"
+      "r5",
+      "s156"
     ],
     [
-      "DD-WRL-004",
-      "S0660"
+      "r2",
+      "s171"
     ],
     [
-      "DD-WRL-001",
-      "S0660"
+      "r1",
+      "s171"
     ],
     [
-      "DD-WRL-009",
-      "S0660"
+      "r4",
+      "s171"
     ],
     [
-      "OG-WRL-010",
-      "S0668"
+      "r15",
+      "s175"
     ],
     [
-      "DD-WRL-013",
-      "S0668"
+      "r8",
+      "s175"
     ],
     [
-      "DD-WRL-004",
-      "S0677"
+      "r2",
+      "s179"
     ],
     [
-      "DD-WRL-009",
-      "S0677"
+      "r4",
+      "s179"
     ],
     [
-      "DD-WRL-004",
-      "S0678"
+      "r2",
+      "s180"
     ],
     [
-      "PD-WRL-003",
-      "S0678"
+      "r22",
+      "s180"
     ],
     [
-      "PD-WRL-008",
-      "S0678"
+      "r26",
+      "s180"
     ],
     [
-      "DD-WRL-011",
-      "S0678"
+      "r6",
+      "s180"
     ],
     [
-      "DD-WRL-001",
-      "S0681"
+      "r1",
+      "s181"
     ],
     [
-      "DD-WRL-012",
-      "S0681"
+      "r7",
+      "s181"
     ],
     [
-      "DD-WRL-004",
-      "S0682"
+      "r2",
+      "s182"
     ],
     [
-      "PD-WRL-003",
-      "S0682"
+      "r22",
+      "s182"
     ],
     [
-      "IO-WRL-009",
-      "S0682"
+      "r10",
+      "s182"
     ],
     [
-      "PD-WRL-010",
-      "S0709"
+      "r28",
+      "s189"
     ],
     [
-      "PD-WRL-011",
-      "S0709"
+      "r29",
+      "s189"
     ],
     [
-      "PD-WRL-005",
-      "S0709"
+      "r23",
+      "s189"
     ],
     [
-      "PD-WRL-003",
-      "S0722"
+      "r22",
+      "s193"
     ],
     [
-      "PD-WRL-008",
-      "S0722"
+      "r26",
+      "s193"
     ],
     [
-      "PD-WRL-008",
-      "S0724"
+      "r26",
+      "s195"
     ],
     [
-      "OG-WRL-012",
-      "S0724"
+      "r16",
+      "s195"
     ],
     [
-      "OG-WRL-010",
-      "S0724"
+      "r15",
+      "s195"
     ],
     [
-      "PD-WRL-006",
-      "S0725"
+      "r24",
+      "s196"
     ],
     [
-      "PD-WRL-011",
-      "S0725"
+      "r29",
+      "s196"
     ],
     [
-      "PD-WRL-001",
-      "S0726"
+      "r20",
+      "s197"
     ],
     [
-      "DD-WRL-001",
-      "S0759"
+      "r1",
+      "s214"
     ],
     [
-      "DD-WRL-012",
-      "S0759"
+      "r7",
+      "s214"
     ],
     [
-      "PD-WRL-003",
-      "S0826"
+      "r22",
+      "s237"
     ],
     [
-      "OG-WRL-010",
-      "S0826"
+      "r15",
+      "s237"
     ],
     [
-      "OG-WRL-008",
-      "S0826"
+      "r14",
+      "s237"
     ],
     [
-      "OG-WRL-010",
-      "S0830"
+      "r15",
+      "s239"
     ],
     [
-      "DD-WRL-009",
-      "S0831"
+      "r4",
+      "s240"
     ],
     [
-      "IO-WRL-009",
-      "S0831"
+      "r10",
+      "s240"
     ],
     [
-      "PD-WRL-001",
-      "S0845"
+      "r20",
+      "s247"
     ],
     [
-      "PD-WRL-007",
-      "S0845"
+      "r25",
+      "s247"
     ],
     [
-      "DD-WRL-009",
-      "S0845"
+      "r4",
+      "s247"
     ],
     [
-      "OG-WRL-019",
-      "S0877"
+      "r18",
+      "s266"
     ],
     [
-      "DD-WRL-004",
-      "S0891"
+      "r2",
+      "s270"
     ],
     [
-      "OG-WRL-010",
-      "S0891"
+      "r15",
+      "s270"
     ],
     [
-      "PD-WRL-006",
-      "S0892"
+      "r24",
+      "s271"
     ],
     [
-      "PD-WRL-010",
-      "S0892"
+      "r28",
+      "s271"
     ],
     [
-      "DD-WRL-009",
-      "S0898"
+      "r4",
+      "s273"
     ],
     [
-      "DD-WRL-012",
-      "S0899"
+      "r7",
+      "s274"
     ],
     [
-      "PD-WRL-006",
-      "S0905"
+      "r24",
+      "s276"
     ],
     [
-      "OG-WRL-020",
-      "S0905"
+      "r19",
+      "s276"
     ],
     [
-      "PD-WRL-003",
-      "S0942"
+      "r22",
+      "s302"
     ],
     [
-      "PD-WRL-010",
-      "S0955"
+      "r28",
+      "s313"
     ],
     [
-      "PD-WRL-003",
-      "S9001"
+      "r22",
+      "s332"
     ],
     [
-      "PD-WRL-002",
-      "S9001"
+      "r21",
+      "s332"
     ],
     [
-      "PD-WRL-008",
-      "S9001"
+      "r26",
+      "s332"
     ],
     [
-      "PD-WRL-011",
-      "S9001"
+      "r29",
+      "s332"
     ],
     [
-      "PD-WRL-009",
-      "S9001"
+      "r27",
+      "s332"
     ],
     [
-      "DD-WRL-011",
-      "S9001"
+      "r6",
+      "s332"
     ],
     [
-      "DD-WRL-013",
-      "S9001"
+      "r8",
+      "s332"
     ],
     [
-      "PD-WRL-007",
-      "S9001"
+      "r25",
+      "s332"
     ],
     [
-      "PD-WRL-010",
-      "S9001"
+      "r28",
+      "s332"
     ],
     [
-      "IO-WRL-009",
-      "S9001"
+      "r10",
+      "s332"
     ],
     [
-      "PD-WRL-003",
-      "S9002"
+      "r22",
+      "s333"
     ],
     [
-      "PD-WRL-002",
-      "S9002"
+      "r21",
+      "s333"
     ],
     [
-      "PD-WRL-008",
-      "S9002"
+      "r26",
+      "s333"
     ],
     [
-      "PD-WRL-011",
-      "S9002"
+      "r29",
+      "s333"
     ],
     [
-      "PD-WRL-009",
-      "S9002"
+      "r27",
+      "s333"
     ],
     [
-      "IO-WRL-008",
-      "S9002"
+      "r9",
+      "s333"
     ],
     [
-      "PD-WRL-007",
-      "S9002"
+      "r25",
+      "s333"
     ],
     [
-      "PD-WRL-010",
-      "S9002"
+      "r28",
+      "s333"
     ],
     [
-      "IO-WRL-009",
-      "S9002"
+      "r10",
+      "s333"
     ],
     [
-      "PD-WRL-001",
-      "S9003"
+      "r20",
+      "s334"
     ],
     [
-      "PD-WRL-003",
-      "S9003"
+      "r22",
+      "s334"
     ],
     [
-      "PD-WRL-002",
-      "S9003"
+      "r21",
+      "s334"
     ],
     [
-      "PD-WRL-008",
-      "S9003"
+      "r26",
+      "s334"
     ],
     [
-      "PD-WRL-011",
-      "S9003"
+      "r29",
+      "s334"
     ],
     [
-      "PD-WRL-010",
-      "S9003"
+      "r28",
+      "s334"
     ],
     [
-      "PD-WRL-007",
-      "S9003"
+      "r25",
+      "s334"
     ],
     [
-      "DD-WRL-004",
-      "S9003"
+      "r2",
+      "s334"
     ],
     [
-      "PD-WRL-003",
-      "S9004"
+      "r22",
+      "s335"
     ],
     [
-      "PD-WRL-002",
-      "S9004"
+      "r21",
+      "s335"
     ],
     [
-      "PD-WRL-011",
-      "S9004"
+      "r29",
+      "s335"
     ],
     [
-      "PD-WRL-009",
-      "S9004"
+      "r27",
+      "s335"
     ],
     [
-      "PD-WRL-007",
-      "S9004"
+      "r25",
+      "s335"
     ],
     [
-      "PD-WRL-010",
-      "S9004"
+      "r28",
+      "s335"
     ],
     [
-      "DD-WRL-004",
-      "S9004"
+      "r2",
+      "s335"
     ],
     [
-      "DD-WRL-001",
-      "S9004"
+      "r1",
+      "s335"
     ],
     [
-      "DD-WRL-009",
-      "S9004"
+      "r4",
+      "s335"
     ],
     [
-      "IO-WRL-009",
-      "S9004"
+      "r10",
+      "s335"
     ],
     [
-      "PD-WRL-003",
-      "S9005"
+      "r22",
+      "s336"
     ],
     [
-      "PD-WRL-008",
-      "S9005"
+      "r26",
+      "s336"
     ],
     [
-      "PD-WRL-011",
-      "S9005"
+      "r29",
+      "s336"
     ],
     [
-      "PD-WRL-009",
-      "S9005"
+      "r27",
+      "s336"
     ],
     [
-      "PD-WRL-010",
-      "S9005"
+      "r28",
+      "s336"
     ],
     [
-      "DD-WRL-004",
-      "S9005"
+      "r2",
+      "s336"
     ],
     [
-      "PD-WRL-001",
-      "S9008"
+      "r20",
+      "s339"
     ],
     [
-      "PD-WRL-003",
-      "S9008"
+      "r22",
+      "s339"
     ],
     [
-      "PD-WRL-002",
-      "S9008"
+      "r21",
+      "s339"
     ],
     [
-      "PD-WRL-010",
-      "S9008"
+      "r28",
+      "s339"
     ],
     [
-      "DD-WRL-004",
-      "S9008"
+      "r2",
+      "s339"
     ],
     [
-      "PD-WRL-001",
-      "S9009"
+      "r20",
+      "s340"
     ],
     [
-      "PD-WRL-003",
-      "S9009"
+      "r22",
+      "s340"
     ],
     [
-      "DD-WRL-004",
-      "S9009"
+      "r2",
+      "s340"
     ],
     [
-      "DD-WRL-013",
-      "S9009"
+      "r8",
+      "s340"
     ],
     [
-      "PD-WRL-011",
-      "S9009"
+      "r29",
+      "s340"
     ],
     [
-      "DD-WRL-011",
-      "S9009"
+      "r6",
+      "s340"
     ],
     [
-      "PD-WRL-003",
-      "S9010"
+      "r22",
+      "s341"
     ],
     [
-      "PD-WRL-011",
-      "S9010"
+      "r29",
+      "s341"
     ],
     [
-      "PD-WRL-002",
-      "S9010"
+      "r21",
+      "s341"
     ],
     [
-      "PD-WRL-009",
-      "S9010"
+      "r27",
+      "s341"
     ],
     [
-      "DD-WRL-011",
-      "S9011"
+      "r6",
+      "s342"
     ],
     [
-      "PD-WRL-010",
-      "S9011"
+      "r28",
+      "s342"
     ],
     [
-      "DD-WRL-004",
-      "S9011"
+      "r2",
+      "s342"
     ],
     [
-      "PD-WRL-001",
-      "S0080"
+      "r20",
+      "s4"
     ],
     [
-      "PD-WRL-005",
-      "S0194"
+      "r23",
+      "s9"
     ],
     [
-      "PD-WRL-009",
-      "S0378"
+      "r27",
+      "s11"
     ],
     [
-      "PD-WRL-003",
-      "S0378"
+      "r22",
+      "s11"
     ],
     [
-      "PD-WRL-005",
-      "S0434"
+      "r23",
+      "s46"
     ],
     [
-      "PD-WRL-011",
-      "S0434"
+      "r29",
+      "s46"
     ],
     [
-      "PD-WRL-005",
-      "S0435"
+      "r23",
+      "s47"
     ],
     [
-      "PD-WRL-011",
-      "S0435"
+      "r29",
+      "s47"
     ],
     [
-      "PD-WRL-010",
-      "S0435"
+      "r28",
+      "s47"
     ],
     [
-      "PD-WRL-001",
-      "S0436"
+      "r20",
+      "s48"
     ],
     [
-      "PD-WRL-011",
-      "S0436"
+      "r29",
+      "s48"
     ],
     [
-      "PD-WRL-003",
-      "S0436"
+      "r22",
+      "s48"
     ],
     [
-      "PD-WRL-005",
-      "S0443"
+      "r23",
+      "s51"
     ],
     [
-      "PD-WRL-005",
-      "S0444"
+      "r23",
+      "s52"
     ],
     [
-      "DD-WRL-004",
-      "S0451"
+      "r2",
+      "s56"
     ],
     [
-      "DD-WRL-011",
-      "S0451"
+      "r6",
+      "s56"
     ],
     [
-      "PD-WRL-010",
-      "S0451"
+      "r28",
+      "s56"
     ],
     [
-      "PD-WRL-005",
-      "S0469"
+      "r23",
+      "s66"
     ],
     [
-      "PD-WRL-003",
-      "S0471"
+      "r22",
+      "s67"
     ],
     [
-      "PD-WRL-005",
-      "S0471"
+      "r23",
+      "s67"
     ],
     [
-      "PD-WRL-009",
-      "S0476"
+      "r27",
+      "s69"
     ],
     [
-      "PD-WRL-001",
-      "S0476"
+      "r20",
+      "s69"
     ],
     [
-      "PD-WRL-002",
-      "S0481"
+      "r21",
+      "s72"
     ],
     [
-      "PD-WRL-006",
-      "S0481"
+      "r24",
+      "s72"
     ],
     [
-      "PD-WRL-006",
-      "S0492"
+      "r24",
+      "s75"
     ],
     [
-      "OG-WRL-007",
-      "S0492"
+      "r13",
+      "s75"
     ],
     [
-      "PD-WRL-001",
-      "S0505"
+      "r20",
+      "s77"
     ],
     [
-      "PD-WRL-003",
-      "S0505"
+      "r22",
+      "s77"
     ],
     [
-      "PD-WRL-011",
-      "S0505"
+      "r29",
+      "s77"
     ],
     [
-      "PD-WRL-011",
-      "S0518"
+      "r29",
+      "s81"
     ],
     [
-      "PD-WRL-003",
-      "S0518"
+      "r22",
+      "s81"
     ],
     [
-      "PD-WRL-010",
-      "S0519"
+      "r28",
+      "s82"
     ],
     [
-      "PD-WRL-011",
-      "S0519"
+      "r29",
+      "s82"
     ],
     [
-      "PD-WRL-001",
-      "S0547"
+      "r20",
+      "s90"
     ],
     [
-      "PD-WRL-002",
-      "S0547"
+      "r21",
+      "s90"
     ],
     [
-      "PD-WRL-002",
-      "S0548"
+      "r21",
+      "s91"
     ],
     [
-      "PD-WRL-001",
-      "S0549"
+      "r20",
+      "s92"
     ],
     [
-      "PD-WRL-001",
-      "S0550"
+      "r20",
+      "s93"
     ],
     [
-      "PD-WRL-006",
-      "S0550"
+      "r24",
+      "s93"
     ],
     [
-      "PD-WRL-002",
-      "S0550"
+      "r21",
+      "s93"
     ],
     [
-      "PD-WRL-005",
-      "S0589"
+      "r23",
+      "s120"
     ],
     [
-      "PD-WRL-003",
-      "S0603"
+      "r22",
+      "s131"
     ],
     [
-      "PD-WRL-003",
-      "S0604"
+      "r22",
+      "s132"
     ],
     [
-      "PD-WRL-005",
-      "S0607"
+      "r23",
+      "s134"
     ],
     [
-      "PD-WRL-005",
-      "S0608"
+      "r23",
+      "s135"
     ],
     [
-      "PD-WRL-005",
-      "S0609"
+      "r23",
+      "s136"
     ],
     [
-      "PD-WRL-010",
-      "S0617"
+      "r28",
+      "s143"
     ],
     [
-      "PD-WRL-009",
-      "S0617"
+      "r27",
+      "s143"
     ],
     [
-      "DD-WRL-008",
-      "S0621"
+      "r3",
+      "s146"
     ],
     [
-      "PD-WRL-009",
-      "S0622"
+      "r27",
+      "s147"
     ],
     [
-      "PD-WRL-003",
-      "S0622"
+      "r22",
+      "s147"
     ],
     [
-      "PD-WRL-003",
-      "S0624"
+      "r22",
+      "s148"
     ],
     [
-      "PD-WRL-009",
-      "S0624"
+      "r27",
+      "s148"
     ],
     [
-      "DD-WRL-008",
-      "S0625"
+      "r3",
+      "s149"
     ],
     [
-      "PD-WRL-011",
-      "S0642"
+      "r29",
+      "s157"
     ],
     [
-      "PD-WRL-003",
-      "S0642"
+      "r22",
+      "s157"
     ],
     [
-      "PD-WRL-011",
-      "S0648"
+      "r29",
+      "s161"
     ],
     [
-      "PD-WRL-010",
-      "S0648"
+      "r28",
+      "s161"
     ],
     [
-      "PD-WRL-009",
-      "S0652"
+      "r27",
+      "s164"
     ],
     [
-      "PD-WRL-003",
-      "S0653"
+      "r22",
+      "s165"
     ],
     [
-      "PD-WRL-005",
-      "S0653"
+      "r23",
+      "s165"
     ],
     [
-      "PD-WRL-005",
-      "S0695"
+      "r23",
+      "s186"
     ],
     [
-      "PD-WRL-008",
-      "S0695"
+      "r26",
+      "s186"
     ],
     [
-      "PD-WRL-001",
-      "S0718"
+      "r20",
+      "s191"
     ],
     [
-      "PD-WRL-011",
-      "S0718"
+      "r29",
+      "s191"
     ],
     [
-      "PD-WRL-005",
-      "S0718"
+      "r23",
+      "s191"
     ],
     [
-      "PD-WRL-005",
-      "S0727"
+      "r23",
+      "s198"
     ],
     [
-      "PD-WRL-011",
-      "S0727"
+      "r29",
+      "s198"
     ],
     [
-      "PD-WRL-001",
-      "S0731"
+      "r20",
+      "s200"
     ],
     [
-      "OG-WRL-007",
-      "S0731"
+      "r13",
+      "s200"
     ],
     [
-      "PD-WRL-003",
-      "S0732"
+      "r22",
+      "s201"
     ],
     [
-      "PD-WRL-011",
-      "S0732"
+      "r29",
+      "s201"
     ],
     [
-      "PD-WRL-010",
-      "S0732"
+      "r28",
+      "s201"
     ],
     [
-      "DD-WRL-008",
-      "S0738"
+      "r3",
+      "s204"
     ],
     [
-      "PD-WRL-006",
-      "S0739"
+      "r24",
+      "s205"
     ],
     [
-      "PD-WRL-011",
-      "S0739"
+      "r29",
+      "s205"
     ],
     [
-      "PD-WRL-001",
-      "S0739"
+      "r20",
+      "s205"
     ],
     [
-      "PD-WRL-011",
-      "S0743"
+      "r29",
+      "s206"
     ],
     [
-      "PD-WRL-010",
-      "S0743"
+      "r28",
+      "s206"
     ],
     [
-      "PD-WRL-003",
-      "S0743"
+      "r22",
+      "s206"
     ],
     [
-      "PD-WRL-003",
-      "S0755"
+      "r22",
+      "s210"
     ],
     [
-      "PD-WRL-002",
-      "S0755"
+      "r21",
+      "s210"
     ],
     [
-      "PD-WRL-002",
-      "S0757"
+      "r21",
+      "s212"
     ],
     [
-      "PD-WRL-003",
-      "S0757"
+      "r22",
+      "s212"
     ],
     [
-      "DD-WRL-004",
-      "S0757"
+      "r2",
+      "s212"
     ],
     [
-      "PD-WRL-011",
-      "S0799"
+      "r29",
+      "s221"
     ],
     [
-      "PD-WRL-001",
-      "S0805"
+      "r20",
+      "s224"
     ],
     [
-      "OG-WRL-007",
-      "S0805"
+      "r13",
+      "s224"
     ],
     [
-      "OG-WRL-019",
-      "S0805"
+      "r18",
+      "s224"
     ],
     [
-      "PD-WRL-003",
-      "S0809"
+      "r22",
+      "s228"
     ],
     [
-      "OG-WRL-017",
-      "S0809"
+      "r17",
+      "s228"
     ],
     [
-      "PD-WRL-006",
-      "S0810"
+      "r24",
+      "s229"
     ],
     [
-      "PD-WRL-001",
-      "S0810"
+      "r20",
+      "s229"
     ],
     [
-      "PD-WRL-001",
-      "S0833"
+      "r20",
+      "s241"
     ],
     [
-      "PD-WRL-011",
-      "S0833"
+      "r29",
+      "s241"
     ],
     [
-      "PD-WRL-003",
-      "S0839"
+      "r22",
+      "s243"
     ],
     [
-      "PD-WRL-007",
-      "S0839"
+      "r25",
+      "s243"
     ],
     [
-      "PD-WRL-005",
-      "S0840"
+      "r23",
+      "s244"
     ],
     [
-      "PD-WRL-010",
-      "S0840"
+      "r28",
+      "s244"
     ],
     [
-      "PD-WRL-005",
-      "S0841"
+      "r23",
+      "s245"
     ],
     [
-      "PD-WRL-005",
-      "S0846"
+      "r23",
+      "s248"
     ],
     [
-      "PD-WRL-003",
-      "S0846"
+      "r22",
+      "s248"
     ],
     [
-      "PD-WRL-011",
-      "S0846"
+      "r29",
+      "s248"
     ],
     [
-      "PD-WRL-001",
-      "S0852"
+      "r20",
+      "s251"
     ],
     [
-      "PD-WRL-010",
-      "S0859"
+      "r28",
+      "s256"
     ],
     [
-      "PD-WRL-011",
-      "S0859"
+      "r29",
+      "s256"
     ],
     [
-      "PD-WRL-003",
-      "S0859"
+      "r22",
+      "s256"
     ],
     [
-      "PD-WRL-003",
-      "S0860"
+      "r22",
+      "s257"
     ],
     [
-      "PD-WRL-009",
-      "S0860"
+      "r27",
+      "s257"
     ],
     [
-      "PD-WRL-003",
-      "S0863"
+      "r22",
+      "s259"
     ],
     [
-      "PD-WRL-002",
-      "S0863"
+      "r21",
+      "s259"
     ],
     [
-      "PD-WRL-003",
-      "S0867"
+      "r22",
+      "s261"
     ],
     [
-      "PD-WRL-011",
-      "S0867"
+      "r29",
+      "s261"
     ],
     [
-      "PD-WRL-009",
-      "S0867"
+      "r27",
+      "s261"
     ],
     [
-      "PD-WRL-002",
-      "S0869"
+      "r21",
+      "s262"
     ],
     [
-      "PD-WRL-005",
-      "S0869"
+      "r23",
+      "s262"
     ],
     [
-      "PD-WRL-011",
-      "S0869"
+      "r29",
+      "s262"
     ],
     [
-      "PD-WRL-011",
-      "S0872"
+      "r29",
+      "s263"
     ],
     [
-      "PD-WRL-003",
-      "S0872"
+      "r22",
+      "s263"
     ],
     [
-      "PD-WRL-010",
-      "S0872"
+      "r28",
+      "s263"
     ],
     [
-      "PD-WRL-005",
-      "S0876"
+      "r23",
+      "s265"
     ],
     [
-      "PD-WRL-003",
-      "S0884"
+      "r22",
+      "s268"
     ],
     [
-      "DD-WRL-008",
-      "S0884"
+      "r3",
+      "s268"
     ],
     [
-      "PD-WRL-011",
-      "S0890"
+      "r29",
+      "s269"
     ],
     [
-      "PD-WRL-001",
-      "S0890"
+      "r20",
+      "s269"
     ],
     [
-      "PD-WRL-006",
-      "S0900"
+      "r24",
+      "s275"
     ],
     [
-      "PD-WRL-011",
-      "S0900"
+      "r29",
+      "s275"
     ],
     [
-      "PD-WRL-001",
-      "S0907"
+      "r20",
+      "s278"
     ],
     [
-      "PD-WRL-006",
-      "S0910"
+      "r24",
+      "s280"
     ],
     [
-      "PD-WRL-011",
-      "S0910"
+      "r29",
+      "s280"
     ],
     [
-      "PD-WRL-006",
-      "S0913"
+      "r24",
+      "s281"
     ],
     [
-      "PD-WRL-002",
-      "S0913"
+      "r21",
+      "s281"
     ],
     [
-      "PD-WRL-006",
-      "S0916"
+      "r24",
+      "s282"
     ],
     [
-      "PD-WRL-011",
-      "S0916"
+      "r29",
+      "s282"
     ],
     [
-      "OG-WRL-007",
-      "S0919"
+      "r13",
+      "s284"
     ],
     [
-      "PD-WRL-003",
-      "S0919"
+      "r22",
+      "s284"
     ],
     [
-      "PD-WRL-010",
-      "S0921"
+      "r28",
+      "s285"
     ],
     [
-      "PD-WRL-003",
-      "S0921"
+      "r22",
+      "s285"
     ],
     [
-      "OG-WRL-007",
-      "S0924"
+      "r13",
+      "s288"
     ],
     [
-      "OG-WRL-010",
-      "S0924"
+      "r15",
+      "s288"
     ],
     [
-      "PD-WRL-010",
-      "S0926"
+      "r28",
+      "s290"
     ],
     [
-      "PD-WRL-011",
-      "S0926"
+      "r29",
+      "s290"
     ],
     [
-      "PD-WRL-003",
-      "S0935"
+      "r22",
+      "s297"
     ],
     [
-      "PD-WRL-003",
-      "S0936"
+      "r22",
+      "s298"
     ],
     [
-      "PD-WRL-003",
-      "S0938"
+      "r22",
+      "s300"
     ],
     [
-      "PD-WRL-011",
-      "S0938"
+      "r29",
+      "s300"
     ],
     [
-      "PD-WRL-006",
-      "S0966"
+      "r24",
+      "s322"
     ],
     [
-      "PD-WRL-010",
-      "S9022"
+      "r28",
+      "s353"
     ],
     [
-      "PD-WRL-005",
-      "S9022"
+      "r23",
+      "s353"
     ],
     [
-      "OG-WRL-020",
-      "S9028"
+      "r19",
+      "s359"
     ],
     [
-      "PD-WRL-009",
-      "S9028"
+      "r27",
+      "s359"
     ],
     [
-      "PD-WRL-006",
-      "S9028"
+      "r24",
+      "s359"
     ],
     [
-      "PD-WRL-003",
-      "S9030"
+      "r22",
+      "s361"
     ],
     [
-      "PD-WRL-001",
-      "S9030"
+      "r20",
+      "s361"
     ],
     [
-      "PD-WRL-002",
-      "S9030"
+      "r21",
+      "s361"
     ],
     [
-      "OG-WRL-007",
-      "S0396"
+      "r13",
+      "s23"
     ],
     [
-      "OG-WRL-019",
-      "S0407"
+      "r18",
+      "s29"
     ],
     [
-      "PD-WRL-003",
-      "S0407"
+      "r22",
+      "s29"
     ],
     [
-      "PD-WRL-001",
-      "S0407"
+      "r20",
+      "s29"
     ],
     [
-      "OG-WRL-007",
-      "S0410"
+      "r13",
+      "s30"
     ],
     [
-      "OG-WRL-007",
-      "S0422"
+      "r13",
+      "s38"
     ],
     [
-      "OG-WRL-007",
-      "S0432"
+      "r13",
+      "s45"
     ],
     [
-      "OG-WRL-010",
-      "S0432"
+      "r15",
+      "s45"
     ],
     [
-      "PD-WRL-003",
-      "S0432"
+      "r22",
+      "s45"
     ],
     [
-      "OG-WRL-019",
-      "S0447"
+      "r18",
+      "s53"
     ],
     [
-      "OG-WRL-019",
-      "S0450"
+      "r18",
+      "s55"
     ],
     [
-      "OG-WRL-007",
-      "S0452"
+      "r13",
+      "s57"
     ],
     [
-      "OG-WRL-010",
-      "S0452"
+      "r15",
+      "s57"
     ],
     [
-      "OG-WRL-017",
-      "S0452"
+      "r17",
+      "s57"
     ],
     [
-      "OG-WRL-012",
-      "S0459"
+      "r16",
+      "s58"
     ],
     [
-      "PD-WRL-007",
-      "S0459"
+      "r25",
+      "s58"
     ],
     [
-      "OG-WRL-019",
-      "S0460"
+      "r18",
+      "s59"
     ],
     [
-      "OG-WRL-019",
-      "S0461"
+      "r18",
+      "s60"
     ],
     [
-      "DD-WRL-001",
-      "S0480"
+      "r1",
+      "s71"
     ],
     [
-      "OG-WRL-019",
-      "S0480"
+      "r18",
+      "s71"
     ],
     [
-      "PD-WRL-003",
-      "S0575"
+      "r22",
+      "s111"
     ],
     [
-      "OG-WRL-007",
-      "S0575"
+      "r13",
+      "s111"
     ],
     [
-      "OG-WRL-019",
-      "S0619"
+      "r18",
+      "s145"
     ],
     [
-      "DD-WRL-011",
-      "S0619"
+      "r6",
+      "s145"
     ],
     [
-      "OG-WRL-007",
-      "S0647"
+      "r13",
+      "s160"
     ],
     [
-      "OG-WRL-019",
-      "S0664"
+      "r18",
+      "s172"
     ],
     [
-      "DD-WRL-001",
-      "S0664"
+      "r1",
+      "s172"
     ],
     [
-      "OG-WRL-010",
-      "S0666"
+      "r15",
+      "s173"
     ],
     [
-      "OG-WRL-010",
-      "S0707"
+      "r15",
+      "s188"
     ],
     [
-      "OG-WRL-019",
-      "S0707"
+      "r18",
+      "s188"
     ],
     [
-      "OG-WRL-012",
-      "S0707"
+      "r16",
+      "s188"
     ],
     [
-      "OG-WRL-010",
-      "S0769"
+      "r15",
+      "s215"
     ],
     [
-      "OG-WRL-019",
-      "S0769"
+      "r18",
+      "s215"
     ],
     [
-      "OG-WRL-010",
-      "S0788"
+      "r15",
+      "s216"
     ],
     [
-      "OG-WRL-007",
-      "S0788"
+      "r13",
+      "s216"
     ],
     [
-      "OG-WRL-019",
-      "S0796"
+      "r18",
+      "s218"
     ],
     [
-      "OG-WRL-010",
-      "S0797"
+      "r15",
+      "s219"
     ],
     [
-      "OG-WRL-017",
-      "S0798"
+      "r17",
+      "s220"
     ],
     [
-      "OG-WRL-019",
-      "S0798"
+      "r18",
+      "s220"
     ],
     [
-      "OG-WRL-017",
-      "S0801"
+      "r17",
+      "s223"
     ],
     [
-      "DD-WRL-011",
-      "S0808"
+      "r6",
+      "s227"
     ],
     [
-      "OG-WRL-019",
-      "S0812"
+      "r18",
+      "s230"
     ],
     [
-      "OG-WRL-017",
-      "S0813"
+      "r17",
+      "s231"
     ],
     [
-      "OG-WRL-019",
-      "S0813"
+      "r18",
+      "s231"
     ],
     [
-      "OG-WRL-017",
-      "S0814"
+      "r17",
+      "s232"
     ],
     [
-      "OG-WRL-008",
-      "S0814"
+      "r14",
+      "s232"
     ],
     [
-      "OG-WRL-007",
-      "S0850"
+      "r13",
+      "s250"
     ],
     [
-      "OG-WRL-019",
-      "S0850"
+      "r18",
+      "s250"
     ],
     [
-      "OG-WRL-007",
-      "S0858"
+      "r13",
+      "s255"
     ],
     [
-      "OG-WRL-019",
-      "S0906"
+      "r18",
+      "s277"
     ],
     [
-      "OG-WRL-019",
-      "S0908"
+      "r18",
+      "s279"
     ],
     [
-      "PD-WRL-007",
-      "S0908"
+      "r25",
+      "s279"
     ],
     [
-      "OG-WRL-019",
-      "S0917"
+      "r18",
+      "s283"
     ],
     [
-      "OG-WRL-007",
-      "S0917"
+      "r13",
+      "s283"
     ],
     [
-      "PD-WRL-003",
-      "S0922"
+      "r22",
+      "s286"
     ],
     [
-      "OG-WRL-007",
-      "S0928"
+      "r13",
+      "s291"
     ],
     [
-      "OG-WRL-019",
-      "S0930"
+      "r18",
+      "s293"
     ],
     [
-      "OG-WRL-007",
-      "S0931"
+      "r13",
+      "s294"
     ],
     [
-      "OG-WRL-017",
-      "S0931"
+      "r17",
+      "s294"
     ],
     [
-      "OG-WRL-017",
-      "S0945"
+      "r17",
+      "s305"
     ],
     [
-      "OG-WRL-019",
-      "S0958"
+      "r18",
+      "s315"
     ],
     [
-      "OG-WRL-010",
-      "S0959"
+      "r15",
+      "s316"
     ],
     [
-      "OG-WRL-007",
-      "S0959"
+      "r13",
+      "s316"
     ],
     [
-      "OG-WRL-019",
-      "S0960"
+      "r18",
+      "s317"
     ],
     [
-      "OG-WRL-007",
-      "S0960"
+      "r13",
+      "s317"
     ],
     [
-      "OG-WRL-019",
-      "S0961"
+      "r18",
+      "s318"
     ],
     [
-      "OG-WRL-019",
-      "S0963"
+      "r18",
+      "s319"
     ],
     [
-      "PD-WRL-006",
-      "S0965"
+      "r24",
+      "s321"
     ],
     [
-      "OG-WRL-007",
-      "S0965"
+      "r13",
+      "s321"
     ],
     [
-      "OG-WRL-008",
-      "S9044"
+      "r14",
+      "s375"
     ],
     [
-      "OG-WRL-012",
-      "S9045"
+      "r16",
+      "s376"
     ],
     [
-      "OG-WRL-010",
-      "S9045"
+      "r15",
+      "s376"
     ],
     [
-      "OG-WRL-007",
-      "S9045"
+      "r13",
+      "s376"
     ],
     [
-      "OG-WRL-010",
-      "S9046"
+      "r15",
+      "s377"
     ],
     [
-      "OG-WRL-019",
-      "S9046"
+      "r18",
+      "s377"
     ],
     [
-      "OG-WRL-007",
-      "S9049"
+      "r13",
+      "s380"
     ],
     [
-      "OG-WRL-017",
-      "S9050"
+      "r17",
+      "s381"
     ],
     [
-      "DD-WRL-004",
-      "S0097"
+      "r2",
+      "s5"
     ],
     [
-      "DD-WRL-001",
-      "S0097"
+      "r1",
+      "s5"
     ],
     [
-      "DD-WRL-011",
-      "S0097"
+      "r6",
+      "s5"
     ],
     [
-      "DD-WRL-009",
-      "S0097"
+      "r4",
+      "s5"
     ],
     [
-      "DD-WRL-011",
-      "S0418"
+      "r6",
+      "s35"
     ],
     [
-      "DD-WRL-009",
-      "S0418"
+      "r4",
+      "s35"
     ],
     [
-      "DD-WRL-004",
-      "S0484"
+      "r2",
+      "s74"
     ],
     [
-      "DD-WRL-012",
-      "S0484"
+      "r7",
+      "s74"
     ],
     [
-      "DD-WRL-011",
-      "S0484"
+      "r6",
+      "s74"
     ],
     [
-      "DD-WRL-009",
-      "S0542"
+      "r4",
+      "s87"
     ],
     [
-      "DD-WRL-011",
-      "S0542"
+      "r6",
+      "s87"
     ],
     [
-      "IO-WRL-008",
-      "S0552"
+      "r9",
+      "s94"
     ],
     [
-      "DD-WRL-009",
-      "S0552"
+      "r4",
+      "s94"
     ],
     [
-      "DD-WRL-009",
-      "S0553"
+      "r4",
+      "s95"
     ],
     [
-      "IO-WRL-008",
-      "S0553"
+      "r9",
+      "s95"
     ],
     [
-      "DD-WRL-004",
-      "S0618"
+      "r2",
+      "s144"
     ],
     [
-      "DD-WRL-009",
-      "S0618"
+      "r4",
+      "s144"
     ],
     [
-      "DD-WRL-011",
-      "S0618"
+      "r6",
+      "s144"
     ],
     [
-      "DD-WRL-011",
-      "S0643"
+      "r6",
+      "s158"
     ],
     [
-      "DD-WRL-009",
-      "S0643"
+      "r4",
+      "s158"
     ],
     [
-      "DD-WRL-013",
-      "S0643"
+      "r8",
+      "s158"
     ],
     [
-      "PD-WRL-007",
-      "S0643"
+      "r25",
+      "s158"
     ],
     [
-      "PD-WRL-001",
-      "S0645"
+      "r20",
+      "s159"
     ],
     [
-      "PD-WRL-010",
-      "S0645"
+      "r28",
+      "s159"
     ],
     [
-      "DD-WRL-013",
-      "S0658"
+      "r8",
+      "s169"
     ],
     [
-      "DD-WRL-004",
-      "S0683"
+      "r2",
+      "s183"
     ],
     [
-      "DD-WRL-009",
-      "S0683"
+      "r4",
+      "s183"
     ],
     [
-      "DD-WRL-004",
-      "S0844"
+      "r2",
+      "s246"
     ],
     [
-      "OG-WRL-012",
-      "S0844"
+      "r16",
+      "s246"
     ],
     [
-      "DD-WRL-011",
-      "S0853"
+      "r6",
+      "s252"
     ],
     [
-      "PD-WRL-003",
-      "S0929"
+      "r22",
+      "s292"
     ],
     [
-      "DD-WRL-004",
-      "S0929"
+      "r2",
+      "s292"
     ],
     [
-      "DD-WRL-009",
-      "S0929"
+      "r4",
+      "s292"
     ],
     [
-      "DD-WRL-004",
-      "S0932"
+      "r2",
+      "s295"
     ],
     [
-      "DD-WRL-009",
-      "S0932"
+      "r4",
+      "s295"
     ],
     [
-      "DD-WRL-001",
-      "S0944"
+      "r1",
+      "s304"
     ],
     [
-      "DD-WRL-001",
-      "S0948"
+      "r1",
+      "s307"
     ],
     [
-      "DD-WRL-004",
-      "S0948"
+      "r2",
+      "s307"
     ],
     [
-      "DD-WRL-004",
-      "S0950"
+      "r2",
+      "s308"
     ],
     [
-      "OG-WRL-012",
-      "S0950"
+      "r16",
+      "s308"
     ],
     [
-      "PD-WRL-007",
-      "S0950"
+      "r25",
+      "s308"
     ],
     [
-      "DD-WRL-011",
-      "S0950"
+      "r6",
+      "s308"
     ],
     [
-      "DD-WRL-004",
-      "S0967"
+      "r2",
+      "s323"
     ],
     [
-      "DD-WRL-012",
-      "S0967"
+      "r7",
+      "s323"
     ],
     [
-      "DD-WRL-011",
-      "S0967"
+      "r6",
+      "s323"
     ],
     [
-      "DD-WRL-012",
-      "S0968"
+      "r7",
+      "s324"
     ],
     [
-      "DD-WRL-008",
-      "S0968"
+      "r3",
+      "s324"
     ],
     [
-      "DD-WRL-008",
-      "S0969"
+      "r3",
+      "s325"
     ],
     [
-      "DD-WRL-012",
-      "S0969"
+      "r7",
+      "s325"
     ],
     [
-      "DD-WRL-004",
-      "S0970"
+      "r2",
+      "s326"
     ],
     [
-      "DD-WRL-011",
-      "S0970"
+      "r6",
+      "s326"
     ],
     [
-      "PD-WRL-001",
-      "S9006"
+      "r20",
+      "s337"
     ],
     [
-      "DD-WRL-011",
-      "S9006"
+      "r6",
+      "s337"
     ],
     [
-      "DD-WRL-009",
-      "S9006"
+      "r4",
+      "s337"
     ],
     [
-      "DD-WRL-001",
-      "S9012"
+      "r1",
+      "s343"
     ],
     [
-      "OG-WRL-012",
-      "S9012"
+      "r16",
+      "s343"
     ],
     [
-      "DD-WRL-012",
-      "S9013"
+      "r7",
+      "s344"
     ],
     [
-      "DD-WRL-004",
-      "S9013"
+      "r2",
+      "s344"
     ],
     [
-      "DD-WRL-013",
-      "S9014"
+      "r8",
+      "s345"
     ],
     [
-      "DD-WRL-004",
-      "S9014"
+      "r2",
+      "s345"
     ],
     [
-      "PD-WRL-001",
-      "S9016"
+      "r20",
+      "s347"
     ],
     [
-      "OG-WRL-012",
-      "S9016"
+      "r16",
+      "s347"
     ],
     [
-      "PD-WRL-007",
-      "S9016"
+      "r25",
+      "s347"
     ],
     [
-      "DD-WRL-004",
-      "S9017"
+      "r2",
+      "s348"
     ],
     [
-      "DD-WRL-012",
-      "S9017"
+      "r7",
+      "s348"
     ],
     [
-      "DD-WRL-001",
-      "S9017"
+      "r1",
+      "s348"
     ],
     [
-      "DD-WRL-004",
-      "S9018"
+      "r2",
+      "s349"
     ],
     [
-      "DD-WRL-001",
-      "S9018"
+      "r1",
+      "s349"
     ],
     [
-      "DD-WRL-004",
-      "S9019"
+      "r2",
+      "s350"
     ],
     [
-      "OG-WRL-012",
-      "S9019"
+      "r16",
+      "s350"
     ],
     [
-      "OG-WRL-012",
-      "S9020"
+      "r16",
+      "s351"
     ],
     [
-      "PD-WRL-003",
-      "S9029"
+      "r22",
+      "s360"
     ],
     [
-      "PD-WRL-010",
-      "S9029"
+      "r28",
+      "s360"
     ],
     [
-      "DD-WRL-012",
-      "S9041"
+      "r7",
+      "s372"
     ],
     [
-      "DD-WRL-004",
-      "S9041"
+      "r2",
+      "s372"
     ],
     [
-      "OG-WRL-004",
-      "S0380"
+      "r11",
+      "s12"
     ],
     [
-      "OG-WRL-004",
-      "S0381"
+      "r11",
+      "s13"
     ],
     [
-      "OG-WRL-020",
-      "S0381"
+      "r19",
+      "s13"
     ],
     [
-      "OG-WRL-004",
-      "S0390"
+      "r11",
+      "s17"
     ],
     [
-      "OG-WRL-004",
-      "S0392"
+      "r11",
+      "s19"
     ],
     [
-      "OG-WRL-020",
-      "S0392"
+      "r19",
+      "s19"
     ],
     [
-      "OG-WRL-004",
-      "S0393"
+      "r11",
+      "s20"
     ],
     [
-      "OG-WRL-020",
-      "S0468"
+      "r19",
+      "s65"
     ],
     [
-      "OG-WRL-004",
-      "S0629"
+      "r11",
+      "s152"
     ],
     [
-      "OG-WRL-020",
-      "S0629"
+      "r19",
+      "s152"
     ],
     [
-      "OG-WRL-005",
-      "S0816"
+      "r12",
+      "s233"
     ],
     [
-      "DD-WRL-004",
-      "S0705"
+      "r2",
+      "s187"
     ],
     [
-      "DD-WRL-011",
-      "S0705"
+      "r6",
+      "s187"
     ],
     [
-      "PD-WRL-001",
-      "S0723"
+      "r20",
+      "s194"
     ],
     [
-      "PD-WRL-011",
-      "S9024"
+      "r29",
+      "s355"
     ],
     [
-      "PD-WRL-003",
-      "S9024"
+      "r22",
+      "s355"
     ],
     [
-      "PD-WRL-009",
-      "S9024"
+      "r27",
+      "s355"
     ],
     [
-      "PD-WRL-001",
-      "S9025"
+      "r20",
+      "s356"
     ],
     [
-      "PD-WRL-010",
-      "S9025"
+      "r28",
+      "s356"
     ],
     [
-      "PD-WRL-003",
-      "S9025"
+      "r22",
+      "s356"
     ],
     [
-      "PD-WRL-006",
-      "S9026"
+      "r24",
+      "s357"
     ],
     [
-      "PD-WRL-010",
-      "S9026"
+      "r28",
+      "s357"
     ],
     [
-      "PD-WRL-010",
-      "S9037"
+      "r28",
+      "s368"
     ],
     [
-      "PD-WRL-003",
-      "S9037"
+      "r22",
+      "s368"
     ],
     [
-      "PD-WRL-008",
-      "S9037"
+      "r26",
+      "s368"
     ],
     [
-      "OG-WRL-004",
-      "S9037"
+      "r11",
+      "s368"
     ],
     [
-      "PD-WRL-008",
-      "S0616"
+      "r26",
+      "s142"
     ],
     [
-      "PD-WRL-007",
-      "S0616"
+      "r25",
+      "s142"
     ],
     [
-      "DD-WRL-012",
-      "S0656"
+      "r7",
+      "s167"
     ],
     [
-      "PD-WRL-008",
-      "S0656"
+      "r26",
+      "s167"
     ],
     [
-      "PD-WRL-008",
-      "S0694"
+      "r26",
+      "s185"
     ],
     [
-      "OG-WRL-012",
-      "S0694"
+      "r16",
+      "s185"
     ],
     [
-      "DD-WRL-008",
-      "S0736"
+      "r3",
+      "s202"
     ],
     [
-      "PD-WRL-008",
-      "S0736"
+      "r26",
+      "s202"
     ],
     [
-      "DD-WRL-008",
-      "S0737"
+      "r3",
+      "s203"
     ],
     [
-      "PD-WRL-010",
-      "S0752"
+      "r28",
+      "s208"
     ],
     [
-      "PD-WRL-011",
-      "S0754"
+      "r29",
+      "s209"
     ],
     [
-      "PD-WRL-010",
-      "S0754"
+      "r28",
+      "s209"
     ],
     [
-      "PD-WRL-003",
-      "S0754"
+      "r22",
+      "s209"
     ],
     [
-      "PD-WRL-008",
-      "S0758"
+      "r26",
+      "s213"
     ],
     [
-      "DD-WRL-001",
-      "S0925"
+      "r1",
+      "s289"
     ],
     [
-      "DD-WRL-008",
-      "S0925"
+      "r3",
+      "s289"
     ],
     [
-      "DD-WRL-012",
-      "S0971"
+      "r7",
+      "s327"
     ],
     [
-      "PD-WRL-008",
-      "S0971"
+      "r26",
+      "s327"
     ],
     [
-      "PD-WRL-007",
-      "S9031"
+      "r25",
+      "s362"
     ],
     [
-      "DD-WRL-012",
-      "S9032"
+      "r7",
+      "s363"
     ],
     [
-      "PD-WRL-007",
-      "S9032"
+      "r25",
+      "s363"
     ],
     [
-      "PD-WRL-010",
-      "S9033"
+      "r28",
+      "s364"
     ],
     [
-      "PD-WRL-011",
-      "S9033"
+      "r29",
+      "s364"
     ],
     [
-      "PD-WRL-010",
-      "S9034"
+      "r28",
+      "s365"
     ],
     [
-      "PD-WRL-011",
-      "S9034"
+      "r29",
+      "s365"
     ],
     [
-      "PD-WRL-007",
-      "S9036"
+      "r25",
+      "s367"
     ],
     [
-      "DD-WRL-012",
-      "S9036"
+      "r7",
+      "s367"
     ],
     [
-      "DD-WRL-012",
-      "S9047"
+      "r7",
+      "s378"
     ],
     [
-      "DD-WRL-008",
-      "S9047"
+      "r3",
+      "s378"
     ],
     [
-      "DD-WRL-008",
-      "S9048"
+      "r3",
+      "s379"
     ],
     [
-      "DD-WRL-013",
-      "S0417"
+      "r8",
+      "s34"
     ],
     [
-      "DD-WRL-011",
-      "S0417"
+      "r6",
+      "s34"
     ],
     [
-      "DD-WRL-004",
-      "S0659"
+      "r2",
+      "s170"
     ],
     [
-      "DD-WRL-011",
-      "S0836"
+      "r6",
+      "s242"
     ],
     [
-      "DD-WRL-001",
-      "S0836"
+      "r1",
+      "s242"
     ],
     [
-      "DD-WRL-013",
-      "S0883"
+      "r8",
+      "s267"
     ],
     [
-      "DD-WRL-008",
-      "S0883"
+      "r3",
+      "s267"
     ],
     [
-      "PD-WRL-007",
-      "S0883"
+      "r25",
+      "s267"
     ],
     [
-      "DD-WRL-013",
-      "S0972"
+      "r8",
+      "s328"
     ],
     [
-      "DD-WRL-008",
-      "S0972"
+      "r3",
+      "s328"
     ],
     [
-      "DD-WRL-013",
-      "S0973"
+      "r8",
+      "s329"
     ],
     [
-      "OG-WRL-017",
-      "S0974"
+      "r17",
+      "s330"
     ],
     [
-      "DD-WRL-001",
-      "S0975"
+      "r1",
+      "s331"
     ],
     [
-      "DD-WRL-001",
-      "S9038"
+      "r1",
+      "s369"
     ],
     [
-      "DD-WRL-011",
-      "S9038"
+      "r6",
+      "s369"
     ],
     [
-      "PD-WRL-007",
-      "S9039"
+      "r25",
+      "s370"
     ],
     [
-      "DD-WRL-012",
-      "S9040"
+      "r7",
+      "s371"
     ],
     [
-      "DD-WRL-011",
-      "S9040"
+      "r6",
+      "s371"
     ],
     [
-      "DD-WRL-010",
-      "S0588"
+      "r5",
+      "s119"
     ],
     [
-      "DD-WRL-010",
-      "S9013"
+      "r5",
+      "s344"
     ],
     [
-      "DD-WRL-010",
-      "S9041"
+      "r5",
+      "s372"
     ],
     [
-      "DD-WRL-010",
-      "S0648"
+      "r5",
+      "s161"
     ],
     [
-      "DD-WRL-010",
-      "S0866"
+      "r5",
+      "s260"
     ]
   ],
   "removeMappings": [],
   "trims": {
-    "OG-WRL-012": [
-      "S0015",
-      "S0097",
-      "S0175",
-      "S0387",
-      "S0391",
-      "S0394",
-      "S0401",
-      "S0403",
-      "S0414",
-      "S0415",
-      "S0416",
-      "S0423",
-      "S0431",
-      "S0447",
-      "S0462",
-      "S0463",
-      "S0466",
-      "S0532",
-      "S0543",
-      "S0544",
-      "S0569",
-      "S0578",
-      "S0579",
-      "S0614",
-      "S0619",
-      "S0632",
-      "S0642",
-      "S0655",
-      "S0656",
-      "S0664",
-      "S0667",
-      "S0673",
-      "S0686",
-      "S0712",
-      "S0723",
-      "S0813",
-      "S0814",
-      "S0866",
-      "S0923",
-      "S9042",
-      "S9043"
+    "r16": [
+      "s2",
+      "s5",
+      "s8",
+      "s15",
+      "s18",
+      "s21",
+      "s25",
+      "s26",
+      "s31",
+      "s32",
+      "s33",
+      "s39",
+      "s44",
+      "s53",
+      "s61",
+      "s62",
+      "s64",
+      "s84",
+      "s88",
+      "s89",
+      "s107",
+      "s113",
+      "s114",
+      "s140",
+      "s145",
+      "s153",
+      "s157",
+      "s166",
+      "s167",
+      "s172",
+      "s174",
+      "s177",
+      "s184",
+      "s190",
+      "s194",
+      "s231",
+      "s232",
+      "s260",
+      "s287",
+      "s373",
+      "s374"
     ]
   },
   "jobTitleRenames": {
-    "OG-WRL-010": "Security Program Management",
-    "PD-WRL-006": "Cyber Threat Intelligence"
+    "r15": "Security Program Management",
+    "r24": "Cyber Threat Intelligence"
   },
   "removeRoles": [
     "DD-WRL-007",
@@ -3477,80 +3477,80 @@
   "removeRolesNote": "Roles removed 2026-10-20 (all with the skills, tasks, and knowledge no remaining role uses, except the skills in `rehome`): DD-WRL-007 Systems Testing and Evaluation (military); IO-WRL-001/002/003/004/005/007 and DD-WRL-006, general IT/data jobs that are not security roles (most already exist as Background options); OG-WRL-013 Systems Authorization, OG-WRL-014 Systems Security Management, and IN-WRL-001 Cybercrime Investigation, too government-specific. OG-WRL-006 Cybersecurity Counsel removed 2026-10-20: not a realistic career path for most people (it requires a law degree); all of its skills are shared with other roles, so none were cut.",
   "rehome": [
     [
-      "PD-WRL-002",
-      "S0471"
+      "r21",
+      "s67"
     ],
     [
-      "PD-WRL-001",
-      "S0841"
+      "r20",
+      "s245"
     ],
     [
-      "PD-WRL-006",
-      "S0852"
+      "r24",
+      "s251"
     ],
     [
-      "DD-WRL-004",
-      "S0542"
+      "r2",
+      "s87"
     ],
     [
-      "OG-WRL-019",
-      "S0808"
+      "r18",
+      "s227"
     ],
     [
-      "OG-WRL-008",
-      "S0808"
+      "r14",
+      "s227"
     ],
     [
-      "PD-WRL-008",
-      "S0845"
+      "r26",
+      "s247"
     ],
     [
-      "DD-WRL-004",
-      "S0845"
+      "r2",
+      "s247"
     ],
     [
-      "PD-WRL-001",
-      "S0682"
+      "r20",
+      "s182"
     ],
     [
-      "PD-WRL-008",
-      "S0682"
+      "r26",
+      "s182"
     ],
     [
-      "DD-WRL-004",
-      "S0577"
+      "r2",
+      "s112"
     ],
     [
-      "DD-WRL-004",
-      "S0584"
+      "r2",
+      "s117"
     ],
     [
-      "PD-WRL-003",
-      "S0677"
+      "r22",
+      "s179"
     ],
     [
-      "PD-WRL-009",
-      "S0626"
+      "r27",
+      "s150"
     ],
     [
-      "PD-WRL-010",
-      "S0726"
+      "r28",
+      "s197"
     ],
     [
-      "PD-WRL-006",
-      "S0011"
+      "r24",
+      "s1"
     ],
     [
-      "DD-WRL-001",
-      "S0554"
+      "r1",
+      "s96"
     ],
     [
-      "DD-WRL-001",
-      "S0830"
+      "r1",
+      "s239"
     ],
     [
-      "DD-WRL-001",
-      "S0891"
+      "r1",
+      "s270"
     ]
   ]
 }

@@ -1,7 +1,7 @@
 {
   "work_role_job_titles": [
     {
-      "work_role_id": "DD-WRL-001",
+      "work_role_id": "r1",
       "work_role_title": "Security Architect",
       "job_titles": [
         "Security Architect",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-004",
+      "work_role_id": "r2",
       "work_role_title": "Security Engineer",
       "job_titles": [
         "Security Engineer",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-008",
+      "work_role_id": "r3",
       "work_role_title": "Security Researcher",
       "job_titles": [
         "Research Engineer",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-009",
+      "work_role_id": "r4",
       "work_role_title": "OT Security Engineer",
       "job_titles": [
         "OT Security Engineer",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-010",
+      "work_role_id": "r5",
       "work_role_title": "AI Security Engineer",
       "job_titles": [
         "AI Security Engineer",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-004",
+      "work_role_id": "r11",
       "work_role_title": "Security Instructional Designer",
       "job_titles": [
         "Curriculum Developer",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-005",
+      "work_role_id": "r12",
       "work_role_title": "Security Instructor",
       "job_titles": [
         "Security Trainer",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-007",
+      "work_role_id": "r13",
       "work_role_title": "CISO",
       "job_titles": [
         "CISO",
@@ -84,7 +84,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-008",
+      "work_role_id": "r14",
       "work_role_title": "Privacy Analyst",
       "job_titles": [
         "Privacy Officer",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-010",
+      "work_role_id": "r15",
       "work_role_title": "Security Program Manager",
       "job_titles": [
         "Security Program Manager",
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-012",
+      "work_role_id": "r16",
       "work_role_title": "IT Auditor",
       "job_titles": [
         "IT Auditor",
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-017",
+      "work_role_id": "r17",
       "work_role_title": "Third-Party Risk Analyst",
       "job_titles": [
         "Supply Chain Risk Analyst",
@@ -132,7 +132,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-001",
+      "work_role_id": "r20",
       "work_role_title": "SOC Analyst",
       "job_titles": [
         "SOC Analyst",
@@ -146,7 +146,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-002",
+      "work_role_id": "r21",
       "work_role_title": "Digital Forensics Analyst",
       "job_titles": [
         "Digital Forensics Analyst",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-003",
+      "work_role_id": "r22",
       "work_role_title": "Incident Responder",
       "job_titles": [
         "Incident Responder",
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-005",
+      "work_role_id": "r23",
       "work_role_title": "Insider Risk Analyst",
       "job_titles": [
         "Insider Threat Analyst",
@@ -175,7 +175,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-006",
+      "work_role_id": "r24",
       "work_role_title": "Threat Intelligence Analyst",
       "job_titles": [
         "Threat Intelligence Analyst",
@@ -185,7 +185,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-007",
+      "work_role_id": "r25",
       "work_role_title": "Vulnerability Management Analyst",
       "job_titles": [
         "Vulnerability Analyst",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-008",
+      "work_role_id": "r26",
       "work_role_title": "Penetration Tester",
       "job_titles": [
         "Penetration Tester",
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-009",
+      "work_role_id": "r27",
       "work_role_title": "Malware Analyst",
       "job_titles": [
         "Malware Analyst",
@@ -217,7 +217,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-011",
+      "work_role_id": "r6",
       "work_role_title": "Cloud Security Engineer",
       "job_titles": [
         "Cloud Security Engineer",
@@ -226,7 +226,7 @@
       ]
     },
     {
-      "work_role_id": "IO-WRL-008",
+      "work_role_id": "r9",
       "work_role_title": "IAM Engineer",
       "job_titles": [
         "IAM Engineer",
@@ -236,7 +236,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-010",
+      "work_role_id": "r28",
       "work_role_title": "Detection Engineer",
       "job_titles": [
         "Detection Engineer",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "work_role_id": "PD-WRL-011",
+      "work_role_id": "r29",
       "work_role_title": "Threat Hunter",
       "job_titles": [
         "Threat Hunter",
@@ -253,7 +253,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-012",
+      "work_role_id": "r7",
       "work_role_title": "Application Security Engineer",
       "job_titles": [
         "Application Security Engineer",
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "work_role_id": "DD-WRL-013",
+      "work_role_id": "r8",
       "work_role_title": "DevSecOps Engineer",
       "job_titles": [
         "DevSecOps Engineer",
@@ -273,7 +273,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-019",
+      "work_role_id": "r18",
       "work_role_title": "GRC Analyst",
       "job_titles": [
         "GRC Analyst",
@@ -286,7 +286,7 @@
       ]
     },
     {
-      "work_role_id": "OG-WRL-020",
+      "work_role_id": "r19",
       "work_role_title": "Security Awareness Manager",
       "job_titles": [
         "Security Awareness Manager",
@@ -295,7 +295,7 @@
       ]
     },
     {
-      "work_role_id": "IO-WRL-009",
+      "work_role_id": "r10",
       "work_role_title": "Cyber Range Engineer",
       "job_titles": [
         "Cyber Range Engineer",

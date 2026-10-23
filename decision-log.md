@@ -517,3 +517,16 @@ An intake quiz that asks about background, appetite for learning, and interests,
 - **Three is a cap and a floor.** `minPicks` and `maxPicks` are both 3, so the "stop early" threshold is unused; change them in the data to allow more.
 - **Mappings are first guesses.** The previous-field and activity-to-skill mappings, the question wording and all weights are a draft to edit before launch.
 - **Not tested with real people.** Persona runs check plausibility, not usefulness.
+
+---
+
+## 21. Our own ids (2026-10-23)
+
+The skills, roles and everything else now use ids of our own instead of NIST NICE's, since the data has changed so much that the NICE ids no longer describe it. A one-letter prefix and a number: `s` skill, `r` work role, `t` task, `k` knowledge, `a` competency area, `c` category (for example `s17`, `r4`). Links drop the letter (`?roles=4,12&skills=17,203`), which roughly halves them again.
+
+- **Numbered once, never reused.** `data/ids.json` records the NICE id each current id replaced (`from_nice`) and the next free number per prefix (`next`). New items take the next number, even if an earlier item was retired. `scripts/etl.py` fails if an id is not in this form or is at or above `next`.
+- **Same order as before.** Ids were assigned in the old id order, so anything sorted by id (the wheel layout, the order of skills on a role card) is unchanged. Sort ids with `natural_key` from `scripts/ids.py` (`s10` after `s9`); a plain string sort puts `s10` first.
+- **Checked.** After a one-time migration of every data file, the regenerated app data was identical to the previous output once the old ids were mapped to the new ones, including every dot position. The persona tests return the same roles.
+- **Old ids left in the data.** Retired skills and roles still named in `data/skill-merges.json`, `skill-cuts.json` and `role-changes.json` keep their old NICE ids; they match nothing, so the scripts skip them. They are also why those files still show some `S0xxx` and `XX-WRL-nnn` values.
+- **No old-link support.** Links made before this change (long or compact) do not open the same state; none had been shared.
+- **History.** Earlier sections of this log use the old ids. Look them up in `data/ids.json`.

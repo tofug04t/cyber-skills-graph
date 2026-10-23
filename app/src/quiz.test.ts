@@ -77,8 +77,8 @@ describe("role quiz scoring", () => {
   });
 
   it("stops boosting a first role the person already covers", () => {
-    const strong = Object.fromEntries(graph.workRoles["PD-WRL-001"].skills.map((id) => [id, "have" as const]));
-    const found = suggestRoles(graph, data, answers({ picked: ["watch"] }), strong).find((s) => s.roleId === "PD-WRL-001");
+    const strong = Object.fromEntries(graph.workRoles["r20"].skills.map((id) => [id, "have" as const]));
+    const found = suggestRoles(graph, data, answers({ picked: ["watch"] }), strong).find((s) => s.roleId === "r20");
     // covered in full: it may still be suggested, but as a close match, not as a first step
     expect(found?.reason ?? "").not.toMatch(/common first role/);
   });
@@ -90,7 +90,7 @@ describe("role quiz scoring", () => {
   });
 
   it("never changes the marks it reads", () => {
-    const marks: Assessment = { S9001: "have", S9002: "partial", S9004: "missing" };
+    const marks: Assessment = { s332: "have", s333: "partial", s335: "missing" };
     const before = JSON.stringify(marks);
     suggestRoles(graph, data, PERSONAS["IT help desk worker"].answers, marks);
     expect(JSON.stringify(marks)).toBe(before);
@@ -118,10 +118,10 @@ describe("role quiz scoring", () => {
   });
 
   it("an explicit None stays zero even when an answer would infer the skill", () => {
-    const credits = knownCredits(data, answers({ field: "sysadmin" }), { S9001: "missing", S9002: "have" });
-    expect(credits.get("S9001")).toBe(0);
-    expect(credits.get("S9002")).toBe(1);
-    expect(credits.get("S9003")).toBe(data.scoring.fieldCredit);
+    const credits = knownCredits(data, answers({ field: "sysadmin" }), { s332: "missing", s333: "have" });
+    expect(credits.get("s332")).toBe(0);
+    expect(credits.get("s333")).toBe(1);
+    expect(credits.get("s334")).toBe(data.scoring.fieldCredit);
   });
 
   it("with interests only, still fills the board", () => {

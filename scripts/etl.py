@@ -27,6 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import color_layout
+from ids import is_valid, natural_key
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "nice-framework-v2-2-0-forked.json"
@@ -40,6 +41,15 @@ def main():
 
     elements = {e["element_identifier"]: e for e in raw["elements"]}
     relationships = raw["relationships"]
+
+    # our own ids only, and ids.json must stay ahead of every number in use (numbers are never reused)
+    ids = json.loads((ROOT / "data" / "ids.json").read_text())
+    bad = sorted(i for i in elements if not is_valid(i))
+    if bad:
+        sys.exit(f"Ids must look like s17 or r4 (see scripts/ids.py): {bad[:5]}")
+    for i in elements:
+        if natural_key(i)[1] >= ids["next"][natural_key(i)[0]]:
+            sys.exit(f"{i} is not below next[{natural_key(i)[0]}] in data/ids.json; raise 'next'")
 
     def etype(element_id):
         el = elements.get(element_id)
@@ -86,7 +96,7 @@ def main():
             "title": el["title"],
             "text": el["text"],
             "category": category_of_role[eid],
-            "skills": sorted(set(skill_ids)),
+            "skills": sorted(set(skill_ids), key=natural_key),
             "tasks": sorted({elements[t]["text"] for t in role_to_tasks.get(eid, [])}),
             "knowledge": sorted(
                 {elements[k]["text"] for k in role_to_knowledge.get(eid, [])}
@@ -100,7 +110,7 @@ def main():
             "id": sid,
             "title": elements[sid]["title"],
             "text": elements[sid]["text"],
-            "workRoles": sorted(role_ids),
+            "workRoles": sorted(role_ids, key=natural_key),
         }
         for sid, role_ids in skill_to_roles.items()
     }
